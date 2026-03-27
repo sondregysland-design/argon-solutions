@@ -1,0 +1,107 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+
+  <!-- Header bar -->
+  <rect width="800" height="52" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Logo -->
+  <circle cx="28" cy="26" r="12" fill="#1E40AF"/>
+  <text x="22" y="30" font-family="sans-serif" font-size="11" font-weight="bold" fill="white">A</text>
+  <text x="46" y="30" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1E293B">Argon Onboarding</text>
+
+  <!-- Nav links -->
+  <rect x="210" y="16" width="60" height="20" rx="5" fill="#EFF6FF"/>
+  <text x="222" y="30" font-family="sans-serif" font-size="10" font-weight="600" fill="#1E40AF">Ansatte</text>
+  <text x="284" y="30" font-family="sans-serif" font-size="10" fill="#64748B">Kurs</text>
+  <text x="318" y="30" font-family="sans-serif" font-size="10" fill="#64748B">Rapporter</text>
+
+  <!-- + Ny ansatt button -->
+  <rect x="672" y="14" width="112" height="26" rx="6" fill="#1E40AF"/>
+  <text x="687" y="31" font-family="sans-serif" font-size="11" font-weight="600" fill="white">+ Ny ansatt</text>
+
+  <!-- Page title -->
+  <text x="24" y="86" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1E293B">Ansatte</text>
+  <text x="102" y="86" font-family="sans-serif" font-size="13" fill="#64748B">3 ansatte</text>
+
+  <!-- Alert banner: course expiry warning -->
+  <rect x="24" y="100" width="752" height="36" rx="7" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="40" y="123" font-family="sans-serif" font-size="11" font-weight="600" fill="#92400E">⚠</text>
+  <text x="56" y="123" font-family="sans-serif" font-size="11" fill="#92400E">2 ansatte har kurs som utløper innen 30 dager. Se detaljer nedenfor.</text>
+
+  <!-- ===================== -->
+  <!-- Employee Card 1: Kari -->
+  <!-- ===================== -->
+  <rect x="24" y="152" width="234" height="270" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Avatar -->
+  <circle cx="141" cy="194" r="28" fill="#DBEAFE"/>
+  <text x="130" y="200" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1E40AF">KN</text>
+  <!-- Name & title -->
+  <text x="141" y="239" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Kari Nordmann</text>
+  <text x="141" y="255" font-family="sans-serif" font-size="10" fill="#64748B" text-anchor="middle">HMS-koordinator</text>
+  <!-- Progress label -->
+  <text x="36" y="278" font-family="sans-serif" font-size="10" fill="#64748B">Kursgjennomføring</text>
+  <text x="222" y="278" font-family="sans-serif" font-size="10" font-weight="600" fill="#1E293B" text-anchor="end">4/5</text>
+  <!-- Progress bar -->
+  <rect x="36" y="283" width="196" height="7" rx="3" fill="#E2E8F0"/>
+  <rect x="36" y="283" width="157" height="7" rx="3" fill="#1E40AF"/>
+  <!-- Course badges -->
+  <rect x="36" y="302" width="44" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="58" y="315" font-family="sans-serif" font-size="9" fill="#166534" text-anchor="middle">Gyldig</text>
+  <rect x="86" y="302" width="50" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="111" y="315" font-family="sans-serif" font-size="9" fill="#166534" text-anchor="middle">Gyldig</text>
+  <rect x="142" y="302" width="52" height="18" rx="4" fill="#FEF9C3"/>
+  <text x="168" y="315" font-family="sans-serif" font-size="9" fill="#854D0E" text-anchor="middle">Utløper</text>
+  <!-- Detail link -->
+  <text x="141" y="400" font-family="sans-serif" font-size="10" fill="#1E40AF" text-anchor="middle">Detaljer →</text>
+
+  <!-- ===================== -->
+  <!-- Employee Card 2: Ole  -->
+  <!-- ===================== -->
+  <rect x="283" y="152" width="234" height="270" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Avatar -->
+  <circle cx="400" cy="194" r="28" fill="#DCFCE7"/>
+  <text x="389" y="200" font-family="sans-serif" font-size="16" font-weight="bold" fill="#166534">OB</text>
+  <!-- Name & title -->
+  <text x="400" y="239" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Ole Berg</text>
+  <text x="400" y="255" font-family="sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Riggteknikker</text>
+  <!-- Progress label -->
+  <text x="295" y="278" font-family="sans-serif" font-size="10" fill="#64748B">Kursgjennomføring</text>
+  <text x="481" y="278" font-family="sans-serif" font-size="10" font-weight="600" fill="#1E293B" text-anchor="end">5/5</text>
+  <!-- Progress bar -->
+  <rect x="295" y="283" width="196" height="7" rx="3" fill="#E2E8F0"/>
+  <rect x="295" y="283" width="196" height="7" rx="3" fill="#22C55E"/>
+  <!-- Course badges -->
+  <rect x="295" y="302" width="44" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="317" y="315" font-family="sans-serif" font-size="9" fill="#166534" text-anchor="middle">Gyldig</text>
+  <rect x="345" y="302" width="44" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="367" y="315" font-family="sans-serif" font-size="9" fill="#166534" text-anchor="middle">Gyldig</text>
+  <rect x="395" y="302" width="44" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="417" y="315" font-family="sans-serif" font-size="9" fill="#166534" text-anchor="middle">Gyldig</text>
+  <!-- Detail link -->
+  <text x="400" y="400" font-family="sans-serif" font-size="10" fill="#1E40AF" text-anchor="middle">Detaljer →</text>
+
+  <!-- ====================== -->
+  <!-- Employee Card 3: Lena  -->
+  <!-- ====================== -->
+  <rect x="542" y="152" width="234" height="270" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Avatar -->
+  <circle cx="659" cy="194" r="28" fill="#FEE2E2"/>
+  <text x="648" y="200" font-family="sans-serif" font-size="16" font-weight="bold" fill="#991B1B">LA</text>
+  <!-- Name & title -->
+  <text x="659" y="239" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Lena Andresen</text>
+  <text x="659" y="255" font-family="sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Verneombud</text>
+  <!-- Progress label -->
+  <text x="554" y="278" font-family="sans-serif" font-size="10" fill="#64748B">Kursgjennomføring</text>
+  <text x="740" y="278" font-family="sans-serif" font-size="10" font-weight="600" fill="#1E293B" text-anchor="end">2/5</text>
+  <!-- Progress bar -->
+  <rect x="554" y="283" width="196" height="7" rx="3" fill="#E2E8F0"/>
+  <rect x="554" y="283" width="79" height="7" rx="3" fill="#EF4444"/>
+  <!-- Course badges -->
+  <rect x="554" y="302" width="44" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="576" y="315" font-family="sans-serif" font-size="9" fill="#166534" text-anchor="middle">Gyldig</text>
+  <rect x="604" y="302" width="46" height="18" rx="4" fill="#FEE2E2"/>
+  <text x="627" y="315" font-family="sans-serif" font-size="9" fill="#991B1B" text-anchor="middle">Utløpt</text>
+  <rect x="656" y="302" width="52" height="18" rx="4" fill="#FEF9C3"/>
+  <text x="682" y="315" font-family="sans-serif" font-size="9" fill="#854D0E" text-anchor="middle">Utløper</text>
+  <!-- Detail link -->
+  <text x="659" y="400" font-family="sans-serif" font-size="10" fill="#1E40AF" text-anchor="middle">Detaljer →</text>
+</svg>

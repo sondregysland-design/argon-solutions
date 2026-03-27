@@ -1,0 +1,103 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+
+  <!-- Sidebar -->
+  <rect width="140" height="450" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Logo -->
+  <circle cx="28" cy="24" r="12" fill="#1E40AF"/>
+  <text x="22" y="28" font-family="sans-serif" font-size="11" font-weight="bold" fill="white">A</text>
+  <text x="46" y="28" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1E293B">Argon CRM</text>
+
+  <!-- Nav items -->
+  <rect x="8" y="48" width="124" height="30" rx="6" fill="#EFF6FF"/>
+  <text x="36" y="67" font-family="sans-serif" font-size="11" font-weight="600" fill="#1E40AF">Dashboard</text>
+  <text x="36" y="97" font-family="sans-serif" font-size="11" fill="#64748B">Søk bedrifter</text>
+  <text x="36" y="122" font-family="sans-serif" font-size="11" fill="#64748B">Auto-scrape</text>
+  <text x="36" y="147" font-family="sans-serif" font-size="11" fill="#64748B">Jobber</text>
+
+  <!-- Main content -->
+  <text x="156" y="36" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1E293B">Dashboard</text>
+  <text x="156" y="52" font-family="sans-serif" font-size="11" fill="#64748B">Oversikt over salgspipeline.</text>
+
+  <!-- Stats cards -->
+  <rect x="156" y="64" width="150" height="52" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="172" y="85" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1E40AF">2</text>
+  <text x="172" y="102" font-family="sans-serif" font-size="10" fill="#64748B">Nye</text>
+
+  <rect x="316" y="64" width="150" height="52" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="332" y="85" font-family="sans-serif" font-size="20" font-weight="bold" fill="#F59E0B">1</text>
+  <text x="332" y="102" font-family="sans-serif" font-size="10" fill="#64748B">Kontaktet</text>
+
+  <rect x="476" y="64" width="150" height="52" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="492" y="85" font-family="sans-serif" font-size="20" font-weight="bold" fill="#8B5CF6">1</text>
+  <text x="492" y="102" font-family="sans-serif" font-size="10" fill="#64748B">Kvalifisert</text>
+
+  <rect x="636" y="64" width="150" height="52" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="652" y="85" font-family="sans-serif" font-size="20" font-weight="bold" fill="#22C55E">0</text>
+  <text x="652" y="102" font-family="sans-serif" font-size="10" fill="#64748B">Kunde</text>
+
+  <!-- Kanban columns headers -->
+  <!-- Ny -->
+  <circle cx="164" cy="136" r="4" fill="#3B82F6"/>
+  <text x="174" y="140" font-family="sans-serif" font-size="11" font-weight="600" fill="#1E293B">Ny</text>
+  <text x="194" y="140" font-family="sans-serif" font-size="10" fill="#64748B">2</text>
+  <text x="238" y="140" font-family="sans-serif" font-size="10" fill="#EF4444">Slett alle</text>
+
+  <!-- Kontaktet -->
+  <circle cx="324" cy="136" r="4" fill="#F59E0B"/>
+  <text x="334" y="140" font-family="sans-serif" font-size="11" font-weight="600" fill="#1E293B">Kontaktet</text>
+  <text x="400" y="140" font-family="sans-serif" font-size="10" fill="#64748B">1</text>
+
+  <!-- Kvalifisert -->
+  <circle cx="484" cy="136" r="4" fill="#8B5CF6"/>
+  <text x="494" y="140" font-family="sans-serif" font-size="11" font-weight="600" fill="#1E293B">Kvalifisert</text>
+  <text x="565" y="140" font-family="sans-serif" font-size="10" fill="#64748B">1</text>
+
+  <!-- Kunde -->
+  <circle cx="644" cy="136" r="4" fill="#22C55E"/>
+  <text x="654" y="140" font-family="sans-serif" font-size="11" font-weight="600" fill="#1E293B">Kunde</text>
+  <text x="705" y="140" font-family="sans-serif" font-size="10" fill="#64748B">0</text>
+
+  <!-- Kanban cards - Ny column -->
+  <!-- Equinor -->
+  <rect x="156" y="152" width="148" height="100" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="168" y="172" font-family="sans-serif" font-size="11" font-weight="600" fill="#1E293B">EQUINOR ASA</text>
+  <text x="168" y="188" font-family="sans-serif" font-size="9" fill="#64748B">STAVANGER</text>
+  <rect x="168" y="196" width="100" height="18" rx="4" fill="#F1F5F9"/>
+  <text x="176" y="209" font-family="sans-serif" font-size="8" fill="#64748B">Utvinning av råolje</text>
+  <text x="168" y="230" font-family="sans-serif" font-size="9" fill="#64748B">21408 ansatte</text>
+  <text x="210" y="244" font-family="sans-serif" font-size="9" fill="#F59E0B">Kontaktet →</text>
+
+  <!-- OMV -->
+  <rect x="156" y="260" width="148" height="100" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="168" y="280" font-family="sans-serif" font-size="11" font-weight="600" fill="#1E293B">OMV NORGE AS</text>
+  <text x="168" y="296" font-family="sans-serif" font-size="9" fill="#64748B">STAVANGER</text>
+  <rect x="168" y="304" width="110" height="18" rx="4" fill="#F1F5F9"/>
+  <text x="176" y="317" font-family="sans-serif" font-size="8" fill="#64748B">Utvinning av naturgass</text>
+  <text x="168" y="338" font-family="sans-serif" font-size="9" fill="#64748B">86 ansatte</text>
+  <text x="210" y="352" font-family="sans-serif" font-size="9" fill="#F59E0B">Kontaktet →</text>
+
+  <!-- Kontaktet column -->
+  <!-- Baker Hughes -->
+  <rect x="316" y="152" width="148" height="110" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="328" y="172" font-family="sans-serif" font-size="10" font-weight="600" fill="#1E293B">BAKER HUGHES</text>
+  <text x="328" y="184" font-family="sans-serif" font-size="10" font-weight="600" fill="#1E293B">TECHNOLOGY AS</text>
+  <text x="328" y="200" font-family="sans-serif" font-size="9" fill="#64748B">STAVANGER</text>
+  <rect x="328" y="208" width="120" height="18" rx="4" fill="#F1F5F9"/>
+  <text x="334" y="221" font-family="sans-serif" font-size="8" fill="#64748B">Annen teknisk konsulent</text>
+  <text x="328" y="240" font-family="sans-serif" font-size="9" fill="#64748B">37 ansatte</text>
+  <text x="328" y="254" font-family="sans-serif" font-size="9" fill="#3B82F6">← Ny</text>
+  <text x="396" y="254" font-family="sans-serif" font-size="9" fill="#8B5CF6">Kvalifisert →</text>
+
+  <!-- Kvalifisert column -->
+  <!-- Halliburton -->
+  <rect x="476" y="152" width="148" height="120" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="488" y="172" font-family="sans-serif" font-size="11" font-weight="600" fill="#1E293B">HALLIBURTON AS</text>
+  <text x="488" y="188" font-family="sans-serif" font-size="9" fill="#64748B">TANANGER</text>
+  <rect x="488" y="196" width="124" height="28" rx="4" fill="#F1F5F9"/>
+  <text x="494" y="209" font-family="sans-serif" font-size="8" fill="#64748B">Boretjenester tilknyttet</text>
+  <text x="494" y="219" font-family="sans-serif" font-size="8" fill="#64748B">utvinning av råolje</text>
+  <text x="488" y="245" font-family="sans-serif" font-size="9" fill="#64748B">2523 ansatte</text>
+  <text x="488" y="264" font-family="sans-serif" font-size="9" fill="#F59E0B">← Kontaktet</text>
+  <text x="564" y="264" font-family="sans-serif" font-size="9" fill="#22C55E">Kunde →</text>
+</svg>

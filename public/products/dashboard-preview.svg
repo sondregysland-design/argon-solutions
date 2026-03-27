@@ -1,0 +1,101 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+
+  <!-- Sidebar -->
+  <rect width="150" height="450" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="12" y="10" width="28" height="28" rx="6" fill="#1E40AF"/>
+  <text x="20" y="29" font-family="sans-serif" font-size="10" font-weight="bold" fill="white">PB</text>
+  <text x="48" y="29" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1E293B">ProjectBoard</text>
+
+  <!-- Nav - MENY -->
+  <text x="16" y="58" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">MENY</text>
+  <rect x="8" y="64" width="134" height="28" rx="6" fill="#EFF6FF"/>
+  <text x="36" y="82" font-family="sans-serif" font-size="11" font-weight="600" fill="#1E40AF">Dashboard</text>
+  <text x="36" y="106" font-family="sans-serif" font-size="11" fill="#64748B">Aktive Prosjekter</text>
+  <text x="36" y="126" font-family="sans-serif" font-size="11" fill="#64748B">Prosedyrer</text>
+  <text x="36" y="146" font-family="sans-serif" font-size="11" fill="#64748B">Todo-liste</text>
+  <text x="36" y="166" font-family="sans-serif" font-size="11" fill="#64748B">Kontraktpriser</text>
+
+  <!-- Nav - AI VERKTØY -->
+  <text x="16" y="194" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">AI VERKTØY</text>
+  <text x="36" y="214" font-family="sans-serif" font-size="11" fill="#64748B">Tekstkorrektur</text>
+  <text x="36" y="234" font-family="sans-serif" font-size="11" fill="#64748B">PDF Analyse</text>
+  <text x="36" y="254" font-family="sans-serif" font-size="11" fill="#64748B">Kompiler til PDF</text>
+
+  <!-- Nav - VERKTØY -->
+  <text x="16" y="282" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">VERKTØY</text>
+  <text x="36" y="302" font-family="sans-serif" font-size="11" fill="#64748B">Innstillinger</text>
+
+  <!-- Main content -->
+  <text x="170" y="38" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1E293B">Prosjekt</text><text x="274" y="38" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1E40AF">oversikt</text>
+  <text x="170" y="56" font-family="sans-serif" font-size="11" fill="#64748B">Oversikt over alle prosjekter og status</text>
+
+  <!-- KPI Cards -->
+  <rect x="170" y="70" width="148" height="62" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="186" y="90" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">TOTALT</text>
+  <text x="186" y="118" font-family="sans-serif" font-size="26" font-weight="bold" fill="#1E293B">7</text>
+
+  <rect x="328" y="70" width="148" height="62" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="344" y="90" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">AKTIVE</text>
+  <text x="344" y="118" font-family="sans-serif" font-size="26" font-weight="bold" fill="#1E40AF">6</text>
+
+  <rect x="486" y="70" width="148" height="62" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="502" y="90" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">FULLFØRTE</text>
+  <text x="502" y="118" font-family="sans-serif" font-size="26" font-weight="bold" fill="#22C55E">1</text>
+
+  <rect x="644" y="70" width="142" height="62" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="660" y="90" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">OFFSHORE</text>
+  <text x="660" y="118" font-family="sans-serif" font-size="26" font-weight="bold" fill="#F59E0B">2</text>
+
+  <!-- Siste prosjekter -->
+  <rect x="170" y="146" width="616" height="296" rx="10" fill="white" stroke="#E2E8F0"/>
+  <text x="190" y="172" font-family="sans-serif" font-size="13" font-weight="600" fill="#1E293B">Siste prosjekter</text>
+
+  <!-- Row 1: Transocean Equinox -->
+  <circle cx="196" cy="204" r="14" fill="#E0E7FF"/>
+  <text x="192" y="208" font-family="sans-serif" font-size="10" font-weight="600" fill="#4338CA">T</text>
+  <text x="220" y="200" font-family="sans-serif" font-size="12" font-weight="500" fill="#1E293B">Transocean Equinox</text>
+  <text x="220" y="214" font-family="sans-serif" font-size="10" fill="#94A3B8">Oseberg · 2026-04-02</text>
+  <rect x="700" y="192" width="64" height="22" rx="11" fill="#DBEAFE"/>
+  <text x="716" y="207" font-family="sans-serif" font-size="9" fill="#1E40AF">Planning</text>
+
+  <!-- Row 2: To Norge -->
+  <circle cx="196" cy="244" r="14" fill="#E0E7FF"/>
+  <text x="192" y="248" font-family="sans-serif" font-size="10" font-weight="600" fill="#4338CA">T</text>
+  <text x="220" y="240" font-family="sans-serif" font-size="12" font-weight="500" fill="#1E293B">To Norge</text>
+  <text x="220" y="254" font-family="sans-serif" font-size="10" fill="#94A3B8">Equinor · 2026-03-20</text>
+  <rect x="694" y="232" width="70" height="22" rx="11" fill="#FEF3C7"/>
+  <text x="710" y="247" font-family="sans-serif" font-size="9" fill="#92400E">Workshop</text>
+
+  <!-- Row 3: West Hercules -->
+  <circle cx="196" cy="284" r="14" fill="#DBEAFE"/>
+  <text x="190" y="288" font-family="sans-serif" font-size="10" font-weight="600" fill="#1E40AF">W</text>
+  <text x="220" y="280" font-family="sans-serif" font-size="12" font-weight="500" fill="#1E293B">West Hercules</text>
+  <text x="220" y="294" font-family="sans-serif" font-size="10" fill="#94A3B8">Troll · 2026-03-18</text>
+  <rect x="694" y="272" width="70" height="22" rx="11" fill="#FEF3C7"/>
+  <text x="710" y="287" font-family="sans-serif" font-size="9" fill="#92400E">Workshop</text>
+
+  <!-- Row 4: Deepsea Nordkapp -->
+  <circle cx="196" cy="324" r="14" fill="#E0E7FF"/>
+  <text x="191" y="328" font-family="sans-serif" font-size="10" font-weight="600" fill="#4338CA">D</text>
+  <text x="220" y="320" font-family="sans-serif" font-size="12" font-weight="500" fill="#1E293B">Deepsea Nordkapp</text>
+  <text x="220" y="334" font-family="sans-serif" font-size="10" fill="#94A3B8">Johan Sverdrup · 2026-03-15</text>
+  <rect x="700" y="312" width="64" height="22" rx="11" fill="#FEE2E2"/>
+  <text x="714" y="327" font-family="sans-serif" font-size="9" fill="#DC2626">Offshore</text>
+
+  <!-- Row 5: Scarabeo 8 -->
+  <circle cx="196" cy="364" r="14" fill="#DBEAFE"/>
+  <text x="192" y="368" font-family="sans-serif" font-size="10" font-weight="600" fill="#1E40AF">S</text>
+  <text x="220" y="360" font-family="sans-serif" font-size="12" font-weight="500" fill="#1E293B">Scarabeo 8</text>
+  <text x="220" y="374" font-family="sans-serif" font-size="10" fill="#94A3B8">Goliat · 2026-03-12</text>
+  <rect x="700" y="352" width="64" height="22" rx="11" fill="#FEE2E2"/>
+  <text x="714" y="367" font-family="sans-serif" font-size="9" fill="#DC2626">Offshore</text>
+
+  <!-- Row 6: Deepsea Atlantic -->
+  <circle cx="196" cy="404" r="14" fill="#E0E7FF"/>
+  <text x="191" y="408" font-family="sans-serif" font-size="10" font-weight="600" fill="#4338CA">D</text>
+  <text x="220" y="400" font-family="sans-serif" font-size="12" font-weight="500" fill="#1E293B">Deepsea Atlantic</text>
+  <text x="220" y="414" font-family="sans-serif" font-size="10" fill="#94A3B8">Alvheim · 2026-02-20</text>
+  <rect x="696" y="392" width="68" height="22" rx="11" fill="#DCFCE7"/>
+  <text x="712" y="407" font-family="sans-serif" font-size="9" fill="#166534">Invoicing</text>
+</svg>

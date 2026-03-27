@@ -1,0 +1,71 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+
+  <!-- Sidebar -->
+  <rect width="150" height="450" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Logo -->
+  <circle cx="28" cy="24" r="12" fill="#1E40AF"/>
+  <text x="22" y="28" font-family="sans-serif" font-size="11" font-weight="bold" fill="white">R</text>
+  <text x="46" y="28" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1E293B">Argon Risk</text>
+
+  <!-- Nav sections -->
+  <text x="16" y="58" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">OVERSIKT</text>
+  <rect x="8" y="64" width="134" height="28" rx="6" fill="#EFF6FF"/>
+  <text x="36" y="82" font-family="sans-serif" font-size="11" font-weight="600" fill="#1E40AF">Dashboard</text>
+
+  <text x="16" y="112" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">PROSJEKTER</text>
+  <text x="36" y="132" font-family="sans-serif" font-size="11" fill="#64748B">Alle prosjekter</text>
+
+  <text x="16" y="160" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">ANALYSE</text>
+  <text x="36" y="180" font-family="sans-serif" font-size="11" fill="#64748B">Lessons Learned</text>
+
+  <text x="16" y="208" font-family="sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">SYSTEM</text>
+  <text x="36" y="228" font-family="sans-serif" font-size="11" fill="#64748B">Innstillinger</text>
+
+  <!-- Main content -->
+  <text x="170" y="40" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1E293B">Dashboard</text>
+
+  <!-- KPI Cards - matching actual app -->
+  <rect x="170" y="56" width="118" height="70" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="210" y="88" font-family="sans-serif" font-size="26" font-weight="bold" fill="#EF4444" text-anchor="middle">2</text>
+  <text x="210" y="112" font-family="sans-serif" font-size="9" fill="#64748B" text-anchor="middle">Høy risiko (totalt)</text>
+
+  <rect x="298" y="56" width="118" height="70" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="338" y="88" font-family="sans-serif" font-size="26" font-weight="bold" fill="#F59E0B" text-anchor="middle">10</text>
+  <text x="338" y="112" font-family="sans-serif" font-size="9" fill="#64748B" text-anchor="middle">Medium risiko</text>
+
+  <rect x="426" y="56" width="118" height="70" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="466" y="88" font-family="sans-serif" font-size="26" font-weight="bold" fill="#22C55E" text-anchor="middle">4</text>
+  <text x="466" y="112" font-family="sans-serif" font-size="9" fill="#64748B" text-anchor="middle">Lav risiko</text>
+
+  <rect x="554" y="56" width="118" height="70" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="594" y="88" font-family="sans-serif" font-size="26" font-weight="bold" fill="#1E293B" text-anchor="middle">8</text>
+  <text x="594" y="112" font-family="sans-serif" font-size="9" fill="#64748B" text-anchor="middle">Åpne tiltak</text>
+
+  <rect x="682" y="56" width="104" height="70" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="722" y="88" font-family="sans-serif" font-size="26" font-weight="bold" fill="#1E40AF" text-anchor="middle">8</text>
+  <text x="722" y="112" font-family="sans-serif" font-size="9" fill="#64748B" text-anchor="middle">Lessons Learned</text>
+
+  <!-- Prosjekter header -->
+  <text x="170" y="160" font-family="sans-serif" font-size="15" font-weight="600" fill="#1E293B">Prosjekter</text>
+
+  <!-- Project card 1: Barentshavet -->
+  <rect x="170" y="174" width="616" height="80" rx="10" fill="white" stroke="#E2E8F0"/>
+  <text x="190" y="204" font-family="sans-serif" font-size="13" font-weight="600" fill="#1E293B">Barentshavet Subsea Tie-in — Detaljdesign</text>
+  <text x="190" y="224" font-family="sans-serif" font-size="10" fill="#64748B">Risikovurdering for subsea tie-in til eksisterende infrastruktur i Barentshavet.</text>
+  <!-- Tags -->
+  <rect x="600" y="196" width="72" height="22" rx="11" fill="#DBEAFE"/>
+  <text x="618" y="211" font-family="sans-serif" font-size="9" fill="#1E40AF" text-anchor="middle">Detaljdesign</text>
+  <text x="690" y="211" font-family="sans-serif" font-size="10" fill="#64748B">4 risikoer</text>
+
+  <!-- Project card 2: Nordsjøen Alpha -->
+  <rect x="170" y="264" width="616" height="80" rx="10" fill="white" stroke="#E2E8F0"/>
+  <text x="190" y="294" font-family="sans-serif" font-size="13" font-weight="600" fill="#1E293B">Nordsjøen Alpha — FEED Phase</text>
+  <text x="190" y="314" font-family="sans-serif" font-size="10" fill="#64748B">Risikovurdering for FPSO-utbygging i Nordsjøen, FEED-fase. Omfatter prosess, struktur og marin risiko.</text>
+  <!-- Tags -->
+  <rect x="580" y="286" width="46" height="22" rx="11" fill="#DBEAFE"/>
+  <text x="594" y="301" font-family="sans-serif" font-size="9" fill="#1E40AF" text-anchor="middle">FEED</text>
+  <text x="640" y="301" font-family="sans-serif" font-size="10" fill="#64748B">12 risikoer</text>
+  <rect x="720" y="286" width="46" height="22" rx="11" fill="#FEE2E2"/>
+  <text x="734" y="301" font-family="sans-serif" font-size="9" fill="#EF4444" text-anchor="middle">2 høy</text>
+</svg>
