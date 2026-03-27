@@ -9,6 +9,24 @@ export interface Product {
 
 export const products: Product[] = [
   {
+    slug: "onboarding",
+    title: "Argon Onboarding (Employee Onboarding)",
+    description:
+      "Komplett onboarding-system for nye ansatte. Spor fremgang, kurs, sertifikater og generer CV automatisk.",
+    demoUrl: "https://argon-onboarding.vercel.app/admin",
+    tags: ["Next.js", "Prisma", "Onboarding"],
+    image: "/products/onboarding-preview.svg",
+  },
+  {
+    slug: "dashboard",
+    title: "Argon Dashboard (Project Board)",
+    description:
+      "Prosjektstyringsdashboard med dataimport, sanntidssynkronisering og full oversikt over fremdrift og kontaktpersoner.",
+    demoUrl: "https://projectboard-delta.vercel.app/",
+    tags: ["Next.js", "Supabase", "Dashboard"],
+    image: "/products/dashboard-preview.svg",
+  },
+  {
     slug: "crm",
     title: "Argon CRM (Customer Relationship Management)",
     description:
@@ -25,24 +43,6 @@ export const products: Product[] = [
     demoUrl: "https://argon-risk.vercel.app/",
     tags: ["Next.js", "Supabase", "Risikostyring"],
     image: "/products/risk-preview.svg",
-  },
-  {
-    slug: "dashboard",
-    title: "Argon Dashboard (Project Board)",
-    description:
-      "Prosjektstyringsdashboard med dataimport, sanntidssynkronisering og full oversikt over fremdrift og kontaktpersoner.",
-    demoUrl: "https://projectboard-delta.vercel.app/",
-    tags: ["Next.js", "Supabase", "Dashboard"],
-    image: "/products/dashboard-preview.svg",
-  },
-  {
-    slug: "onboarding",
-    title: "Argon Onboarding (Employee Onboarding)",
-    description:
-      "Komplett onboarding-system for nye ansatte. Spor fremgang, kurs, sertifikater og generer CV automatisk.",
-    demoUrl: "https://argon-onboarding.vercel.app/admin",
-    tags: ["Next.js", "Prisma", "Onboarding"],
-    image: "/products/onboarding-preview.svg",
   },
 ];
 
