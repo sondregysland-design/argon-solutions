@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { BookingSection } from "@/components/BookingSection";
 
 export const metadata: Metadata = {
   title: "Kontakt — Argon Solutions",
@@ -26,7 +27,7 @@ export default function KontaktPage() {
             </div>
             <div>
               <h3 className="font-semibold text-text">Telefon</h3>
-              <p className="mt-1 text-text-light">+47 XXX XX XXX</p>
+              <p className="mt-1 text-text-light">+47 901 20 714</p>
             </div>
             <div>
               <h3 className="font-semibold text-text">Lokasjon</h3>
@@ -38,6 +39,17 @@ export default function KontaktPage() {
                 Vi svarer vanligvis innen 24 timer på hverdager.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Booking Section */}
+        <div className="mt-20 border-t border-gray-200 pt-16">
+          <h2 className="text-3xl font-bold text-text">Book en konsultasjon</h2>
+          <p className="mt-4 max-w-2xl text-lg text-text-light">
+            Foretrekker du å snakke direkte? Velg en ledig tid for et 30-minutters møte.
+          </p>
+          <div className="mt-8 rounded-xl bg-white shadow-sm p-6 md:p-8">
+            <BookingSection />
           </div>
         </div>
       </div>
