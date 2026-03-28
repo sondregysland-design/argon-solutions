@@ -15,7 +15,7 @@ export const products: Product[] = [
       "Komplett onboarding-system for nye ansatte. Spor fremgang, kurs, sertifikater og generer CV automatisk.",
     demoUrl: "https://argon-onboarding.vercel.app/admin",
     tags: ["Next.js", "Prisma", "Onboarding"],
-    image: "/products/onboarding-preview.svg",
+    image: "/products/onboarding-preview.png",
   },
   {
     slug: "dashboard",
@@ -34,6 +34,15 @@ export const products: Product[] = [
     demoUrl: "https://argon-crm-tan.vercel.app/",
     tags: ["Next.js", "Tailwind", "CRM"],
     image: "/products/crm-preview.svg",
+  },
+  {
+    slug: "docs",
+    title: "Argon Docs (PDF Intelligence)",
+    description:
+      "AI-drevet PDF-ekstraksjon. Last opp fakturaer, sikkerhetsdokumenter og sertifikater — få strukturerte data på sekunder.",
+    demoUrl: "https://argon-docs.vercel.app/",
+    tags: ["Next.js", "Claude AI", "PDF"],
+    image: "/products/docs-preview.svg",
   },
   {
     slug: "risk",
