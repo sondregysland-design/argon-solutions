@@ -193,7 +193,7 @@ export function BookingSection() {
       </div>
 
       <p className="text-xs text-gray-400 mt-6">
-        Booking må gjøres minst 2 dager i forveien. Hvert møte varer 30 minutter.
+        Tidene oppdateres fortløpende. Booking må gjøres minst 2 dager i forveien.
       </p>
     </div>
   );

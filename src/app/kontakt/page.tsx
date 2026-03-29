@@ -44,11 +44,16 @@ export default function KontaktPage() {
 
         {/* Booking Section */}
         <div className="mt-20 border-t border-gray-200 pt-16">
-          <h2 className="text-3xl font-bold text-text">Book en konsultasjon</h2>
-          <p className="mt-4 max-w-2xl text-lg text-text-light">
-            Foretrekker du å snakke direkte? Velg en ledig tid for et 30-minutters møte.
+          <div className="flex items-center gap-3 mb-2">
+            <div className="h-px flex-1 bg-gradient-to-r from-primary/20 to-transparent" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary-light">Begrenset tilgjengelighet</span>
+            <div className="h-px flex-1 bg-gradient-to-l from-primary/20 to-transparent" />
+          </div>
+          <h2 className="text-3xl font-bold text-text mt-4">Book en konsultasjon</h2>
+          <p className="mt-4 max-w-2xl text-text-light">
+            Vi tilbyr et begrenset antall konsultasjoner hver uke. Velg en av de ledige tidene for en 30-minutters samtale.
           </p>
-          <div className="mt-8 rounded-xl bg-white shadow-sm p-6 md:p-8">
+          <div className="mt-8 rounded-xl bg-white shadow-sm border border-gray-100 p-6 md:p-8">
             <BookingSection />
           </div>
         </div>
