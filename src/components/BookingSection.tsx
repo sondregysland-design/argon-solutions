@@ -164,7 +164,7 @@ export function BookingSection() {
                 <input id="book-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="din@epost.no" className={inputClass} />
               </div>
               <div>
-                <label htmlFor="book-company" className="block text-sm font-medium text-text">Selskap</label>
+                <label htmlFor="book-company" className="block text-sm font-medium text-text">Firmanavn</label>
                 <input id="book-company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Valgfritt" className={inputClass} />
               </div>
               <div>
