@@ -1,5 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { ServiceCard } from "@/components/ServiceCard";
+import { ProductCard } from "@/components/ProductCard";
+import { products, miniProducts } from "@/lib/products";
 import Link from "next/link";
 
 const services = [
@@ -36,9 +38,9 @@ const services = [
 ];
 
 const stats = [
-  { value: "10+", label: "Års erfaring" },
-  { value: "50+", label: "Leveranser" },
+  { value: "10+", label: "Års erfaring i olje og gass" },
   { value: "100%", label: "Norsk" },
+  { value: "0 kr", label: "Første måneden" },
 ];
 
 export default function Home() {
@@ -52,12 +54,51 @@ export default function Home() {
           <h2 className="text-center text-3xl font-bold text-text">
             Hva vi tilbyr
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Vi spesialiserer oss på software og integrasjon for olje og gass-næringen.
-          </p>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
               <ServiceCard key={s.title} {...s} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Produkter */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <h2 className="text-center text-3xl font-bold text-text">
+            Våre produkter
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
+            Se noen av løsningene vi har bygget for olje og gass-næringen.
+          </p>
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {products.slice(0, 3).map((product) => (
+              <ProductCard key={product.slug} {...product} />
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/produkter"
+              className="text-sm font-semibold text-primary transition hover:text-primary-dark"
+            >
+              Se alle produkter &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Mini-produkter */}
+      <section className="bg-surface py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <h2 className="text-center text-3xl font-bold text-text">
+            Mini-produkter
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
+            Mindre verktøy mer for avbrekk.
+          </p>
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {miniProducts.map((product) => (
+              <ProductCard key={product.slug} {...product} />
             ))}
           </div>
         </div>
