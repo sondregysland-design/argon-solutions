@@ -33,7 +33,7 @@ export const products: Product[] = [
       "Komplett kundeoppfølgingssystem bygget for olje og gass. Håndter kunder, prosjekter og oppfølging i ett system.",
     demoUrl: "https://argon-crm-tan.vercel.app/",
     tags: ["Next.js", "Tailwind", "CRM"],
-    image: "/products/crm-preview.svg",
+    image: "/products/crm-preview.png",
   },
   {
     slug: "docs",
