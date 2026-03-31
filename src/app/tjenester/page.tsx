@@ -207,7 +207,9 @@ const tjenester = [
 const illustrations = [
   <ClaudeCodeIllustration key="claude" />,
   <IntegrationIllustration key="integration" />,
-  <ClaudeStartupIllustration key="claude-startup" />,
+  <div key="claude-screenshot" className="flex h-full min-h-[300px] items-center justify-center rounded-xl border border-gray-200 bg-[#1a1b26] p-4 shadow-lg">
+    <img src="/products/claude-code-preview.png" alt="Claude Code terminal" className="rounded-lg" />
+  </div>,
 ];
 
 export default function TjenesterPage() {
