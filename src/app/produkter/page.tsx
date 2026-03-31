@@ -15,7 +15,7 @@ export default function ProdukterPage() {
         <p className="mt-4 max-w-2xl text-lg text-text-light">
           Skreddersydde AI- og softwareløsninger for små og mellomstore bedrifter
           i olje og gass. Vi skreddersyr verktøyet dere trenger, dere prøver det
-          gratis den første måneden uten forpliktelser.
+          gratis den første måneden uten forpliktelse.
         </p>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

@@ -12,9 +12,9 @@ export function Hero() {
           <span className="block text-primary">for energisektoren</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-text-light">
-          Vi bygger software og integrasjoner som forenkler arbeidshverdagen
-          for norsk olje og gass. Fra systemintegrasjon til skreddersydd
-          utvikling — vi leverer løsninger som virker.
+          Skreddersydde AI- og softwareløsninger for små og mellomstore
+          bedrifter i olje og gass. Vi skreddersyr verktøyet dere trenger,
+          dere prøver det gratis den første måneden uten forpliktelser.
         </p>
         <div className="mt-10 flex justify-center gap-4">
           <Link
