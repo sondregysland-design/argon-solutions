@@ -4,17 +4,18 @@ import { ProductCard } from "@/components/ProductCard";
 
 export const metadata: Metadata = {
   title: "Produkter | Argon Solutions",
-  description: "Se produktene vi har bygget for olje og gass-næringen.",
+  description: "Skreddersydde AI- og softwareløsninger for små og mellomstore bedrifter i olje og gass.",
 };
 
 export default function ProdukterPage() {
   return (
     <div className="py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h1 className="text-4xl font-bold text-text">Våre produkter</h1>
+        <h1 className="text-4xl font-bold text-text">Skreddersydde AI- og softwareløsninger</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
-          Vi bygger produkter som løser reelle utfordringer i olje og gass.
-          Her er noen av løsningene vi har utviklet.
+          Skreddersydde AI- og softwareløsninger for små og mellomstore bedrifter
+          i olje og gass. Vi skreddersyr verktøyet dere trenger, dere prøver det
+          gratis den første måneden uten forpliktelser.
         </p>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
