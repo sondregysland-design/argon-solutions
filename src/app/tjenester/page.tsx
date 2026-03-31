@@ -114,67 +114,54 @@ function IntegrationIllustration() {
   );
 }
 
-function ApiIllustration() {
+function ClaudeStartupIllustration() {
   return (
-    <div className="flex h-full min-h-[300px] flex-col rounded-xl border border-gray-200 bg-white p-0 font-mono text-sm shadow-lg">
-      {/* Header */}
-      <div className="flex items-center justify-between border-b border-gray-100 px-4 py-2.5">
-        <div className="flex items-center gap-2">
-          <div className="rounded bg-green-100 px-2 py-0.5 text-[11px] font-bold text-green-700">GET</div>
-          <span className="text-xs text-text-light">/api/v1/jobs</span>
+    <div className="flex h-full min-h-[300px] flex-col rounded-xl border border-gray-200 bg-[#1a1b26] p-0 font-mono text-sm shadow-lg">
+      {/* Title bar */}
+      <div className="flex items-center gap-2 border-b border-gray-700 px-4 py-2.5">
+        <div className="flex gap-1.5">
+          <div className="h-3 w-3 rounded-full bg-red-500/80" />
+          <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
+          <div className="h-3 w-3 rounded-full bg-green-500/80" />
         </div>
-        <div className="rounded-full bg-green-100 px-2.5 py-0.5 text-[10px] font-medium text-green-700">200 OK</div>
+        <span className="ml-2 text-xs text-gray-400">PowerShell — claude</span>
       </div>
-      {/* Response */}
-      <div className="flex-1 bg-gray-50 p-4 text-[12px]">
-        <div className="text-gray-400">{"{"}</div>
-        <div className="pl-4">
-          <span className="text-primary">&quot;status&quot;</span>
-          <span className="text-gray-400">: </span>
-          <span className="text-green-600">&quot;success&quot;</span>
-          <span className="text-gray-400">,</span>
+      {/* Terminal content */}
+      <div className="flex-1 space-y-4 p-5 text-[13px] leading-relaxed">
+        <div>
+          <span className="text-[#7aa2f7]">PS C:\Users\dev&gt;</span>{" "}
+          <span className="text-gray-300">claude</span>
         </div>
-        <div className="pl-4">
-          <span className="text-primary">&quot;data&quot;</span>
-          <span className="text-gray-400">: [{"{"}</span>
+        <div className="flex gap-6">
+          {/* Mascot */}
+          <div className="text-[11px] leading-[1.1]">
+            <div className="text-amber-600">{"  ╭──────╮"}</div>
+            <div className="text-amber-600">{"  │"}<span className="text-white">▪</span>{"  "}<span className="text-white">▪</span>{"│"}</div>
+            <div className="text-amber-600">{"  │  ──  │"}</div>
+            <div className="text-amber-600">{"  ╰┬────┬╯"}</div>
+            <div className="text-amber-600">{"   │    │"}</div>
+          </div>
+          {/* Version info */}
+          <div className="space-y-1">
+            <div className="text-lg font-bold text-gray-200">Claude Code <span className="text-gray-500">v2.1.86</span></div>
+            <div className="text-gray-400">Opus 4.6 (1M context) · Claude Max</div>
+            <div className="text-gray-500">~/project</div>
+          </div>
         </div>
-        <div className="pl-8">
-          <span className="text-primary">&quot;id&quot;</span>
-          <span className="text-gray-400">: </span>
-          <span className="text-amber-600">1042</span>
-          <span className="text-gray-400">,</span>
+        <div className="text-[#7aa2f7]">
+          ↑ Opus now defaults to 1M context · 5x more room
         </div>
-        <div className="pl-8">
-          <span className="text-primary">&quot;platform&quot;</span>
-          <span className="text-gray-400">: </span>
-          <span className="text-green-600">&quot;Gullfaks C&quot;</span>
-          <span className="text-gray-400">,</span>
+        <div className="mt-4 flex items-center gap-2">
+          <span className="text-gray-300">{">"}</span>
+          <div className="h-4 w-1.5 animate-pulse bg-gray-400" />
         </div>
-        <div className="pl-8">
-          <span className="text-primary">&quot;type&quot;</span>
-          <span className="text-gray-400">: </span>
-          <span className="text-green-600">&quot;vedlikehold&quot;</span>
-          <span className="text-gray-400">,</span>
-        </div>
-        <div className="pl-8">
-          <span className="text-primary">&quot;status&quot;</span>
-          <span className="text-gray-400">: </span>
-          <span className="text-green-600">&quot;aktiv&quot;</span>
-        </div>
-        <div className="pl-4 text-gray-400">{"}],"}</div>
-        <div className="pl-4">
-          <span className="text-primary">&quot;total&quot;</span>
-          <span className="text-gray-400">: </span>
-          <span className="text-amber-600">847</span>
-        </div>
-        <div className="text-gray-400">{"}"}</div>
-      </div>
-      {/* Footer */}
-      <div className="flex items-center justify-between border-t border-gray-100 px-4 py-2">
-        <span className="text-[10px] text-text-light">Response time: 42ms</span>
-        <div className="flex gap-1">
-          <div className="rounded bg-blue-100 px-1.5 py-0.5 text-[10px] text-primary">REST</div>
-          <div className="rounded bg-blue-100 px-1.5 py-0.5 text-[10px] text-primary">Auth</div>
+        {/* Status bar */}
+        <div className="mt-auto flex items-center gap-3 pt-4 text-[11px]">
+          <span className="text-gray-500">[Opus 4.6 (1M context)]</span>
+          <div className="h-1.5 flex-1 rounded-full bg-gray-700">
+            <div className="h-1.5 w-[3%] rounded-full bg-[#7aa2f7]" />
+          </div>
+          <span className="text-gray-500">0% context</span>
         </div>
       </div>
     </div>
@@ -220,7 +207,7 @@ const tjenester = [
 const illustrations = [
   <ClaudeCodeIllustration key="claude" />,
   <IntegrationIllustration key="integration" />,
-  <ClaudeCodeIllustration key="claude-training" />,
+  <ClaudeStartupIllustration key="claude-startup" />,
 ];
 
 export default function TjenesterPage() {
