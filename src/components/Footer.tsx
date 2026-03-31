@@ -24,7 +24,7 @@ export function Footer() {
             <h4 className="font-semibold text-text">Kontakt</h4>
             <ul className="mt-3 space-y-2 text-sm text-text-light">
               <li>post@argonsolutions.no</li>
-              <li>+47 XXX XX XXX</li>
+              <li>+47 901 20 714</li>
               <li>Stavanger, Norge</li>
             </ul>
           </div>
