@@ -1,7 +1,8 @@
 import { Hero } from "@/components/Hero";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ProductCard } from "@/components/ProductCard";
-import { products, miniProducts } from "@/lib/products";
+import { products, automations } from "@/lib/products";
+import { AutomationCard } from "@/components/AutomationCard";
 import Link from "next/link";
 
 const services = [
@@ -26,12 +27,12 @@ const services = [
     ),
   },
   {
-    title: "API-utvikling",
+    title: "AI-agenter",
     description:
-      "Robuste og dokumenterte API-er som knytter systemer sammen og muliggjør datadeling.",
+      "Intelligente agenter som automatiserer nettleseroppgaver, datainnhenting og repetitive prosesser.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-1.47 4.411a2.25 2.25 0 01-2.133 1.589H8.603a2.25 2.25 0 01-2.133-1.589L5 14.5m14 0H5" />
       </svg>
     ),
   },
@@ -87,18 +88,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mini-produkter */}
+      {/* Automatisering */}
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-center text-3xl font-bold text-text">
-            Mini-produkter
+            Automatisering
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Mindre verktøy mer for avbrekk.
+          <p className="mx-auto mt-3 max-w-2xl text-center text-text-light">
+            Spar tid med ferdige automatiseringsløsninger bygget for olje og
+            gass-næringen. Våre automatiseringer håndterer repetitive oppgaver
+            slik at teamet ditt kan fokusere på det som gir verdi.
           </p>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {miniProducts.map((product) => (
-              <ProductCard key={product.slug} {...product} />
+            {automations.map((a) => (
+              <AutomationCard key={a.slug} {...a} />
             ))}
           </div>
         </div>

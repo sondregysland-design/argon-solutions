@@ -63,51 +63,64 @@ function ClaudeCodeIllustration() {
   );
 }
 
-function IntegrationIllustration() {
+function AIAgentIllustration() {
   return (
     <div className="flex h-full min-h-[300px] items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 p-8">
-      <div className="w-full max-w-[280px] space-y-4">
-        {/* System boxes */}
-        <div className="flex items-center justify-between">
-          <div className="rounded-lg border border-blue-200 bg-white px-4 py-3 text-center shadow-sm">
-            <div className="text-xs font-medium text-primary">ERP</div>
-            <div className="text-[10px] text-text-light">SAP / Oracle</div>
-          </div>
-          <div className="flex-1 border-t-2 border-dashed border-primary-light/40" />
-          <div className="rounded-lg border border-blue-200 bg-white px-4 py-3 text-center shadow-sm">
-            <div className="text-xs font-medium text-primary">CRM</div>
-            <div className="text-[10px] text-text-light">Salesforce</div>
-          </div>
+      <div className="w-full max-w-[300px] space-y-3">
+        {/* Trigger */}
+        <div className="rounded-lg border border-blue-200 bg-white px-4 py-3 text-center shadow-sm">
+          <div className="text-xs font-medium text-primary">Oppgave</div>
+          <div className="text-[10px] text-text-light">&quot;Hent sertifikater fra leverandørportal&quot;</div>
         </div>
 
-        {/* Center hub */}
         <div className="flex justify-center">
-          <div className="relative">
-            <div className="absolute -top-3 left-1/2 h-3 w-0.5 -translate-x-1/2 bg-primary-light/40" />
-            <div className="rounded-xl border-2 border-primary bg-white px-6 py-4 text-center shadow-md">
-              <div className="text-xs font-bold text-primary">ARGON</div>
-              <div className="text-[10px] text-text-light">Integrasjon</div>
-              <div className="mt-1 flex justify-center gap-1">
-                <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#a6e3a1]" />
-                <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#a6e3a1] [animation-delay:0.2s]" />
-                <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#a6e3a1] [animation-delay:0.4s]" />
-              </div>
+          <div className="h-4 w-0.5 bg-primary-light/40" />
+        </div>
+
+        {/* Agent hub */}
+        <div className="flex justify-center">
+          <div className="rounded-xl border-2 border-primary bg-white px-5 py-4 text-center shadow-md">
+            <div className="flex items-center justify-center gap-2">
+              <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-1.47 4.411a2.25 2.25 0 01-2.133 1.589H8.603a2.25 2.25 0 01-2.133-1.589L5 14.5m14 0H5" />
+              </svg>
+              <div className="text-sm font-bold text-primary">AI Agent</div>
             </div>
-            <div className="absolute -bottom-3 left-1/2 h-3 w-0.5 -translate-x-1/2 bg-primary-light/40" />
+            <div className="mt-1 flex justify-center gap-1">
+              <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#a6e3a1]" />
+              <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#a6e3a1] [animation-delay:0.2s]" />
+              <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#a6e3a1] [animation-delay:0.4s]" />
+            </div>
           </div>
         </div>
 
-        {/* Bottom systems */}
-        <div className="flex items-center justify-between">
-          <div className="rounded-lg border border-blue-200 bg-white px-4 py-3 text-center shadow-sm">
-            <div className="text-xs font-medium text-primary">SCADA</div>
-            <div className="text-[10px] text-text-light">Prosessdata</div>
+        <div className="flex justify-center">
+          <div className="h-4 w-0.5 bg-primary-light/40" />
+        </div>
+
+        {/* Steps */}
+        <div className="space-y-2">
+          <div className="flex items-center gap-2 rounded-lg border border-green-200 bg-green-50 px-3 py-2">
+            <svg className="h-4 w-4 shrink-0 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="text-xs text-green-800">Åpnet nettleser, logget inn</span>
           </div>
-          <div className="flex-1 border-t-2 border-dashed border-primary-light/40" />
-          <div className="rounded-lg border border-blue-200 bg-white px-4 py-3 text-center shadow-sm">
-            <div className="text-xs font-medium text-primary">BI</div>
-            <div className="text-[10px] text-text-light">Rapportering</div>
+          <div className="flex items-center gap-2 rounded-lg border border-green-200 bg-green-50 px-3 py-2">
+            <svg className="h-4 w-4 shrink-0 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="text-xs text-green-800">47 leverandører behandlet</span>
           </div>
+          <div className="flex items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-3 py-2">
+            <div className="h-4 w-4 shrink-0 animate-spin rounded-full border-2 border-blue-300 border-t-blue-600" />
+            <span className="text-xs text-blue-800">Eksporterer rapport...</span>
+          </div>
+        </div>
+
+        {/* Time saved */}
+        <div className="rounded-lg bg-primary/5 px-4 py-2 text-center">
+          <span className="text-xs font-medium text-primary">3 min i stedet for 6 timer manuelt</span>
         </div>
       </div>
     </div>
@@ -181,14 +194,14 @@ const tjenester = [
     ],
   },
   {
-    title: "Systemintegrasjon",
+    title: "AI-agenter",
     description:
-      "Knytt eksisterende systemer sømløst sammen. Vi sørger for at data flyter fritt mellom plattformer, fjerner manuelle prosesser og reduserer feil.",
+      "Intelligente agenter som automatiserer nettleseroppgaver, datainnhenting og repetitive prosesser. Spar timer hver dag på manuelt arbeid.",
     features: [
-      "ERP- og SAP-integrasjon",
-      "Datamigrasjon mellom systemer",
-      "Automatiserte arbeidsflyter",
-      "Sanntidssynkronisering",
+      "Nettleserautomatisering",
+      "Automatisk datainnhenting",
+      "Skjemautfylling og rapportering",
+      "Integrasjon med eksisterende systemer",
     ],
   },
   {
@@ -206,7 +219,7 @@ const tjenester = [
 
 const illustrations = [
   <ClaudeCodeIllustration key="claude" />,
-  <IntegrationIllustration key="integration" />,
+  <AIAgentIllustration key="ai-agent" />,
   <div key="claude-screenshot" className="flex h-full min-h-[300px] items-center justify-center rounded-xl border border-gray-200 bg-[#1a1b26] p-4 shadow-lg">
     <img src="/products/claude-code-preview.png" alt="Claude Code terminal" className="rounded-lg" />
   </div>,

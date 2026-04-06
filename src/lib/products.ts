@@ -55,14 +55,52 @@ export const products: Product[] = [
   },
 ];
 
-export const miniProducts: Product[] = [
+export interface Automation {
+  slug: string;
+  title: string;
+  description: string;
+  features: string[];
+  icon: "document" | "shield" | "chart";
+}
+
+export const automations: Automation[] = [
   {
-    slug: "hms-spill",
-    title: "Argon HMS Spill",
+    slug: "pdf-word",
+    title: "PDF/Word-automatisering",
     description:
-      "Interaktivt HMS-spill for olje og gass. Perfekt som icebreaker i møter, workshops og opplæring. Test kunnskap om sikkerhet, prosedyrer og regelverk.",
-    demoUrl: "/hms-quiz",
-    tags: ["Opplæring", "HMS", "Icebreaker"],
-    image: "/products/hms-quiz-preview.svg",
+      "Automatisert kvalitetssikring og sammenligning av dokumenter i PDF og Word-format.",
+    features: [
+      "Kvalitetssikring av dokumentasjon",
+      "Automatisk dokumentsammenligning",
+      "Finn endringer mellom versjoner",
+      "Digitaliserer håndskrevne dokumenter",
+    ],
+    icon: "document",
+  },
+  {
+    slug: "hms-rapportering",
+    title: "HMS-rapportering",
+    description:
+      "Automatisert compliance-rapporter og HMS-dokumentasjon.",
+    features: [
+      "Automatisk datainnsamling",
+      "Compliance-sjekklister",
+      "Periodiske rapporter",
+      "Varsling ved avvik",
+    ],
+    icon: "shield",
+  },
+  {
+    slug: "intern-rapportering",
+    title: "Intern rapportering",
+    description:
+      "Samle og distribuer nøkkeltall automatisk på tvers av organisasjonen.",
+    features: [
+      "Automatisering av PowerPoint med nøkkeltall",
+      "Automatisk distribusjon",
+      "Tilpassbare rapportmaler",
+      "Eksport til Excel/PDF",
+    ],
+    icon: "chart",
   },
 ];
