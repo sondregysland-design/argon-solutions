@@ -9,3 +9,44 @@
   --color-text-light: #64748B;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Blog prose styling */
+.prose {
+  color: var(--color-text);
+  line-height: 1.8;
+}
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: var(--color-text);
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.prose h1 { font-size: 2rem; }
+.prose h2 { font-size: 1.5rem; }
+.prose h3 { font-size: 1.25rem; }
+.prose p {
+  margin-bottom: 1.25em;
+}
+.prose ul, .prose ol {
+  margin-bottom: 1.25em;
+  padding-left: 1.5em;
+}
+.prose ul { list-style-type: disc; }
+.prose ol { list-style-type: decimal; }
+.prose li {
+  margin-bottom: 0.375em;
+}
+.prose strong {
+  font-weight: 600;
+}
+.prose a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.prose a:hover {
+  color: var(--color-primary-dark);
+}
+.prose hr {
+  border-color: #e2e8f0;
+  margin: 2em 0;
+}
