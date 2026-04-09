@@ -16,10 +16,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPost(slug);
   if (!post) return {};
 
+  const title = `${post.title} — Argon Solutions`;
+
   return {
-    title: `${post.title} — Argon Solutions`,
+    title,
     description: post.description,
     keywords: post.keywords,
+    alternates: { canonical: `/blogg/${slug}` },
+    openGraph: {
+      title,
+      description: post.description,
+      url: `/blogg/${slug}`,
+      type: "article",
+      publishedTime: post.date,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: post.description,
+    },
   };
 }
 
@@ -28,8 +43,38 @@ export default async function BlogPostPage({ params }: Props) {
   const post = await getPost(slug);
   if (!post) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Argon Solutions",
+      url: "https://argonsolutions.no",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Argon Solutions",
+      url: "https://argonsolutions.no",
+      logo: { "@type": "ImageObject", url: "https://argonsolutions.no/favicon.svg" },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://argonsolutions.no/blogg/${slug}`,
+    },
+    keywords: post.keywords.join(", "),
+  };
+
   return (
     <article className="mx-auto max-w-3xl px-6 py-20">
+      <script
+        type="application/ld+json"
+        // Safe: jsonLd is built from our own markdown frontmatter, not user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Link
         href="/blogg"
         className="text-sm text-text-light hover:text-primary transition-colors"

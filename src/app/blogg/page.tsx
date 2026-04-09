@@ -2,10 +2,25 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 
+const title = "Blogg — Argon Solutions";
+const description =
+  "Artikler om AI, automatisering og digitalisering i olje og gass-industrien. Innsikt fra Argon Solutions.";
+
 export const metadata: Metadata = {
-  title: "Blogg — Argon Solutions",
-  description:
-    "Artikler om AI, automatisering og digitalisering i olje og gass-industrien. Innsikt fra Argon Solutions.",
+  title,
+  description,
+  alternates: { canonical: "/blogg" },
+  openGraph: {
+    title,
+    description,
+    url: "/blogg",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function BlogPage() {
