@@ -8,7 +8,6 @@ import { LogoFull } from "./Logo";
 const links = [
   { href: "/", label: "Hjem" },
   { href: "/tjenester", label: "Tjenester" },
-  { href: "/blogg", label: "Blogg" },
   { href: "/om-oss", label: "Om oss" },
   { href: "/kontakt", label: "Kontakt" },
 ];
