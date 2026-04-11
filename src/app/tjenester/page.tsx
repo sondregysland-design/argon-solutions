@@ -65,10 +65,10 @@ function ClaudeCodeIllustration() {
 
 function AIAgentIllustration() {
   return (
-    <div className="flex h-full min-h-[300px] items-center justify-center rounded-xl bg-gradient-to-br from-sand to-parchment p-8">
+    <div className="flex h-full min-h-[300px] items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 p-8">
       <div className="w-full max-w-[300px] space-y-3">
         {/* Trigger */}
-        <div className="rounded-lg border border-border-warm bg-white px-4 py-3 text-center shadow-sm">
+        <div className="rounded-lg border border-blue-200 bg-white px-4 py-3 text-center shadow-sm">
           <div className="text-xs font-medium text-primary">Oppgave</div>
           <div className="text-[10px] text-text-light">&quot;Hent sertifikater fra leverandørportal&quot;</div>
         </div>
@@ -112,9 +112,9 @@ function AIAgentIllustration() {
             </svg>
             <span className="text-xs text-green-800">47 leverandører behandlet</span>
           </div>
-          <div className="flex items-center gap-2 rounded-lg border border-border-warm bg-sand px-3 py-2">
-            <div className="h-4 w-4 shrink-0 animate-spin rounded-full border-2 border-border-warm border-t-primary" />
-            <span className="text-xs text-text">Eksporterer rapport...</span>
+          <div className="flex items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-3 py-2">
+            <div className="h-4 w-4 shrink-0 animate-spin rounded-full border-2 border-blue-300 border-t-blue-600" />
+            <span className="text-xs text-blue-800">Eksporterer rapport...</span>
           </div>
         </div>
 
@@ -229,7 +229,7 @@ export default function TjenesterPage() {
   return (
     <div className="py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">Våre tjenester</h1>
+        <h1 className="text-4xl font-bold text-text">Våre tjenester</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
           Vi leverer teknologiløsninger skreddersydd for energisektoren.
           Her er hva vi kan hjelpe med.
@@ -244,7 +244,7 @@ export default function TjenesterPage() {
               }`}
             >
               <div className="flex-1">
-                <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">{t.title}</h2>
+                <h2 className="text-2xl font-bold text-text">{t.title}</h2>
                 <p className="mt-3 text-text-light">{t.description}</p>
                 <ul className="mt-6 space-y-2">
                   {t.features.map((f) => (

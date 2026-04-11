@@ -24,14 +24,14 @@ export default function OmOssPage() {
   return (
     <div className="py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">Om Argon Solutions</h1>
+        <h1 className="text-4xl font-bold text-text">Om Argon Solutions</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
           To ingeniører fra olje og gass som bygger software for bransjen.
         </p>
 
         {/* Hvem vi er */}
         <div className="mt-16 rounded-xl bg-surface p-8 md:p-12">
-          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Hvem vi er</h2>
+          <h2 className="text-2xl font-bold text-text">Hvem vi er</h2>
           <p className="mt-4 text-text-light">
             Argon Solutions ble startet av to ingeniører med erfaring fra olje
             og gass-sektoren. Vi har sett på nært hold hvordan bransjen
@@ -48,10 +48,10 @@ export default function OmOssPage() {
 
         {/* Verdier */}
         <div className="mt-16">
-          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Hva vi står for</h2>
+          <h2 className="text-2xl font-bold text-text">Hva vi står for</h2>
           <div className="mt-8 grid gap-8 sm:grid-cols-3">
             {verdier.map((v) => (
-              <div key={v.title} className="rounded-xl border border-border-cream p-6">
+              <div key={v.title} className="rounded-xl border border-gray-100 p-6">
                 <h3 className="text-lg font-semibold text-primary">{v.title}</h3>
                 <p className="mt-2 text-sm text-text-light">{v.description}</p>
               </div>
@@ -61,7 +61,7 @@ export default function OmOssPage() {
 
         {/* Hvorfor Argon */}
         <div className="mt-16">
-          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Hvorfor Argon?</h2>
+          <h2 className="text-2xl font-bold text-text">Hvorfor Argon?</h2>
           <p className="mt-4 text-text-light">
             Argon er en edelgass. Stabil, pålitelig og essensiell i
             industrielle prosesser. Akkurat som gassen, leverer vi løsninger

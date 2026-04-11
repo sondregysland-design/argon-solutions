@@ -49,7 +49,7 @@ export function BookingCalendar({
       <div className="flex items-center justify-between mb-4">
         <button
           onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
-          className="p-2 rounded-lg hover:bg-sand transition-colors text-text-light hover:text-text"
+          className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-text-light hover:text-text"
           aria-label="Forrige måned"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,7 +61,7 @@ export function BookingCalendar({
         </h3>
         <button
           onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
-          className="p-2 rounded-lg hover:bg-sand transition-colors text-text-light hover:text-text"
+          className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-text-light hover:text-text"
           aria-label="Neste måned"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,10 +93,10 @@ export function BookingCalendar({
               onClick={() => onSelectDate(dateStr)}
               className={`
                 relative aspect-square flex items-center justify-center rounded-lg text-sm transition-all duration-150
-                ${!isCurrentMonth ? "text-text-muted/50" : ""}
-                ${isDisabled && isCurrentMonth ? "text-text-muted/50 cursor-not-allowed" : ""}
+                ${!isCurrentMonth ? "text-gray-300" : ""}
+                ${isDisabled && isCurrentMonth ? "text-gray-300 cursor-not-allowed" : ""}
                 ${!isDisabled && hasSlots && !isSelected ? "text-text hover:bg-primary-light/10 hover:text-primary cursor-pointer" : ""}
-                ${!isDisabled && !hasSlots ? "text-text-muted/50 cursor-not-allowed" : ""}
+                ${!isDisabled && !hasSlots ? "text-gray-300 cursor-not-allowed" : ""}
                 ${isSelected ? "bg-primary text-white shadow-sm font-semibold" : ""}
               `}
             >

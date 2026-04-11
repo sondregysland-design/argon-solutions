@@ -55,7 +55,7 @@ export function ContactForm() {
           id="name"
           name="name"
           required
-          className="mt-1 block w-full rounded-lg border border-border-warm px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          className="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           placeholder="Ditt navn"
         />
       </div>
@@ -68,7 +68,7 @@ export function ContactForm() {
           id="email"
           name="email"
           required
-          className="mt-1 block w-full rounded-lg border border-border-warm px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          className="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           placeholder="din@epost.no"
         />
       </div>
@@ -81,7 +81,7 @@ export function ContactForm() {
           name="message"
           rows={5}
           required
-          className="mt-1 block w-full rounded-lg border border-border-warm px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          className="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           placeholder="Fortell oss om prosjektet ditt..."
         />
       </div>

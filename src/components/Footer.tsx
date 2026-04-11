@@ -2,7 +2,7 @@ import { LogoFull } from "./Logo";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border-cream bg-ivory">
+    <footer className="border-t border-gray-100 bg-surface">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
@@ -30,7 +30,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-8 border-t border-border-warm pt-6 text-center text-xs text-text-muted">
+        <div className="mt-8 border-t border-gray-200 pt-6 text-center text-xs text-text-light">
           &copy; {new Date().getFullYear()} Argon Solutions. Alle rettigheter reservert.
         </div>
       </div>
