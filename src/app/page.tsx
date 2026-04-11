@@ -52,7 +52,7 @@ export default function Home() {
       {/* Tjenester */}
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-center text-3xl font-bold text-text">
+          <h2 className="text-center font-[family-name:var(--font-playfair)] text-3xl font-medium text-text">
             Hva vi tilbyr
           </h2>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -66,7 +66,7 @@ export default function Home() {
       {/* Produkter */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-center text-3xl font-bold text-text">
+          <h2 className="text-center font-[family-name:var(--font-playfair)] text-3xl font-medium text-text">
             Våre produkter
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
@@ -91,7 +91,7 @@ export default function Home() {
       {/* Automatisering */}
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-center text-3xl font-bold text-text">
+          <h2 className="text-center font-[family-name:var(--font-playfair)] text-3xl font-medium text-text">
             Automatisering
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-text-light">
@@ -112,25 +112,25 @@ export default function Home() {
         <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-12 px-6">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
-              <div className="text-4xl font-bold text-primary">{s.value}</div>
+              <div className="font-[family-name:var(--font-playfair)] text-4xl font-medium text-primary">{s.value}</div>
               <div className="mt-1 text-sm text-text-light">{s.label}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary py-16">
+      {/* CTA - Dark section for contrast */}
+      <section className="bg-primary-dark py-16">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-3xl font-bold text-white">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-medium text-white">
             Klar for å modernisere systemene?
           </h2>
-          <p className="mt-3 text-blue-100">
+          <p className="mt-3 text-blue-200">
             Ta kontakt for en uforpliktende samtale om hvordan vi kan hjelpe.
           </p>
           <Link
             href="/kontakt"
-            className="mt-8 inline-block rounded-lg bg-white px-8 py-3 text-sm font-semibold text-primary transition hover:bg-blue-50"
+            className="mt-8 inline-block rounded-xl bg-white px-8 py-3 text-sm font-semibold text-primary transition hover:bg-blue-50"
           >
             Ta kontakt
           </Link>

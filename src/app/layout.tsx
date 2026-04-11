@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["500"], variable: "--font-playfair" });
 
 const siteUrl = "https://argonsolutions.no";
 const siteName = "Argon Solutions";
@@ -84,7 +85,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.className} bg-white text-text antialiased`}>
+      <body className={`${inter.className} ${playfair.variable} bg-white text-text antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

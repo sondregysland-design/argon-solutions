@@ -229,7 +229,7 @@ export default function TjenesterPage() {
   return (
     <div className="py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h1 className="text-4xl font-bold text-text">Våre tjenester</h1>
+        <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">Våre tjenester</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
           Vi leverer teknologiløsninger skreddersydd for energisektoren.
           Her er hva vi kan hjelpe med.
@@ -244,7 +244,7 @@ export default function TjenesterPage() {
               }`}
             >
               <div className="flex-1">
-                <h2 className="text-2xl font-bold text-text">{t.title}</h2>
+                <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">{t.title}</h2>
                 <p className="mt-3 text-text-light">{t.description}</p>
                 <ul className="mt-6 space-y-2">
                   {t.features.map((f) => (

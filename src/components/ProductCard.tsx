@@ -3,7 +3,7 @@ import type { Product } from "@/lib/products";
 
 export function ProductCard({ title, description, demoUrl, tags, image }: Product) {
   return (
-    <div className="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition hover:shadow-md">
+    <div className="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-[0_0_0_1px_rgba(0,0,0,0.04)] transition hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
       <div className="relative aspect-video overflow-hidden bg-surface">
         <Image
           src={image}
@@ -15,7 +15,7 @@ export function ProductCard({ title, description, demoUrl, tags, image }: Produc
       </div>
       <div className="p-6">
         <h3 className="text-lg font-semibold text-text">{title}</h3>
-        <p className="mt-2 text-sm text-text-light">{description}</p>
+        <p className="mt-2 text-sm leading-relaxed text-text-light">{description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span key={tag} className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-primary">{tag}</span>

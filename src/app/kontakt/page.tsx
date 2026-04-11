@@ -11,7 +11,7 @@ export default function KontaktPage() {
   return (
     <div className="py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h1 className="text-4xl font-bold text-text">Kontakt oss</h1>
+        <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">Kontakt oss</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
           Har du et prosjekt eller en utfordring vi kan hjelpe med? Send oss en
           melding, så tar vi kontakt.
@@ -49,7 +49,7 @@ export default function KontaktPage() {
             <span className="text-xs font-semibold uppercase tracking-widest text-primary-light">Begrenset tilgjengelighet</span>
             <div className="h-px flex-1 bg-gradient-to-l from-primary/20 to-transparent" />
           </div>
-          <h2 className="text-3xl font-bold text-text mt-4">Book en konsultasjon</h2>
+          <h2 className="text-3xl font-[family-name:var(--font-playfair)] font-medium text-text mt-4">Book en konsultasjon</h2>
           <p className="mt-4 max-w-2xl text-text-light">
             Vi tilbyr et begrenset antall konsultasjoner hver uke. Velg en av de ledige tidene for en 30-minutters samtale.
           </p>
