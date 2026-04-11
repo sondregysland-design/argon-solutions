@@ -92,7 +92,7 @@ export function BookingSection() {
   }
 
   const inputClass =
-    "mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary";
+    "mt-1 block w-full rounded-lg border border-border-warm px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary";
 
   return (
     <div>
@@ -139,7 +139,7 @@ export function BookingSection() {
                     className={`px-4 py-3 rounded-lg text-sm font-medium transition-all duration-150 ${
                       selectedTime === time
                         ? "bg-primary text-white shadow-sm"
-                        : "bg-white border border-gray-200 text-text hover:border-primary-light hover:text-primary"
+                        : "bg-ivory border border-border-warm text-text hover:border-primary-light hover:text-primary"
                     }`}
                   >
                     {time}
@@ -192,7 +192,7 @@ export function BookingSection() {
         </div>
       </div>
 
-      <p className="text-xs text-gray-400 mt-6">
+      <p className="text-xs text-text-muted mt-6">
         Tidene oppdateres fortløpende. Booking må gjøres minst 2 dager i forveien.
       </p>
     </div>

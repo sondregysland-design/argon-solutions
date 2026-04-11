@@ -20,8 +20,8 @@ const icons: Record<Automation["icon"], React.ReactNode> = {
 
 export function AutomationCard({ title, description, features, icon }: Automation) {
   return (
-    <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6">
-      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-primary">
+    <div className="flex flex-col rounded-xl border border-border-cream bg-ivory p-6">
+      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-sand text-primary">
         {icons[icon]}
       </div>
       <h3 className="text-lg font-semibold text-text">{title}</h3>

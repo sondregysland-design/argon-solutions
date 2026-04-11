@@ -17,7 +17,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border-b border-border-cream bg-parchment/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/">
           <LogoFull />
@@ -56,7 +56,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-gray-100 px-6 py-4 md:hidden">
+        <div className="border-t border-border-cream px-6 py-4 md:hidden">
           {links.map((l) => (
             <Link
               key={l.href}
