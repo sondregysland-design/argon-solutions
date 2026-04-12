@@ -11,7 +11,7 @@ import Link from "next/link";
 const services = [
   {
     title: "Skreddersydd Software",
-    href: "https://argonsolutions.no",
+    expandable: "software" as const,
     description:
       "Utvikling av spesialtilpassede applikasjoner som løser deres unike utfordringer i energisektoren.",
     icon: (
@@ -22,7 +22,7 @@ const services = [
   },
   {
     title: "Systemintegrasjon",
-    expandable: true,
+    expandable: "integration" as const,
     description:
       "Sømløs kobling mellom eksisterende systemer. API-utvikling, dataflyt og automatisering.",
     icon: (
@@ -50,7 +50,7 @@ const stats = [
 ];
 
 export default function Home() {
-  const [showIntegration, setShowIntegration] = useState(false);
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
   return (
     <>
@@ -68,7 +68,11 @@ export default function Home() {
                 <button
                   key={s.title}
                   type="button"
-                  onClick={() => setShowIntegration(!showIntegration)}
+                  onClick={() =>
+                    setExpandedSection(
+                      expandedSection === s.expandable ? null : s.expandable
+                    )
+                  }
                   className="text-left"
                 >
                   <ServiceCard {...s} />
@@ -79,10 +83,69 @@ export default function Home() {
             )}
           </div>
 
+          {/* Expandable Skreddersydd Software section */}
+          <div
+            className={`mt-8 overflow-hidden transition-all duration-500 ease-in-out ${
+              expandedSection === "software" ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-12">
+              <div className="flex flex-col gap-8 md:flex-row md:items-start">
+                <div className="flex-1 space-y-4">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-medium text-text">
+                    Prosjektstyring for offshore
+                  </h3>
+                  <p className="text-text-light leading-relaxed">
+                    Vi bygger komplette webapplikasjoner tilpasset deres behov.
+                    Her er et eksempel — et prosjektstyringssystem med rollebasert
+                    tilgang, lagerstyring, AI-rapportgenerering og sanntids
+                    verkstedlogg.
+                  </p>
+                  <ul className="space-y-2 pt-2">
+                    {[
+                      "Rollebasert tilgang (leder & verksted)",
+                      "AI-genererte prosjektrapporter",
+                      "Lagerstyring med automatiske bestillinger",
+                      "Sanntids verkstedlogg og fremdrift",
+                    ].map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-sm text-text-light">
+                        <svg className="h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="pt-4">
+                    <Link
+                      href="/kontakt"
+                      className="inline-block rounded-xl bg-primary px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
+                    >
+                      Ta kontakt
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+                    <iframe
+                      src="https://project-dashboard-psi-gilt.vercel.app/login"
+                      title="Prosjektstyring — demo"
+                      className="h-[500px] w-full"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="mt-3 text-center text-xs text-text-light">
+                    Prøv live demo — velg en rolle og utforsk systemet
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Expandable Systemintegrasjon section */}
           <div
             className={`mt-8 overflow-hidden transition-all duration-500 ease-in-out ${
-              showIntegration ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
+              expandedSection === "integration" ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-12">
