@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Hero } from "@/components/Hero";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ProductCard } from "@/components/ProductCard";
@@ -8,6 +11,7 @@ import Link from "next/link";
 const services = [
   {
     title: "Skreddersydd Software",
+    href: "https://argonsolutions.no",
     description:
       "Utvikling av spesialtilpassede applikasjoner som løser deres unike utfordringer i energisektoren.",
     icon: (
@@ -18,6 +22,7 @@ const services = [
   },
   {
     title: "Systemintegrasjon",
+    expandable: true,
     description:
       "Sømløs kobling mellom eksisterende systemer. API-utvikling, dataflyt og automatisering.",
     icon: (
@@ -45,6 +50,8 @@ const stats = [
 ];
 
 export default function Home() {
+  const [showIntegration, setShowIntegration] = useState(false);
+
   return (
     <>
       <Hero />
@@ -56,9 +63,73 @@ export default function Home() {
             Hva vi tilbyr
           </h2>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <ServiceCard key={s.title} {...s} />
-            ))}
+            {services.map((s) =>
+              s.expandable ? (
+                <button
+                  key={s.title}
+                  type="button"
+                  onClick={() => setShowIntegration(!showIntegration)}
+                  className="text-left"
+                >
+                  <ServiceCard {...s} />
+                </button>
+              ) : (
+                <ServiceCard key={s.title} {...s} />
+              )
+            )}
+          </div>
+
+          {/* Expandable Systemintegrasjon section */}
+          <div
+            className={`mt-8 overflow-hidden transition-all duration-500 ease-in-out ${
+              showIntegration ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-12">
+              <div className="flex flex-col gap-8 md:flex-row md:items-center">
+                <div className="flex-1 space-y-4">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-medium text-text">
+                    AI-drevet systemintegrasjon
+                  </h3>
+                  <p className="text-text-light leading-relaxed">
+                    Vi kobler sammen eksisterende systemer og bygger skreddersydde
+                    integrasjoner som gjør at data flyter automatisk mellom plattformer.
+                    Diagrammet viser et eksempel der prosjektdata hentes fra databasen,
+                    forbedres av ChatGPT API, og genereres som en ferdig Word-rapport.
+                  </p>
+                  <ul className="space-y-2 pt-2">
+                    {[
+                      "API-utvikling og integrasjon",
+                      "AI-drevet rapportgenerering",
+                      "Automatisk dataflyt mellom systemer",
+                      "Kobling mot eksisterende databaser",
+                    ].map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-sm text-text-light">
+                        <svg className="h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="pt-4">
+                    <Link
+                      href="/kontakt"
+                      className="inline-block rounded-xl bg-primary px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
+                    >
+                      Ta kontakt
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <img
+                    src="/products/ai-report-system.png"
+                    alt="AI rapportgenerering — dataflyt fra database via API og ChatGPT til Word-dokument"
+                    className="w-full rounded-xl"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

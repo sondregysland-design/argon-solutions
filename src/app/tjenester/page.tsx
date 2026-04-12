@@ -183,6 +183,7 @@ function ClaudeStartupIllustration() {
 
 const tjenester = [
   {
+    id: "skreddersydd-software",
     title: "Skreddersydd Software",
     description:
       "Vi utvikler spesialtilpassede applikasjoner som løser deres unike utfordringer. Fra dashboards og overvåkningssystemer til komplett arbeidsflytstyring, vi bygger det dere trenger.",
@@ -194,6 +195,19 @@ const tjenester = [
     ],
   },
   {
+    id: "systemintegrasjon",
+    title: "Systemintegrasjon",
+    description:
+      "Vi kobler sammen eksisterende systemer og bygger skreddersydde integrasjoner som gjør at data flyter automatisk mellom plattformer. API-utvikling, AI-drevet rapportering og automatiserte arbeidsflyter.",
+    features: [
+      "API-utvikling og integrasjon",
+      "AI-drevet rapportgenerering",
+      "Automatisk dataflyt mellom systemer",
+      "Kobling mot eksisterende databaser",
+    ],
+  },
+  {
+    id: "ai-agenter",
     title: "AI-agenter",
     description:
       "Intelligente agenter som automatiserer nettleseroppgaver, datainnhenting og repetitive prosesser. Spar timer hver dag på manuelt arbeid.",
@@ -205,6 +219,7 @@ const tjenester = [
     ],
   },
   {
+    id: "claude-code",
     title: "Claude Code opplæring",
     description:
       "Lær å bruke Claude Code for å akselerere utviklingen. Vi tilbyr opplæring og workshops som gjør teamet deres mer produktive med AI-assistert koding.",
@@ -219,6 +234,13 @@ const tjenester = [
 
 const illustrations = [
   <ClaudeCodeIllustration key="claude" />,
+  <div key="systemintegrasjon" className="flex h-full min-h-[300px] items-center justify-center rounded-xl border border-gray-100 bg-white p-6 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
+    <img
+      src="/products/ai-report-system.png"
+      alt="AI rapportgenerering — dataflyt fra database via API og ChatGPT til Word-dokument"
+      className="w-full rounded-lg"
+    />
+  </div>,
   <AIAgentIllustration key="ai-agent" />,
   <div key="claude-screenshot" className="flex h-full min-h-[300px] items-center justify-center rounded-xl border border-gray-200 bg-[#1a1b26] p-4 shadow-lg">
     <img src="/products/claude-code-preview.png" alt="Claude Code terminal" className="rounded-lg" />
@@ -238,8 +260,9 @@ export default function TjenesterPage() {
         <div className="mt-16 space-y-16">
           {tjenester.map((t, i) => (
             <div
+              id={t.id}
               key={t.title}
-              className={`flex flex-col gap-8 md:flex-row ${
+              className={`scroll-mt-24 flex flex-col gap-8 md:flex-row ${
                 i % 2 === 1 ? "md:flex-row-reverse" : ""
               }`}
             >
