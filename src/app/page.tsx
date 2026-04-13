@@ -33,6 +33,7 @@ const services = [
   },
   {
     title: "AI-agenter",
+    expandable: "ai-agents" as const,
     description:
       "Intelligente agenter som automatiserer nettleseroppgaver, datainnhenting og repetitive prosesser.",
     icon: (
@@ -139,6 +140,18 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+
+              {/* Architecture diagram */}
+              <div className="mt-10">
+                <h4 className="mb-4 text-center font-[family-name:var(--font-playfair)] text-lg font-medium text-text">
+                  Systemarkitektur
+                </h4>
+                <img
+                  src="/products/dashboard-architecture.png"
+                  alt="Arkitekturdiagram — Project Dashboard med rollebasert tilgang, delt database, AI-rapportgenerering"
+                  className="mx-auto w-full max-w-2xl rounded-xl"
+                />
+              </div>
             </div>
           </div>
 
@@ -191,6 +204,83 @@ export default function Home() {
                     className="w-full rounded-xl"
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Expandable AI-agenter section */}
+          <div
+            className={`mt-8 overflow-hidden transition-all duration-500 ease-in-out ${
+              expandedSection === "ai-agents" ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-12">
+              <div className="flex flex-col gap-8 md:flex-row md:items-center">
+                <div className="flex-1 space-y-4">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-medium text-text">
+                    AI-agenter i aksjon
+                  </h3>
+                  <p className="text-text-light leading-relaxed">
+                    Se hvordan våre AI-agenter automatiserer nettleseroppgaver,
+                    datainnhenting og repetitive prosesser. Videoen viser en
+                    agent som jobber autonomt for å løse oppgaver.
+                  </p>
+                  <ul className="space-y-2 pt-2">
+                    {[
+                      "Nettleserautomatisering",
+                      "Automatisk datainnhenting",
+                      "Skjemautfylling og rapportering",
+                      "Integrasjon med eksisterende systemer",
+                    ].map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-sm text-text-light">
+                        <svg className="h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="pt-4">
+                    <Link
+                      href="/kontakt"
+                      className="inline-block rounded-xl bg-primary px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
+                    >
+                      Ta kontakt
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+                    <video
+                      src="/ai-agenter-demo.mp4"
+                      controls
+                      className="h-auto w-full"
+                      preload="metadata"
+                    >
+                      Nettleseren din støtter ikke videoavspilling.
+                    </video>
+                  </div>
+                  <p className="mt-3 text-center text-xs text-text-light">
+                    Se demo — AI-agent som automatiserer oppgaver
+                  </p>
+                </div>
+              </div>
+
+              {/* Architecture diagram */}
+              <div className="mt-10">
+                <h4 className="mb-4 text-center font-[family-name:var(--font-playfair)] text-lg font-medium text-text">
+                  Slik fungerer det
+                </h4>
+                <p className="mx-auto mb-6 max-w-2xl text-center text-sm text-text-light leading-relaxed">
+                  AI-agenten logger inn på dashboardet, henter data, navigerer til Kabal
+                  for å skrape oppdaterte datoer, oppdaterer systemet og genererer en
+                  ferdig rapport — helt automatisk, uten manuell innsats.
+                </p>
+                <img
+                  src="/products/ai-browser-automation.png"
+                  alt="AI Browser Automation — flytdiagram som viser AI-agent, dashboard, Kabal-scraping, læring og rapportgenerering"
+                  className="mx-auto w-full max-w-2xl rounded-xl"
+                />
               </div>
             </div>
           </div>
