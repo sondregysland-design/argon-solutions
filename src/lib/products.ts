@@ -9,22 +9,13 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    slug: "onboarding",
-    title: "Argon Onboarding (Employee Onboarding)",
+    slug: "prosjektstyring",
+    title: "Argon Prosjektstyring",
     description:
-      "Komplett onboarding-system for nye ansatte. Spor fremgang, kurs, sertifikater og generer CV automatisk.",
-    demoUrl: "https://argon-onboarding.vercel.app/admin",
-    tags: ["Next.js", "Prisma", "Onboarding"],
-    image: "/products/onboarding-preview.png",
-  },
-  {
-    slug: "dashboard",
-    title: "Argon Dashboard (Project Board)",
-    description:
-      "Prosjektstyringsdashboard med dataimport, sanntidssynkronisering og full oversikt over fremdrift og kontaktpersoner.",
-    demoUrl: "https://projectboard-delta.vercel.app/",
-    tags: ["Next.js", "Supabase", "Dashboard"],
-    image: "/products/dashboard-preview.svg",
+      "Prosjektstyring for offshore med rollebasert tilgang, ROV-systemsporing, prosedyrer, gjøremål og lagerstyring. Full oversikt over aktive prosjekter, status og frister.",
+    demoUrl: "https://project-dashboard-psi-gilt.vercel.app/login",
+    tags: ["Next.js", "Supabase", "Prosjektstyring"],
+    image: "/products/prosjektstyring-preview.png",
   },
   {
     slug: "crm",
@@ -34,6 +25,15 @@ export const products: Product[] = [
     demoUrl: "https://argon-crm-tan.vercel.app/",
     tags: ["Next.js", "Tailwind", "CRM"],
     image: "/products/crm-preview.png",
+  },
+  {
+    slug: "dashboard",
+    title: "Argon Dashboard (Project Board)",
+    description:
+      "Prosjektstyringsdashboard med dataimport, sanntidssynkronisering og full oversikt over fremdrift og kontaktpersoner.",
+    demoUrl: "https://projectboard-delta.vercel.app/",
+    tags: ["Next.js", "Supabase", "Dashboard"],
+    image: "/products/dashboard-preview.svg",
   },
   {
     slug: "docs",

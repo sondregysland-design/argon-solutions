@@ -12,7 +12,7 @@ export function ServiceCard({
   href?: string;
 }) {
   const content = (
-    <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-[0_0_0_1px_rgba(0,0,0,0.04)] transition hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
+    <div className="h-full rounded-xl border border-gray-100 bg-white p-6 shadow-[0_0_0_1px_rgba(0,0,0,0.04)] transition hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-primary">
         {icon}
       </div>
