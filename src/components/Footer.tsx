@@ -12,7 +12,7 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="font-semibold text-text">Sider</h4>
+            <h3 className="font-semibold text-text">Sider</h3>
             <ul className="mt-3 space-y-2 text-sm text-text-light">
               <li><a href="/" className="hover:text-primary">Hjem</a></li>
               <li><a href="/tjenester" className="hover:text-primary">Tjenester</a></li>
@@ -22,7 +22,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-text">Kontakt</h4>
+            <h3 className="font-semibold text-text">Kontakt</h3>
             <ul className="mt-3 space-y-2 text-sm text-text-light">
               <li>post@argonsolutions.no</li>
               <li>+47 901 20 714</li>

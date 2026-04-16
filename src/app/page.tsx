@@ -74,29 +74,25 @@ export default function Home() {
           <h2 className="text-center font-[family-name:var(--font-playfair)] text-3xl font-medium text-text">
             Hva vi tilbyr
           </h2>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((s) => (
-              <button
-                key={s.title}
-                type="button"
-                onClick={() =>
-                  setExpandedSection(
-                    expandedSection === s.expandable ? null : s.expandable
-                  )
-                }
-                className="text-left cursor-pointer"
-              >
-                <ServiceCard {...s} />
-              </button>
-            ))}
-          </div>
-
-          {/* Expandable Skreddersydd Software section */}
-          <div
-            className={`mt-8 overflow-hidden transition-all duration-500 ease-in-out ${
-              expandedSection === "software" ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
-            }`}
-          >
+          <div className="mt-12 grid gap-x-8 gap-y-0 sm:grid-cols-2 lg:grid-cols-4">
+            {/* Software card */}
+            <button
+              type="button"
+              onClick={() =>
+                setExpandedSection(
+                  expandedSection === "software" ? null : "software"
+                )
+              }
+              className="mb-8 text-left cursor-pointer sm:order-1"
+            >
+              <ServiceCard {...services[0]} isExpandable isExpanded={expandedSection === "software"} />
+            </button>
+            {/* Expandable Skreddersydd Software section */}
+            <div
+              className={`col-span-full sm:order-2 overflow-hidden transition-all duration-500 ease-in-out ${
+                expandedSection === "software" ? "max-h-[1200px] opacity-100 mb-8" : "max-h-0 opacity-0"
+              }`}
+            >
             <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-12">
               {/* Architecture diagram */}
               <div className="mb-10">
@@ -159,12 +155,24 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Expandable CRM & Salgsautomatisering section */}
-          <div
-            className={`mt-8 overflow-hidden transition-all duration-500 ease-in-out ${
-              expandedSection === "crm" ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"
-            }`}
-          >
+            {/* CRM card */}
+            <button
+              type="button"
+              onClick={() =>
+                setExpandedSection(
+                  expandedSection === "crm" ? null : "crm"
+                )
+              }
+              className="mb-8 text-left cursor-pointer sm:order-1"
+            >
+              <ServiceCard {...services[1]} isExpandable isExpanded={expandedSection === "crm"} />
+            </button>
+            {/* Expandable CRM & Salgsautomatisering section */}
+            <div
+              className={`col-span-full sm:order-2 overflow-hidden transition-all duration-500 ease-in-out ${
+                expandedSection === "crm" ? "max-h-[5000px] opacity-100 mb-8" : "max-h-0 opacity-0"
+              }`}
+            >
             <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-12">
               {/* Section intro */}
               <div className="mb-10 space-y-3">
@@ -322,12 +330,24 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Expandable Systemintegrasjon section */}
-          <div
-            className={`mt-8 overflow-hidden transition-all duration-500 ease-in-out ${
-              expandedSection === "integration" ? "max-h-[3000px] opacity-100" : "max-h-0 opacity-0"
-            }`}
-          >
+            {/* Integration card */}
+            <button
+              type="button"
+              onClick={() =>
+                setExpandedSection(
+                  expandedSection === "integration" ? null : "integration"
+                )
+              }
+              className="mb-8 text-left cursor-pointer sm:order-1"
+            >
+              <ServiceCard {...services[2]} isExpandable isExpanded={expandedSection === "integration"} />
+            </button>
+            {/* Expandable Systemintegrasjon section */}
+            <div
+              className={`col-span-full sm:order-2 overflow-hidden transition-all duration-500 ease-in-out ${
+                expandedSection === "integration" ? "max-h-[3000px] opacity-100 mb-8" : "max-h-0 opacity-0"
+              }`}
+            >
             <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-12">
               {/* Section intro */}
               <div className="mb-10 space-y-3">
@@ -428,12 +448,24 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Expandable AI-agenter section */}
-          <div
-            className={`mt-8 overflow-hidden transition-all duration-500 ease-in-out ${
-              expandedSection === "ai-agents" ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
-            }`}
-          >
+            {/* AI-agents card */}
+            <button
+              type="button"
+              onClick={() =>
+                setExpandedSection(
+                  expandedSection === "ai-agents" ? null : "ai-agents"
+                )
+              }
+              className="mb-8 text-left cursor-pointer sm:order-1"
+            >
+              <ServiceCard {...services[3]} isExpandable isExpanded={expandedSection === "ai-agents"} />
+            </button>
+            {/* Expandable AI-agenter section */}
+            <div
+              className={`col-span-full sm:order-2 overflow-hidden transition-all duration-500 ease-in-out ${
+                expandedSection === "ai-agents" ? "max-h-[1200px] opacity-100 mb-8" : "max-h-0 opacity-0"
+              }`}
+            >
             <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-12">
               {/* Architecture diagram */}
               <div className="mb-10">
@@ -504,6 +536,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </div>
         </div>
       </section>
 
@@ -516,7 +549,7 @@ export default function Home() {
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
             Praktiske kurs og skreddersydd rådgivning som gjør teamet ditt til eksperter i AI-drevet utvikling.
           </p>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2">
+          <div className="mt-12 grid gap-x-8 gap-y-0 sm:grid-cols-2">
             {/* Kurs Card */}
             <button
               type="button"
@@ -525,7 +558,7 @@ export default function Home() {
                   expandedSection === "claude-kurs" ? null : "claude-kurs"
                 )
               }
-              className="text-left cursor-pointer"
+              className="mb-8 text-left cursor-pointer sm:order-1"
             >
               <ServiceCard
                 icon={
@@ -535,37 +568,16 @@ export default function Home() {
                 }
                 title="Claude Code Kurs"
                 description="Praktiske workshops som tar teamet ditt fra nybegynner til ekspert. Fra grunnleggende bruk til avanserte AI-workflows."
+                isExpandable
+                isExpanded={expandedSection === "claude-kurs"}
               />
             </button>
-            {/* Consulting Card */}
-            <button
-              type="button"
-              onClick={() =>
-                setExpandedSection(
-                  expandedSection === "claude-consulting" ? null : "claude-consulting"
-                )
-              }
-              className="text-left cursor-pointer"
+            {/* Expandable Claude Code Kurs */}
+            <div
+              className={`col-span-full sm:order-2 overflow-hidden transition-all duration-500 ease-in-out ${
+                expandedSection === "claude-kurs" ? "max-h-[3000px] opacity-100 mb-8" : "max-h-0 opacity-0"
+              }`}
             >
-              <ServiceCard
-                icon={
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                }
-                title="Claude Code Consulting"
-                description="Vi implementerer Claude Code i bedriftens utviklingsprosess. Skreddersydde skills, integrasjoner og AI-agenter."
-              />
-            </button>
-          </div>
-
-          {/* Expandable Claude Code Kurs */}
-          <div
-            className={`mt-8 overflow-hidden transition-all duration-500 ease-in-out ${
-              expandedSection === "claude-kurs" ? "max-h-[3000px] opacity-100" : "max-h-0 opacity-0"
-            }`}
-          >
             <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-12">
               <div className="mb-10">
                 <img
@@ -688,12 +700,35 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Expandable Claude Code Consulting */}
-          <div
-            className={`mt-8 overflow-hidden transition-all duration-500 ease-in-out ${
-              expandedSection === "claude-consulting" ? "max-h-[3000px] opacity-100" : "max-h-0 opacity-0"
-            }`}
-          >
+            {/* Consulting Card */}
+            <button
+              type="button"
+              onClick={() =>
+                setExpandedSection(
+                  expandedSection === "claude-consulting" ? null : "claude-consulting"
+                )
+              }
+              className="mb-8 text-left cursor-pointer sm:order-1"
+            >
+              <ServiceCard
+                icon={
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                }
+                title="Claude Code Consulting"
+                description="Vi implementerer Claude Code i bedriftens utviklingsprosess. Skreddersydde skills, integrasjoner og AI-agenter."
+                isExpandable
+                isExpanded={expandedSection === "claude-consulting"}
+              />
+            </button>
+            {/* Expandable Claude Code Consulting */}
+            <div
+              className={`col-span-full sm:order-2 overflow-hidden transition-all duration-500 ease-in-out ${
+                expandedSection === "claude-consulting" ? "max-h-[3000px] opacity-100 mb-8" : "max-h-0 opacity-0"
+              }`}
+            >
             <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-12">
               <div className="mb-10">
                 <img
@@ -778,6 +813,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
