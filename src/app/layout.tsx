@@ -68,7 +68,7 @@ export default function RootLayout({
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+47-901-20-714",
+      telephone: "+47-452-09-979",
       email: "post@argonsolutions.no",
       contactType: "customer service",
       availableLanguage: ["Norwegian", "English"],

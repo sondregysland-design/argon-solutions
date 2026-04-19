@@ -27,7 +27,7 @@ export default function KontaktPage() {
             </div>
             <div>
               <h3 className="font-semibold text-text">Telefon</h3>
-              <p className="mt-1 text-text-light">+47 901 20 714</p>
+              <p className="mt-1 text-text-light">+47 452 09 979</p>
             </div>
             <div>
               <h3 className="font-semibold text-text">Lokasjon</h3>
