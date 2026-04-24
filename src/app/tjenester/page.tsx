@@ -320,7 +320,47 @@ const serviceJsonLd = {
   },
 };
 
-const allTjenesterJsonLd = [faqJsonLd, serviceJsonLd];
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "Slik kommer du i gang med skreddersydd software fra Argon Solutions",
+  description:
+    "Steg-for-steg prosess for å få utviklet skreddersydd software for olje- og gassindustrien med Argon Solutions.",
+  step: [
+    {
+      "@type": "HowToStep",
+      position: 1,
+      name: "Book en gratis konsultasjon",
+      text: "Kontakt Argon Solutions via kontaktskjemaet eller e-post post@argonsolutions.no for å diskutere ditt behov.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 2,
+      name: "Behovsanalyse og kravspesifikasjon",
+      text: "Vi kartlegger eksisterende systemer, arbeidsprosesser og smertepunkter for å definere løsningen.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 3,
+      name: "Utvikling med løpende demo",
+      text: "Vi bygger løsningen iterativt med ukentlige demoer slik at dere ser fremdriften og kan gi tilbakemelding.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 4,
+      name: "Testing og lansering",
+      text: "Grundig testing av funksjonalitet, sikkerhet og ytelse før produksjonslansering.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 5,
+      name: "Gratis første måned",
+      text: "Dere prøver løsningen gratis den første måneden uten forpliktelse. Vi justerer basert på tilbakemelding.",
+    },
+  ],
+};
+
+const allTjenesterJsonLd = [faqJsonLd, serviceJsonLd, howToJsonLd];
 
 export default function TjenesterPage() {
   return (
