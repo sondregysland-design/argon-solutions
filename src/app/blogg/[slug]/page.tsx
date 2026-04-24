@@ -16,15 +16,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPost(slug);
   if (!post) return {};
 
-  const title = `${post.title} — Argon Solutions`;
-
   return {
-    title,
+    title: post.title,
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical: `/blogg/${slug}` },
     openGraph: {
-      title,
+      title: post.title,
       description: post.description,
       url: `/blogg/${slug}`,
       type: "article",
@@ -32,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: post.title,
       description: post.description,
     },
   };

@@ -3,9 +3,17 @@ import { products, automations } from "@/lib/products";
 import { ProductCard } from "@/components/ProductCard";
 import { AutomationCard } from "@/components/AutomationCard";
 
+const description = "Skreddersydde AI- og softwareløsninger for små og mellomstore bedrifter i olje og gass.";
+
 export const metadata: Metadata = {
-  title: "Produkter | Argon Solutions",
-  description: "Skreddersydde AI- og softwareløsninger for små og mellomstore bedrifter i olje og gass.",
+  title: "Produkter",
+  description,
+  alternates: { canonical: "/produkter" },
+  openGraph: {
+    title: "Produkter",
+    description,
+    url: "/produkter",
+  },
 };
 
 export default function ProdukterPage() {

@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
 
+const description = "To ingeniører fra olje og gass som bygger software for bransjen.";
+
 export const metadata: Metadata = {
-  title: "Om oss — Argon Solutions",
-  description: "To ingeniører fra olje og gass som bygger software for bransjen.",
+  title: "Om oss",
+  description,
+  alternates: { canonical: "/om-oss" },
+  openGraph: {
+    title: "Om oss",
+    description,
+    url: "/om-oss",
+  },
 };
 
 const verdier = [

@@ -5,7 +5,7 @@ keywords: ["systemintegrasjon energisektoren", "systemintegrasjon olje og gass",
 date: 2026-04-09
 ---
 
-# Systemintegrasjon i Energisektoren: Hvordan Teknologi Revolusjonerer Olje og Gass i Norge
+## Systemintegrasjon i Energisektoren: Hvordan Teknologi Revolusjonerer Olje og Gass i Norge
 
 Eneregisektoren i Norge står overfor en digital transformasjon som krever sofistikerte løsninger for systemintegrasjon. Med komplekse operasjoner som spenner fra offshore-plattformer til raffinering og distribusjon, er behovet for sømløs integrasjon av systemer større enn noen gang.
 

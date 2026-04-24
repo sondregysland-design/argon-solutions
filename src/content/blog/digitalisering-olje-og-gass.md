@@ -5,7 +5,7 @@ keywords: ["digitalisering olje og gass", "olje og gass Norge", "AI-l\u00f8sning
 date: 2026-04-09
 ---
 
-# Digitalisering olje og gass: Hvordan Norge leder an i transformasjonen
+## Digitalisering olje og gass: Hvordan Norge leder an i transformasjonen
 
 Digitalisering olje og gass har blitt en kritisk faktor for å sikre Norges posisjon som en ledende energinasjon. Med økende krav til effektivitet, bærekraft og sikkerhet, må norske olje- og gasselskaper omfavne teknologiske løsninger som kan revolusjonere deres daglige drift.
 

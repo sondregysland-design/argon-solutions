@@ -2,9 +2,17 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { BookingSection } from "@/components/BookingSection";
 
+const description = "Ta kontakt med Argon Solutions for en uforpliktende samtale.";
+
 export const metadata: Metadata = {
-  title: "Kontakt — Argon Solutions",
-  description: "Ta kontakt med Argon Solutions for en uforpliktende samtale.",
+  title: "Kontakt",
+  description,
+  alternates: { canonical: "/kontakt" },
+  openGraph: {
+    title: "Kontakt",
+    description,
+    url: "/kontakt",
+  },
 };
 
 export default function KontaktPage() {

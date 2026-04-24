@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200, height=630">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0a0f1e;
+    color: #f0f2f5;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Subtle grid pattern */
+  .grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(99, 140, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 140, 255, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 100%);
+  }
+
+  /* Gradient orb top-right */
+  .orb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+  }
+  .orb-1 {
+    top: -200px;
+    right: -100px;
+    background: radial-gradient(circle, #3b6ef6, #1a3a8a);
+  }
+  .orb-2 {
+    bottom: -250px;
+    left: -150px;
+    background: radial-gradient(circle, #0e7490, #064e5e);
+    opacity: 0.10;
+  }
+
+  /* Accent line */
+  .accent-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a3a8a, #3b6ef6, #06b6d4, #1a3a8a);
+  }
+
+  /* Content layout */
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 80px 90px;
+  }
+
+  /* Logo / Company name */
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .logo-mark {
+    width: 56px;
+    height: 56px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-mark svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .company-name {
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Tagline */
+  .tagline {
+    font-size: 26px;
+    font-weight: 400;
+    color: #94a3b8;
+    letter-spacing: 0.2px;
+    margin-bottom: 48px;
+    line-height: 1.4;
+  }
+
+  /* Divider */
+  .divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, #3b6ef6, transparent);
+    margin-bottom: 28px;
+  }
+
+  /* URL */
+  .url {
+    font-size: 18px;
+    font-weight: 600;
+    color: #64748b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  /* Decorative corner elements */
+  .corner-decoration {
+    position: absolute;
+    bottom: 60px;
+    right: 80px;
+    display: flex;
+    gap: 8px;
+    opacity: 0.25;
+  }
+  .corner-decoration .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #3b6ef6;
+  }
+  .corner-decoration .dot:nth-child(2) { opacity: 0.6; }
+  .corner-decoration .dot:nth-child(3) { opacity: 0.3; }
+
+  /* Geometric accent lines */
+  .geo-lines {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 300px;
+    opacity: 0.08;
+  }
+</style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="accent-line"></div>
+
+  <!-- Geometric accent on right side -->
+  <svg class="geo-lines" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="0" x2="200" y2="150" stroke="#3b6ef6" stroke-width="1"/>
+    <line x1="0" y1="40" x2="200" y2="190" stroke="#3b6ef6" stroke-width="1"/>
+    <line x1="0" y1="80" x2="200" y2="230" stroke="#3b6ef6" stroke-width="1"/>
+    <line x1="0" y1="120" x2="200" y2="270" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="0" y1="160" x2="200" y2="300" stroke="#06b6d4" stroke-width="0.5"/>
+    <circle cx="100" cy="150" r="40" stroke="#3b6ef6" stroke-width="0.5"/>
+    <circle cx="100" cy="150" r="80" stroke="#3b6ef6" stroke-width="0.3"/>
+  </svg>
+
+  <div class="content">
+    <div class="logo-row">
+      <!-- Stylized A mark -->
+      <div class="logo-mark">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="aGrad" x1="0" y1="0" x2="56" y2="56">
+              <stop offset="0%" stop-color="#3b6ef6"/>
+              <stop offset="100%" stop-color="#06b6d4"/>
+            </linearGradient>
+          </defs>
+          <path d="M28 4L6 48h12l4-9h16l4 9h12L28 4zm0 16l6 14H22l6-14z" fill="url(#aGrad)"/>
+        </svg>
+      </div>
+      <span class="company-name">Argon Solutions</span>
+    </div>
+    <p class="tagline">Softwareløsninger for energisektoren</p>
+    <div class="divider"></div>
+    <span class="url">argonsolutions.no</span>
+  </div>
+
+  <div class="corner-decoration">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</body>
+</html>

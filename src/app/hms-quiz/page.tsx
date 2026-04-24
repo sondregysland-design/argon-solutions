@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 
+const description =
+  "Interaktivt HMS-spill for olje og gass. Test kunnskap om sikkerhet, prosedyrer og regelverk.";
+
 export const metadata: Metadata = {
-  title: "HMS Spill — Argon Solutions",
-  description:
-    "Interaktivt HMS-spill for olje og gass. Test kunnskap om sikkerhet, prosedyrer og regelverk.",
+  title: "HMS Spill",
+  description,
+  alternates: { canonical: "/hms-quiz" },
+  openGraph: {
+    title: "HMS Spill",
+    description,
+    url: "/hms-quiz",
+  },
 };
 
 export default function HmsQuizPage() {

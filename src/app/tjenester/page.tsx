@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
 
+const description = "Software, systemintegrasjon og API-utvikling for olje og gass.";
+
 export const metadata: Metadata = {
-  title: "Tjenester — Argon Solutions",
-  description: "Software, systemintegrasjon og API-utvikling for olje og gass.",
+  title: "Tjenester",
+  description,
+  alternates: { canonical: "/tjenester" },
+  openGraph: {
+    title: "Tjenester",
+    description,
+    url: "/tjenester",
+  },
 };
 
 function ClaudeCodeIllustration() {
