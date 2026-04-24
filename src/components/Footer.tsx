@@ -22,6 +22,7 @@ export function Footer() {
               <li><a href="/referanser" className="hover:text-primary">Referanser</a></li>
               <li><a href="/blogg" className="hover:text-primary">Blogg</a></li>
               <li><a href="/om-oss" className="hover:text-primary">Om oss</a></li>
+              <li><a href="/faq" className="hover:text-primary">FAQ</a></li>
               <li><a href="/kontakt" className="hover:text-primary">Kontakt</a></li>
             </ul>
           </div>
