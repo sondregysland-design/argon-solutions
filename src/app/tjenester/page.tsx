@@ -294,12 +294,40 @@ const faqJsonLd = {
   })),
 };
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Custom Software Development",
+  provider: {
+    "@type": "Organization",
+    "@id": "https://argonsolutions.no/#organization",
+    name: "Argon Solutions",
+  },
+  areaServed: { "@type": "Country", name: "Norway" },
+  description:
+    "Argon Solutions leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge.",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Tjenester",
+    itemListElement: tjenester.map((t) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: t.title,
+        description: t.description,
+      },
+    })),
+  },
+};
+
+const allTjenesterJsonLd = [faqJsonLd, serviceJsonLd];
+
 export default function TjenesterPage() {
   return (
     <div className="py-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(allTjenesterJsonLd) }}
       />
       <div className="mx-auto max-w-6xl px-6">
         <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">Våre tjenester</h1>
