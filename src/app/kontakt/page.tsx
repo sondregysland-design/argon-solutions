@@ -20,10 +20,11 @@ export default function KontaktPage() {
   return (
     <div className="py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">Kontakt oss</h1>
+        <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">Kontakt Argon Solutions</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
-          Har du et prosjekt eller en utfordring vi kan hjelpe med? Send oss en
-          melding, så tar vi kontakt.
+          Argon Solutions bygger skreddersydd software, CRM-systemer og AI-agenter
+          for olje- og gassindustrien i Norge. Har du et prosjekt eller en
+          utfordring vi kan hjelpe med? Send oss en melding, så tar vi kontakt.
         </p>
 
         <div className="mt-12 grid gap-12 md:grid-cols-2">
@@ -40,7 +41,14 @@ export default function KontaktPage() {
             </div>
             <div>
               <h3 className="font-semibold text-text">Lokasjon</h3>
-              <p className="mt-1 text-text-light">Stavanger, Norge</p>
+              <p className="mt-1 text-text-light">Stavanger, Rogaland, Norge</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-text">Sosiale medier</h3>
+              <div className="mt-1 space-y-1">
+                <a href="https://www.instagram.com/argonsolutions/" target="_blank" rel="noopener noreferrer" className="block text-text-light hover:text-primary transition-colors">Instagram: @argonsolutions</a>
+                <a href="https://www.linkedin.com/company/argon-solutions-no/" target="_blank" rel="noopener noreferrer" className="block text-text-light hover:text-primary transition-colors">LinkedIn: Argon Solutions</a>
+              </div>
             </div>
             <div className="rounded-xl bg-surface p-6">
               <h3 className="font-semibold text-text">Responstid</h3>
