@@ -48,11 +48,19 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.description,
     datePublished: post.date,
     dateModified: post.date,
-    author: {
-      "@type": "Organization",
-      name: "Argon Solutions",
-      url: "https://argonsolutions.no",
-    },
+    author: [
+      {
+        "@type": "Person",
+        name: "Sondre Gysland",
+        jobTitle: "Grunder, Argon Solutions",
+        url: "https://www.linkedin.com/company/argon-solutions-no/",
+      },
+      {
+        "@type": "Organization",
+        name: "Argon Solutions",
+        url: "https://argonsolutions.no",
+      },
+    ],
     publisher: {
       "@type": "Organization",
       name: "Argon Solutions",
