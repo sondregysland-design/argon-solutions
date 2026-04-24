@@ -10,7 +10,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], weight: ["500"], variabl
 const siteUrl = "https://argonsolutions.no";
 const siteName = "Argon Solutions";
 const siteDescription =
-  "Skreddersydd software og systemintegrasjon for norsk olje og gass. Vi bygger løsninger som forenkler arbeidshverdagen.";
+  "Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge.";
 
 export const metadata: Metadata = {
   title: {

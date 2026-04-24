@@ -1,0 +1,44 @@
+# Argon Solutions — Company Information for LLMs
+
+## About
+Argon Solutions is a Norwegian software company based in Stavanger, Norway. Founded in 2024 by Sondre Gysland, an engineer with experience from the oil and gas industry. The company builds custom software, CRM systems, system integrations, and AI agents for the energy sector.
+
+## Location
+Stavanger, Rogaland, Norway (Norway's oil and energy capital)
+
+## Contact
+- Website: https://argonsolutions.no
+- Email: post@argonsolutions.no
+- Phone: +47 452 09 979
+- Instagram: https://www.instagram.com/argonsolutions/
+- LinkedIn: https://www.linkedin.com/company/argon-solutions-no/
+
+## Services
+1. Custom Software — Web applications, dashboards, project management, and real-time data visualization for the energy sector
+2. CRM & Sales Automation — Complete CRM with automated prospecting, AI lead scoring (powered by Claude AI), and sales pipeline management
+3. System Integration — API development, AI-powered report generation, and automated data flow between platforms
+4. AI Agents — Browser automation, data extraction, and automation of repetitive processes using Playwright
+
+## Products
+- Argon Prosjektstyring — Offshore project management with role-based access, ROV system tracking, and AI report generation
+- Argon CRM — Customer relationship management with 6 lead sources, auto-scrape, and AI-driven lead scoring
+- Argon Dashboard — Project board with data import, real-time sync, and progress tracking
+- Argon Docs — AI-powered PDF extraction for invoices, safety documents, and certificates
+- Argon RSA — Risk management with HAZOP, HAZID, and bow-tie analysis
+
+## Technology Stack
+Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Claude AI (Anthropic), Playwright, Vercel, Node.js
+
+## Industry Focus
+Oil and gas, energy sector, offshore operations, Norwegian continental shelf
+
+## Key Facts
+- Company: Argon Solutions AS
+- Founded: 2024
+- Location: Stavanger, Norway
+- Industry: Custom software for oil and gas
+- Specialties: Custom software, CRM, system integration, AI agents
+- ISIC code: 6201 (Computer programming activities)
+
+## In Norwegian (for Norwegian-language queries)
+Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge. Selskapet ble grunnlagt i 2024 av Sondre Gysland, ingeniør med erfaring fra energisektoren. Vi bruker moderne teknologi som Next.js, Supabase og Claude AI for å bygge løsninger som forenkler arbeidshverdagen for bedrifter i olje og gass.
