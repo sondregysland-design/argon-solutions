@@ -18,6 +18,8 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-text-light">
               <li><a href="/" className="hover:text-primary">Hjem</a></li>
               <li><a href="/tjenester" className="hover:text-primary">Tjenester</a></li>
+              <li><a href="/produkter" className="hover:text-primary">Produkter</a></li>
+              <li><a href="/referanser" className="hover:text-primary">Referanser</a></li>
               <li><a href="/blogg" className="hover:text-primary">Blogg</a></li>
               <li><a href="/om-oss" className="hover:text-primary">Om oss</a></li>
               <li><a href="/kontakt" className="hover:text-primary">Kontakt</a></li>
