@@ -119,8 +119,9 @@ export default function RootLayout({
       { "@type": "ListItem", position: 2, name: "Tjenester", item: `${siteUrl}/tjenester` },
       { "@type": "ListItem", position: 3, name: "Produkter", item: `${siteUrl}/produkter` },
       { "@type": "ListItem", position: 4, name: "Blogg", item: `${siteUrl}/blogg` },
-      { "@type": "ListItem", position: 5, name: "Om oss", item: `${siteUrl}/om-oss` },
-      { "@type": "ListItem", position: 6, name: "Kontakt", item: `${siteUrl}/kontakt` },
+      { "@type": "ListItem", position: 5, name: "Referanser", item: `${siteUrl}/referanser` },
+      { "@type": "ListItem", position: 6, name: "Om oss", item: `${siteUrl}/om-oss` },
+      { "@type": "ListItem", position: 7, name: "Kontakt", item: `${siteUrl}/kontakt` },
     ],
   };
 

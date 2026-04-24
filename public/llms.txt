@@ -32,6 +32,14 @@ Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Claude AI (Anthr
 ## Industry Focus
 Oil and gas, energy sector, offshore operations, Norwegian continental shelf
 
+## Case Studies and Project References
+Argon Solutions has delivered multiple projects for the Norwegian oil and gas industry:
+1. Offshore Project Management with ROV Tracking — Full project management platform with role-based access, real-time status, and ROV system tracking modules. Built with Next.js and Supabase.
+2. CRM and Sales Automation for Energy Sector — Complete CRM with automated prospecting from 6 lead sources, AI-driven lead scoring via Claude AI, and PandaDoc integration for proposals.
+3. AI-Powered Document Processing (PDF Intelligence) — Uses Claude AI to extract structured data from PDFs (invoices, safety documents, certificates) in seconds.
+4. Risk Management with HAZOP and Bow-Tie Analysis — Intuitive web application for risk management with HAZOP, HAZID, and bow-tie analysis support.
+5. Browser Automation for Certificate Management — AI agent using Playwright that reduced 6 hours of manual portal work to 3 minutes per week, processing 47 suppliers automatically.
+
 ## Key Facts
 - Company: Argon Solutions AS
 - Founded: 2024

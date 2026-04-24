@@ -59,7 +59,8 @@ export default function OmOssPage() {
           <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Hvem vi er</h2>
           <p className="mt-4 text-text-light">
             Argon Solutions ble grunnlagt i 2024 av Sondre Gysland, ingeniør
-            med erfaring fra olje- og gassindustrien i Norge. Vi har sett på
+            med erfaring fra olje- og gassindustrien på norsk kontinentalsokkel. Med bakgrunn
+            fra offshore prosjektstyring, subsea-operasjoner og ROV-systemer har vi sett på
             nært hold hvordan bransjen sliter med utdaterte systemer, manuelle
             prosesser og verktøy som ikke snakker sammen.
           </p>
@@ -67,7 +68,9 @@ export default function OmOssPage() {
             I stedet for å klage over det, bestemte vi oss for å fikse det.
             Vi kombinerer ingeniørbakgrunnen vår med moderne teknologi som
             AI-agenter, automatisering og skreddersydd software for å
-            gjøre hverdagen enklere for selskaper i energisektoren.
+            gjøre hverdagen enklere for selskaper i energisektoren. Vi har
+            levert prosjekter innen prosjektstyring, CRM, AI-dokumentbehandling,
+            risikostyring og nettleserautomatisering for selskaper i olje og gass.
           </p>
         </div>
 
