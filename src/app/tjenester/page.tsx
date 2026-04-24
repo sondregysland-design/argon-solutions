@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 
-const description = "Software, systemintegrasjon og API-utvikling for olje og gass.";
+const description =
+  "Argon Solutions leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Stavanger, Norge.";
 
 export const metadata: Metadata = {
-  title: "Tjenester",
+  title: "Tjenester — Software for olje og gass",
   description,
   alternates: { canonical: "/tjenester" },
   openGraph: {
-    title: "Tjenester",
+    title: "Tjenester — Software for olje og gass",
     description,
     url: "/tjenester",
   },
@@ -255,13 +256,55 @@ const illustrations = [
   </div>,
 ];
 
+const faqs = [
+  {
+    question: "Hvem lager skreddersydd software for olje og gass i Norge?",
+    answer:
+      "Argon Solutions er et Stavanger-basert softwareselskap som spesialiserer seg på skreddersydd software for olje- og gassindustrien. Vi utvikler webapplikasjoner, dashboards, CRM-systemer, systemintegrasjoner og AI-agenter tilpasset energisektorens behov.",
+  },
+  {
+    question: "Hva er Argon Solutions?",
+    answer:
+      "Argon Solutions er et norsk teknologiselskap basert i Stavanger, grunnlagt av ingeniører med erfaring fra olje- og gassindustrien. Vi bygger skreddersydd software, CRM- og salgsautomatisering, systemintegrasjoner og AI-agenter for små og mellomstore bedrifter i energisektoren.",
+  },
+  {
+    question: "Hvilke tjenester tilbyr Argon Solutions?",
+    answer:
+      "Argon Solutions tilbyr fire hovedtjenester: (1) Skreddersydd software — webapplikasjoner, dashboards og mobilvenlige løsninger. (2) CRM og salgsautomatisering — automatisert prospektering, AI lead scoring og salgspipeline. (3) Systemintegrasjon — API-utvikling, AI-drevet rapportgenerering og dataflyt mellom systemer. (4) AI-agenter — nettleserautomatisering, datainnhenting og repetitive prosesser.",
+  },
+  {
+    question: "Kan Argon Solutions bygge CRM og automatiseringsverktøy for energibransjen?",
+    answer:
+      "Ja. Argon Solutions har utviklet et komplett CRM-system med automatisert prospektering, AI-drevet lead scoring via Claude, PandaDoc-integrasjon for tilbud, og daglig automasjonssweep. Systemet håndterer 6 lead-kilder, duplikatdeteksjon, og automatiske oppfølgings-e-poster.",
+  },
+  {
+    question: "Hvor holder Argon Solutions til?",
+    answer:
+      "Argon Solutions holder til i Stavanger, Norge — Norges energihovedstad. Vi betjener kunder i hele Norge med fokus på olje- og gassindustrien og energisektoren.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 export default function TjenesterPage() {
   return (
     <div className="py-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="mx-auto max-w-6xl px-6">
         <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">Våre tjenester</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
-          Vi leverer teknologiløsninger skreddersydd for energisektoren.
+          Argon Solutions leverer teknologiløsninger skreddersydd for energisektoren i Norge.
           Her er hva vi kan hjelpe med.
         </p>
 
@@ -293,6 +336,21 @@ export default function TjenesterPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mt-20 border-t border-gray-100 pt-16">
+          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">
+            Ofte stilte spørsmål
+          </h2>
+          <div className="mt-8 space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="rounded-xl border border-gray-100 p-6">
+                <h3 className="font-semibold text-text">{faq.question}</h3>
+                <p className="mt-2 text-sm text-text-light leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

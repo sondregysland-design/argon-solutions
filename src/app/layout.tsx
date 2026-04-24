@@ -56,15 +56,32 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "LocalBusiness"],
+    "@id": `${siteUrl}/#organization`,
     name: siteName,
+    legalName: "Argon Solutions AS",
     url: siteUrl,
     logo: `${siteUrl}/favicon.svg`,
-    description: siteDescription,
+    image: `${siteUrl}/og-image.png`,
+    description:
+      "Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge.",
+    foundingDate: "2024",
+    founder: [
+      { "@type": "Person", name: "Sondre Gysland", jobTitle: "Grunder" },
+    ],
+    numberOfEmployees: { "@type": "QuantitativeValue", value: 2 },
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Stavanger",
       addressLocality: "Stavanger",
+      addressRegion: "Rogaland",
+      postalCode: "4000",
       addressCountry: "NO",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 58.97,
+      longitude: 5.73,
     },
     contactPoint: {
       "@type": "ContactPoint",
@@ -73,7 +90,25 @@ export default function RootLayout({
       contactType: "customer service",
       availableLanguage: ["Norwegian", "English"],
     },
-    sameAs: ["https://www.instagram.com/argonsolutions/"],
+    sameAs: [
+      "https://www.instagram.com/argonsolutions/",
+      "https://www.linkedin.com/company/argon-solutions-no/",
+    ],
+    knowsAbout: [
+      "Skreddersydd software for olje og gass",
+      "CRM-systemer for energisektoren",
+      "Systemintegrasjon og API-utvikling",
+      "AI-agenter og nettleserautomatisering",
+      "Digitalisering av olje- og gassindustrien",
+      "Claude Code opplæring og workshops",
+    ],
+    areaServed: {
+      "@type": "Country",
+      name: "Norway",
+    },
+    priceRange: "$$",
+    isicV4: "6201",
+    naics: "541511",
   };
 
   return (
