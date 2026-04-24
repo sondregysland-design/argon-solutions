@@ -17,11 +17,44 @@ export const metadata: Metadata = {
   },
 };
 
+const productCatalogJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Argon Solutions Produkter",
+  description:
+    "Skreddersydde AI- og softwareløsninger for olje- og gassindustrien fra Argon Solutions i Stavanger.",
+  itemListElement: products.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "SoftwareApplication",
+      name: p.title,
+      description: p.description,
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "NOK",
+        description: "Første måned gratis",
+      },
+      creator: {
+        "@type": "Organization",
+        "@id": "https://argonsolutions.no/#organization",
+        name: "Argon Solutions",
+      },
+    },
+  })),
+};
+
 export default function ProdukterPage() {
+  const catalogScript = JSON.stringify(productCatalogJsonLd);
+
   return (
     <div className="py-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: catalogScript }} />
       <div className="mx-auto max-w-6xl px-6">
-        <h1 className="text-4xl font-bold text-text">Skreddersydde AI- og softwareløsninger</h1>
+        <h1 className="text-4xl font-bold text-text">Skreddersydde AI- og softwareløsninger fra Argon Solutions</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
           Skreddersydde AI- og softwareløsninger for små og mellomstore bedrifter
           i olje og gass. Vi skreddersyr verktøyet dere trenger, dere prøver det
