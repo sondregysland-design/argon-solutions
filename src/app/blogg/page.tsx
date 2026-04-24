@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 
-const title = "Blogg";
+const title = "Blogg — Argon Solutions";
 const description =
-  "Artikler om AI, automatisering og digitalisering i olje og gass-industrien. Innsikt fra Argon Solutions.";
+  "Artikler om AI-automatisering, digitalisering og systemintegrasjon i norsk olje og gass. Innsikt og ekspertise fra Argon Solutions i Stavanger.";
 
 export const metadata: Metadata = {
   title,

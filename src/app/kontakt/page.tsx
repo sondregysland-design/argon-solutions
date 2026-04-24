@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { BookingSection } from "@/components/BookingSection";
 
-const description = "Ta kontakt med Argon Solutions for en uforpliktende samtale.";
+const description =
+  "Kontakt Argon Solutions i Stavanger for skreddersydd software, CRM-systemer og AI-løsninger for olje og gass. Book en gratis konsultasjon.";
 
 export const metadata: Metadata = {
-  title: "Kontakt",
+  title: "Kontakt Argon Solutions — Software for olje og gass i Stavanger",
   description,
   alternates: { canonical: "/kontakt" },
   openGraph: {
-    title: "Kontakt",
+    title: "Kontakt Argon Solutions — Software for olje og gass i Stavanger",
     description,
     url: "/kontakt",
   },
