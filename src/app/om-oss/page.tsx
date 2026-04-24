@@ -137,6 +137,42 @@ export default function OmOssPage() {
           </dl>
         </div>
 
+        {/* Teknologipartnere */}
+        <div className="mt-16 rounded-xl border border-gray-100 p-8 md:p-12">
+          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Teknologi vi bygger med</h2>
+          <p className="mt-4 text-text-light">
+            Vi bruker velprøvd, moderne teknologi fra ledende leverandører.
+            Alle våre løsninger kjører på skalerbar skyinfrastruktur med
+            enterprise-grade sikkerhet.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-lg bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text">Anthropic (Claude AI)</h3>
+              <p className="mt-1 text-xs text-text-light">AI-drevet lead scoring, dokumentanalyse og rapportgenerering</p>
+            </div>
+            <div className="rounded-lg bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text">Vercel</h3>
+              <p className="mt-1 text-xs text-text-light">Enterprise hosting med edge-nettverk og automatisk deployment</p>
+            </div>
+            <div className="rounded-lg bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text">Supabase</h3>
+              <p className="mt-1 text-xs text-text-light">Open-source backend med PostgreSQL, autentisering og sanntids-synk</p>
+            </div>
+            <div className="rounded-lg bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text">Next.js / React</h3>
+              <p className="mt-1 text-xs text-text-light">Industriledende frontend-rammeverk for raske, SEO-vennlige webapper</p>
+            </div>
+            <div className="rounded-lg bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text">Playwright</h3>
+              <p className="mt-1 text-xs text-text-light">Nettleserautomatisering for AI-agenter og testing</p>
+            </div>
+            <div className="rounded-lg bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text">PandaDoc</h3>
+              <p className="mt-1 text-xs text-text-light">Automatisert tilbuds- og kontraktgenerering</p>
+            </div>
+          </div>
+        </div>
+
         {/* Hvorfor Argon */}
         <div className="mt-16">
           <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Hvorfor Argon?</h2>
