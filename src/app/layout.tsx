@@ -111,13 +111,38 @@ export default function RootLayout({
     naics: "541511",
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Hjem", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "Tjenester", item: `${siteUrl}/tjenester` },
+      { "@type": "ListItem", position: 3, name: "Produkter", item: `${siteUrl}/produkter` },
+      { "@type": "ListItem", position: 4, name: "Blogg", item: `${siteUrl}/blogg` },
+      { "@type": "ListItem", position: 5, name: "Om oss", item: `${siteUrl}/om-oss` },
+      { "@type": "ListItem", position: 6, name: "Kontakt", item: `${siteUrl}/kontakt` },
+    ],
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteName,
+    url: siteUrl,
+    description: siteDescription,
+    publisher: { "@id": `${siteUrl}/#organization` },
+    inLanguage: "nb-NO",
+  };
+
+  const allJsonLd = [jsonLd, breadcrumbJsonLd, websiteJsonLd];
+
   return (
     <html lang="no">
       <head>
         <script
           type="application/ld+json"
-          // Safe: jsonLd is a static object defined in server-side code, not user input
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          // Safe: allJsonLd is a static array of objects defined in server-side code, not user input
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(allJsonLd) }}
         />
       </head>
       <body className={`${inter.className} ${playfair.variable} bg-white text-text antialiased`}>
