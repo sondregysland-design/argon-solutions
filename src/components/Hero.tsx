@@ -12,9 +12,10 @@ export function Hero() {
           <span className="block text-primary">for energisektoren</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-light">
-          Skreddersydde AI- og softwareløsninger for små og mellomstore
-          bedrifter i olje og gass. Vi skreddersyr verktøyet dere trenger,
-          dere prøver det gratis den første måneden uten forpliktelser.
+          Argon Solutions bygger skreddersydde AI- og softwareløsninger for
+          små og mellomstore bedrifter i olje og gass. Fra CRM og
+          prosjektstyring til systemintegrasjon og AI-agenter — vi
+          skreddersyr verktøyet dere trenger. Første måneden gratis.
         </p>
         <div className="mt-10 flex justify-center gap-4">
           <Link

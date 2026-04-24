@@ -8,7 +8,9 @@ export function Footer() {
           <div>
             <LogoFull />
             <p className="mt-4 text-sm text-text-light">
-              Skreddersydd software og integrasjonsløsninger for norsk olje og gass.
+              Argon Solutions er et Stavanger-basert softwareselskap som leverer
+              skreddersydd software, CRM, systemintegrasjon og AI-agenter
+              for olje- og gassindustrien i Norge.
             </p>
           </div>
           <div>
@@ -26,8 +28,12 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-text-light">
               <li>post@argonsolutions.no</li>
               <li>+47 452 09 979</li>
-              <li>Stavanger, Norge</li>
+              <li>Stavanger, Rogaland, Norge</li>
             </ul>
+            <div className="mt-4 flex gap-3">
+              <a href="https://www.instagram.com/argonsolutions/" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-primary transition-colors text-sm">Instagram</a>
+              <a href="https://www.linkedin.com/company/argon-solutions-no/" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-primary transition-colors text-sm">LinkedIn</a>
+            </div>
           </div>
         </div>
         <div className="mt-8 border-t border-gray-200 pt-6 text-center text-xs text-text-light">
