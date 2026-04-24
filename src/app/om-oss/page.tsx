@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 
-const description = "To ingeniører fra olje og gass som bygger software for bransjen.";
+const description =
+  "Argon Solutions er et Stavanger-basert softwareselskap grunnlagt av ingeniører med erfaring fra olje- og gassindustrien. Vi bygger skreddersydd software, CRM-systemer og AI-agenter for energisektoren.";
 
 export const metadata: Metadata = {
-  title: "Om oss",
+  title: "Om Argon Solutions — Softwareselskap i Stavanger for olje og gass",
   description,
   alternates: { canonical: "/om-oss" },
   openGraph: {
-    title: "Om oss",
+    title: "Om Argon Solutions — Softwareselskap i Stavanger for olje og gass",
     description,
     url: "/om-oss",
   },
@@ -28,23 +29,39 @@ const verdier = [
   },
 ];
 
+const speakableJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Om Argon Solutions",
+  url: "https://argonsolutions.no/om-oss",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["#company-summary", "#technology-stack", "#key-facts"],
+  },
+};
+
 export default function OmOssPage() {
+  const speakableScript = JSON.stringify(speakableJsonLd);
+
   return (
     <div className="py-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: speakableScript }} />
       <div className="mx-auto max-w-6xl px-6">
         <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">Om Argon Solutions</h1>
-        <p className="mt-4 max-w-2xl text-lg text-text-light">
-          To ingeniører fra olje og gass som bygger software for bransjen.
+        <p id="company-summary" className="mt-4 max-w-2xl text-lg text-text-light">
+          Argon Solutions er et norsk softwareselskap basert i Stavanger som
+          spesialiserer seg på skreddersydd software, CRM-systemer,
+          systemintegrasjon og AI-agenter for olje- og gassindustrien.
         </p>
 
         {/* Hvem vi er */}
         <div className="mt-16 rounded-xl bg-surface p-8 md:p-12">
           <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Hvem vi er</h2>
           <p className="mt-4 text-text-light">
-            Argon Solutions ble startet av to ingeniører med erfaring fra olje
-            og gass-sektoren. Vi har sett på nært hold hvordan bransjen
-            sliter med utdaterte systemer, manuelle prosesser og verktøy
-            som ikke snakker sammen.
+            Argon Solutions ble grunnlagt i 2024 av Sondre Gysland, ingeniør
+            med erfaring fra olje- og gassindustrien i Norge. Vi har sett på
+            nært hold hvordan bransjen sliter med utdaterte systemer, manuelle
+            prosesser og verktøy som ikke snakker sammen.
           </p>
           <p className="mt-3 text-text-light">
             I stedet for å klage over det, bestemte vi oss for å fikse det.
@@ -52,6 +69,25 @@ export default function OmOssPage() {
             AI-agenter, automatisering og skreddersydd software for å
             gjøre hverdagen enklere for selskaper i energisektoren.
           </p>
+        </div>
+
+        {/* Teknologisk ekspertise */}
+        <div id="technology-stack" className="mt-16 rounded-xl border border-gray-100 p-8 md:p-12">
+          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Teknologisk ekspertise</h2>
+          <p className="mt-4 text-text-light">
+            Vi bygger med moderne, velprøvd teknologi. Våre løsninger bruker
+            Next.js, React og Tailwind CSS for frontend, Supabase og PostgreSQL
+            for backend og datalagring, og Claude AI (Anthropic) for
+            AI-funksjonalitet som rapportgenerering, lead scoring og
+            dokumentanalyse.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            {["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Claude AI", "Playwright", "Vercel", "Node.js"].map((tech) => (
+              <span key={tech} className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Verdier */}
@@ -65,6 +101,37 @@ export default function OmOssPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Nøkkelfakta */}
+        <div id="key-facts" className="mt-16 rounded-xl bg-surface p-8 md:p-12">
+          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Nøkkelfakta</h2>
+          <dl className="mt-6 grid gap-6 sm:grid-cols-2">
+            <div>
+              <dt className="text-sm font-semibold text-text">Selskap</dt>
+              <dd className="mt-1 text-text-light">Argon Solutions AS</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-semibold text-text">Lokasjon</dt>
+              <dd className="mt-1 text-text-light">Stavanger, Rogaland, Norge</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-semibold text-text">Grunnlagt</dt>
+              <dd className="mt-1 text-text-light">2024</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-semibold text-text">Bransje</dt>
+              <dd className="mt-1 text-text-light">Software for olje- og gassindustrien</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-semibold text-text">Spesialområder</dt>
+              <dd className="mt-1 text-text-light">Skreddersydd software, CRM, systemintegrasjon, AI-agenter</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-semibold text-text">Kontakt</dt>
+              <dd className="mt-1 text-text-light">post@argonsolutions.no · +47 452 09 979</dd>
+            </div>
+          </dl>
         </div>
 
         {/* Hvorfor Argon */}
