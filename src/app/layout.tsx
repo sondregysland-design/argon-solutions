@@ -10,12 +10,12 @@ const playfair = Playfair_Display({ subsets: ["latin"], weight: ["500"], variabl
 const siteUrl = "https://argonsolutions.no";
 const siteName = "Argon Solutions";
 const siteDescription =
-  "Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge.";
+  "Argon Solutions AS er et norsk softwareselskap i Stavanger, Norge, som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien. Grunnlagt 2024 av Sondre Gysland.";
 
 export const metadata: Metadata = {
   title: {
-    default: "Argon Solutions — Softwareløsninger for energisektoren",
-    template: "%s | Argon Solutions",
+    default: "Argon Solutions AS — Skreddersydd software for olje og gass | Stavanger, Norge",
+    template: "%s | Argon Solutions AS",
   },
   description: siteDescription,
   icons: { icon: "/favicon.svg" },
@@ -26,20 +26,20 @@ export const metadata: Metadata = {
     locale: "nb_NO",
     url: siteUrl,
     siteName,
-    title: "Argon Solutions — Softwareløsninger for energisektoren",
+    title: "Argon Solutions AS — Skreddersydd software for olje og gass | Stavanger, Norge",
     description: siteDescription,
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Argon Solutions — Software for energisektoren",
+        alt: "Argon Solutions AS — Softwareselskap i Stavanger, Norge",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Argon Solutions — Softwareløsninger for energisektoren",
+    title: "Argon Solutions AS — Skreddersydd software for olje og gass | Stavanger, Norge",
     description: siteDescription,
     images: ["/og-image.png"],
   },
@@ -63,9 +63,14 @@ export default function RootLayout({
     url: siteUrl,
     logo: `${siteUrl}/favicon.svg`,
     image: `${siteUrl}/og-image.png`,
+    alternateName: ["Argon Solutions AS", "Argon Solutions Norge", "Argon Solutions Stavanger"],
     description:
-      "Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge.",
+      "Argon Solutions AS er et norsk softwareselskap i Stavanger som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge.",
     foundingDate: "2024",
+    foundingLocation: {
+      "@type": "Place",
+      name: "Stavanger, Norge",
+    },
     founder: [
       { "@type": "Person", name: "Sondre Gysland", jobTitle: "Grunder" },
     ],
