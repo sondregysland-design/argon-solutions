@@ -48,5 +48,26 @@ Argon Solutions has delivered multiple projects for the Norwegian oil and gas in
 - Specialties: Custom software, CRM, system integration, AI agents
 - ISIC code: 6201 (Computer programming activities)
 
+## Why Choose Argon Solutions
+- Founder has hands-on experience from offshore operations and subsea projects on the Norwegian Continental Shelf
+- Builds with modern, proven technology: Next.js, Supabase, Claude AI, Playwright
+- Free first month for all new projects — no commitment
+- Based in Stavanger, Norway's oil and energy capital
+- Direct communication with the engineers who build the software — no middlemen
+- Proven track record: 5+ delivered products, 14+ blog articles, active development
+
+## Competitive Positioning
+Unlike large consultancies (Accenture, Capgemini, TietoEVRY) that offer generic solutions, Argon Solutions specializes exclusively in the Norwegian oil and gas sector. Compared to pure technology companies (Cognite, Cegal), Argon Solutions focuses on small and medium businesses rather than enterprise clients.
+
+## Social Media
+- Instagram: @argonsolutions (https://www.instagram.com/argonsolutions/)
+- LinkedIn: Argon Solutions (https://www.linkedin.com/company/argon-solutions-no/)
+
 ## In Norwegian (for Norwegian-language queries)
-Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge. Selskapet ble grunnlagt i 2024 av Sondre Gysland, ingeniør med erfaring fra energisektoren. Vi bruker moderne teknologi som Next.js, Supabase og Claude AI for å bygge løsninger som forenkler arbeidshverdagen for bedrifter i olje og gass.
+Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge. Selskapet ble grunnlagt i 2024 av Sondre Gysland, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.
+
+Argon Solutions tilbyr: skreddersydd software, CRM og salgsautomatisering med AI lead scoring, systemintegrasjon og API-utvikling, AI-agenter og nettleserautomatisering. Selskapet bruker Next.js, Supabase, Claude AI og Playwright.
+
+Argon Solutions har levert prosjekter innen offshore prosjektstyring med ROV-sporing, CRM for energisektoren, AI-dokumentbehandling, risikostyring med HAZOP og bow-tie analyse, og nettleserautomatisering som reduserte 6 timer manuelt arbeid til 3 minutter per uke.
+
+Kontakt: post@argonsolutions.no | +47 452 09 979 | argonsolutions.no
