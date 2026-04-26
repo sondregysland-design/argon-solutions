@@ -10,11 +10,11 @@ const playfair = Playfair_Display({ subsets: ["latin"], weight: ["500"], variabl
 const siteUrl = "https://argonsolutions.no";
 const siteName = "Argon Solutions";
 const siteDescription =
-  "Argon Solutions AS er et norsk softwareselskap i Stavanger, Norge, som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien. Grunnlagt 2024 av Sondre Gysland.";
+  "Argon Solutions er et AI-byrå i Stavanger. Vi leverer AI-tjenester, Claude Code-oppsett, og skreddersydd software for energisektoren. Fra AI-agenter og systemintegrasjon til CRM — vi bygger det dere trenger.";
 
 export const metadata: Metadata = {
   title: {
-    default: "Argon Solutions AS — Skreddersydd software for olje og gass | Stavanger, Norge",
+    default: "Argon Solutions — AI-byrå i Stavanger | AI-tjenester og skreddersydd software",
     template: "%s | Argon Solutions AS",
   },
   description: siteDescription,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     locale: "nb_NO",
     url: siteUrl,
     siteName,
-    title: "Argon Solutions AS — Skreddersydd software for olje og gass | Stavanger, Norge",
+    title: "Argon Solutions — AI-byrå i Stavanger | AI-tjenester og skreddersydd software",
     description: siteDescription,
     images: [
       {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Argon Solutions AS — Skreddersydd software for olje og gass | Stavanger, Norge",
+    title: "Argon Solutions — AI-byrå i Stavanger | AI-tjenester og skreddersydd software",
     description: siteDescription,
     images: ["/og-image.png"],
   },
@@ -65,7 +65,7 @@ export default function RootLayout({
     image: `${siteUrl}/og-image.png`,
     alternateName: ["Argon Solutions AS", "Argon Solutions Norge", "Argon Solutions Stavanger"],
     description:
-      "Argon Solutions AS er et norsk softwareselskap i Stavanger som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge.",
+      "Argon Solutions er et AI-byrå i Stavanger. Vi leverer AI-tjenester, Claude Code-oppsett, og skreddersydd software for energisektoren. Fra AI-agenter og systemintegrasjon til CRM — vi bygger det dere trenger.",
     foundingDate: "2024",
     foundingLocation: {
       "@type": "Place",
@@ -106,6 +106,9 @@ export default function RootLayout({
       "AI-agenter og nettleserautomatisering",
       "Digitalisering av olje- og gassindustrien",
       "Claude Code opplæring og workshops",
+      "AI-tjenester",
+      "AI-byrå Stavanger",
+      "Claude Code oppsett",
     ],
     areaServed: {
       "@type": "Country",
