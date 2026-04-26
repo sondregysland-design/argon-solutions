@@ -72,7 +72,26 @@ export default function RootLayout({
       name: "Stavanger, Norge",
     },
     founder: [
-      { "@type": "Person", name: "Sondre Gysland", jobTitle: "Grunder" },
+      {
+        "@type": "Person",
+        "@id": `${siteUrl}/#founder`,
+        name: "Sondre Gysland",
+        jobTitle: "Grunder og daglig leder",
+        description: "Ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel. Grunnla Argon Solutions i 2024 for å bygge skreddersydd software for olje- og gassindustrien.",
+        worksFor: { "@id": `${siteUrl}/#organization` },
+        knowsAbout: [
+          "Offshore operations",
+          "Subsea systems",
+          "ROV operations",
+          "Software development",
+          "AI and machine learning",
+          "Claude AI",
+          "Norwegian Continental Shelf",
+        ],
+        sameAs: [
+          "https://www.linkedin.com/company/argon-solutions-no/",
+        ],
+      },
     ],
     numberOfEmployees: { "@type": "QuantitativeValue", value: 2 },
     address: {
@@ -96,7 +115,8 @@ export default function RootLayout({
       availableLanguage: ["Norwegian", "English"],
     },
     sameAs: [
-      "https://www.linkedin.com/company/112877302/post",
+      "https://www.linkedin.com/company/argon-solutions-no/",
+      "https://www.instagram.com/argonsolutions/",
     ],
     knowsAbout: [
       "Skreddersydd software for olje og gass",
@@ -108,6 +128,12 @@ export default function RootLayout({
       "AI-tjenester",
       "AI-byrå Stavanger",
       "Claude Code oppsett",
+      "Digital transformasjon energisektoren",
+      "Maskinlæring for olje og gass",
+      "NORSOK-kompatibel software",
+      "HMS-dokumenthåndtering",
+      "HAZOP og bow-tie risikoanalyse",
+      "Prediktivt vedlikehold offshore",
     ],
     areaServed: {
       "@type": "Country",
