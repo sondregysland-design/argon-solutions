@@ -6,11 +6,11 @@ const description =
   "Kontakt Argon Solutions i Stavanger for skreddersydd software, CRM-systemer og AI-løsninger for olje og gass. Book en gratis konsultasjon.";
 
 export const metadata: Metadata = {
-  title: "Kontakt Argon Solutions — Software for olje og gass i Stavanger",
+  title: "Kontakt Argon Solutions: Software for olje og gass i Stavanger",
   description,
   alternates: { canonical: "/kontakt" },
   openGraph: {
-    title: "Kontakt Argon Solutions — Software for olje og gass i Stavanger",
+    title: "Kontakt Argon Solutions: Software for olje og gass i Stavanger",
     description,
     url: "/kontakt",
   },

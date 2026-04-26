@@ -5,12 +5,12 @@ const description =
   "Argon Solutions setter opp Claude Code som et komplett AI-operativsystem for din bedrift. Skreddersydde skills, MCP-servere, hooks og arbeidsflyter. AI-byrå i Stavanger.";
 
 export const metadata: Metadata = {
-  title: "Claude Code for bedrifter — Oppsett, opplæring og rådgivning",
+  title: "Claude Code for bedrifter: Oppsett, opplæring og rådgivning",
   description,
   keywords: ["Claude Code", "Claude Code oppsett", "Claude Code bedrift", "AI operativsystem", "AI-byrå Stavanger"],
   alternates: { canonical: "/tjenester/claude-code" },
   openGraph: {
-    title: "Claude Code for bedrifter — Oppsett, opplæring og rådgivning",
+    title: "Claude Code for bedrifter: Oppsett, opplæring og rådgivning",
     description,
     url: "/tjenester/claude-code",
   },
@@ -82,7 +82,7 @@ export default function ClaudeCodePage() {
           Claude Code for bedrifter
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
-          Claude Code er ikke bare et kodeverktøy — det er et fullstendig AI-operativsystem for din bedrift.
+          Claude Code er ikke bare et kodeverktøy. Det er et fullstendig AI-operativsystem for din bedrift.
           Argon Solutions hjelper deg med oppsett og skreddersydde konfigurasjoner som gjør teamet produktivt.
         </p>
         <div className="mt-16 rounded-xl bg-surface p-8 md:p-12">
@@ -94,7 +94,7 @@ export default function ClaudeCodePage() {
           </p>
           <p className="mt-3 text-text-light">
             Der en chatbot svarer på spørsmål, tar Claude Code ansvar for oppgaver. Det skriver kode,
-            tester og deployer — alt mens det husker konteksten gjennom CLAUDE.md.
+            tester og deployer, alt mens det husker konteksten gjennom CLAUDE.md.
             Med riktig oppsett blir det et virtuelt teammedlem som kjenner bedriften din fra innsiden.
           </p>
         </div>
@@ -119,7 +119,7 @@ export default function ClaudeCodePage() {
         <div className="mt-20 border-t border-gray-100 pt-16">
           <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Opplæringspakker</h2>
           <p className="mt-4 max-w-2xl text-text-light">
-            Fra en rask introduksjon til komplett organisasjonsoppsett — vi tilpasser til der dere er i dag.
+            Fra en rask introduksjon til komplett organisasjonsoppsett. Vi tilpasser til der dere er i dag.
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {trainingTiers.map((tier) => (

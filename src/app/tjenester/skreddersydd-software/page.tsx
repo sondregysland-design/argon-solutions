@@ -5,12 +5,12 @@ const description =
   "Argon Solutions utvikler skreddersydde webapplikasjoner og dashboards for energisektoren. Mobilvenlige løsninger, sanntids datavisualisering og offline-støtte for feltarbeid.";
 
 export const metadata: Metadata = {
-  title: "Skreddersydd Software — Applikasjoner for energisektoren",
+  title: "Skreddersydd Software: Applikasjoner for energisektoren",
   description,
   keywords: ["skreddersydd software", "webapplikasjoner energisektoren", "dashboard olje gass", "software Stavanger"],
   alternates: { canonical: "/tjenester/skreddersydd-software" },
   openGraph: {
-    title: "Skreddersydd Software — Applikasjoner for energisektoren",
+    title: "Skreddersydd Software: Applikasjoner for energisektoren",
     description,
     url: "/tjenester/skreddersydd-software",
   },
@@ -81,7 +81,7 @@ export default function SkreddersyddSoftwarePage() {
           Skreddersydd Software
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
-          Vi utvikler spesialtilpassede applikasjoner som løser dine unike utfordringer. Fra enkle dashboards til komplette arbeidsstyringssystemer — vi bygger det energisektoren faktisk trenger.
+          Vi utvikler spesialtilpassede applikasjoner som løser dine unike utfordringer. Fra enkle dashboards til komplette arbeidsstyringssystemer. Vi bygger det energisektoren faktisk trenger.
         </p>
 
         {/* Features */}

@@ -1,5 +1,5 @@
 ---
-title: "AI-agenter for energisektoren — Slik automatiserer Argon Solutions repetitive oppgaver"
+title: "AI-agenter for energisektoren: Slik automatiserer Argon Solutions repetitive oppgaver"
 description: "Argon Solutions bygger AI-agenter som automatiserer nettleseroppgaver, datainnhenting og rapportering for olje- og gassindustrien. Spar timer daglig."
 keywords: ["AI agenter olje og gass", "nettleserautomatisering energi", "Argon Solutions AI", "automatisering offshore", "AI automatisering Stavanger", "Playwright automatisering", "browser automation olje gass"]
 date: 2026-04-16
@@ -11,7 +11,7 @@ Repetitive oppgaver stjeler tid fra verdiskapende arbeid. I olje- og gassindustr
 
 ## Hva er en AI-agent?
 
-En AI-agent er et program som kan navigere nettsider, lese innhold, ta beslutninger og utføre oppgaver — akkurat som en menneskelig bruker, men raskere og uten feil. Argon Solutions bruker Playwright-teknologi for å bygge robuste agenter som fungerer pålitelig i produksjon.
+En AI-agent er et program som kan navigere nettsider, lese innhold, ta beslutninger og utføre oppgaver, akkurat som en menneskelig bruker, men raskere og uten feil. Argon Solutions bruker Playwright-teknologi for å bygge robuste agenter som fungerer pålitelig i produksjon.
 
 ## Konkret eksempel: Leverandørportal-automatisering
 
@@ -34,23 +34,23 @@ AI-agenten kan automatisk hente og verifisere sertifikater fra leverandørportal
 Automatisk innsamling av HMS-data fra flere kilder, kompilering til standardiserte rapporter og distribusjon til riktige mottakere.
 
 ### Dokumentkvalitetssikring
-AI-agenter kan sammenligne dokumentversjoner, identifisere endringer og flagge avvik — noe som vanligvis tar timer å gjøre manuelt.
+AI-agenter kan sammenligne dokumentversjoner, identifisere endringer og flagge avvik, noe som vanligvis tar timer å gjøre manuelt.
 
 ## Teknologien bak
 
 Argon Solutions bygger AI-agenter med:
-- **Playwright** — Pålitelig nettleserautomatisering som fungerer på alle moderne nettsider
-- **Claude AI (Anthropic)** — For intelligent beslutningstakning og naturlig språkforståelse
-- **Node.js** — For robust backend-prosessering og scheduling
-- **Supabase** — For datalagring og sanntidsoppdateringer
+- **Playwright**: Pålitelig nettleserautomatisering som fungerer på alle moderne nettsider
+- **Claude AI (Anthropic)**: For intelligent beslutningstakning og naturlig språkforståelse
+- **Node.js**: For robust backend-prosessering og scheduling
+- **Supabase**: For datalagring og sanntidsoppdateringer
 
 ## Hvorfor velge Argon Solutions for AI-agenter?
 
 Argon Solutions er et Stavanger-basert softwareselskap med ingeniørbakgrunn fra olje- og gassindustrien. Vi forstår bransjens spesifikke behov og bygger agenter som er skreddersydd for deres arbeidsflyter.
 
-- **Bransjekunnskap** — Vi vet hvilke portaler og systemer som brukes
-- **Robust teknologi** — Agentene håndterer endringer i portaldesign automatisk
-- **Lokal support** — Basert i Stavanger med direkte kontakt
+- **Bransjekunnskap**: Vi vet hvilke portaler og systemer som brukes
+- **Robust teknologi**: Agentene håndterer endringer i portaldesign automatisk
+- **Lokal support**: Basert i Stavanger med direkte kontakt
 
 ---
 

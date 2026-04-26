@@ -5,12 +5,12 @@ const description =
   "Argon Solutions bygger AI-agenter og agentic AI-løsninger som automatiserer nettleseroppgaver, datainnhenting og repetitive prosesser for energisektoren i Norge.";
 
 export const metadata: Metadata = {
-  title: "AI-agenter — Agentic AI og automatisering",
+  title: "AI-agenter: Agentic AI og automatisering",
   description,
   keywords: ["AI-agenter", "agentic AI", "automatisering energisektoren", "nettleserautomatisering", "AI agent Norge"],
   alternates: { canonical: "/tjenester/ai-agenter" },
   openGraph: {
-    title: "AI-agenter — Agentic AI og automatisering",
+    title: "AI-agenter: Agentic AI og automatisering",
     description,
     url: "/tjenester/ai-agenter",
   },
@@ -33,11 +33,11 @@ const serviceJsonLd = {
 const useCases = [
   {
     title: "Nettleserautomatisering",
-    desc: "Agenter som navigerer nettsider, fyller ut skjemaer og henter data — akkurat slik en menneskelig bruker ville gjort det.",
+    desc: "Agenter som navigerer nettsider, fyller ut skjemaer og henter data, akkurat slik en menneskelig bruker ville gjort det.",
   },
   {
     title: "Datainnhenting",
-    desc: "Automatisk innsamling av data fra leverandørportaler, offentlige registre og andre nettsteder — strukturert og klar for bruk.",
+    desc: "Automatisk innsamling av data fra leverandørportaler, offentlige registre og andre nettsteder, strukturert og klar for bruk.",
   },
   {
     title: "Skjemautfylling",
@@ -50,10 +50,10 @@ const useCases = [
 ];
 
 const howItWorks = [
-  { step: "1", title: "Playwright", desc: "Agentene styrer en nettleser programmatisk via Playwright — samme teknologi brukt av store tech-selskaper for testing." },
+  { step: "1", title: "Playwright", desc: "Agentene styrer en nettleser programmatisk via Playwright, samme teknologi brukt av store tech-selskaper for testing." },
   { step: "2", title: "Claude AI", desc: "Claude analyserer hva som er på skjermen og bestemmer neste handling, akkurat som et menneske ville gjort." },
   { step: "3", title: "Orkestrering", desc: "En overordnet orkestrator koordinerer agenter, håndterer feil og sikrer at oppgaven fullføres korrekt." },
-  { step: "4", title: "Rapportering", desc: "Resultater leveres strukturert — som filer, databaseoppføringer eller e-poster — klare til bruk." },
+  { step: "4", title: "Rapportering", desc: "Resultater leveres strukturert, som filer, databaseoppføringer eller e-poster, klare til bruk." },
 ];
 
 export default function AIAgenterPage() {
@@ -75,7 +75,7 @@ export default function AIAgenterPage() {
           AI-agenter
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
-          Intelligente agenter som automatiserer nettleseroppgaver, datainnhenting og repetitive prosesser. Agentic AI gir maskinen evnen til å handle autonomt — og spar timer hver dag på manuelt arbeid.
+          Intelligente agenter som automatiserer nettleseroppgaver, datainnhenting og repetitive prosesser. Agentic AI gir maskinen evnen til å handle autonomt, og spar timer hver dag på manuelt arbeid.
         </p>
 
         {/* Example callout */}
@@ -84,7 +84,7 @@ export default function AIAgenterPage() {
             Eksempel fra praksis: 47 leverandører behandlet på 3 minutter
           </p>
           <p className="mt-1 text-sm text-text-light">
-            En agent logger inn i leverandørportalen, henter sertifikater fra alle leverandørene, og eksporterer en strukturert rapport — automatisk, uten menneskelig inngripen.
+            En agent logger inn i leverandørportalen, henter sertifikater fra alle leverandørene, og eksporterer en strukturert rapport, automatisk, uten menneskelig inngripen.
           </p>
         </div>
 

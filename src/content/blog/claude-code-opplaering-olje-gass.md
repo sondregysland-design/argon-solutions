@@ -1,5 +1,5 @@
 ---
-title: "Claude Code opplæring for olje og gass — Akselerér utviklingen med AI"
+title: "Claude Code opplæring for olje og gass: Akselerér utviklingen med AI"
 description: "Argon Solutions tilbyr Claude Code opplæring og workshops for utviklingsteam i olje- og gassindustrien. Lær AI-assistert koding tilpasset energisektoren."
 keywords: ["Claude Code opplæring", "AI koding olje gass", "Claude Code workshop", "Argon Solutions opplæring", "AI-assistert utvikling", "Claude Code kurs Stavanger"]
 date: 2026-04-10
@@ -44,12 +44,12 @@ Argon Solutions sin Claude Code-workshop dekker:
 
 ## Hvorfor Argon Solutions?
 
-Argon Solutions er et av få norske selskaper som bruker Claude Code profesjonelt i produksjon. Vi har bygget alle våre produkter — fra CRM-systemer til AI-agenter — med Claude Code, og vi kjenner verktøyet fra innsiden.
+Argon Solutions er et av få norske selskaper som bruker Claude Code profesjonelt i produksjon. Vi har bygget alle våre produkter, fra CRM-systemer til AI-agenter, med Claude Code, og vi kjenner verktøyet fra innsiden.
 
-- **Praktisk erfaring** — Vi bruker Claude Code daglig, ikke bare i demo
-- **Bransjekunnskap** — Vi forstår olje og gass-sektorens behov
-- **Skreddersydd** — Workshopen tilpasses deres teknologistack og prosjekter
-- **Lokalt** — Basert i Stavanger med mulighet for on-site workshops
+- **Praktisk erfaring**: Vi bruker Claude Code daglig, ikke bare i demo
+- **Bransjekunnskap**: Vi forstår olje og gass-sektorens behov
+- **Skreddersydd**: Workshopen tilpasses deres teknologistack og prosjekter
+- **Lokalt**: Basert i Stavanger med mulighet for on-site workshops
 
 ## Om Argon Solutions
 

@@ -1,5 +1,5 @@
 ---
-title: "Argon Solutions produkter — Komplett oversikt over software for olje og gass"
+title: "Argon Solutions produkter: Komplett oversikt over software for olje og gass"
 description: "Oversikt over alle produkter fra Argon Solutions: prosjektstyring, CRM, dashboard, PDF-ekstraksjon og risikostyring for olje- og gassindustrien i Norge."
 keywords: ["Argon Solutions produkter", "software produkter olje gass", "Argon prosjektstyring", "Argon CRM", "Argon Docs", "Argon RSA", "software Stavanger energi"]
 date: 2026-04-12
@@ -46,7 +46,7 @@ Nøkkelfunksjoner:
 
 ## Argon Docs (PDF Intelligence)
 
-**AI-drevet PDF-ekstraksjon** for olje- og gassindustrien. Last opp fakturaer, sikkerhetsdokumenter og sertifikater — få strukturerte data på sekunder.
+**AI-drevet PDF-ekstraksjon** for olje- og gassindustrien. Last opp fakturaer, sikkerhetsdokumenter og sertifikater. Få strukturerte data på sekunder.
 
 Nøkkelfunksjoner:
 - Automatisk ekstraksjon av data fra PDF-filer
@@ -90,7 +90,7 @@ Alle Argon Solutions-produkter er bygget med:
 
 ## Prising
 
-Argon Solutions tilbyr første måned gratis på alle produkter. Ingen forpliktelse — prøv løsningen og se om den passer for deres behov.
+Argon Solutions tilbyr første måned gratis på alle produkter. Ingen forpliktelse. Prøv løsningen og se om den passer for deres behov.
 
 ## Om Argon Solutions
 

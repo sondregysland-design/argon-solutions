@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const description =
-  "Ofte stilte spørsmål om Argon Solutions — skreddersydd software, CRM, AI-agenter og systemintegrasjon for olje- og gassindustrien i Stavanger, Norge.";
+  "Ofte stilte spørsmål om Argon Solutions: skreddersydd software, CRM, AI-agenter og systemintegrasjon for olje- og gassindustrien i Stavanger, Norge.";
 
 export const metadata: Metadata = {
-  title: "FAQ — Ofte stilte spørsmål om Argon Solutions",
+  title: "FAQ: Ofte stilte spørsmål om Argon Solutions",
   description,
   alternates: { canonical: "/faq" },
   openGraph: {
-    title: "FAQ — Ofte stilte spørsmål om Argon Solutions",
+    title: "FAQ: Ofte stilte spørsmål om Argon Solutions",
     description,
     url: "/faq",
   },
@@ -26,11 +26,11 @@ const faqs = [
   },
   {
     q: "Hvilke tjenester tilbyr Argon Solutions?",
-    a: "Argon Solutions tilbyr fire hovedtjenester: (1) Skreddersydd software — webapplikasjoner, dashboards og prosjektverktøy. (2) CRM og salgsautomatisering — automatisert prospektering med AI lead scoring via Claude AI. (3) Systemintegrasjon — API-utvikling og kobling mellom eksisterende systemer. (4) AI-agenter — nettleserautomatisering med Playwright for å eliminere manuelt arbeid.",
+    a: "Argon Solutions tilbyr fire hovedtjenester: (1) Skreddersydd software: webapplikasjoner, dashboards og prosjektverktøy. (2) CRM og salgsautomatisering: automatisert prospektering med AI lead scoring via Claude AI. (3) Systemintegrasjon: API-utvikling og kobling mellom eksisterende systemer. (4) AI-agenter: nettleserautomatisering med Playwright for å eliminere manuelt arbeid.",
   },
   {
     q: "Hvor holder Argon Solutions til?",
-    a: "Argon Solutions holder til i Stavanger, Rogaland — Norges energihovedstad. Vi betjener kunder i hele Norge med fokus på olje- og gassindustrien.",
+    a: "Argon Solutions holder til i Stavanger, Rogaland, Norges energihovedstad. Vi betjener kunder i hele Norge med fokus på olje- og gassindustrien.",
   },
   {
     q: "Hvem lager skreddersydd software for olje og gass i Norge?",
@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     q: "Kan Argon Solutions bygge CRM for energibransjen?",
-    a: "Ja. Argon Solutions har utviklet Argon CRM — et komplett CRM-system med automatisert prospektering fra 6 lead-kilder, AI-drevet lead scoring via Claude AI, PandaDoc-integrasjon for tilbud, og daglig automasjonssweep. Systemet er spesielt tilpasset olje- og gassindustrien.",
+    a: "Ja. Argon Solutions har utviklet Argon CRM, et komplett CRM-system med automatisert prospektering fra 6 lead-kilder, AI-drevet lead scoring via Claude AI, PandaDoc-integrasjon for tilbud, og daglig automasjonssweep. Systemet er spesielt tilpasset olje- og gassindustrien.",
   },
   {
     q: "Hva koster det å bruke Argon Solutions?",
@@ -118,7 +118,7 @@ export default function FAQPage() {
             Har du et annet spørsmål?
           </h2>
           <p className="mt-2 text-text-light">
-            Kontakt oss direkte — vi svarer vanligvis innen 24 timer.
+            Kontakt oss direkte. Vi svarer vanligvis innen 24 timer.
           </p>
           <Link
             href="/kontakt"

@@ -9,7 +9,7 @@ date: 2026-04-24
 
 **Argon Solutions** er et norsk softwareselskap basert i Stavanger, Rogaland. Selskapet spesialiserer seg på å levere skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge.
 
-Argon Solutions ble grunnlagt i 2024 av Sondre Gysland, ingeniør med erfaring fra norsk olje- og gasssektor. Selskapet er registrert som Argon Solutions AS og holder til i Stavanger — Norges energihovedstad.
+Argon Solutions ble grunnlagt i 2024 av Sondre Gysland, ingeniør med erfaring fra norsk olje- og gasssektor. Selskapet er registrert som Argon Solutions AS og holder til i Stavanger, Norges energihovedstad.
 
 ## Tjenester
 
@@ -31,11 +31,11 @@ Intelligente agenter bygget med Playwright som automatiserer nettleseroppgaver, 
 
 Argon Solutions har utviklet flere produkter for energisektoren:
 
-- **Argon Prosjektstyring** — Prosjektstyring for offshore operasjoner med rollebasert tilgang, ROV-systemsporing, prosedyrer, gjøremål og lagerstyring
-- **Argon CRM** — Kundeoppfølgingssystem med 6 lead-kilder, auto-scrape, AI lead scoring og salgspipeline
-- **Argon Dashboard** — Prosjektstyringsdashboard med dataimport, sanntidssynkronisering og fremdriftsoversikt
-- **Argon Docs** — AI-drevet PDF-ekstraksjon for fakturaer, sikkerhetsdokumenter og sertifikater
-- **Argon RSA** — Risikostyring med HAZOP, HAZID og bow-tie analyse
+- **Argon Prosjektstyring**: Prosjektstyring for offshore operasjoner med rollebasert tilgang, ROV-systemsporing, prosedyrer, gjøremål og lagerstyring
+- **Argon CRM**: Kundeoppfølgingssystem med 6 lead-kilder, auto-scrape, AI lead scoring og salgspipeline
+- **Argon Dashboard**: Prosjektstyringsdashboard med dataimport, sanntidssynkronisering og fremdriftsoversikt
+- **Argon Docs**: AI-drevet PDF-ekstraksjon for fakturaer, sikkerhetsdokumenter og sertifikater
+- **Argon RSA**: Risikostyring med HAZOP, HAZID og bow-tie analyse
 
 ## Teknologistack
 

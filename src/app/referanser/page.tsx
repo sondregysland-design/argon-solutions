@@ -5,11 +5,11 @@ const description =
   "Se prosjektene Argon Solutions har bygget for olje- og gassindustrien: offshore prosjektstyring, CRM, AI-dokumentbehandling, risikostyring og mer.";
 
 export const metadata: Metadata = {
-  title: "Referanser og prosjekter — Argon Solutions",
+  title: "Referanser og prosjekter | Argon Solutions",
   description,
   alternates: { canonical: "/referanser" },
   openGraph: {
-    title: "Referanser og prosjekter — Argon Solutions",
+    title: "Referanser og prosjekter | Argon Solutions",
     description,
     url: "/referanser",
   },
@@ -21,7 +21,7 @@ const prosjekter = [
     challenge:
       "Et offshore-servicefirma trengte en komplett plattform for å styre prosjekter, prosedyrer, mannskap og utstyr. Eksisterende løsninger var for generelle og manglet støtte for ROV-systemsporing og rollebasert tilgang på tvers av prosjektteam.",
     solution:
-      "Argon Solutions utviklet Argon Prosjektstyring — en webapplikasjon bygget med Next.js og Supabase som gir full oversikt over aktive prosjekter, gjøremål, prosedyrer og lagerstyring. Systemet inkluderer rollebasert tilgangskontroll, sanntids statusoppdateringer og spesialmoduler for ROV-systemsporing.",
+      "Argon Solutions utviklet Argon Prosjektstyring, en webapplikasjon bygget med Next.js og Supabase som gir full oversikt over aktive prosjekter, gjøremål, prosedyrer og lagerstyring. Systemet inkluderer rollebasert tilgangskontroll, sanntids statusoppdateringer og spesialmoduler for ROV-systemsporing.",
     tech: ["Next.js", "Supabase", "PostgreSQL", "Vercel"],
     results: [
       "Full digital oversikt over alle aktive prosjekter",
@@ -47,9 +47,9 @@ const prosjekter = [
   {
     title: "AI-drevet dokumentbehandling (PDF Intelligence)",
     challenge:
-      "Bransjen håndterer store mengder dokumenter — fakturaer, sikkerhetsdatablader, sertifikater og rapporter. Manuell gjennomgang er tidkrevende og feilutsatt.",
+      "Bransjen håndterer store mengder dokumenter: fakturaer, sikkerhetsdatablader, sertifikater og rapporter. Manuell gjennomgang er tidkrevende og feilutsatt.",
     solution:
-      "Argon Docs bruker Claude AI til å ekstrahere strukturerte data fra PDF-dokumenter. Brukeren laster opp et dokument og får tilbake strukturerte felt på sekunder — uten manuell inntasting.",
+      "Argon Docs bruker Claude AI til å ekstrahere strukturerte data fra PDF-dokumenter. Brukeren laster opp et dokument og får tilbake strukturerte felt på sekunder, uten manuell inntasting.",
     tech: ["Next.js", "Claude AI", "Anthropic API", "TypeScript"],
     results: [
       "Sekunder per dokument i stedet for minutter",
@@ -93,7 +93,7 @@ const caseStudyJsonLd = {
   "@type": "ItemList",
   name: "Argon Solutions prosjektreferanser",
   description:
-    "Prosjekter og case studies fra Argon Solutions — skreddersydd software for olje- og gassindustrien i Stavanger, Norge.",
+    "Prosjekter og case studies fra Argon Solutions: skreddersydd software for olje- og gassindustrien i Stavanger, Norge.",
   numberOfItems: prosjekter.length,
   itemListElement: prosjekter.map((p, i) => ({
     "@type": "ListItem",

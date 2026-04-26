@@ -4,11 +4,11 @@ const description =
   "Argon Solutions er et AI-byrå i Stavanger grunnlagt av ingeniører med erfaring fra olje- og gassindustrien. Vi leverer AI-tjenester, Claude Code-oppsett og skreddersydd software for energisektoren.";
 
 export const metadata: Metadata = {
-  title: "Om Argon Solutions — Softwareselskap i Stavanger for olje og gass",
+  title: "Om Argon Solutions: Softwareselskap i Stavanger for olje og gass",
   description,
   alternates: { canonical: "/om-oss" },
   openGraph: {
-    title: "Om Argon Solutions — Softwareselskap i Stavanger for olje og gass",
+    title: "Om Argon Solutions: Softwareselskap i Stavanger for olje og gass",
     description,
     url: "/om-oss",
   },
@@ -25,7 +25,7 @@ const verdier = [
   },
   {
     title: "Nærhet",
-    description: "Vi er to personer. Dere snakker direkte med de som bygger — ingen mellomledd, ingen support-køer.",
+    description: "Vi er to personer. Dere snakker direkte med de som bygger. Ingen mellomledd, ingen support-køer.",
   },
 ];
 
@@ -81,15 +81,15 @@ export default function OmOssPage() {
           </h2>
           <p className="mt-4 text-text-light">
             Vi har implementert Claude Code-miljøer for bedrifter i energisektoren.
-            Vår tilnærming: Vi setter opp et komplett AI-operativsystem —
-            skreddersydde skills, MCP-servere, og arbeidsflyter — slik at teamet
+            Vår tilnærming: Vi setter opp et komplett AI-operativsystem:
+            skreddersydde skills, MCP-servere, og arbeidsflyter, slik at teamet
             ditt får en AI-assistent som faktisk forstår deres systemer, data og
             prosesser.
           </p>
           <p className="mt-3 text-text-light">
             Som AI-byrå i Stavanger kombinerer vi dyp bransjekunnskap fra olje og
             gass med ekspertise innen moderne AI-tjenester. Det betyr at vi ikke
-            bare setter opp teknologien — vi forstår konteksten den skal brukes i.
+            bare setter opp teknologien. Vi forstår konteksten den skal brukes i.
           </p>
         </div>
 

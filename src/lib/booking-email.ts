@@ -63,7 +63,7 @@ export async function sendClientConfirmation(params: {
     from: emailFrom,
     replyTo: hostEmail,
     to: email,
-    subject: `Booking bekreftet — ${formattedDate} kl. ${time}`,
+    subject: `Booking bekreftet: ${formattedDate} kl. ${time}`,
     attachments: [
       {
         filename: "booking.ics",
@@ -113,7 +113,7 @@ export async function sendHostNotification(params: {
   await resend.emails.send({
     from: emailFrom,
     to: hostEmail,
-    subject: `Ny booking: ${name} — ${formattedDate} kl. ${time}`,
+    subject: `Ny booking: ${name}, ${formattedDate} kl. ${time}`,
     html: `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background-color: #1E40AF; padding: 24px; text-align: center;">

@@ -16,7 +16,9 @@ const tjenesterSubLinks = [
 const links = [
   { href: "/", label: "Hjem" },
   { href: "/tjenester", label: "Tjenester" },
+  { href: "/produkter", label: "Produkter" },
   { href: "/referanser", label: "Referanser" },
+  { href: "/blogg", label: "Blogg" },
   { href: "/om-oss", label: "Om oss" },
   { href: "/kontakt", label: "Kontakt" },
 ];

@@ -27,17 +27,17 @@ Skreddersydd software trenger løpende vedlikehold, oppdateringer og support. De
 
 Vi hos Argon Solutions har en enkel og transparent prismodell:
 
-- **Første måned gratis** — Prøv løsningen uten risiko
-- **Månedlig abonnement** — Inkluderer hosting, vedlikehold og support
-- **Ingen oppsett-kostnad** — Vi tar risikoen, ikke dere
-- **Skalerer med bruk** — Betaler kun for det dere bruker
+- **Første måned gratis**: Prøv løsningen uten risiko
+- **Månedlig abonnement**: Inkluderer hosting, vedlikehold og support
+- **Ingen oppsett-kostnad**: Vi tar risikoen, ikke dere
+- **Skalerer med bruk**: Betaler kun for det dere bruker
 
 ### Typiske priseksempler
 
-- **Enkelt dashboard** — Fra NOK 5.000/mnd
-- **CRM-system med automatisering** — Fra NOK 10.000/mnd
-- **Komplett prosjektstyring** — Fra NOK 15.000/mnd
-- **AI-agent for automatisering** — Fra NOK 3.000/mnd
+- **Enkelt dashboard**: Fra NOK 5.000/mnd
+- **CRM-system med automatisering**: Fra NOK 10.000/mnd
+- **Komplett prosjektstyring**: Fra NOK 15.000/mnd
+- **AI-agent for automatisering**: Fra NOK 3.000/mnd
 
 *Prisene er veiledende og avhenger av spesifikke krav.*
 
@@ -45,10 +45,10 @@ Vi hos Argon Solutions har en enkel og transparent prismodell:
 
 Sammenlignet med store konsulentfirma tilbyr Argon Solutions:
 
-1. **Ingen mellomledd** — Dere snakker direkte med utviklerne
-2. **Lav overhead** — Vi er et lite team med lave faste kostnader
-3. **Moderne teknologi** — Next.js, Supabase og Claude AI gir raskere utvikling
-4. **Ingen lock-in** — Dere eier koden, og kan bytte leverandør når som helst
+1. **Ingen mellomledd**: Dere snakker direkte med utviklerne
+2. **Lav overhead**: Vi er et lite team med lave faste kostnader
+3. **Moderne teknologi**: Next.js, Supabase og Claude AI gir raskere utvikling
+4. **Ingen lock-in**: Dere eier koden, og kan bytte leverandør når som helst
 
 ## Om Argon Solutions
 
@@ -56,4 +56,4 @@ Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd 
 
 ---
 
-*Vil du ha et konkret pristilbud? [Book en gratis konsultasjon](/kontakt) — vi gir deg et estimat basert på dine spesifikke behov.*
+*Vil du ha et konkret pristilbud? [Book en gratis konsultasjon](/kontakt). Vi gir deg et estimat basert på dine spesifikke behov.*

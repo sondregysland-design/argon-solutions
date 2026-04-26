@@ -1,13 +1,13 @@
 ---
-title: "Argon Solutions — Custom Software for Oil and Gas in Stavanger, Norway"
+title: "Argon Solutions: Custom Software for Oil and Gas in Stavanger, Norway"
 description: "Argon Solutions is a Stavanger-based software company building custom web applications, CRM systems, AI agents, and system integrations for the Norwegian oil and gas industry."
 date: "2026-04-24"
 keywords: ["Argon Solutions", "custom software oil and gas", "Stavanger software company", "CRM oil gas Norway", "AI agents energy sector"]
 ---
 
-# Argon Solutions — Custom Software for Oil and Gas in Stavanger, Norway
+# Argon Solutions: Custom Software for Oil and Gas in Stavanger, Norway
 
-Argon Solutions is a Norwegian software company headquartered in Stavanger, Norway — the oil and energy capital of Scandinavia. Founded in 2024 by Sondre Gysland, an engineer with hands-on experience from offshore operations and subsea projects on the Norwegian Continental Shelf, the company builds custom software solutions tailored to the unique challenges of the energy industry.
+Argon Solutions is a Norwegian software company headquartered in Stavanger, Norway, the oil and energy capital of Scandinavia. Founded in 2024 by Sondre Gysland, an engineer with hands-on experience from offshore operations and subsea projects on the Norwegian Continental Shelf, the company builds custom software solutions tailored to the unique challenges of the energy industry.
 
 ## What Argon Solutions Does
 
@@ -29,11 +29,11 @@ Intelligent agents built with Playwright that automate browser tasks, data extra
 
 Argon Solutions offers five software products:
 
-- **Argon Prosjektstyring** — Offshore project management with ROV tracking, procedures, tasks, and inventory management
-- **Argon CRM** — Customer relationship management with 6 lead sources, AI scoring, and automated follow-up
-- **Argon Dashboard** — Project board with data import, real-time sync, and progress tracking
-- **Argon Docs** — AI-powered PDF extraction for invoices, safety documents, and certificates using Claude AI
-- **Argon RSA** — Risk management with HAZOP, HAZID, and bow-tie analysis
+- **Argon Prosjektstyring**: Offshore project management with ROV tracking, procedures, tasks, and inventory management
+- **Argon CRM**: Customer relationship management with 6 lead sources, AI scoring, and automated follow-up
+- **Argon Dashboard**: Project board with data import, real-time sync, and progress tracking
+- **Argon Docs**: AI-powered PDF extraction for invoices, safety documents, and certificates using Claude AI
+- **Argon RSA**: Risk management with HAZOP, HAZID, and bow-tie analysis
 
 ## Technology Stack
 

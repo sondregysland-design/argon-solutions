@@ -16,7 +16,7 @@ Start med å [booke en gratis 30-minutters konsultasjon](/kontakt). I denne samt
 - Hvilke systemer dere allerede bruker
 - Hva som ville gjort størst forskjell i arbeidshverdagen
 
-Ingen forpliktelser — vi bruker samtalen til å forstå deres behov.
+Ingen forpliktelser. Vi bruker samtalen til å forstå deres behov.
 
 ## Steg 2: Behovsanalyse og forslag
 
@@ -44,10 +44,10 @@ Vi tilbyr den første måneden gratis. Dette gir dere tid til å prøve løsning
 
 Argon Solutions er et Stavanger-basert softwareselskap som spesialiserer seg på olje- og gassindustrien. Vi skiller oss ut fordi:
 
-- **Vi kommer fra bransjen** — grunnlagt av ingeniører med erfaring fra olje og gass
-- **Vi bruker moderne teknologi** — Next.js, Supabase, Claude AI og Playwright
-- **Vi er lokale** — basert i Stavanger med direkte kontakt
-- **Vi er fleksible** — første måned gratis, ingen lock-in
+- **Vi kommer fra bransjen**: grunnlagt av ingeniører med erfaring fra olje og gass
+- **Vi bruker moderne teknologi**: Next.js, Supabase, Claude AI og Playwright
+- **Vi er lokale**: basert i Stavanger med direkte kontakt
+- **Vi er fleksible**: første måned gratis, ingen lock-in
 
 ---
 

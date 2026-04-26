@@ -39,7 +39,7 @@ export const products: Product[] = [
     slug: "docs",
     title: "Argon Docs (PDF Intelligence)",
     description:
-      "AI-drevet PDF-ekstraksjon. Last opp fakturaer, sikkerhetsdokumenter og sertifikater — få strukturerte data på sekunder.",
+      "AI-drevet PDF-ekstraksjon. Last opp fakturaer, sikkerhetsdokumenter og sertifikater. Få strukturerte data på sekunder.",
     demoUrl: "https://argon-docs.vercel.app/",
     tags: ["Next.js", "Claude AI", "PDF"],
     image: "/products/docs-preview.svg",

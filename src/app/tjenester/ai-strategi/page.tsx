@@ -5,12 +5,12 @@ const description =
   "Argon Solutions tilbyr AI-strategi og rådgivning for energisektoren. AI readiness-vurdering, automatiseringskartlegging, ROI-modellering og implementeringsveikart for beslutningstakere.";
 
 export const metadata: Metadata = {
-  title: "AI-strategi og rådgivning — Veikart for AI-implementering",
+  title: "AI-strategi og rådgivning: Veikart for AI-implementering",
   description,
   keywords: ["AI strategi", "AI rådgivning", "AI konsulent", "AI implementering energisektoren", "AI veikart"],
   alternates: { canonical: "/tjenester/ai-strategi" },
   openGraph: {
-    title: "AI-strategi og rådgivning — Veikart for AI-implementering",
+    title: "AI-strategi og rådgivning: Veikart for AI-implementering",
     description,
     url: "/tjenester/ai-strategi",
   },
@@ -41,7 +41,7 @@ const offerings = [
   },
   {
     title: "ROI-modellering",
-    desc: "Konkrete beregninger av forventet inntjening, tidsbesparelse og kostnadsreduksjon fra AI-investeringer — slik at ledelsen kan ta datadrevne beslutninger.",
+    desc: "Konkrete beregninger av forventet inntjening, tidsbesparelse og kostnadsreduksjon fra AI-investeringer, slik at ledelsen kan ta datadrevne beslutninger.",
   },
   {
     title: "Implementeringsveikart",
@@ -78,7 +78,7 @@ export default function AIStrategiPage() {
           AI-strategi og rådgivning
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
-          For beslutningstakere som ønsker en strukturert tilnærming til AI — ikke bare buzzwords, men konkrete veikart og ROI-beregninger tilpasset energisektoren.
+          For beslutningstakere som ønsker en strukturert tilnærming til AI: ikke bare buzzwords, men konkrete veikart og ROI-beregninger tilpasset energisektoren.
         </p>
 
         {/* Offerings */}

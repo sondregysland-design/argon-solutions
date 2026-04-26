@@ -2,7 +2,7 @@ import { google } from "googleapis";
 import { addMinutes, format, parseISO } from "date-fns";
 import { fromZonedTime } from "date-fns-tz";
 
-// Wider pool of possible times — but only 2-3 shown per day
+// Wider pool of possible times, but only 2-3 shown per day
 const ALL_POSSIBLE_TIMES = [
   "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
   "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
@@ -29,7 +29,7 @@ function dateHash(dateStr: string): number {
 
 /**
  * Pick 2-3 random slots from the pool for a given date.
- * Deterministic — same date always gets same slots.
+ * Deterministic: same date always gets same slots.
  */
 function getSlotsForDate(dateStr: string): string[] {
   const hash = dateHash(dateStr);

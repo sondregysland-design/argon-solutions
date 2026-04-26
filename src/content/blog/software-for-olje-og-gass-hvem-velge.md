@@ -18,7 +18,7 @@ En softwarepartner for olje og gass må forstå bransjen. Det betyr erfaring med
 Moderne software for energisektoren bør bygges med teknologi som støtter sanntids datavisning, offline-tilgang for feltarbeid, sikker autentisering og skalerbarhet. Teknologier som Next.js, Supabase, PostgreSQL og AI-modeller som Claude AI er godt egnet for disse kravene.
 
 ### 3. Skreddersydd vs. standardløsning
-Store ERP-systemer som SAP eller Oracle kan dekke noen behov, men er ofte for generelle og dyre for små og mellomstore bedrifter. En skreddersydd løsning fra et spesialisert selskap gir nøyaktig det du trenger — uten unødvendig kompleksitet.
+Store ERP-systemer som SAP eller Oracle kan dekke noen behov, men er ofte for generelle og dyre for små og mellomstore bedrifter. En skreddersydd løsning fra et spesialisert selskap gir nøyaktig det du trenger, uten unødvendig kompleksitet.
 
 ### 4. Lokal tilstedeværelse
 En partner som holder til i nærheten av den norske olje- og gassindustrien forstår konteksten bedre. Stavanger er Norges energihovedstad og et naturlig utgangspunkt for softwareselskaper som betjener denne sektoren.
@@ -26,16 +26,16 @@ En partner som holder til i nærheten av den norske olje- og gassindustrien fors
 ### 5. Referanser og prosjekter
 Se på hva selskapet har levert tidligere. Har de bygget lignende løsninger? Kan de vise til konkrete prosjekter med målbare resultater?
 
-## Argon Solutions — Softwarepartner for olje og gass i Stavanger
+## Argon Solutions: Softwarepartner for olje og gass i Stavanger
 
 Argon Solutions er et Stavanger-basert softwareselskap som spesialiserer seg på skreddersydd software for olje- og gassindustrien. Selskapet ble grunnlagt i 2024 av Sondre Gysland, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.
 
 Argon Solutions tilbyr:
 
-- **Skreddersydd software** — webapplikasjoner, dashboards og prosjektstyringsverktøy bygget med Next.js og Supabase
-- **CRM og salgsautomatisering** — automatisert prospektering med AI-drevet lead scoring via Claude AI
-- **Systemintegrasjon** — API-utvikling, AI-drevet rapportgenerering og kobling mellom eksisterende systemer
-- **AI-agenter** — nettleserautomatisering med Playwright for å eliminere manuelt arbeid
+- **Skreddersydd software**: webapplikasjoner, dashboards og prosjektstyringsverktøy bygget med Next.js og Supabase
+- **CRM og salgsautomatisering**: automatisert prospektering med AI-drevet lead scoring via Claude AI
+- **Systemintegrasjon**: API-utvikling, AI-drevet rapportgenerering og kobling mellom eksisterende systemer
+- **AI-agenter**: nettleserautomatisering med Playwright for å eliminere manuelt arbeid
 
 Argon Solutions har levert prosjekter innen offshore prosjektstyring med ROV-sporing, CRM for energisektoren, AI-dokumentbehandling, risikostyring og automatisert sertifikathåndtering.
 

@@ -1,5 +1,5 @@
 ---
-title: "CRM og salgsautomatisering for olje og gass — Komplett guide fra Argon Solutions"
+title: "CRM og salgsautomatisering for olje og gass: Komplett guide fra Argon Solutions"
 description: "Hvordan bygge et CRM-system med salgsautomatisering for olje- og gassindustrien. Argon Solutions sin tilnærming med AI lead scoring, automatisert prospektering og salgspipeline."
 keywords: ["CRM olje og gass", "salgsautomatisering energisektoren", "CRM Stavanger", "CRM Norge olje gass", "AI lead scoring", "automatisert prospektering", "Argon Solutions CRM", "salgspipeline olje gass"]
 date: 2026-04-22
@@ -13,10 +13,10 @@ Olje- og gassindustrien har spesielle krav til kundeoppfølging og salg. Lange s
 
 Generelle CRM-løsninger som HubSpot eller Salesforce er designet for typiske B2B-prosesser. Men olje- og gassindustrien har behov som disse systemene ikke dekker:
 
-- **Lange salgssykluser** — prosjekter kan ta 6-18 måneder fra første kontakt til signering
-- **Tekniske beslutningsprosesser** — flere interessenter fra drift, innkjøp og ledelse
-- **Bransjespesifikk data** — NACE-koder, sertifiseringer, offshore-kapasiteter
-- **Compliance-krav** — dokumentasjon og sporbarhet for alle kundeinteraksjoner
+- **Lange salgssykluser**: prosjekter kan ta 6-18 måneder fra første kontakt til signering
+- **Tekniske beslutningsprosesser**: flere interessenter fra drift, innkjøp og ledelse
+- **Bransjespesifikk data**: NACE-koder, sertifiseringer, offshore-kapasiteter
+- **Compliance-krav**: dokumentasjon og sporbarhet for alle kundeinteraksjoner
 
 ## Argon Solutions sin CRM-løsning
 
@@ -25,19 +25,19 @@ Argon Solutions har utviklet et CRM-system som adresserer alle disse utfordringe
 ### Automatisert prospektering med 6 lead-kilder
 
 Leads strømmer inn automatisk fra:
-1. **Brønnøysundregistrene (Brreg)** — Nye selskapsregistreringer i riktig bransje
-2. **Google** — Bedrifter som søker etter relevante tjenester
-3. **Proff.no** — Firmainformasjon og kontaktdata
-4. **LinkedIn** — Via Vayne.io og Hunter.io for e-postberikelse
-5. **Kontaktskjema** — Inbound leads fra argonsolutions.no
-6. **Booking** — Leads som booker konsultasjon
+1. **Brønnøysundregistrene (Brreg)**: Nye selskapsregistreringer i riktig bransje
+2. **Google**: Bedrifter som søker etter relevante tjenester
+3. **Proff.no**: Firmainformasjon og kontaktdata
+4. **LinkedIn**: Via Vayne.io og Hunter.io for e-postberikelse
+5. **Kontaktskjema**: Inbound leads fra argonsolutions.no
+6. **Booking**: Leads som booker konsultasjon
 
 ### AI-drevet lead scoring med Claude
 
 Hver lead scores automatisk av Claude AI basert på:
-- **Fit score** — hvor godt bedriften matcher idealkunden
-- **Interest score** — hvor mye interesse som er vist
-- **AI-kommentar** — Claude sin vurdering i fritekst
+- **Fit score**: hvor godt bedriften matcher idealkunden
+- **Interest score**: hvor mye interesse som er vist
+- **AI-kommentar**: Claude sin vurdering i fritekst
 
 ### Daglig automasjonssweep
 
@@ -69,4 +69,4 @@ Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd 
 
 ---
 
-*Vil du se hvordan Argon CRM kan fungere for din bedrift? [Book en konsultasjon](/kontakt) — vi viser deg systemet og diskuterer tilpasninger for dine behov.*
+*Vil du se hvordan Argon CRM kan fungere for din bedrift? [Book en konsultasjon](/kontakt). Vi viser deg systemet og diskuterer tilpasninger for dine behov.*

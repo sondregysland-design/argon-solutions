@@ -14,7 +14,7 @@ export function Hero() {
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-light">
           Argon Solutions er et AI-byrå i Stavanger. Vi leverer AI-tjenester,
           Claude Code-oppsett, og skreddersydd software for energisektoren.
-          Fra CRM og prosjektstyring til AI-agenter — vi skreddersyr
+          Fra CRM og prosjektstyring til AI-agenter, vi skreddersyr
           verktøyet dere trenger. Første måneden gratis.
         </p>
         <div className="mt-10 flex justify-center gap-4">

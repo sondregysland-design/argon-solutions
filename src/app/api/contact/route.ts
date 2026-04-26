@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       </div>`,
     });
 
-    // Push to CRM (fire-and-forget — don't block the form response)
+    // Push to CRM (fire-and-forget, don't block the form response)
     const crmUrl = process.env.ARGON_CRM_BASE_URL;
     if (crmUrl) {
       fetch(`${crmUrl}/api/leads/ingest`, {

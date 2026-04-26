@@ -5,7 +5,7 @@ keywords: ["AI-strategi", "AI strategi bedrift", "AI veikart", "AI implementerin
 date: 2026-04-22
 ---
 
-Mange norske bedrifter har hatt "AI-strategi" på agendaen i to år uten å komme videre enn pilotprosjekter og interne diskusjoner. Problemet er sjelden mangel på vilje — det er mangel på en praktisk metode for å gå fra ide til implementering. Denne guiden gir deg en konkret tilnærming.
+Mange norske bedrifter har hatt "AI-strategi" på agendaen i to år uten å komme videre enn pilotprosjekter og interne diskusjoner. Problemet er sjelden mangel på vilje. Det er mangel på en praktisk metode for å gå fra ide til implementering. Denne guiden gir deg en konkret tilnærming.
 
 ## Hvorfor AI-strategier feiler
 
@@ -23,7 +23,7 @@ Før vi snakker om hva som fungerer, er det nyttig å forstå hva som konsekvent
 
 ### Steg 1: Kartlegg smertepunkter, ikke AI-muligheter
 
-Start med bedriftens faktiske smertepunkter — prosesser som er tidkrevende, feilprone eller frustrerende for ansatte. Snakk med folk som gjør arbeidet, ikke bare ledelsen.
+Start med bedriftens faktiske smertepunkter: prosesser som er tidkrevende, feilprone eller frustrerende for ansatte. Snakk med folk som gjør arbeidet, ikke bare ledelsen.
 
 Gode indikatorer på AI-egnede prosesser: "Vi kopierer mye data mellom systemer", "Vi bruker timer på å lage rapporter som er klare neste dag likevel", "Vi sjekker de samme tingene manuelt om og om igjen."
 
@@ -45,7 +45,7 @@ Plott smertepunktene etter to akser:
 - **Verdi** (y-akse): Hvor mye tid/kostnader spares, eller hvor stor kvalitetsforbedring oppnås?
 - **Kompleksitet** (x-akse): Hvor mange systemer er involvert? Hvor mye edge-case-håndtering kreves?
 
-Prosjektene øverst til venstre (høy verdi, lav kompleksitet) er ditt første veikart. Disse bygger momentum, kompetanse og tillit til AI internt — uten å ta på seg for mye risiko tidlig.
+Prosjektene øverst til venstre (høy verdi, lav kompleksitet) er ditt første veikart. Disse bygger momentum, kompetanse og tillit til AI internt, uten å ta på seg for mye risiko tidlig.
 
 ### Steg 4: Bygg et første prosjekt riktig
 
@@ -91,7 +91,7 @@ Et solid AI-veikart for en norsk SMB ser typisk slik ut:
 **Kvartal 2–3**: Fullskala implementering av første prosjekt og pilot av andre
 **Kvartal 4**: Evaluering, iterasjon og planlegging for neste år
 
-Bedrifter som prøver å gjøre alt på en gang, kommer typisk inn i kvartal to med prosjekter som henger, entusiasme som ebber og ledelse som begynner å tvile. Gå smalere og dypere — og bygg suksess stein for stein.
+Bedrifter som prøver å gjøre alt på en gang, kommer typisk inn i kvartal to med prosjekter som henger, entusiasme som ebber og ledelse som begynner å tvile. Gå smalere og dypere. Bygg suksess stein for stein.
 
 ---
 

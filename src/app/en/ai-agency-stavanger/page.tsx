@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const title = "AI Agency in Stavanger, Norway — Argon Solutions";
+const title = "AI Agency in Stavanger, Norway | Argon Solutions";
 const description = "Argon Solutions is an AI agency in Stavanger, Norway. We deliver AI services, Claude Code setup, custom software and AI agents for the energy sector.";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function AIAgencyPage() {
           AI Agency in Stavanger
         </h1>
         <p className="mt-6 text-lg text-text-light leading-relaxed">
-          Argon Solutions is an AI agency based in Stavanger, Norway — the energy capital of the Nordics.
+          Argon Solutions is an AI agency based in Stavanger, Norway, the energy capital of the Nordics.
           We build custom AI solutions, set up Claude Code environments, and develop AI agents for
           businesses in the energy sector.
         </p>
@@ -32,7 +32,7 @@ export default function AIAgencyPage() {
           <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">What we do</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {[
-              { title: "Claude Code Setup", desc: "We set up Claude Code as a complete AI operating system for your team — custom skills, MCP servers, and workflows." },
+              { title: "Claude Code Setup", desc: "We set up Claude Code as a complete AI operating system for your team: custom skills, MCP servers, and workflows." },
               { title: "Custom Software", desc: "Bespoke web applications, dashboards, and tools built for the energy sector." },
               { title: "AI Agents", desc: "Autonomous agents that handle browser automation, data collection, and repetitive processes." },
               { title: "System Integration", desc: "Connect your existing systems with custom APIs, automated data flows, and AI-powered reporting." },
@@ -51,7 +51,7 @@ export default function AIAgencyPage() {
             {[
               "Founded by engineers with 10+ years of hands-on experience in oil & gas operations",
               "We build working AI systems, not PowerPoint presentations",
-              "First month free — try before you commit",
+              "First month free. Try before you commit",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <svg className="mt-1 h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">

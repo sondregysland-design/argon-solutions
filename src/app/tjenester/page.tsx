@@ -22,7 +22,7 @@ const serviceCards = [
     title: "Claude Code oppsett",
     badge: "Mest etterspurt",
     description:
-      "Vi setter opp Claude Code som et komplett AI-operativsystem for din bedrift — med skreddersydde skills, MCP-servere, hooks og arbeidsflyter.",
+      "Vi setter opp Claude Code som et komplett AI-operativsystem for din bedrift: med skreddersydde skills, MCP-servere, hooks og arbeidsflyter.",
   },
   {
     href: "/tjenester/skreddersydd-software",
@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "Hvilke tjenester tilbyr Argon Solutions?",
     answer:
-      "Argon Solutions tilbyr fem hovedtjenester: (1) Claude Code oppsett — AI-operativsystem for din bedrift. (2) Skreddersydd software — webapplikasjoner, dashboards og mobilvenlige løsninger. (3) Systemintegrasjon — API-utvikling, AI-drevet rapportgenerering og dataflyt mellom systemer. (4) AI-agenter — nettleserautomatisering, datainnhenting og repetitive prosesser. (5) AI-strategi og rådgivning — veikart og implementeringsstøtte.",
+      "Argon Solutions tilbyr fem hovedtjenester: (1) Claude Code oppsett: AI-operativsystem for din bedrift. (2) Skreddersydd software: webapplikasjoner, dashboards og mobilvenlige løsninger. (3) Systemintegrasjon: API-utvikling, AI-drevet rapportgenerering og dataflyt mellom systemer. (4) AI-agenter: nettleserautomatisering, datainnhenting og repetitive prosesser. (5) AI-strategi og rådgivning: veikart og implementeringsstøtte.",
   },
   {
     question: "Kan Argon Solutions bygge CRM og automatiseringsverktøy for energibransjen?",
@@ -78,7 +78,7 @@ const faqs = [
   {
     question: "Hvor holder Argon Solutions til?",
     answer:
-      "Argon Solutions holder til i Stavanger, Norge — Norges energihovedstad. Vi betjener kunder i hele Norge med fokus på olje- og gassindustrien og energisektoren.",
+      "Argon Solutions holder til i Stavanger, Norge, Norges energihovedstad. Vi betjener kunder i hele Norge med fokus på olje- og gassindustrien og energisektoren.",
   },
 ];
 
@@ -203,7 +203,7 @@ export default function TjenesterPage() {
             Slik kommer du i gang
           </h2>
           <p className="mt-4 max-w-2xl text-text-light">
-            Fra første samtale til ferdig løsning — slik jobber Argon Solutions.
+            Fra første samtale til ferdig løsning: slik jobber Argon Solutions.
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-5">
             {[

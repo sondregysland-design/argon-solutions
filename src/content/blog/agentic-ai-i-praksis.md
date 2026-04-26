@@ -1,11 +1,11 @@
 ---
 title: "Agentic AI i praksis: Slik bygger vi autonome AI-agenter"
-description: "Agentic AI er AI-systemer som handler selvstendig. Lær hvordan Argon Solutions bygger autonome AI-agenter for norske bedrifter — fra nettleserautomatisering til komplekse arbeidsflyter."
+description: "Agentic AI er AI-systemer som handler selvstendig. Lær hvordan Argon Solutions bygger autonome AI-agenter for norske bedrifter, fra nettleserautomatisering til komplekse arbeidsflyter."
 keywords: ["agentic AI", "AI-agenter", "autonom AI", "AI automatisering", "AI-byrå", "AI-tjenester Stavanger"]
 date: 2026-04-25
 ---
 
-En chatbot svarer på spørsmål. En AI-agent løser problemer. Dette skillet — mellom reaktiv og autonom AI — er kjernen i begrepet "agentic AI", og det er det som avgjør om AI faktisk endrer hvordan bedriften opererer, eller bare blir et avansert Google.
+En chatbot svarer på spørsmål. En AI-agent løser problemer. Dette skillet, mellom reaktiv og autonom AI, er kjernen i begrepet "agentic AI", og det er det som avgjør om AI faktisk endrer hvordan bedriften opererer, eller bare blir et avansert Google.
 
 ## Hva er agentic AI?
 
@@ -33,11 +33,11 @@ Fra seks timer til tre minutter, med høyere pålitelighet og full sporbarhet.
 
 Argon Solutions bruker en kombinasjon av teknologier valgt for pålitelighet i produksjon:
 
-**Playwright for nettleserautomatisering**: Playwright er industristandarden for robust web-automatisering. Det håndterer moderne nettsider, JavaScript-rendring og dynamisk innhold — egenskaper som er avgjørende for å automatisere reelle forretningssystemer.
+**Playwright for nettleserautomatisering**: Playwright er industristandarden for robust web-automatisering. Det håndterer moderne nettsider, JavaScript-rendring og dynamisk innhold, egenskaper som er avgjørende for å automatisere reelle forretningssystemer.
 
 **Claude AI for intelligens**: Playwright forteller agenten hvordan den navigerer. Claude tar beslutningene. Skal dette dokumentet flagges? Er dette sertifikatet gyldig? Hva er den relevante informasjonen på denne siden? Claude analyserer og tolker innholdet agenten møter.
 
-**Orkestrering og scheduling**: Agentene kjøres på definerte tidspunkter eller utløses av hendelser. Vi bygger robuste feilhåndteringsrutiner slik at en endret portalstruktur ikke stopper hele prosessen — agenten varsler og venter på instruksjon i stedet for å feile stille.
+**Orkestrering og scheduling**: Agentene kjøres på definerte tidspunkter eller utløses av hendelser. Vi bygger robuste feilhåndteringsrutiner slik at en endret portalstruktur ikke stopper hele prosessen. Agenten varsler og venter på instruksjon i stedet for å feile stille.
 
 **Logging og sporbarhet**: Alle handlinger logges. Bedriften kan til enhver tid se nøyaktig hva agenten har gjort, hvilke beslutninger som ble tatt og basert på hvilken informasjon.
 
@@ -45,11 +45,11 @@ Argon Solutions bruker en kombinasjon av teknologier valgt for pålitelighet i p
 
 ### Datainnsamling og overvåking
 
-Agenter som kontinuerlig henter data fra eksterne kilder — markedspriser, leverandørstatus, regulatoriske oppdateringer, bransjenytt — og oppsummerer det som er relevant. Informasjonen er alltid oppdatert, uten at noen bruker tid på å lete.
+Agenter som kontinuerlig henter data fra eksterne kilder, markedspriser, leverandørstatus, regulatoriske oppdateringer, bransjenytt, og oppsummerer det som er relevant. Informasjonen er alltid oppdatert, uten at noen bruker tid på å lete.
 
 ### Dokumentprosessering
 
-Mange bedrifter mottar store mengder dokumenter — kontrakter, tilbud, tekniske spesifikasjoner, sertifikater. En AI-agent kan lese hvert dokument, ekstrahere nøkkelinformasjon, sjekke mot interne krav og kategorisere etter innhold. Det som tidligere tok en medarbeider en dag, tar agenten minutter.
+Mange bedrifter mottar store mengder dokumenter: kontrakter, tilbud, tekniske spesifikasjoner, sertifikater. En AI-agent kan lese hvert dokument, ekstrahere nøkkelinformasjon, sjekke mot interne krav og kategorisere etter innhold. Det som tidligere tok en medarbeider en dag, tar agenten minutter.
 
 ### Compliance og HMS
 
@@ -57,7 +57,7 @@ I regulerte industrier er compliance-dokumentasjon kritisk og tidkrevende. Agent
 
 ### Rapportering
 
-Periodiske rapporter — ukentlige statusrapporter, månedlige KPI-oversikter, kvartalsvise styrerappporter — er typiske kandidater for automatisering. Agenten henter data fra relevante systemer, strukturerer innholdet etter malen og leverer et ferdig utkast til gjennomlesing.
+Periodiske rapporter, ukentlige statusrapporter, månedlige KPI-oversikter, kvartalsvise styrerapporter, er typiske kandidater for automatisering. Agenten henter data fra relevante systemer, strukturerer innholdet etter malen og leverer et ferdig utkast til gjennomlesing.
 
 ## Er agentic AI riktig for din bedrift?
 
@@ -70,8 +70,8 @@ En god kandidat for AI-agenter er en prosess som:
 
 Hvis du kan beskrive prosessen som en liste med instruksjoner en ny medarbeider ville fulgt, kan en AI-agent sannsynligvis gjøre det.
 
-Kompliserte prosesser som krever kreativitet, komplekse forhandlinger eller unik domenekunnskap er derimot bedre egnet for AI som støtter et menneske — ikke erstatter det.
+Kompliserte prosesser som krever kreativitet, komplekse forhandlinger eller unik domenekunnskap er derimot bedre egnet for AI som støtter et menneske, ikke erstatter det.
 
 ---
 
-*Argon Solutions er et AI-byrå i Stavanger som designer og bygger autonome AI-agenter for norske bedrifter. Har du en prosess du tror kan automatiseres? [Kontakt oss](/kontakt) — vi gir deg en ærlig vurdering.*
+*Argon Solutions er et AI-byrå i Stavanger som designer og bygger autonome AI-agenter for norske bedrifter. Har du en prosess du tror kan automatiseres? [Kontakt oss](/kontakt). Vi gir deg en ærlig vurdering.*

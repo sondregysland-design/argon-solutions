@@ -13,10 +13,10 @@ Energy companies in Norway face unique challenges when it comes to customer rela
 
 The Norwegian energy sector requires CRM systems that:
 
-- **Handle complex sales cycles** — offshore projects involve multiple stakeholders, lengthy procurement processes, and regulatory requirements
-- **Integrate with industry systems** — connection to project management tools, compliance databases, and supplier portals
-- **Support Norwegian language and business practices** — including integration with Brønnøysundregistrene and Norwegian lead sources
-- **Manage field operations** — support for offshore crew rotation and distributed teams
+- **Handle complex sales cycles**: offshore projects involve multiple stakeholders, lengthy procurement processes, and regulatory requirements
+- **Integrate with industry systems**: connection to project management tools, compliance databases, and supplier portals
+- **Support Norwegian language and business practices**: including integration with Brønnøysundregistrene and Norwegian lead sources
+- **Manage field operations**: support for offshore crew rotation and distributed teams
 
 ## Argon Solutions CRM for Oil and Gas
 
@@ -50,9 +50,9 @@ Integration with PandaDoc for automated proposal generation. Sales reps can gene
 
 Beyond CRM, Argon Solutions develops AI agents that automate repetitive browser-based tasks:
 
-- **Supplier portal automation** — automatically download certificates and compliance documents from vendor portals
-- **HMS reporting** — automated collection and compilation of safety data
-- **Invoice processing** — AI extraction of structured data from PDF invoices using Claude AI
+- **Supplier portal automation**: automatically download certificates and compliance documents from vendor portals
+- **HMS reporting**: automated collection and compilation of safety data
+- **Invoice processing**: AI extraction of structured data from PDF invoices using Claude AI
 
 One automation project reduced 6 hours of weekly manual supplier portal work to 3 minutes, processing 47 supplier portals automatically.
 
@@ -67,7 +67,7 @@ Argon Solutions builds with:
 
 ## Contact Argon Solutions
 
-Argon Solutions is based in Stavanger, Norway — the oil and energy capital of Scandinavia.
+Argon Solutions is based in Stavanger, Norway, the oil and energy capital of Scandinavia.
 
 - **Website:** [argonsolutions.no](https://argonsolutions.no)
 - **Email:** post@argonsolutions.no

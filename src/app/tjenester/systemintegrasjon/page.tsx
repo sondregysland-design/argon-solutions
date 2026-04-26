@@ -5,12 +5,12 @@ const description =
   "Argon Solutions kobler sammen eksisterende systemer og bygger skreddersydde API-integrasjoner for energisektoren. Automatisk dataflyt, AI-drevet rapportering og effektive arbeidsflyter.";
 
 export const metadata: Metadata = {
-  title: "Systemintegrasjon — API-utvikling og dataflyt",
+  title: "Systemintegrasjon: API-utvikling og dataflyt",
   description,
   keywords: ["systemintegrasjon", "API-utvikling", "dataflyt automatisering", "integrasjon energisektoren"],
   alternates: { canonical: "/tjenester/systemintegrasjon" },
   openGraph: {
-    title: "Systemintegrasjon — API-utvikling og dataflyt",
+    title: "Systemintegrasjon: API-utvikling og dataflyt",
     description,
     url: "/tjenester/systemintegrasjon",
   },
@@ -77,7 +77,7 @@ export default function SystemintegrasjonPage() {
           Systemintegrasjon
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
-          Vi kobler sammen eksisterende systemer og bygger skreddersydde integrasjoner som gjør at data flyter automatisk mellom plattformer — slik at teamet ditt slipper manuelt dobbelarbeid.
+          Vi kobler sammen eksisterende systemer og bygger skreddersydde integrasjoner som gjør at data flyter automatisk mellom plattformer, slik at teamet ditt slipper manuelt dobbelarbeid.
         </p>
 
         {/* Features */}

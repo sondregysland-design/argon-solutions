@@ -98,7 +98,7 @@ export default function Home() {
               <div className="mb-10">
                 <img
                   src="/products/dashboard-architecture.png"
-                  alt="Arkitekturdiagram — Project Dashboard med rollebasert tilgang, delt database, AI-rapportgenerering"
+                  alt="Arkitekturdiagram: Project Dashboard med rollebasert tilgang, delt database, AI-rapportgenerering"
                   className="mx-auto w-full max-w-2xl rounded-xl"
                 />
               </div>
@@ -110,7 +110,7 @@ export default function Home() {
                   </h3>
                   <p className="text-text-light leading-relaxed">
                     Vi bygger komplette webapplikasjoner tilpasset deres behov.
-                    Her er et eksempel — et prosjektstyringssystem med rollebasert
+                    Her er et eksempel: et prosjektstyringssystem med rollebasert
                     tilgang, lagerstyring, AI-rapportgenerering og sanntids
                     verkstedlogg.
                   </p>
@@ -142,13 +142,13 @@ export default function Home() {
                   <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
                     <iframe
                       src="https://project-dashboard-psi-gilt.vercel.app/login"
-                      title="Prosjektstyring — demo"
+                      title="Prosjektstyring: demo"
                       className="h-[500px] w-full"
                       loading="lazy"
                     />
                   </div>
                   <p className="mt-3 text-center text-xs text-text-light">
-                    Prøv live demo — velg en rolle og utforsk systemet
+                    Prøv live demo: velg en rolle og utforsk systemet
                   </p>
                 </div>
               </div>
@@ -182,16 +182,16 @@ export default function Home() {
                 <p className="max-w-2xl text-text-light leading-relaxed">
                   Et komplett CRM-system med automatisert prospektering,
                   AI-drevet lead scoring, og en salgspipeline som driver seg
-                  selv — fra første scrape til signert kunde.
+                  selv, fra første scrape til signert kunde.
                 </p>
               </div>
 
-              {/* Part 1: Full CRM Flow — diagram left, text right */}
+              {/* Part 1: Full CRM Flow, diagram left, text right */}
               <div className="flex flex-col gap-8 md:flex-row md:items-center">
                 <div className="flex-1">
                   <img
                     src="/products/crm-full-flow.png"
-                    alt="CRM komplett flyt — fra 6 lead-kilder via auto-scrape, berikelse og AI scoring til salgspipeline"
+                    alt="CRM komplett flyt: fra 6 lead-kilder via auto-scrape, berikelse og AI scoring til salgspipeline"
                     className="w-full rounded-xl"
                   />
                 </div>
@@ -200,7 +200,7 @@ export default function Home() {
                     Fra lead-kilde til kunde
                   </h4>
                   <p className="text-text-light leading-relaxed">
-                    Leads strømmer inn fra 6 kilder — Brreg, Google, Proff,
+                    Leads strømmer inn fra 6 kilder: Brreg, Google, Proff,
                     LinkedIn, kontaktskjema og booking. Auto-scrape henter og
                     beriker data automatisk, AI scorer hver lead, og pipelinen
                     fører dem fra ny til signert kunde.
@@ -228,12 +228,12 @@ export default function Home() {
               {/* Divider */}
               <div className="my-10 border-t border-gray-100" />
 
-              {/* Part 2: Daily Automation — text left, diagram right */}
+              {/* Part 2: Daily Automation, text left, diagram right */}
               <div className="flex flex-col gap-8 md:flex-row-reverse md:items-center">
                 <div className="flex-1">
                   <img
                     src="/products/crm-daily-automation.png"
-                    alt="Daglig automasjon — 6 moduler som kjører automatisk: pipeline, AI score, duplikat, win/loss, AI e-post, rapport"
+                    alt="Daglig automasjon: 6 moduler som kjører automatisk: pipeline, AI score, duplikat, win/loss, AI e-post, rapport"
                     className="w-full rounded-xl"
                   />
                 </div>
@@ -244,7 +244,7 @@ export default function Home() {
                   <p className="text-text-light leading-relaxed">
                     Hver morgen kjører 6 automatiseringsmoduler som holder
                     pipelinen i bevegelse uten manuell innsats. AI scorer leads,
-                    genererer oppfølgings-e-poster, og fanger opp duplikater —
+                    genererer oppfølgings-e-poster, og fanger opp duplikater.
                     mens ukentlige rapporter sendes automatisk.
                   </p>
                   <ul className="space-y-2 pt-2">
@@ -307,13 +307,13 @@ export default function Home() {
                   >
                     <img
                       src="/products/crm-screenshot.png"
-                      alt="Argon CRM — salgspipeline dashboard"
+                      alt="Argon CRM: salgspipeline dashboard"
                       className="w-full"
                       loading="lazy"
                     />
                   </div>
                   <p className="mt-3 text-center text-xs text-text-light">
-                    Argon CRM — salgspipeline og automatisert prospektering
+                    Argon CRM: salgspipeline og automatisert prospektering
                   </p>
                 </div>
               </div>
@@ -357,11 +357,11 @@ export default function Home() {
                 <p className="max-w-2xl text-text-light leading-relaxed">
                   Vi kobler sammen eksisterende systemer og bygger skreddersydde
                   integrasjoner som gjør at data flyter automatisk mellom
-                  plattformer — raskt, sømløst og uten manuell innsats.
+                  plattformer, raskt, sømløst og uten manuell innsats.
                 </p>
               </div>
 
-              {/* Example 1: AI Rapportgenerering — text left, image right */}
+              {/* Example 1: AI Rapportgenerering, text left, image right */}
               <div className="flex flex-col gap-8 md:flex-row md:items-center">
                 <div className="flex-1 space-y-4">
                   <h4 className="font-[family-name:var(--font-playfair)] text-xl font-medium text-text">
@@ -390,7 +390,7 @@ export default function Home() {
                 <div className="flex-1">
                   <img
                     src="/products/ai-report-system.png"
-                    alt="AI rapportgenerering — dataflyt fra database via API og ChatGPT til Word-dokument"
+                    alt="AI rapportgenerering: dataflyt fra database via API og ChatGPT til Word-dokument"
                     className="w-full rounded-xl"
                   />
                 </div>
@@ -399,7 +399,7 @@ export default function Home() {
               {/* Divider */}
               <div className="my-10 border-t border-gray-100" />
 
-              {/* Example 2: AI E-posthåndtering — image left, text right (diagonal) */}
+              {/* Example 2: AI E-posthåndtering, image left, text right (diagonal) */}
               <div className="flex flex-col gap-8 md:flex-row-reverse md:items-center">
                 <div className="flex-1 space-y-4">
                   <h4 className="font-[family-name:var(--font-playfair)] text-xl font-medium text-text">
@@ -430,7 +430,7 @@ export default function Home() {
                 <div className="flex-1">
                   <img
                     src="/products/ai-email-automation.png"
-                    alt="AI e-posthåndtering — Gmail via MCP til AI Agent, PM-system og automatisk work order"
+                    alt="AI e-posthåndtering: Gmail via MCP til AI Agent, PM-system og automatisk work order"
                     className="w-full rounded-xl"
                   />
                 </div>
@@ -475,11 +475,11 @@ export default function Home() {
                 <p className="mx-auto mb-6 max-w-2xl text-center text-sm text-text-light leading-relaxed">
                   AI-agenten logger inn på dashboardet, henter data, navigerer til Kabal
                   for å skrape oppdaterte datoer, oppdaterer systemet og genererer en
-                  ferdig rapport — helt automatisk, uten manuell innsats.
+                  ferdig rapport, helt automatisk, uten manuell innsats.
                 </p>
                 <img
                   src="/products/ai-browser-automation.png"
-                  alt="AI Browser Automation — flytdiagram som viser AI-agent, dashboard, Kabal-scraping, læring og rapportgenerering"
+                  alt="AI Browser Automation: flytdiagram som viser AI-agent, dashboard, Kabal-scraping, læring og rapportgenerering"
                   className="mx-auto w-full max-w-2xl rounded-xl"
                 />
               </div>
@@ -530,7 +530,7 @@ export default function Home() {
                     </video>
                   </div>
                   <p className="mt-3 text-center text-xs text-text-light">
-                    Se demo — AI-agent som automatiserer oppgaver
+                    Se demo: AI-agent som automatiserer oppgaver
                   </p>
                 </div>
               </div>
@@ -582,7 +582,7 @@ export default function Home() {
               <div className="mb-10">
                 <img
                   src="/products/claude-code-kurs.png"
-                  alt="Claude Code Kurs — 4 steg fra intro til team setup"
+                  alt="Claude Code Kurs: 4 steg fra intro til team setup"
                   className="mx-auto w-full max-w-2xl rounded-xl"
                 />
               </div>
@@ -615,7 +615,7 @@ export default function Home() {
                   </Link>
                 </div>
 
-                {/* Interaktiv Kurs — 1 dag */}
+                {/* Interaktiv Kurs, 1 dag */}
                 <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6 shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
                   <div className="mb-4 flex items-center justify-between">
                     <span className="rounded-md bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700">1 dag</span>
@@ -642,7 +642,7 @@ export default function Home() {
                   </Link>
                 </div>
 
-                {/* Interaktiv Kurs — 2 dager */}
+                {/* Interaktiv Kurs, 2 dager */}
                 <div className="relative flex flex-col rounded-xl border-2 border-primary bg-white p-6 shadow-[0_4px_20px_rgba(30,64,175,0.1)]">
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-0.5 text-[10px] font-bold tracking-wide text-white uppercase">Anbefalt</div>
                   <div className="mb-4 flex items-center justify-between">
@@ -733,7 +733,7 @@ export default function Home() {
               <div className="mb-10">
                 <img
                   src="/products/claude-code-consulting.png"
-                  alt="Claude Code Consulting — Custom Setup, Custom Skills, MCP Servers, AI Agenter"
+                  alt="Claude Code Consulting: Custom Setup, Custom Skills, MCP Servers, AI Agenter"
                   className="mx-auto w-full max-w-2xl rounded-xl"
                 />
               </div>

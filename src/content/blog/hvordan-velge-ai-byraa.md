@@ -1,5 +1,5 @@
 ---
-title: "Hvordan velge riktig AI-byrå — 7 spørsmål du bør stille"
+title: "Hvordan velge riktig AI-byrå: 7 spørsmål du bør stille"
 description: "Vurdering av AI-byråer for din bedrift. 7 kritiske spørsmål som avslører om byrået faktisk kan levere, eller bare selger buzzwords."
 keywords: ["AI-byrå", "velge AI-byrå", "AI konsulent", "AI rådgivning", "AI leverandør Norge"]
 date: 2026-04-23
@@ -7,7 +7,7 @@ date: 2026-04-23
 
 AI-byrå-markedet er preget av to ytterpunkter: store konsulentselskaper som selger strategirapporter til seks-sifrede beløp uten å bygge noe, og enkeltpersoner som lover å automatisere alt med ChatGPT-integrasjoner som feiler etter tre måneder. Mellom disse finnes seriøse leverandører som faktisk leverer. Disse spørsmålene hjelper deg å skille dem fra hverandre.
 
-## 1. Kan du vise meg et fungerende system — ikke en presentasjon?
+## 1. Kan du vise meg et fungerende system, ikke en presentasjon?
 
 Det første og viktigste spørsmålet. Et byrå som har bygget AI-løsninger i produksjon kan vise deg live-systemer eller dokumenterte resultater fra kunder. Ikke konseptskisser. Ikke "vi har gjort noe lignende". Et faktisk fungerende system.
 
@@ -17,7 +17,7 @@ Røde flagg: Lange PowerPoint-presentasjoner om AI-potensialet. Referanser de ik
 
 ## 2. Hvilke modeller bruker dere, og hvorfor?
 
-Markedet for AI-modeller endrer seg raskt. Et seriøst byrå har en klar mening om hvilke modeller som passer til hvilke oppgaver — og kan forklare avveiingene.
+Markedet for AI-modeller endrer seg raskt. Et seriøst byrå har en klar mening om hvilke modeller som passer til hvilke oppgaver, og kan forklare avveiingene.
 
 Riktige svar inneholder konkrete begrunnelser: "Vi bruker Claude for dokumentanalyse fordi kontektsvindusst størrelse er kritisk for lange dokumenter" eller "For sanntidsapplikasjoner bruker vi [X] fordi latens er under [Y] millisekunder."
 
@@ -49,7 +49,7 @@ Generisk AI-kunnskap er én ting. Forståelse av din bransjes spesifikke krav, s
 
 Gode svar: Referanser fra samme bransje. Konkrete eksempler på bransje-spesifikke utfordringer de har løst. Kunnskap om bransje-spesifikke systemer.
 
-Røde flagg: "AI er universelt — vi trenger ikke bransjeforståelse." Dette er alltid feil.
+Røde flagg: "AI er universelt. Vi trenger ikke bransjeforståelse." Dette er alltid feil.
 
 ## 6. Hva er realistisk tidslinje og leveranse?
 
@@ -73,10 +73,10 @@ I tillegg til svarene på de syv spørsmålene, er det noen mønstre som konsekv
 
 - **Buzzword-tett, innhold-tomt**: Mye snakk om "AI-transformasjon" og "fremtidens arbeidsflyt", lite om konkrete mekanismer og resultater
 - **Ingen portefølje**: Kan ikke vise referanseprosjekter eller live-systemer
-- **Alle modeller, alle bransjer**: Ekte spesialisering krever fokus — et selskap som "gjør alt AI" gjør ingenting godt
+- **Alle modeller, alle bransjer**: Ekte spesialisering krever fokus. Et selskap som "gjør alt AI" gjør ingenting godt
 - **Pris uten scope**: Et tilbud uten klar spesifikasjon av hva som leveres er ikke et tilbud, det er en åpen regning
 - **Presset til rask beslutning**: Seriøse leverandører er ikke redd for at du tar deg tid til å evaluere
 
 ---
 
-*Argon Solutions er et AI-byrå i Stavanger. Vi leverer fungerende systemer, ikke presentasjoner — og vi besvarer alle syv spørsmålene over med konkrete svar. [Ta kontakt](/kontakt) for en ærlig samtale om hva AI kan gjøre for din bedrift.*
+*Argon Solutions er et AI-byrå i Stavanger. Vi leverer fungerende systemer, ikke presentasjoner, og vi besvarer alle syv spørsmålene over med konkrete svar. [Ta kontakt](/kontakt) for en ærlig samtale om hva AI kan gjøre for din bedrift.*

@@ -4,11 +4,11 @@ const description =
   "Gratis interaktivt HMS-spill fra Argon Solutions for olje- og gassindustrien. Test kunnskap om sikkerhet, prosedyrer og regelverk offshore.";
 
 export const metadata: Metadata = {
-  title: "HMS Spill — Gratis sikkerhetsquiz for olje og gass | Argon Solutions",
+  title: "HMS Spill | Gratis sikkerhetsquiz for olje og gass | Argon Solutions",
   description,
   alternates: { canonical: "/hms-quiz" },
   openGraph: {
-    title: "HMS Spill — Gratis sikkerhetsquiz for olje og gass | Argon Solutions",
+    title: "HMS Spill | Gratis sikkerhetsquiz for olje og gass | Argon Solutions",
     description,
     url: "/hms-quiz",
   },

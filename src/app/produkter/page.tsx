@@ -7,11 +7,11 @@ const description =
   "Argon Solutions sine produkter: prosjektstyring, CRM, dashboard, PDF-ekstraksjon og risikostyring for olje- og gassindustrien. Skreddersydd med AI.";
 
 export const metadata: Metadata = {
-  title: "Produkter — AI-drevet software for olje og gass",
+  title: "Produkter: AI-drevet software for olje og gass",
   description,
   alternates: { canonical: "/produkter" },
   openGraph: {
-    title: "Produkter — AI-drevet software for olje og gass | Argon Solutions",
+    title: "Produkter | AI-drevet software for olje og gass | Argon Solutions",
     description,
     url: "/produkter",
   },
@@ -56,7 +56,7 @@ export default function ProdukterPage() {
       <div className="mx-auto max-w-6xl px-6">
         <h1 className="text-4xl font-bold text-text">Skreddersydde AI- og softwareløsninger fra Argon Solutions</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
-          Våre AI-drevne produkter for energisektoren — bygget med Claude Code
+          Våre AI-drevne produkter for energisektoren, bygget med Claude Code
           og moderne AI-tjenester for å automatisere hverdagen. Vi skreddersyr
           verktøyet dere trenger, dere prøver det gratis den første måneden
           uten forpliktelse.
