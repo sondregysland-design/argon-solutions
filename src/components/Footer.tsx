@@ -8,9 +8,9 @@ export function Footer() {
           <div>
             <LogoFull />
             <p className="mt-4 text-sm text-text-light">
-              Argon Solutions er et Stavanger-basert softwareselskap som leverer
-              skreddersydd software, CRM, systemintegrasjon og AI-agenter
-              for olje- og gassindustrien i Norge.
+              Argon Solutions er et AI-byrå i Stavanger som leverer AI-tjenester,
+              Claude Code-oppsett, skreddersydd software og AI-agenter for
+              energisektoren i Norge.
             </p>
           </div>
           <div>

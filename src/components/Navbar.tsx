@@ -5,6 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogoFull } from "./Logo";
 
+const tjenesterSubLinks = [
+  { href: "/tjenester/claude-code", label: "Claude Code oppsett" },
+  { href: "/tjenester/skreddersydd-software", label: "Skreddersydd Software" },
+  { href: "/tjenester/systemintegrasjon", label: "Systemintegrasjon" },
+  { href: "/tjenester/ai-agenter", label: "AI-agenter" },
+  { href: "/tjenester/ai-strategi", label: "AI-strategi" },
+];
+
 const links = [
   { href: "/", label: "Hjem" },
   { href: "/tjenester", label: "Tjenester" },
@@ -15,6 +23,7 @@ const links = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [tjenesterOpen, setTjenesterOpen] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -26,17 +35,50 @@ export function Navbar() {
 
         {/* Desktop */}
         <div className="hidden gap-8 md:flex">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                pathname === l.href ? "text-primary" : "text-text-light"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
+          {links.map((l) =>
+            l.href === "/tjenester" ? (
+              <div
+                key={l.href}
+                className="relative"
+                onMouseEnter={() => setTjenesterOpen(true)}
+                onMouseLeave={() => setTjenesterOpen(false)}
+              >
+                <Link
+                  href={l.href}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    pathname === l.href || pathname.startsWith("/tjenester/")
+                      ? "text-primary"
+                      : "text-text-light"
+                  }`}
+                >
+                  {l.label}
+                </Link>
+                {tjenesterOpen && (
+                  <div className="absolute top-full left-0 mt-1 w-56 rounded-xl border border-gray-100 bg-white py-2 shadow-lg">
+                    {tjenesterSubLinks.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        className="block px-4 py-2 text-sm text-text-light hover:bg-surface hover:text-primary transition-colors"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  pathname === l.href ? "text-primary" : "text-text-light"
+                }`}
+              >
+                {l.label}
+              </Link>
+            )
+          )}
         </div>
 
         {/* Mobile toggle */}
@@ -59,16 +101,35 @@ export function Navbar() {
       {open && (
         <div className="border-t border-gray-100 px-6 py-4 md:hidden">
           {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className={`block py-2 text-sm font-medium ${
-                pathname === l.href ? "text-primary" : "text-text-light"
-              }`}
-            >
-              {l.label}
-            </Link>
+            <div key={l.href}>
+              <Link
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className={`block py-2 text-sm font-medium ${
+                  pathname === l.href || (l.href === "/tjenester" && pathname.startsWith("/tjenester/"))
+                    ? "text-primary"
+                    : "text-text-light"
+                }`}
+              >
+                {l.label}
+              </Link>
+              {l.href === "/tjenester" && (
+                <div className="pl-4">
+                  {tjenesterSubLinks.map((sub) => (
+                    <Link
+                      key={sub.href}
+                      href={sub.href}
+                      onClick={() => setOpen(false)}
+                      className={`block py-1.5 text-sm ${
+                        pathname === sub.href ? "text-primary" : "text-text-light"
+                      }`}
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       )}

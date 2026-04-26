@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const description =
-  "Argon Solutions er et Stavanger-basert softwareselskap grunnlagt av ingeniører med erfaring fra olje- og gassindustrien. Vi bygger skreddersydd software, CRM-systemer og AI-agenter for energisektoren.";
+  "Argon Solutions er et AI-byrå i Stavanger grunnlagt av ingeniører med erfaring fra olje- og gassindustrien. Vi leverer AI-tjenester, Claude Code-oppsett og skreddersydd software for energisektoren.";
 
 export const metadata: Metadata = {
   title: "Om Argon Solutions — Softwareselskap i Stavanger for olje og gass",
@@ -74,6 +74,25 @@ export default function OmOssPage() {
           </p>
         </div>
 
+        {/* AI-operativsystem */}
+        <div className="mt-16 rounded-xl border border-primary/20 bg-primary/5 p-8 md:p-12">
+          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">
+            Hvorfor AI-operativsystem?
+          </h2>
+          <p className="mt-4 text-text-light">
+            Vi har implementert Claude Code-miljøer for bedrifter i energisektoren.
+            Vår tilnærming: Vi setter opp et komplett AI-operativsystem —
+            skreddersydde skills, MCP-servere, og arbeidsflyter — slik at teamet
+            ditt får en AI-assistent som faktisk forstår deres systemer, data og
+            prosesser.
+          </p>
+          <p className="mt-3 text-text-light">
+            Som AI-byrå i Stavanger kombinerer vi dyp bransjekunnskap fra olje og
+            gass med ekspertise innen moderne AI-tjenester. Det betyr at vi ikke
+            bare setter opp teknologien — vi forstår konteksten den skal brukes i.
+          </p>
+        </div>
+
         {/* Teknologisk ekspertise */}
         <div id="technology-stack" className="mt-16 rounded-xl border border-gray-100 p-8 md:p-12">
           <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Teknologisk ekspertise</h2>
@@ -124,7 +143,7 @@ export default function OmOssPage() {
             </div>
             <div>
               <dt className="text-sm font-semibold text-text">Bransje</dt>
-              <dd className="mt-1 text-text-light">Software for olje- og gassindustrien</dd>
+              <dd className="mt-1 text-text-light">AI-tjenester og software for energisektoren</dd>
             </div>
             <div>
               <dt className="text-sm font-semibold text-text">Spesialområder</dt>

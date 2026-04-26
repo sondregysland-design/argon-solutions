@@ -24,6 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    { url: `${baseUrl}/tjenester/claude-code`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.9 },
+    { url: `${baseUrl}/tjenester/skreddersydd-software`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${baseUrl}/tjenester/systemintegrasjon`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${baseUrl}/tjenester/ai-agenter`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${baseUrl}/tjenester/ai-strategi`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${baseUrl}/en/ai-agency-stavanger`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 },
     {
       url: `${baseUrl}/produkter`,
       lastModified: new Date(),
