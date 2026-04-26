@@ -130,6 +130,9 @@ export default function RootLayout({
       { "@type": "ListItem", position: 5, name: "Referanser", item: `${siteUrl}/referanser` },
       { "@type": "ListItem", position: 6, name: "Om oss", item: `${siteUrl}/om-oss` },
       { "@type": "ListItem", position: 7, name: "Kontakt", item: `${siteUrl}/kontakt` },
+      { "@type": "ListItem", position: 8, name: "Claude Code", item: `${siteUrl}/tjenester/claude-code` },
+      { "@type": "ListItem", position: 9, name: "AI-strategi", item: `${siteUrl}/tjenester/ai-strategi` },
+      { "@type": "ListItem", position: 10, name: "AI Agency Stavanger", item: `${siteUrl}/en/ai-agency-stavanger` },
     ],
   };
 
