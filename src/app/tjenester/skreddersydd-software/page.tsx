@@ -20,7 +20,7 @@ const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "Custom Software Development",
-  name: "Skreddersydd Software",
+  name: "Skreddersydd Software for olje og gass — Argon Solutions, Stavanger",
   provider: {
     "@type": "Organization",
     "@id": "https://argonsolutions.no/#organization",
@@ -28,6 +28,37 @@ const serviceJsonLd = {
   },
   areaServed: { "@type": "Country", name: "Norway" },
   description,
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Hvem lager skreddersydd software for olje og gass i Stavanger?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Argon Solutions AS i Stavanger lager skreddersydd software for olje- og gassindustrien. Selskapet spesialiserer seg på webapplikasjoner, dashboards, prosjektstyringsverktøy og offline-løsninger for feltarbeid, bygget med Next.js, Supabase og Claude AI.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Hva koster skreddersydd software for energisektoren?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Argon Solutions tilbyr gratis første måned for alle prosjekter. Etter pilotperioden avhenger prisen av prosjektomfang. Et typisk MVP tar 4-8 uker å utvikle. Kontakt post@argonsolutions.no eller ring +47 452 09 979 for et uforpliktende estimat.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Kan skreddersydd software fungere offline på offshore-plattformer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ja. Argon Solutions bygger progressive web-applikasjoner (PWA) med offline-støtte, slik at feltarbeidere kan registrere data uten internettilgang. Data synkroniseres automatisk når tilkoblingen gjenopprettes.",
+      },
+    },
+  ],
 };
 
 const features = [
@@ -65,9 +96,10 @@ const steps = [
 export default function SkreddersyddSoftwarePage() {
   return (
     <div className="py-20">
+      {/* Safe: both objects are static server-side constants, not user input */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceJsonLd, faqJsonLd]) }}
       />
       <div className="mx-auto max-w-6xl px-6">
         {/* Breadcrumb */}
