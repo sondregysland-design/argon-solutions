@@ -96,8 +96,7 @@ export default function RootLayout({
       availableLanguage: ["Norwegian", "English"],
     },
     sameAs: [
-      "https://www.instagram.com/argonsolutions/",
-      "https://www.linkedin.com/company/argon-solutions-no/",
+      "https://www.linkedin.com/company/112877302/post",
     ],
     knowsAbout: [
       "Skreddersydd software for olje og gass",
