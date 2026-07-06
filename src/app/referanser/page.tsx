@@ -123,7 +123,7 @@ export default function ReferanserPage() {
         dangerouslySetInnerHTML={{ __html: jsonLdScript }}
       />
       <div className="mx-auto max-w-6xl px-6">
-        <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">
+        <h1 className="text-4xl font-display font-medium text-text">
           Referanser og prosjekter
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
@@ -135,9 +135,9 @@ export default function ReferanserPage() {
           {prosjekter.map((p) => (
             <div
               key={p.slug}
-              className="rounded-2xl border border-gray-100 bg-white p-8 md:p-10"
+              className="rounded-2xl border border-text/10 bg-white p-8 md:p-10"
             >
-              <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">
+              <h2 className="text-2xl font-display font-medium text-text">
                 {p.title}
               </h2>
 
@@ -204,7 +204,7 @@ export default function ReferanserPage() {
         </div>
 
         <div className="mt-16 rounded-2xl bg-surface p-8 text-center md:p-12">
-          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">
+          <h2 className="text-2xl font-display font-medium text-text">
             Har du et lignende prosjekt?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-text-light">

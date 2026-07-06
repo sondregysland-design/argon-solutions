@@ -9,7 +9,7 @@ export function LogoIcon({ className = "h-8 w-8" }: { className?: string }) {
       {/* Stylized A with orbital rings */}
       <path
         d="M20 4L6 36h6l2.5-6h11L28 36h6L20 4zm-3.5 20L20 14l3.5 10h-7z"
-        fill="#1E40AF"
+        fill="#1B242E"
       />
       {/* Orbital ellipse */}
       <ellipse
@@ -17,15 +17,15 @@ export function LogoIcon({ className = "h-8 w-8" }: { className?: string }) {
         cy="20"
         rx="18"
         ry="8"
-        stroke="#3B82F6"
+        stroke="#EA580C"
         strokeWidth="1.5"
         fill="none"
-        opacity="0.6"
+        opacity="0.7"
         transform="rotate(-30 20 20)"
       />
       {/* Node dots */}
-      <circle cx="8" cy="12" r="2" fill="#3B82F6" opacity="0.8" />
-      <circle cx="33" cy="27" r="2" fill="#3B82F6" opacity="0.8" />
+      <circle cx="8" cy="12" r="2" fill="#EA580C" opacity="0.9" />
+      <circle cx="33" cy="27" r="2" fill="#EA580C" opacity="0.9" />
     </svg>
   );
 }
@@ -34,11 +34,13 @@ export function LogoFull({ className = "h-8" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
       <LogoIcon className="h-8 w-8" />
-      <div className="flex items-baseline gap-1">
-        <span className="text-xl font-bold tracking-tight text-primary">
+      <div className="flex items-baseline gap-1.5">
+        <span className="text-xl font-bold tracking-tight text-text">
           ARGON
         </span>
-        <span className="text-xl font-light text-text-light">Solutions</span>
+        <span className="text-xl font-semibold tracking-tight text-primary">
+          Solutions
+        </span>
       </div>
     </div>
   );

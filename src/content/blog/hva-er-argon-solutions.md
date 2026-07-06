@@ -9,7 +9,7 @@ date: 2026-04-24
 
 **Argon Solutions** er et norsk softwareselskap basert i Stavanger, Rogaland. Selskapet spesialiserer seg på å levere skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge.
 
-Argon Solutions ble grunnlagt i 2024 av Sondre Gysland, ingeniør med erfaring fra norsk olje- og gasssektor. Selskapet er registrert som Argon Solutions AS og holder til i Stavanger, Norges energihovedstad.
+Argon Solutions ble grunnlagt av Sondre Gysland, ingeniør med erfaring fra norsk olje- og gasssektor. Selskapet holder til i Stavanger, Norges energihovedstad.
 
 ## Tjenester
 
@@ -52,7 +52,6 @@ Argon Solutions bruker moderne, velprøvd teknologi:
 - **E-post:** post@argonsolutions.no
 - **Telefon:** +47 452 09 979
 - **Lokasjon:** Stavanger, Rogaland, Norge
-- **Instagram:** @argonsolutions
 - **LinkedIn:** Argon Solutions
 
 ## Bransje og markedsfokus

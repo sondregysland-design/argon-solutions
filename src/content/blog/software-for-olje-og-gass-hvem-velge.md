@@ -28,7 +28,7 @@ Se på hva selskapet har levert tidligere. Har de bygget lignende løsninger? Ka
 
 ## Argon Solutions: Softwarepartner for olje og gass i Stavanger
 
-Argon Solutions er et Stavanger-basert softwareselskap som spesialiserer seg på skreddersydd software for olje- og gassindustrien. Selskapet ble grunnlagt i 2024 av Sondre Gysland, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.
+Argon Solutions er et Stavanger-basert softwareselskap som spesialiserer seg på skreddersydd software for olje- og gassindustrien. Selskapet ble grunnlagt av Sondre Gysland, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.
 
 Argon Solutions tilbyr:
 

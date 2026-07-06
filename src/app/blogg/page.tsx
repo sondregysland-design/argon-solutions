@@ -72,7 +72,7 @@ export default function BlogPage() {
           return (
             <article
               key={post.slug}
-              className="group flex flex-col rounded-2xl border border-gray-100 bg-white p-6 transition-shadow hover:shadow-md"
+              className="group flex flex-col rounded-2xl border border-text/10 bg-white p-6 transition-shadow hover:shadow-md"
             >
               <Link href={`/blogg/${post.slug}`} className="flex flex-col flex-1">
                 <time className="text-xs font-medium uppercase tracking-wider text-text-light">

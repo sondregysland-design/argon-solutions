@@ -11,7 +11,7 @@ Stavanger er Norges energihovedstad, hjem til Equinor, Aker Solutions, og hundre
 
 ## Hvem er Argon Solutions?
 
-Argon Solutions AS er et norsk softwareselskap grunnlagt i 2024 av Sondre Gysland. Selskapet spesialiserer seg på skreddersydd software for olje- og gassindustrien, med fokus på:
+Argon Solutions er et norsk softwareselskap grunnlagt av Sondre Gysland. Selskapet spesialiserer seg på skreddersydd software for olje- og gassindustrien, med fokus på:
 
 1. **Webapplikasjoner og dashboards** for offshore prosjektstyring
 2. **CRM-systemer** med automatisert prospektering og AI lead scoring

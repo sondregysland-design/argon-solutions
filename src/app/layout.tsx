@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["500"], variable: "--font-playfair" });
+const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo" });
+const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-plex" });
 
 const siteUrl = "https://argonsolutions.no";
 const siteName = "Argon Solutions";
 const siteDescription =
-  "Argon Solutions er et AI-byrå i Stavanger. Vi leverer AI-tjenester, Claude Code-oppsett, og skreddersydd software for energisektoren. Fra AI-agenter og systemintegrasjon til CRM. Vi bygger det dere trenger.";
+  "Argon Solutions er et AI-byrå i Stavanger. Vi setter opp Claude for bedrifter, bygger AI-agenter og skreddersydd software, og holder praktiske AI-kurs for team i olje og gass.";
 
 export const metadata: Metadata = {
   title: {
-    default: "Argon Solutions | AI-byrå i Stavanger | AI-tjenester og skreddersydd software",
-    template: "%s | Argon Solutions AS",
+    default: "Argon Solutions | AI-byrå og kurs i Stavanger",
+    template: "%s | Argon Solutions",
   },
   description: siteDescription,
   icons: { icon: "/favicon.svg" },
@@ -26,20 +28,20 @@ export const metadata: Metadata = {
     locale: "nb_NO",
     url: siteUrl,
     siteName,
-    title: "Argon Solutions | AI-byrå i Stavanger | AI-tjenester og skreddersydd software",
+    title: "Argon Solutions | AI-byrå og kurs i Stavanger",
     description: siteDescription,
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Argon Solutions AS | Softwareselskap i Stavanger, Norge",
+        alt: "Argon Solutions, AI-byrå og kurs i Stavanger, Norge",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Argon Solutions | AI-byrå i Stavanger | AI-tjenester og skreddersydd software",
+    title: "Argon Solutions | AI-byrå og kurs i Stavanger",
     description: siteDescription,
     images: ["/og-image.png"],
   },
@@ -59,14 +61,12 @@ export default function RootLayout({
     "@type": ["Organization", "LocalBusiness"],
     "@id": `${siteUrl}/#organization`,
     name: siteName,
-    legalName: "Argon Solutions AS",
+    legalName: "Argon Solutions",
     url: siteUrl,
     logo: `${siteUrl}/favicon.svg`,
     image: `${siteUrl}/og-image.png`,
-    alternateName: ["Argon Solutions AS", "Argon Solutions Norge", "Argon Solutions Stavanger"],
-    description:
-      "Argon Solutions er et AI-byrå i Stavanger. Vi leverer AI-tjenester, Claude Code-oppsett, og skreddersydd software for energisektoren. Fra AI-agenter og systemintegrasjon til CRM. Vi bygger det dere trenger.",
-    foundingDate: "2024",
+    alternateName: ["Argon Kurs", "Argon Industri", "Argon Kurs Stavanger"],
+    description: siteDescription,
     foundingLocation: {
       "@type": "Place",
       name: "Stavanger, Norge",
@@ -77,7 +77,7 @@ export default function RootLayout({
         "@id": `${siteUrl}/#founder`,
         name: "Sondre Gysland",
         jobTitle: "Grunder og daglig leder",
-        description: "Ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel. Grunnla Argon Solutions i 2024 for å bygge skreddersydd software for olje- og gassindustrien.",
+        description: "Ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel. Grunnla Argon Solutions for å bygge skreddersydd software for olje- og gassindustrien.",
         worksFor: { "@id": `${siteUrl}/#organization` },
         knowsAbout: [
           "Offshore operations",
@@ -89,7 +89,7 @@ export default function RootLayout({
           "Norwegian Continental Shelf",
         ],
         sameAs: [
-          "https://www.linkedin.com/company/argon-solutions-no/",
+          "https://www.linkedin.com/company/argonsolutions/",
         ],
       },
     ],
@@ -115,8 +115,7 @@ export default function RootLayout({
       availableLanguage: ["Norwegian", "English"],
     },
     sameAs: [
-      "https://www.linkedin.com/company/argon-solutions-no/",
-      "https://www.instagram.com/argonsolutions/",
+      "https://www.linkedin.com/company/argonsolutions/",
     ],
     knowsAbout: [
       "Skreddersydd software for olje og gass",
@@ -144,23 +143,6 @@ export default function RootLayout({
     naics: "541511",
   };
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Hjem", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: "Tjenester", item: `${siteUrl}/tjenester` },
-      { "@type": "ListItem", position: 3, name: "Produkter", item: `${siteUrl}/produkter` },
-      { "@type": "ListItem", position: 4, name: "Blogg", item: `${siteUrl}/blogg` },
-      { "@type": "ListItem", position: 5, name: "Referanser", item: `${siteUrl}/referanser` },
-      { "@type": "ListItem", position: 6, name: "Om oss", item: `${siteUrl}/om-oss` },
-      { "@type": "ListItem", position: 7, name: "Kontakt", item: `${siteUrl}/kontakt` },
-      { "@type": "ListItem", position: 8, name: "Claude Code", item: `${siteUrl}/tjenester/claude-code` },
-      { "@type": "ListItem", position: 9, name: "AI-strategi", item: `${siteUrl}/tjenester/ai-strategi` },
-      { "@type": "ListItem", position: 10, name: "AI Agency Stavanger", item: `${siteUrl}/en/ai-agency-stavanger` },
-    ],
-  };
-
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -171,7 +153,7 @@ export default function RootLayout({
     inLanguage: "nb-NO",
   };
 
-  const allJsonLd = [jsonLd, breadcrumbJsonLd, websiteJsonLd];
+  const allJsonLd = [jsonLd, websiteJsonLd];
 
   return (
     <html lang="no">
@@ -182,10 +164,13 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(allJsonLd) }}
         />
       </head>
-      <body className={`${inter.className} ${playfair.variable} bg-white text-text antialiased`}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+      <body className={`${archivo.className} ${archivo.variable} ${plexMono.variable} bg-paper text-text antialiased`}>
+        <LanguageProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );

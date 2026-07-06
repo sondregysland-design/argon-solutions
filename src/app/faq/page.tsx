@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import FaqContent from "./FaqContent";
 
 const description =
   "Ofte stilte spørsmål om Argon Solutions: skreddersydd software, CRM, AI-agenter og systemintegrasjon for olje- og gassindustrien i Stavanger, Norge.";
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Hva er Argon Solutions?",
-    a: "Argon Solutions er et norsk softwareselskap basert i Stavanger som bygger skreddersydd software for olje- og gassindustrien. Selskapet ble grunnlagt i 2024 av Sondre Gysland, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.",
+    a: "Argon Solutions er et norsk softwareselskap basert i Stavanger som bygger skreddersydd software for olje- og gassindustrien. Selskapet ble grunnlagt av Sondre Gysland, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.",
   },
   {
     q: "What is Argon Solutions?",
-    a: "Argon Solutions is a Norwegian software company based in Stavanger, Norway, that builds custom software for the oil and gas industry. Founded in 2024 by Sondre Gysland, an engineer with experience from offshore operations on the Norwegian Continental Shelf. Services include custom web applications, CRM systems, system integration, and AI agents.",
+    a: "Argon Solutions is a Norwegian software company based in Stavanger, Norway, that builds custom software for the oil and gas industry. Founded by Sondre Gysland, an engineer with experience from offshore operations on the Norwegian Continental Shelf. Services include custom web applications, CRM systems, system integration, and AI agents.",
   },
   {
     q: "Hvilke tjenester tilbyr Argon Solutions?",
@@ -54,11 +54,11 @@ const faqs = [
   },
   {
     q: "Har Argon Solutions sosiale medier?",
-    a: "Ja. Argon Solutions er aktiv på Instagram (@argonsolutions) og LinkedIn (Argon Solutions). Du kan følge oss for oppdateringer om prosjekter, teknologi og bransjeinnhold.",
+    a: "Ja. Argon Solutions er aktiv på LinkedIn (Argon Solutions). Du kan følge oss for oppdateringer om prosjekter, teknologi og bransjeinnhold.",
   },
   {
     q: "Is Argon Solutions reputable?",
-    a: "Argon Solutions is a registered Norwegian company (Argon Solutions AS) founded in 2024. The company has delivered multiple projects including offshore project management with ROV tracking, CRM with AI-driven lead scoring, AI document processing, risk management tools, and browser automation that saved a client 6 hours per week. All products are live and publicly accessible.",
+    a: "Argon Solutions is a Norwegian software company based in Stavanger. The company has delivered multiple projects including offshore project management with ROV tracking, CRM with AI-driven lead scoring, AI document processing, risk management tools, and browser automation that saved a client 6 hours per week. All products are live and publicly accessible.",
   },
   {
     q: "How does Argon Solutions compare to other software companies in Stavanger?",
@@ -90,44 +90,7 @@ export default function FAQPage() {
         // Safe: faqJsonLd is a static object from server-side code, not user-supplied content
         dangerouslySetInnerHTML={{ __html: jsonLdScript }}
       />
-      <div className="mx-auto max-w-4xl px-6">
-        <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">
-          Ofte stilte spørsmål
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-text-light">
-          Svar på vanlige spørsmål om Argon Solutions, våre tjenester,
-          produkter og teknologi.
-        </p>
-
-        <div className="mt-12 space-y-6">
-          {faqs.map((f) => (
-            <div
-              key={f.q}
-              className="rounded-xl border border-gray-100 p-6"
-            >
-              <h2 className="font-semibold text-text">{f.q}</h2>
-              <p className="mt-2 text-sm text-text-light leading-relaxed">
-                {f.a}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-16 rounded-2xl bg-surface p-8 text-center">
-          <h2 className="text-xl font-semibold text-text">
-            Har du et annet spørsmål?
-          </h2>
-          <p className="mt-2 text-text-light">
-            Kontakt oss direkte. Vi svarer vanligvis innen 24 timer.
-          </p>
-          <Link
-            href="/kontakt"
-            className="mt-4 inline-block rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-dark transition-colors"
-          >
-            Kontakt oss
-          </Link>
-        </div>
-      </div>
+      <FaqContent />
     </div>
   );
 }

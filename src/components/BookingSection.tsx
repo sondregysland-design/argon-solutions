@@ -2,10 +2,64 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { format, addMonths, addDays, parseISO } from "date-fns";
-import { nb } from "date-fns/locale";
+import { nb, enUS } from "date-fns/locale";
+import { useLanguage } from "@/i18n/LanguageProvider";
 import { BookingCalendar } from "./BookingCalendar";
 
 export function BookingSection() {
+  const { locale } = useLanguage();
+  const dfnsLocale = locale === "en" ? enUS : nb;
+  const m =
+    locale === "en"
+      ? {
+          loadError: "Could not load available times",
+          genericError: "Something went wrong",
+          retryError: "Something went wrong. Please try again.",
+          successTitle: "Booking confirmed",
+          successBody:
+            "You will receive a confirmation by email with a calendar invitation.",
+          bookAnother: "Book a new meeting",
+          loadingCalendar: "Loading calendar...",
+          noSlots: "No available times on this day",
+          selectDate: "Select a date to see available times",
+          nameLabel: "Name *",
+          namePlaceholder: "Your full name",
+          emailLabel: "Email *",
+          emailPlaceholder: "you@email.com",
+          companyLabel: "Company name",
+          companyPlaceholder: "Optional",
+          topicLabel: "Topic",
+          topicPlaceholder: "Short description (optional)",
+          submit: "Confirm booking",
+          submitting: "Booking...",
+          footer:
+            "Times are updated continuously. Bookings must be made at least 2 days in advance.",
+        }
+      : {
+          loadError: "Kunne ikke laste tilgjengelige tider",
+          genericError: "Noe gikk galt",
+          retryError: "Noe gikk galt. Vennligst prøv igjen.",
+          successTitle: "Booking bekreftet!",
+          successBody:
+            "Du mottar en bekreftelse på e-post med kalenderinvitasjon.",
+          bookAnother: "Book et nytt møte",
+          loadingCalendar: "Laster kalender...",
+          noSlots: "Ingen ledige tider denne dagen",
+          selectDate: "Velg en dato for å se ledige tider",
+          nameLabel: "Navn *",
+          namePlaceholder: "Ditt fulle navn",
+          emailLabel: "E-post *",
+          emailPlaceholder: "din@epost.no",
+          companyLabel: "Firmanavn",
+          companyPlaceholder: "Valgfritt",
+          topicLabel: "Tema",
+          topicPlaceholder: "Kort beskrivelse (valgfritt)",
+          submit: "Bekreft booking",
+          submitting: "Booker...",
+          footer:
+            "Tidene oppdateres fortløpende. Booking må gjøres minst 2 dager i forveien.",
+        };
+
   const [availability, setAvailability] = useState<Record<string, string[]>>({});
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
@@ -25,14 +79,18 @@ export function BookingSection() {
       const from = format(addDays(new Date(), 2), "yyyy-MM-dd");
       const to = format(addMonths(new Date(), 2), "yyyy-MM-dd");
       const res = await fetch(`/api/availability?from=${from}&to=${to}`);
+      if (!res.ok) {
+        setError(m.loadError);
+        return;
+      }
       const data = await res.json();
       if (data.dates) setAvailability(data.dates);
     } catch {
-      setError("Kunne ikke laste tilgjengelige tider");
+      setError(m.loadError);
     } finally {
       setFetchingSlots(false);
     }
-  }, []);
+  }, [m.loadError]);
 
   useEffect(() => {
     fetchAvailability();
@@ -53,12 +111,12 @@ export function BookingSection() {
       });
       const result = await res.json();
       if (!res.ok) {
-        setError(result.error || "Noe gikk galt");
+        setError(result.error || m.genericError);
         return;
       }
       setSuccess(true);
     } catch {
-      setError("Noe gikk galt. Vennligst prøv igjen.");
+      setError(m.retryError);
     } finally {
       setLoading(false);
     }
@@ -66,7 +124,7 @@ export function BookingSection() {
 
   const slotsForDate = selectedDate ? availability[selectedDate] || [] : [];
   const formattedSelectedDate = selectedDate
-    ? format(parseISO(selectedDate), "EEEE d. MMMM", { locale: nb })
+    ? format(parseISO(selectedDate), "EEEE d. MMMM", { locale: dfnsLocale })
     : "";
 
   if (success) {
@@ -77,22 +135,22 @@ export function BookingSection() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-lg font-semibold text-green-800">Booking bekreftet!</h3>
+        <h3 className="text-lg font-semibold text-green-800">{m.successTitle}</h3>
         <p className="mt-2 text-sm text-green-700">
-          Du mottar en bekreftelse på e-post med kalenderinvitasjon.
+          {m.successBody}
         </p>
         <button
           onClick={() => { setSuccess(false); setSelectedDate(null); setSelectedTime(null); setName(""); setEmail(""); setCompany(""); setTopic(""); fetchAvailability(); }}
           className="mt-4 text-sm text-primary hover:underline"
         >
-          Book et nytt møte
+          {m.bookAnother}
         </button>
       </div>
     );
   }
 
   const inputClass =
-    "mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary";
+    "mt-1 block w-full rounded-lg border border-text/15 px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary";
 
   return (
     <div>
@@ -112,7 +170,7 @@ export function BookingSection() {
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                 </svg>
-                <p className="text-sm text-text-light">Laster kalender...</p>
+                <p className="text-sm text-text-light">{m.loadingCalendar}</p>
               </div>
             </div>
           ) : (
@@ -139,7 +197,7 @@ export function BookingSection() {
                     className={`px-4 py-3 rounded-lg text-sm font-medium transition-all duration-150 ${
                       selectedTime === time
                         ? "bg-primary text-white shadow-sm"
-                        : "bg-white border border-gray-200 text-text hover:border-primary-light hover:text-primary"
+                        : "bg-white border border-text/15 text-text hover:border-primary-light hover:text-primary"
                     }`}
                   >
                     {time}
@@ -150,33 +208,33 @@ export function BookingSection() {
           )}
 
           {selectedDate && slotsForDate.length === 0 && (
-            <p className="text-sm text-text-light">Ingen ledige tider denne dagen</p>
+            <p className="text-sm text-text-light">{m.noSlots}</p>
           )}
 
           {selectedTime && (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="book-name" className="block text-sm font-medium text-text">Navn *</label>
-                <input id="book-name" type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Ditt fulle navn" className={inputClass} />
+                <label htmlFor="book-name" className="block text-sm font-medium text-text">{m.nameLabel}</label>
+                <input id="book-name" type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder={m.namePlaceholder} className={inputClass} />
               </div>
               <div>
-                <label htmlFor="book-email" className="block text-sm font-medium text-text">E-post *</label>
-                <input id="book-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="din@epost.no" className={inputClass} />
+                <label htmlFor="book-email" className="block text-sm font-medium text-text">{m.emailLabel}</label>
+                <input id="book-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder={m.emailPlaceholder} className={inputClass} />
               </div>
               <div>
-                <label htmlFor="book-company" className="block text-sm font-medium text-text">Firmanavn</label>
-                <input id="book-company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Valgfritt" className={inputClass} />
+                <label htmlFor="book-company" className="block text-sm font-medium text-text">{m.companyLabel}</label>
+                <input id="book-company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder={m.companyPlaceholder} className={inputClass} />
               </div>
               <div>
-                <label htmlFor="book-topic" className="block text-sm font-medium text-text">Tema</label>
-                <textarea id="book-topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Kort beskrivelse (valgfritt)" maxLength={200} rows={2} className={`${inputClass} resize-none`} />
+                <label htmlFor="book-topic" className="block text-sm font-medium text-text">{m.topicLabel}</label>
+                <textarea id="book-topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder={m.topicPlaceholder} maxLength={200} rows={2} className={`${inputClass} resize-none`} />
               </div>
               <button
                 type="submit"
                 disabled={loading || !name || !email}
                 className="w-full rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
               >
-                {loading ? "Booker..." : "Bekreft booking"}
+                {loading ? m.submitting : m.submit}
               </button>
             </form>
           )}
@@ -186,14 +244,14 @@ export function BookingSection() {
               <svg className="w-10 h-10 mx-auto mb-3 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              Velg en dato for å se ledige tider
+              {m.selectDate}
             </div>
           )}
         </div>
       </div>
 
       <p className="text-xs text-gray-400 mt-6">
-        Tidene oppdateres fortløpende. Booking må gjøres minst 2 dager i forveien.
+        {m.footer}
       </p>
     </div>
   );

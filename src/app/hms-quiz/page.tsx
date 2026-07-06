@@ -25,7 +25,7 @@ export default function HmsQuizPage() {
           Argon Solutions i Stavanger.
         </p>
 
-        <div className="mt-12 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+        <div className="mt-12 overflow-hidden rounded-xl border border-text/15 bg-white shadow-sm">
           <iframe
             src="https://sondregysland-design.github.io/argon-hms-quize/"
             width="100%"

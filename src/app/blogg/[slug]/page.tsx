@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPost, getAllSlugs } from "@/lib/blog";
+import { getPost, getAllSlugs, getAllPosts, type BlogPostMeta } from "@/lib/blog";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -9,6 +9,19 @@ interface Props {
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
+}
+
+function getRelatedPosts(currentSlug: string, currentKeywords: string[]): BlogPostMeta[] {
+  const all = getAllPosts().filter((p) => p.slug !== currentSlug);
+  const lowered = currentKeywords.map((k) => k.toLowerCase());
+  const scored = all.map((p) => {
+    const overlap = p.keywords.filter((k) =>
+      lowered.includes(k.toLowerCase())
+    ).length;
+    return { post: p, score: overlap };
+  });
+  const ranked = scored.sort((a, b) => b.score - a.score).map((s) => s.post);
+  return ranked.slice(0, 3);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -41,6 +54,8 @@ export default async function BlogPostPage({ params }: Props) {
   const post = await getPost(slug);
   if (!post) notFound();
 
+  const relatedPosts = getRelatedPosts(slug, post.keywords);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -53,7 +68,7 @@ export default async function BlogPostPage({ params }: Props) {
         "@type": "Person",
         name: "Sondre Gysland",
         jobTitle: "Grunder, Argon Solutions",
-        url: "https://www.linkedin.com/company/argon-solutions-no/",
+        url: "https://www.linkedin.com/company/argonsolutions/",
       },
       {
         "@type": "Organization",
@@ -94,6 +109,24 @@ export default async function BlogPostPage({ params }: Props) {
           {post.title}
         </h1>
         <p className="mt-4 text-lg text-text-light">{post.description}</p>
+        <div className="mt-6 flex items-center gap-3 border-t border-text/10 pt-6">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+            SG
+          </div>
+          <div>
+            <p className="text-sm font-medium text-text">Sondre Gysland</p>
+            <p className="text-xs text-text-light">
+              Grunder, Argon Solutions ·{" "}
+              <a
+                href="https://www.linkedin.com/company/argonsolutions/"
+                rel="author"
+                className="hover:text-primary transition-colors"
+              >
+                LinkedIn
+              </a>
+            </p>
+          </div>
+        </div>
       </header>
 
       {/* Content is sanitized server-side in lib/blog.ts via sanitize-html */}
@@ -101,6 +134,31 @@ export default async function BlogPostPage({ params }: Props) {
         className="prose mt-10"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
+
+      {relatedPosts.length > 0 && (
+        <aside className="mt-16 border-t border-text/10 pt-10">
+          <h2 className="text-2xl font-display font-medium text-text">
+            Relaterte artikler
+          </h2>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedPosts.map((rp) => (
+              <Link
+                key={rp.slug}
+                href={`/blogg/${rp.slug}`}
+                className="group block rounded-xl border border-text/10 p-5 transition-colors hover:border-primary/30 hover:bg-surface"
+              >
+                <time className="text-xs text-text-light">{rp.date}</time>
+                <h3 className="mt-2 text-base font-semibold text-text group-hover:text-primary transition-colors">
+                  {rp.title}
+                </h3>
+                <p className="mt-2 text-sm text-text-light line-clamp-3">
+                  {rp.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </aside>
+      )}
 
       <div className="mt-16 rounded-2xl bg-surface p-8 text-center">
         <h2 className="text-xl font-semibold text-text">

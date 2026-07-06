@@ -16,7 +16,8 @@ import {
   addDays,
   isBefore,
 } from "date-fns";
-import { nb } from "date-fns/locale";
+import { nb, enUS } from "date-fns/locale";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 interface BookingCalendarProps {
   availability: Record<string, string[]>;
@@ -31,6 +32,21 @@ export function BookingCalendar({
   selectedDate,
   onSelectDate,
 }: BookingCalendarProps) {
+  const { locale } = useLanguage();
+  const dfnsLocale = locale === "en" ? enUS : nb;
+  const m =
+    locale === "en"
+      ? {
+          weekDays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          prevMonth: "Previous month",
+          nextMonth: "Next month",
+        }
+      : {
+          weekDays: ["Man", "Tir", "Ons", "Tor", "Fre", "Lør", "Søn"],
+          prevMonth: "Forrige måned",
+          nextMonth: "Neste måned",
+        };
+
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const earliest = useMemo(() => addDays(new Date(), MIN_ADVANCE_DAYS), []);
 
@@ -42,7 +58,7 @@ export function BookingCalendar({
     return eachDayOfInterval({ start: calStart, end: calEnd });
   }, [currentMonth]);
 
-  const weekDays = ["Man", "Tir", "Ons", "Tor", "Fre", "Lør", "Søn"];
+  const weekDays = m.weekDays;
 
   return (
     <div>
@@ -50,19 +66,19 @@ export function BookingCalendar({
         <button
           onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
           className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-text-light hover:text-text"
-          aria-label="Forrige måned"
+          aria-label={m.prevMonth}
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         <h3 className="text-lg font-semibold text-text capitalize">
-          {format(currentMonth, "MMMM yyyy", { locale: nb })}
+          {format(currentMonth, "MMMM yyyy", { locale: dfnsLocale })}
         </h3>
         <button
           onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
           className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-text-light hover:text-text"
-          aria-label="Neste måned"
+          aria-label={m.nextMonth}
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

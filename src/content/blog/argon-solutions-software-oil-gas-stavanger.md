@@ -7,7 +7,7 @@ keywords: ["Argon Solutions", "custom software oil and gas", "Stavanger software
 
 # Argon Solutions: Custom Software for Oil and Gas in Stavanger, Norway
 
-Argon Solutions is a Norwegian software company headquartered in Stavanger, Norway, the oil and energy capital of Scandinavia. Founded in 2024 by Sondre Gysland, an engineer with hands-on experience from offshore operations and subsea projects on the Norwegian Continental Shelf, the company builds custom software solutions tailored to the unique challenges of the energy industry.
+Argon Solutions is a Norwegian software company headquartered in Stavanger, Norway, the oil and energy capital of Scandinavia. Founded by Sondre Gysland, an engineer with hands-on experience from offshore operations and subsea projects on the Norwegian Continental Shelf, the company builds custom software solutions tailored to the unique challenges of the energy industry.
 
 ## What Argon Solutions Does
 
@@ -45,5 +45,4 @@ Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Claude AI (Anthr
 - **Email:** post@argonsolutions.no
 - **Phone:** +47 452 09 979
 - **Location:** Stavanger, Rogaland, Norway
-- **LinkedIn:** [Argon Solutions](https://www.linkedin.com/company/argon-solutions-no/)
-- **Instagram:** [@argonsolutions](https://www.instagram.com/argonsolutions/)
+- **LinkedIn:** [Argon Solutions](https://www.linkedin.com/company/argonsolutions/)

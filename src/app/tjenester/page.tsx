@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { TjenesterContent } from "./TjenesterContent";
 
 const description =
   "Argon Solutions leverer AI-tjenester, Claude Code-oppsett, skreddersydd software, systemintegrasjon og AI-agenter for norske bedrifter i energisektoren.";
@@ -166,79 +166,7 @@ export default function TjenesterPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(allTjenesterJsonLd) }}
       />
-      <div className="mx-auto max-w-6xl px-6">
-        <h1 className="text-4xl font-[family-name:var(--font-playfair)] font-medium text-text">
-          AI-tjenester og software
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-text-light">
-          Argon Solutions leverer AI-tjenester og skreddersydd software for energisektoren i Norge.
-          Her er hva vi kan hjelpe med.
-        </p>
-
-        {/* Service card grid */}
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {serviceCards.map((card) => (
-            <Link
-              key={card.href}
-              href={card.href}
-              className="group rounded-xl border border-gray-100 p-6 transition-all hover:border-primary/30 hover:shadow-md"
-            >
-              {card.badge && (
-                <span className="mb-3 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                  {card.badge}
-                </span>
-              )}
-              <h2 className="text-lg font-[family-name:var(--font-playfair)] font-medium text-text">
-                {card.title}
-              </h2>
-              <p className="mt-2 text-sm text-text-light leading-relaxed">{card.description}</p>
-              <span className="mt-4 inline-block text-sm font-medium text-primary">Les mer →</span>
-            </Link>
-          ))}
-        </div>
-
-        {/* How it works */}
-        <div className="mt-20 border-t border-gray-100 pt-16">
-          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">
-            Slik kommer du i gang
-          </h2>
-          <p className="mt-4 max-w-2xl text-text-light">
-            Fra første samtale til ferdig løsning: slik jobber Argon Solutions.
-          </p>
-          <div className="mt-8 grid gap-6 sm:grid-cols-5">
-            {[
-              { step: "1", title: "Gratis konsultasjon", desc: "30-minutters samtale for å forstå deres behov og utfordringer." },
-              { step: "2", title: "Behovsanalyse", desc: "Vi kartlegger systemer, prosesser og smertepunkter." },
-              { step: "3", title: "Utvikling", desc: "Iterativ utvikling med ukentlige demoer og tilbakemelding." },
-              { step: "4", title: "Testing", desc: "Grundig testing av funksjonalitet, sikkerhet og ytelse." },
-              { step: "5", title: "Gratis første måned", desc: "Prøv løsningen uten forpliktelse. Vi justerer basert på erfaring." },
-            ].map((s) => (
-              <div key={s.step} className="text-center">
-                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                  {s.step}
-                </div>
-                <h3 className="mt-3 text-sm font-semibold text-text">{s.title}</h3>
-                <p className="mt-1 text-xs text-text-light">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="mt-20 border-t border-gray-100 pt-16">
-          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">
-            Ofte stilte spørsmål
-          </h2>
-          <div className="mt-8 space-y-6">
-            {faqs.map((faq) => (
-              <div key={faq.question} className="rounded-xl border border-gray-100 p-6">
-                <h3 className="font-semibold text-text">{faq.question}</h3>
-                <p className="mt-2 text-sm text-text-light leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <TjenesterContent />
     </div>
   );
 }

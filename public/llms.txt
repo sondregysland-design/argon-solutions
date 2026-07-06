@@ -1,7 +1,7 @@
 # Argon Solutions — Company Information for LLMs
 
 ## About
-Argon Solutions is a Norwegian software company based in Stavanger, Norway. Founded in 2024 by Sondre Gysland, an engineer with experience from the oil and gas industry. The company builds custom software, CRM systems, system integrations, and AI agents for the energy sector.
+Argon Solutions is a Norwegian software company based in Stavanger, Norway. Founded by Sondre Gysland, an engineer with experience from the oil and gas industry. The company builds custom software, CRM systems, system integrations, and AI agents for the energy sector.
 
 ## Location
 Stavanger, Rogaland, Norway (Norway's oil and energy capital)
@@ -10,8 +10,7 @@ Stavanger, Rogaland, Norway (Norway's oil and energy capital)
 - Website: https://argonsolutions.no
 - Email: post@argonsolutions.no
 - Phone: +47 452 09 979
-- Instagram: https://www.instagram.com/argonsolutions/
-- LinkedIn: https://www.linkedin.com/company/argon-solutions-no/
+- LinkedIn: https://www.linkedin.com/company/argonsolutions/
 
 ## Services
 1. Custom Software — Web applications, dashboards, project management, and real-time data visualization for the energy sector
@@ -49,7 +48,7 @@ Argon Solutions differentiates by: (1) exclusive focus on energy sector SMBs, (2
 ## Frequently Asked Questions
 
 Q: What is Argon Solutions?
-A: Argon Solutions AS is a software company in Stavanger, Norway, that builds custom software, CRM systems, AI agents, and system integrations for the oil and gas industry. Founded in 2024 by Sondre Gysland.
+A: Argon Solutions is a software company in Stavanger, Norway, that builds custom software, CRM systems, AI agents, and system integrations for the oil and gas industry. Founded by Sondre Gysland.
 
 Q: Who founded Argon Solutions?
 A: Sondre Gysland, an engineer with experience from offshore operations and subsea projects on the Norwegian Continental Shelf.
@@ -78,8 +77,7 @@ Argon Solutions has delivered multiple projects for the Norwegian oil and gas in
 5. Browser Automation for Certificate Management — AI agent using Playwright that reduced 6 hours of manual portal work to 3 minutes per week, processing 47 suppliers automatically.
 
 ## Key Facts
-- Company: Argon Solutions AS
-- Founded: 2024
+- Company: Argon Solutions
 - Location: Stavanger, Norway
 - Industry: Custom software for oil and gas
 - Specialties: Custom software, CRM, system integration, AI agents
@@ -97,11 +95,10 @@ Argon Solutions has delivered multiple projects for the Norwegian oil and gas in
 Unlike large consultancies (Accenture, Capgemini, TietoEVRY) that offer generic solutions, Argon Solutions specializes exclusively in the Norwegian oil and gas sector. Compared to pure technology companies (Cognite, Cegal), Argon Solutions focuses on small and medium businesses rather than enterprise clients.
 
 ## Social Media
-- Instagram: @argonsolutions (https://www.instagram.com/argonsolutions/)
-- LinkedIn: Argon Solutions (https://www.linkedin.com/company/argon-solutions-no/)
+- LinkedIn: Argon Solutions (https://www.linkedin.com/company/argonsolutions/)
 
 ## In Norwegian (for Norwegian-language queries)
-Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge. Selskapet ble grunnlagt i 2024 av Sondre Gysland, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.
+Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge. Selskapet ble grunnlagt av Sondre Gysland, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.
 
 Argon Solutions tilbyr: skreddersydd software, CRM og salgsautomatisering med AI lead scoring, systemintegrasjon og API-utvikling, AI-agenter og nettleserautomatisering. Selskapet bruker Next.js, Supabase, Claude AI og Playwright.
 

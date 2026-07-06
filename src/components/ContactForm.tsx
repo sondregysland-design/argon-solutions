@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useT } from "@/i18n/LanguageProvider";
 
 export function ContactForm() {
+  const t = useT();
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -10,8 +12,8 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="rounded-xl border border-green-200 bg-green-50 p-8 text-center">
-        <h3 className="text-lg font-semibold text-green-800">Takk for meldingen!</h3>
-        <p className="mt-2 text-sm text-green-700">Vi tar kontakt så snart vi kan.</p>
+        <h3 className="text-lg font-semibold text-green-800">{t("contactForm.successTitle")}</h3>
+        <p className="mt-2 text-sm text-green-700">{t("contactForm.successBody")}</p>
       </div>
     );
   }
@@ -35,7 +37,7 @@ export function ContactForm() {
       if (!res.ok) throw new Error("Sending feilet");
       setSubmitted(true);
     } catch {
-      setError("Kunne ikke sende meldingen. Vennligst prøv igjen.");
+      setError(t("contactForm.error"));
     } finally {
       setSending(false);
     }
@@ -48,41 +50,41 @@ export function ContactForm() {
     >
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-text">
-          Navn
+          {t("contactForm.name")}
         </label>
         <input
           type="text"
           id="name"
           name="name"
           required
-          className="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-          placeholder="Ditt navn"
+          className="mt-1 block w-full rounded-lg border border-text/15 px-4 py-3 text-sm placeholder:text-text-light transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          placeholder={t("contactForm.namePh")}
         />
       </div>
       <div>
         <label htmlFor="email" className="block text-sm font-medium text-text">
-          E-post
+          {t("contactForm.email")}
         </label>
         <input
           type="email"
           id="email"
           name="email"
           required
-          className="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-          placeholder="din@epost.no"
+          className="mt-1 block w-full rounded-lg border border-text/15 px-4 py-3 text-sm placeholder:text-text-light transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          placeholder={t("contactForm.emailPh")}
         />
       </div>
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-text">
-          Melding
+          {t("contactForm.message")}
         </label>
         <textarea
           id="message"
           name="message"
           rows={5}
           required
-          className="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 text-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-          placeholder="Fortell oss om prosjektet ditt..."
+          className="mt-1 block w-full rounded-lg border border-text/15 px-4 py-3 text-sm placeholder:text-text-light transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          placeholder={t("contactForm.messagePh")}
         />
       </div>
       {error && (
@@ -95,7 +97,7 @@ export function ContactForm() {
         disabled={sending}
         className="w-full rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
       >
-        {sending ? "Sender..." : "Send melding"}
+        {sending ? t("contactForm.sending") : t("contactForm.send")}
       </button>
     </form>
   );

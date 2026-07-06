@@ -19,7 +19,7 @@ export default function AIAgencyPage() {
         <p className="text-sm text-text-light">
           <Link href="/" className="hover:text-primary">Norsk</Link>{" / "}<span className="text-text">English</span>
         </p>
-        <h1 className="mt-6 text-4xl font-[family-name:var(--font-playfair)] font-medium text-text sm:text-5xl">
+        <h1 className="mt-6 text-4xl font-display font-medium text-text sm:text-5xl">
           AI Agency in Stavanger
         </h1>
         <p className="mt-6 text-lg text-text-light leading-relaxed">
@@ -29,7 +29,7 @@ export default function AIAgencyPage() {
         </p>
 
         <section className="mt-16">
-          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">What we do</h2>
+          <h2 className="text-2xl font-display font-medium text-text">What we do</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {[
               { title: "Claude Code Setup", desc: "We set up Claude Code as a complete AI operating system for your team: custom skills, MCP servers, and workflows." },
@@ -37,7 +37,7 @@ export default function AIAgencyPage() {
               { title: "AI Agents", desc: "Autonomous agents that handle browser automation, data collection, and repetitive processes." },
               { title: "System Integration", desc: "Connect your existing systems with custom APIs, automated data flows, and AI-powered reporting." },
             ].map((s) => (
-              <div key={s.title} className="rounded-xl border border-gray-100 p-6">
+              <div key={s.title} className="rounded-xl border border-text/10 p-6">
                 <h3 className="font-semibold text-text">{s.title}</h3>
                 <p className="mt-2 text-sm text-text-light">{s.desc}</p>
               </div>
@@ -46,7 +46,7 @@ export default function AIAgencyPage() {
         </section>
 
         <section className="mt-16 rounded-xl bg-surface p-8 md:p-12">
-          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Why Argon Solutions?</h2>
+          <h2 className="text-2xl font-display font-medium text-text">Why Argon Solutions?</h2>
           <ul className="mt-6 space-y-3 text-text-light">
             {[
               "Founded by engineers with 10+ years of hands-on experience in oil & gas operations",
@@ -64,7 +64,7 @@ export default function AIAgencyPage() {
         </section>
 
         <section className="mt-16 rounded-2xl bg-primary/5 p-8 text-center md:p-12">
-          <h2 className="text-2xl font-[family-name:var(--font-playfair)] font-medium text-text">Ready to get started?</h2>
+          <h2 className="text-2xl font-display font-medium text-text">Ready to get started?</h2>
           <p className="mt-3 text-text-light">Book a free 30-minute consultation to discuss how AI can transform your operations.</p>
           <Link href="/kontakt" className="mt-6 inline-block rounded-xl bg-primary px-8 py-3 text-sm font-semibold text-white shadow-[0_0_0_1px_var(--color-primary)] transition hover:bg-primary-dark">
             Get in touch

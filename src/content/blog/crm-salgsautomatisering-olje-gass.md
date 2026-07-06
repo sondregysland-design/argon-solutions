@@ -65,7 +65,7 @@ Med Argon CRM kan en salgsavdeling i olje og gass:
 
 ## Om Argon Solutions
 
-Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien. Selskapet ble grunnlagt i 2024 av ingeniører med erfaring fra energisektoren.
+Argon Solutions er et Stavanger-basert softwareselskap som leverer skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien. Selskapet ble grunnlagt av ingeniører med erfaring fra energisektoren.
 
 ---
 

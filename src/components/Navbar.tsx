@@ -4,39 +4,45 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogoFull } from "./Logo";
+import { useT } from "@/i18n/LanguageProvider";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const tjenesterSubLinks = [
-  { href: "/tjenester/claude-code", label: "Claude Code oppsett" },
-  { href: "/tjenester/skreddersydd-software", label: "Skreddersydd Software" },
-  { href: "/tjenester/systemintegrasjon", label: "Systemintegrasjon" },
-  { href: "/tjenester/ai-agenter", label: "AI-agenter" },
-  { href: "/tjenester/ai-strategi", label: "AI-strategi" },
+  { href: "/tjenester/claude-code", key: "claudeCode" },
+  { href: "/tjenester/ai-chatbot", key: "aiChatbot" },
+  { href: "/tjenester/ai-agenter", key: "aiAgents" },
+  { href: "/tjenester/ai-strategi", key: "aiStrategy" },
+  { href: "/tjenester/skreddersydd-software", key: "customSoftware" },
+  { href: "/tjenester/systemintegrasjon", key: "systemIntegration" },
+  { href: "/produkter", key: "products" },
+  { href: "/kunstig-intelligens", key: "whatIsAi" },
 ];
 
 const links = [
-  { href: "/", label: "Hjem" },
-  { href: "/tjenester", label: "Tjenester" },
-  { href: "/produkter", label: "Produkter" },
-  { href: "/referanser", label: "Referanser" },
-  { href: "/blogg", label: "Blogg" },
-  { href: "/om-oss", label: "Om oss" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/", key: "home" },
+  { href: "/oppsett", key: "oppsett" },
+  { href: "/kurs", key: "kurs" },
+  { href: "/kurs/bedrift", key: "bedrift" },
+  { href: "/tjenester", key: "services" },
+  { href: "/om-oss", key: "about" },
+  { href: "/kontakt", key: "contact" },
 ];
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [tjenesterOpen, setTjenesterOpen] = useState(false);
   const pathname = usePathname();
+  const t = useT();
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border-b border-text/10 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/">
           <LogoFull />
         </Link>
 
         {/* Desktop */}
-        <div className="hidden gap-8 md:flex">
+        <div className="hidden items-center gap-8 md:flex">
           {links.map((l) =>
             l.href === "/tjenester" ? (
               <div
@@ -53,17 +59,17 @@ export function Navbar() {
                       : "text-text-light"
                   }`}
                 >
-                  {l.label}
+                  {t(`nav.${l.key}`)}
                 </Link>
                 {tjenesterOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-56 rounded-xl border border-gray-100 bg-white py-2 shadow-lg">
+                  <div className="absolute top-full left-0 mt-1 w-56 rounded-xl border border-text/10 bg-white py-2 shadow-lg">
                     {tjenesterSubLinks.map((sub) => (
                       <Link
                         key={sub.href}
                         href={sub.href}
                         className="block px-4 py-2 text-sm text-text-light hover:bg-surface hover:text-primary transition-colors"
                       >
-                        {sub.label}
+                        {t(`sub.${sub.key}`)}
                       </Link>
                     ))}
                   </div>
@@ -77,17 +83,19 @@ export function Navbar() {
                   pathname === l.href ? "text-primary" : "text-text-light"
                 }`}
               >
-                {l.label}
+                {t(`nav.${l.key}`)}
               </Link>
             )
           )}
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden"
+          className="-m-2.5 p-2.5 md:hidden"
           aria-label="Meny"
+          aria-expanded={open}
         >
           <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             {open ? (
@@ -101,7 +109,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-gray-100 px-6 py-4 md:hidden">
+        <div className="border-t border-text/10 px-6 py-4 md:hidden">
           {links.map((l) => (
             <div key={l.href}>
               <Link
@@ -113,7 +121,7 @@ export function Navbar() {
                     : "text-text-light"
                 }`}
               >
-                {l.label}
+                {t(`nav.${l.key}`)}
               </Link>
               {l.href === "/tjenester" && (
                 <div className="pl-4">
@@ -126,13 +134,16 @@ export function Navbar() {
                         pathname === sub.href ? "text-primary" : "text-text-light"
                       }`}
                     >
-                      {sub.label}
+                      {t(`sub.${sub.key}`)}
                     </Link>
                   ))}
                 </div>
               )}
             </div>
           ))}
+          <div className="mt-4 border-t border-text/10 pt-4">
+            <LanguageSwitcher />
+          </div>
         </div>
       )}
     </nav>

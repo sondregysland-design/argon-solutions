@@ -1,4 +1,7 @@
+"use client";
+
 import type { Automation } from "@/lib/products";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 const icons: Record<Automation["icon"], React.ReactNode> = {
   document: (
@@ -18,16 +21,30 @@ const icons: Record<Automation["icon"], React.ReactNode> = {
   ),
 };
 
-export function AutomationCard({ title, description, features, icon }: Automation) {
+export function AutomationCard({
+  title,
+  titleEn,
+  description,
+  descriptionEn,
+  features,
+  featuresEn,
+  icon,
+}: Automation) {
+  const { locale } = useLanguage();
+  const en = locale === "en";
+  const displayTitle = en ? titleEn : title;
+  const displayDescription = en ? descriptionEn : description;
+  const displayFeatures = en ? featuresEn : features;
+
   return (
-    <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6">
+    <div className="flex flex-col rounded-xl border border-text/10 bg-white p-6">
       <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-primary">
         {icons[icon]}
       </div>
-      <h3 className="text-lg font-semibold text-text">{title}</h3>
-      <p className="mt-1 flex-1 text-sm text-text-light">{description}</p>
+      <h3 className="text-lg font-semibold text-text">{displayTitle}</h3>
+      <p className="mt-1 flex-1 text-sm text-text-light">{displayDescription}</p>
       <div className="mt-4 grid grid-cols-1 gap-2">
-        {features.map((feature) => (
+        {displayFeatures.map((feature) => (
           <div key={feature} className="flex items-start gap-2 text-sm text-text">
             <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
