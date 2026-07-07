@@ -51,3 +51,74 @@
   border-color: #e2e8f0;
   margin: 2em 0;
 }
+
+/* Monitor (ClaudeMonitor.tsx): snur seg mot pekeren */
+.crt-scene {
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+  perspective: 900px;
+  pointer-events: none;
+}
+.crt-rig {
+  position: relative;
+  transform-origin: 50% 60%;
+  will-change: transform;
+}
+.crt-rig svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.crt-shadow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  transform-origin: 50% 95%;
+  will-change: transform;
+}
+.crt-glow {
+  position: absolute;
+  inset: -14% -20% 2% -20%;
+  background: radial-gradient(ellipse 58% 52% at 50% 44%, rgba(217, 119, 87, 0.14), transparent 70%);
+  animation: crt-breathe 7s ease-in-out infinite;
+}
+@keyframes crt-breathe {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.045);
+  }
+}
+.crt-content,
+.crt-glare {
+  will-change: transform;
+}
+.crt-caret {
+  animation: crt-caret-blink 1.15s steps(1, end) infinite;
+}
+@keyframes crt-caret-blink {
+  0%,
+  55% {
+    opacity: 0.9;
+  }
+  56%,
+  100% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .crt-glow {
+    animation: none;
+    opacity: 0.8;
+  }
+  .crt-caret {
+    animation: none;
+    opacity: 0.9;
+  }
+}
