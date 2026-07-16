@@ -96,7 +96,7 @@ const no: Messages = {
     {
       title: "AI-agenter for repetitive oppgaver",
       description:
-        "Autonome AI-agenter som leser e-post, oppdaterer systemer, håndterer dokumenter og sender varsler. En av våre kunder sparte 6 timer per uke ved å automatisere sertifikathåndtering for 47 leverandører, ned til 3 minutter i uken.",
+        "Autonome AI-agenter som leser e-post, oppdaterer systemer, håndterer dokumenter og sender varsler. Grunnleggerne sparte selv 6 timer per uke ved å automatisere sertifikathåndtering for 47 leverandører, ned til 3 minutter i uken.",
       href: "/tjenester/ai-agenter",
     },
     {
@@ -356,7 +356,7 @@ const en: Messages = {
     {
       title: "AI agents for repetitive tasks",
       description:
-        "Autonomous AI agents that read email, update systems, handle documents and send alerts. One of our clients saved 6 hours per week by automating certificate handling for 47 suppliers, down to 3 minutes a week.",
+        "Autonomous AI agents that read email, update systems, handle documents and send alerts. The founders themselves saved 6 hours per week by automating certificate handling for 47 suppliers, down to 3 minutes a week.",
       href: "/tjenester/ai-agenter",
     },
     {

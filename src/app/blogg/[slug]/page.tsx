@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPost, getAllSlugs, getAllPosts, type BlogPostMeta } from "@/lib/blog";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -66,18 +67,21 @@ export default async function BlogPostPage({ params }: Props) {
     author: [
       {
         "@type": "Person",
+        "@id": "https://argonsolutions.no/#founder",
         name: "Sondre Gysland",
         jobTitle: "Grunder, Argon Solutions",
         url: "https://www.linkedin.com/company/argonsolutions/",
       },
       {
         "@type": "Organization",
+        "@id": "https://argonsolutions.no/#organization",
         name: "Argon Solutions",
         url: "https://argonsolutions.no",
       },
     ],
     publisher: {
       "@type": "Organization",
+      "@id": "https://argonsolutions.no/#organization",
       name: "Argon Solutions",
       url: "https://argonsolutions.no",
       logo: { "@type": "ImageObject", url: "https://argonsolutions.no/favicon.svg" },
@@ -89,12 +93,37 @@ export default async function BlogPostPage({ params }: Props) {
     keywords: post.keywords.join(", "),
   };
 
+  // FAQPage-schema når artikkelen har en faq-blokk i frontmatter.
+  // Spørsmålene skal også stå som synlig tekst i selve artikkelen.
+  const faqJsonLd =
+    post.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "@id": `https://argonsolutions.no/blogg/${slug}#faq`,
+          inLanguage: "nb-NO",
+          mainEntity: post.faq.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null;
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: "Hjem", url: SITE_URL },
+    { name: "Blogg", url: `${SITE_URL}/blogg` },
+    { name: post.title, url: `${SITE_URL}/blogg/${slug}` },
+  ]);
+  const allJsonLd = faqJsonLd
+    ? [jsonLd, faqJsonLd, breadcrumbLd]
+    : [jsonLd, breadcrumbLd];
+
   return (
     <article className="mx-auto max-w-3xl px-6 py-20">
       <script
         type="application/ld+json"
         // Safe: jsonLd is built from our own markdown frontmatter, not user input
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(allJsonLd) }}
       />
       <Link
         href="/blogg"

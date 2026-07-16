@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { Reveal } from "@/components/Reveal";
 
 const CheckIcon = () => (
   <svg className="h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -18,7 +20,8 @@ const no = {
   ctaTop: "Book en gratis prat",
   stepsTitle: "Slik setter vi opp Claude",
   stepsIntro:
-    "Et fast opplegg i fem steg. Vi tar ansvaret for det tekniske, dere beholder kontrollen på data og retning.",
+    "Et fast opplegg i fem steg. Vi tar ansvaret for det tekniske, dere beholder kontrollen på data og retning. Klikk deg gjennom stegene.",
+  stepsNext: "Neste steg",
   steps: [
     {
       n: "01",
@@ -121,7 +124,8 @@ const en: typeof no = {
   ctaTop: "Book a free chat",
   stepsTitle: "How we set up Claude",
   stepsIntro:
-    "A fixed five-step approach. We take responsibility for the technical side, you keep control of your data and direction.",
+    "A fixed five-step approach. We take responsibility for the technical side, you keep control of your data and direction. Click through the steps.",
+  stepsNext: "Next step",
   steps: [
     {
       n: "01",
@@ -218,6 +222,7 @@ const en: typeof no = {
 export default function OppsettContent() {
   const { locale } = useLanguage();
   const m = locale === "en" ? en : no;
+  const [activeStep, setActiveStep] = useState(0);
 
   return (
     <div className="mx-auto max-w-6xl px-6">
@@ -240,12 +245,46 @@ export default function OppsettContent() {
       <div className="mt-20">
         <h2 className="text-2xl font-display font-medium text-text">{m.stepsTitle}</h2>
         <p className="mt-4 max-w-2xl text-text-light">{m.stepsIntro}</p>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {m.steps.map((step) => (
-            <div key={step.n} className="rounded-xl border border-text/10 p-6">
-              <span className="font-mono text-sm text-primary">{step.n}</span>
-              <h3 className="mt-3 text-lg font-semibold text-text">{step.title}</h3>
-              <p className="mt-2 text-sm text-text-light">{step.body}</p>
+        <div className="mt-8">
+          <div className="flex flex-wrap gap-2">
+            {m.steps.map((step, i) => (
+              <button
+                key={step.n}
+                type="button"
+                onClick={() => setActiveStep(i)}
+                aria-pressed={i === activeStep}
+                className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition ${
+                  i === activeStep
+                    ? "bg-ink text-white"
+                    : "bg-surface text-text-light hover:bg-text/10 hover:text-text"
+                }`}
+              >
+                <span className="font-mono text-xs">{step.n}</span>
+                <span className="hidden sm:inline">{step.title}</span>
+              </button>
+            ))}
+          </div>
+          {m.steps.map((step, i) => (
+            <div
+              key={step.n}
+              className={
+                i === activeStep
+                  ? "step-panel mt-6 rounded-2xl border border-text/10 p-8 md:p-10"
+                  : "hidden"
+              }
+            >
+              <span className="font-mono text-sm text-primary">{step.n} / 05</span>
+              <h3 className="mt-2 text-xl font-semibold text-text">{step.title}</h3>
+              <p className="mt-3 max-w-2xl leading-relaxed text-text-light">{step.body}</p>
+              {i < m.steps.length - 1 && (
+                <button
+                  type="button"
+                  onClick={() => setActiveStep(i + 1)}
+                  className="mt-6 text-sm font-semibold text-primary hover:underline"
+                >
+                  {m.stepsNext} &rarr;
+                </button>
+              )}
             </div>
           ))}
         </div>
@@ -256,11 +295,13 @@ export default function OppsettContent() {
         <h2 className="text-2xl font-display font-medium text-text">{m.agentsTitle}</h2>
         <p className="mt-4 max-w-2xl text-text-light">{m.agentsIntro}</p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {m.agents.map((agent) => (
-            <div key={agent.title} className="rounded-xl border border-text/10 bg-white p-6">
-              <h3 className="text-lg font-semibold text-primary">{agent.title}</h3>
-              <p className="mt-2 text-sm text-text-light">{agent.body}</p>
-            </div>
+          {m.agents.map((agent, i) => (
+            <Reveal key={agent.title} delay={(i % 3) * 80}>
+              <div className="card-lift h-full rounded-xl border border-text/10 bg-white p-6">
+                <h3 className="text-lg font-semibold text-primary">{agent.title}</h3>
+                <p className="mt-2 text-sm text-text-light">{agent.body}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
         <p className="mt-6 text-sm text-text-light">{m.agentsNote}</p>
@@ -271,8 +312,9 @@ export default function OppsettContent() {
         <h2 className="text-2xl font-display font-medium text-text">{m.packagesTitle}</h2>
         <p className="mt-4 max-w-2xl text-text-light">{m.packagesIntro}</p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {m.packages.map((pkg) => (
-            <div key={pkg.name} className="flex flex-col rounded-xl border border-text/10 p-6">
+          {m.packages.map((pkg, i) => (
+            <Reveal key={pkg.name} delay={(i % 3) * 80} className="h-full">
+            <div className="card-lift flex h-full flex-col rounded-xl border border-text/10 p-6">
               <span className="inline-block self-start rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">{pkg.target}</span>
               <h3 className="mt-3 text-lg font-semibold text-text">{pkg.name}</h3>
               <p className="mt-2 text-sm text-text-light">{pkg.body}</p>
@@ -285,6 +327,7 @@ export default function OppsettContent() {
                 ))}
               </ul>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -307,7 +350,8 @@ export default function OppsettContent() {
       </div>
 
       {/* CTA */}
-      <div className="mt-20 rounded-xl bg-primary p-10 text-center md:p-14">
+      <Reveal className="mt-20">
+      <div className="rounded-xl bg-primary p-10 text-center md:p-14">
         <h2 className="text-2xl font-display font-medium text-white">{m.ctaTitle}</h2>
         <p className="mx-auto mt-3 max-w-xl text-white/90">{m.ctaText}</p>
         <Link
@@ -317,6 +361,7 @@ export default function OppsettContent() {
           {m.ctaButton}
         </Link>
       </div>
+      </Reveal>
     </div>
   );
 }

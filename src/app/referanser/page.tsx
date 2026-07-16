@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Se prosjektene Argon Solutions har bygget for olje- og gassindustrien: offshore prosjektstyring, CRM, AI-dokumentbehandling, risikostyring og mer.";
@@ -19,7 +20,7 @@ const prosjekter = [
   {
     title: "Offshore prosjektstyring med ROV-sporing",
     challenge:
-      "Et offshore-servicefirma trengte en komplett plattform for å styre prosjekter, prosedyrer, mannskap og utstyr. Eksisterende løsninger var for generelle og manglet støtte for ROV-systemsporing og rollebasert tilgang på tvers av prosjektteam.",
+      "Offshore-servicebransjen mangler en komplett plattform for å styre prosjekter, prosedyrer, mannskap og utstyr. Eksisterende løsninger er for generelle og mangler støtte for ROV-systemsporing og rollebasert tilgang på tvers av prosjektteam.",
     solution:
       "Argon Solutions utviklet Argon Prosjektstyring, en webapplikasjon bygget med Next.js og Supabase som gir full oversikt over aktive prosjekter, gjøremål, prosedyrer og lagerstyring. Systemet inkluderer rollebasert tilgangskontroll, sanntids statusoppdateringer og spesialmoduler for ROV-systemsporing.",
     tech: ["Next.js", "Supabase", "PostgreSQL", "Vercel"],
@@ -75,9 +76,9 @@ const prosjekter = [
   {
     title: "Nettleserautomatisering for sertifikathåndtering",
     challenge:
-      "En leverandørbedrift brukte 6 timer per uke på å manuelt logge inn på leverandørportaler, laste ned sertifikater og oppdatere interne systemer.",
+      "Grunnleggerne brukte selv 6 timer per uke på å manuelt logge inn på leverandørportaler, laste ned sertifikater og oppdatere interne systemer i sin egen arbeidshverdag i olje og gass.",
     solution:
-      "Argon Solutions utviklet en AI-agent med Playwright som automatisk logger inn på portaler, navigerer til riktig side, laster ned sertifikater og oppdaterer kundens system. Agenten kjøres automatisk og varsler ved avvik.",
+      "Argon Solutions utviklet en AI-agent med Playwright som automatisk logger inn på portaler, navigerer til riktig side, laster ned sertifikater og oppdaterer det interne systemet. Agenten kjøres automatisk og varsler ved avvik.",
     tech: ["Playwright", "Node.js", "Claude AI"],
     results: [
       "Fra 6 timer til 3 minutter per uke",
@@ -113,7 +114,13 @@ const caseStudyJsonLd = {
 
 export default function ReferanserPage() {
   // Safe: jsonLdScript is a static JSON object from server-side code, not user input
-  const jsonLdScript = JSON.stringify(caseStudyJsonLd);
+  const jsonLdScript = JSON.stringify([
+    caseStudyJsonLd,
+    breadcrumbJsonLd([
+      { name: "Hjem", url: SITE_URL },
+      { name: "Referanser", url: `${SITE_URL}/referanser` },
+    ]),
+  ]);
 
   return (
     <div className="py-20">
@@ -128,7 +135,8 @@ export default function ReferanserPage() {
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-text-light">
           Argon Solutions har bygget skreddersydde løsninger for olje- og
-          gassindustrien i Norge. Her er et utvalg av prosjektene vi har levert.
+          gassindustrien i Norge. Her er et utvalg av produktene vi har bygget,
+          alle i drift og offentlig tilgjengelige.
         </p>
 
         <div className="mt-16 space-y-12">

@@ -35,7 +35,7 @@ Argon Solutions har levert:
 - **Argon CRM**: kundeoppfølging med 6 lead-kilder og AI-drevet scoring via Claude AI
 - **Argon Docs**: AI-dokumentbehandling som ekstraher data fra PDF-filer på sekunder
 - **Argon RSA**: risikostyring med HAZOP, HAZID og bow-tie analyse
-- **AI-agenter**: nettleserautomatisering som sparte en kunde 6 timer per uke
+- **AI-agenter**: nettleserautomatisering som fjernet 6 timer ukentlig manuelt arbeid fra grunnleggernes egen arbeidsflyt
 
 ## Teknologi
 

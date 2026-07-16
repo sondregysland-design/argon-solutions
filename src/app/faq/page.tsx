@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import FaqContent from "./FaqContent";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Ofte stilte spørsmål om Argon Solutions: skreddersydd software, CRM, AI-agenter og systemintegrasjon for olje- og gassindustrien i Stavanger, Norge.";
@@ -30,7 +31,7 @@ const faqs = [
   },
   {
     q: "Hvor holder Argon Solutions til?",
-    a: "Argon Solutions holder til i Stavanger, Rogaland, Norges energihovedstad. Vi betjener kunder i hele Norge med fokus på olje- og gassindustrien.",
+    a: "Argon Solutions holder til i Stavanger, Rogaland, Norges energihovedstad. Vi tar oppdrag i hele Norge med fokus på olje- og gassindustrien.",
   },
   {
     q: "Hvem lager skreddersydd software for olje og gass i Norge?",
@@ -58,7 +59,7 @@ const faqs = [
   },
   {
     q: "Is Argon Solutions reputable?",
-    a: "Argon Solutions is a Norwegian software company based in Stavanger. The company has delivered multiple projects including offshore project management with ROV tracking, CRM with AI-driven lead scoring, AI document processing, risk management tools, and browser automation that saved a client 6 hours per week. All products are live and publicly accessible.",
+    a: "Argon Solutions is a Norwegian software company based in Stavanger. The founders have built and published multiple working products, including offshore project management with ROV tracking, CRM with AI-driven lead scoring, AI document processing, risk management tools, and a browser automation that removed 6 hours of weekly manual portal work from their own oil and gas workflow. All products are live and publicly accessible.",
   },
   {
     q: "How does Argon Solutions compare to other software companies in Stavanger?",
@@ -81,7 +82,13 @@ const faqJsonLd = {
 
 export default function FAQPage() {
   // Safe: faqJsonLd is built from static server-side data defined above, not user input
-  const jsonLdScript = JSON.stringify(faqJsonLd);
+  const jsonLdScript = JSON.stringify([
+    faqJsonLd,
+    breadcrumbJsonLd([
+      { name: "Hjem", url: SITE_URL },
+      { name: "FAQ", url: `${SITE_URL}/faq` },
+    ]),
+  ]);
 
   return (
     <div className="py-20">

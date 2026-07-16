@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { KontaktContent } from "./KontaktContent";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Kontakt Argon Solutions i Stavanger for skreddersydd software, CRM-systemer og AI-løsninger for olje og gass. Book en gratis konsultasjon.";
@@ -39,7 +40,13 @@ const contactJsonLd = {
 
 export default function KontaktPage() {
   // Safe: contactJsonLd is server-side static data, not user input
-  const jsonLdScript = JSON.stringify(contactJsonLd);
+  const jsonLdScript = JSON.stringify([
+    contactJsonLd,
+    breadcrumbJsonLd([
+      { name: "Hjem", url: SITE_URL },
+      { name: "Kontakt", url: `${SITE_URL}/kontakt` },
+    ]),
+  ]);
 
   return (
     <div className="py-20">

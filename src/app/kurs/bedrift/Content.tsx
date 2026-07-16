@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { Reveal } from "@/components/Reveal";
 
 const ShieldIcon = () => (
   <svg className="mt-0.5 h-4 w-4 shrink-0 text-steel" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -15,7 +16,7 @@ const no = {
   intro:
     "Vi kommer til dere og bruker deres hverdag som pensum. Fra ledelsen til verkstedgulvet, med en kursholder som har femten år bak seg fra verksted, offshore og kontor.",
   ctaPrimary: "Be om tilbud",
-  ctaSecondary: "Se åpne kurs",
+  ctaSecondary: "Se dagskurset for private",
   securityTitle: "Trygg bruk av AI i drift",
   securityBody:
     "Det første spørsmålet i bransjen er alltid det samme. Hva skjer med dataene våre? Derfor starter vi der. Kurset viser hvordan dere kan jobbe med Claude uten å eksponere driftskritisk eller proprietær informasjon.",
@@ -70,7 +71,7 @@ const en: typeof no = {
   intro:
     "We come to you and use your everyday work as the curriculum. From management to the workshop floor, with an instructor who has fifteen years behind him from the workshop, offshore and the office.",
   ctaPrimary: "Request a quote",
-  ctaSecondary: "See open courses",
+  ctaSecondary: "See the day course for individuals",
   securityTitle: "Safe use of AI in operations",
   securityBody:
     "The first question in this industry is always the same. What happens to our data? So that is where we start. The course shows how you can work with Claude without exposing operation-critical or proprietary information.",
@@ -126,23 +127,26 @@ export default function BedriftContent() {
   return (
     <div>
       {/* Header band, petrol */}
-      <div className="bg-steel">
+      <div className="bg-ink">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel-light brightness-150">{m.eyebrow}</p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold tracking-tight text-white sm:text-6xl">
+          <p className="inline-flex items-center gap-2 text-sm font-medium text-white/60">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary-light" aria-hidden />
+            {m.eyebrow}
+          </p>
+          <h1 className="mt-4 max-w-3xl font-display text-5xl font-medium tracking-tight text-white sm:text-6xl">
             {m.h1}
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">{m.intro}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/kontakt"
-              className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-steel transition hover:bg-white/90"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:bg-white/90"
             >
               {m.ctaPrimary}
             </Link>
             <Link
               href="/kurs"
-              className="rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/60"
+              className="rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
             >
               {m.ctaSecondary}
             </Link>
@@ -155,10 +159,10 @@ export default function BedriftContent() {
         <div className="mt-20">
           <div className="grid gap-10 md:grid-cols-2">
             <div>
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-text">{m.securityTitle}</h2>
+              <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.securityTitle}</h2>
               <p className="mt-4 leading-relaxed text-text-light">{m.securityBody}</p>
             </div>
-            <ul className="space-y-4 rounded-xl border border-steel/20 bg-steel/5 p-8">
+            <ul className="space-y-4 rounded-2xl bg-surface p-8">
               {m.securityPoints.map((p) => (
                 <li key={p} className="flex items-start gap-3 text-sm text-text">
                   <ShieldIcon />
@@ -170,8 +174,8 @@ export default function BedriftContent() {
         </div>
 
         {/* Ladder */}
-        <div className="mt-24 border-t border-text/10 pt-14">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-text">{m.ladderTitle}</h2>
+        <div className="mt-24">
+          <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.ladderTitle}</h2>
           <p className="mt-4 max-w-2xl text-text-light">{m.ladderIntro}</p>
           <ol className="mt-10">
             {m.ladder.map((step, i) => (
@@ -182,36 +186,36 @@ export default function BedriftContent() {
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-steel/30 bg-white font-mono text-sm font-semibold text-steel">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <div className="pt-1.5">
+                <Reveal className="pt-1.5" delay={i * 60}>
                   <h3 className="text-lg font-semibold text-text">{step.name}</h3>
                   <p className="mt-1 max-w-xl text-sm leading-relaxed text-text-light">{step.desc}</p>
-                </div>
+                </Reveal>
               </li>
             ))}
           </ol>
         </div>
 
         {/* Bevis + pris */}
-        <div className="mt-24 grid gap-px overflow-hidden rounded-xl border border-text/10 bg-text/10 md:grid-cols-2">
-          <div className="bg-white p-8 md:p-10">
-            <h2 className="font-display text-2xl font-semibold tracking-tight text-text">{m.proofTitle}</h2>
+        <div className="mt-24 grid gap-4 md:grid-cols-2">
+          <div className="card-lift rounded-3xl bg-surface p-8 md:p-10">
+            <h2 className="font-display text-2xl font-medium tracking-tight text-text">{m.proofTitle}</h2>
             <p className="mt-4 text-sm leading-relaxed text-text-light">{m.proofBody}</p>
           </div>
-          <div className="bg-white p-8 md:p-10">
-            <h2 className="font-display text-2xl font-semibold tracking-tight text-text">{m.priceTitle}</h2>
-            <p className="mt-4 font-mono text-4xl font-semibold text-steel">{m.priceValue}</p>
+          <div className="card-lift rounded-3xl bg-surface p-8 md:p-10">
+            <h2 className="font-display text-2xl font-medium tracking-tight text-text">{m.priceTitle}</h2>
+            <p className="mt-4 font-display text-5xl font-medium tracking-tight text-text">{m.priceValue}</p>
             <p className="mt-1 text-sm text-text-light">{m.priceUnit}</p>
             <p className="mt-4 text-sm leading-relaxed text-text-light">{m.priceNote}</p>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="mt-24 rounded-2xl bg-ink p-10 text-center md:p-14">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-white">{m.ctaTitle}</h2>
+        <div className="mt-24 rounded-3xl bg-ink p-10 text-center md:p-14">
+          <h2 className="font-display text-3xl font-medium tracking-tight text-white">{m.ctaTitle}</h2>
           <p className="mx-auto mt-4 max-w-xl text-white/70">{m.ctaBody}</p>
           <Link
             href="/kontakt"
-            className="mt-8 inline-block rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-white transition hover:bg-primary-light"
+            className="mt-8 inline-block rounded-full bg-white px-8 py-3 text-sm font-semibold text-ink transition hover:bg-white/90"
           >
             {m.ctaButton}
           </Link>

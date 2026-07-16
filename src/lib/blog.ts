@@ -7,6 +7,11 @@ import sanitizeHtml from "sanitize-html";
 
 const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
 
+export interface BlogFaq {
+  q: string;
+  a: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -14,6 +19,7 @@ export interface BlogPost {
   date: string;
   keywords: string[];
   content: string;
+  faq: BlogFaq[];
 }
 
 export interface BlogPostMeta {
@@ -61,6 +67,7 @@ export async function getPost(slug: string): Promise<BlogPost | null> {
     description: data.description || "",
     date: data.date ? String(data.date) : "",
     keywords: data.keywords || [],
+    faq: Array.isArray(data.faq) ? data.faq.filter((f: BlogFaq) => f && f.q && f.a) : [],
     content: sanitizeHtml(result.toString(), {
       allowedTags: sanitizeHtml.defaults.allowedTags.concat(["h1", "h2", "h3", "h4", "img"]),
       allowedAttributes: { ...sanitizeHtml.defaults.allowedAttributes, img: ["src", "alt"] },

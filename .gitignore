@@ -44,3 +44,6 @@ next-env.d.ts
 # geo optimizer
 /geo/
 geo/
+
+# graphify knowledge-graph outputs (regenerable)
+graphify-out/

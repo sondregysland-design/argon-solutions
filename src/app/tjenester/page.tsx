@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { TjenesterContent } from "./TjenesterContent";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Argon Solutions leverer AI-tjenester, Claude Code-oppsett, skreddersydd software, systemintegrasjon og AI-agenter for norske bedrifter i energisektoren.";
@@ -78,7 +79,7 @@ const faqs = [
   {
     question: "Hvor holder Argon Solutions til?",
     answer:
-      "Argon Solutions holder til i Stavanger, Norge, Norges energihovedstad. Vi betjener kunder i hele Norge med fokus på olje- og gassindustrien og energisektoren.",
+      "Argon Solutions holder til i Stavanger, Norge, Norges energihovedstad. Vi tar oppdrag i hele Norge med fokus på olje- og gassindustrien og energisektoren.",
   },
 ];
 
@@ -157,7 +158,15 @@ const howToJsonLd = {
   ],
 };
 
-const allTjenesterJsonLd = [faqJsonLd, serviceJsonLd, howToJsonLd];
+const allTjenesterJsonLd = [
+  faqJsonLd,
+  serviceJsonLd,
+  howToJsonLd,
+  breadcrumbJsonLd([
+    { name: "Hjem", url: SITE_URL },
+    { name: "Tjenester", url: `${SITE_URL}/tjenester` },
+  ]),
+];
 
 export default function TjenesterPage() {
   return (

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { OmOssContent } from "./OmOssContent";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Argon Solutions er et AI-byrå i Stavanger grunnlagt av ingeniører med erfaring fra olje- og gassindustrien. Vi leverer AI-tjenester, Claude Code-oppsett og skreddersydd software for energisektoren.";
@@ -27,7 +28,13 @@ const speakableJsonLd = {
 };
 
 export default function OmOssPage() {
-  const speakableScript = JSON.stringify(speakableJsonLd);
+  const speakableScript = JSON.stringify([
+    speakableJsonLd,
+    breadcrumbJsonLd([
+      { name: "Hjem", url: SITE_URL },
+      { name: "Om oss", url: `${SITE_URL}/om-oss` },
+    ]),
+  ]);
 
   return (
     <div className="py-20">

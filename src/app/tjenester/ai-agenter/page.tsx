@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AIAgenterContent from "./Content";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Argon Solutions bygger AI-agenter og agentic AI-løsninger som automatiserer nettleseroppgaver, datainnhenting og repetitive prosesser for energisektoren i Norge.";
@@ -47,7 +48,7 @@ const faqJsonLd = {
       name: "Hvor mye tid kan en AI-agent spare?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "I et konkret prosjekt for olje- og gassindustrien reduserte Argon Solutions' AI-agent 6 timer manuelt portalarbeid til 3 minutter per uke, med 47 leverandører behandlet automatisk.",
+        text: "I grunnleggernes egen arbeidsflyt i olje og gass reduserte Argon Solutions' AI-agent 6 timer manuelt portalarbeid til 3 minutter per uke, med 47 leverandørportaler behandlet automatisk.",
       },
     },
     {
@@ -61,13 +62,19 @@ const faqJsonLd = {
   ],
 };
 
+const breadcrumbLd = breadcrumbJsonLd([
+  { name: "Hjem", url: SITE_URL },
+  { name: "Tjenester", url: `${SITE_URL}/tjenester` },
+  { name: "AI-agenter", url: `${SITE_URL}/tjenester/ai-agenter` },
+]);
+
 export default function AIAgenterPage() {
   return (
     <div className="py-20">
       <script
         type="application/ld+json"
         // Safe: both objects are static server-side constants, not user input
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceJsonLd, faqJsonLd]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceJsonLd, faqJsonLd, breadcrumbLd]) }}
       />
       <AIAgenterContent />
     </div>

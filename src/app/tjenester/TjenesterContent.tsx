@@ -109,7 +109,7 @@ const no: Strings = {
     {
       question: "Hvor holder Argon Solutions til?",
       answer:
-        "Argon Solutions holder til i Stavanger, Norge, Norges energihovedstad. Vi betjener kunder i hele Norge med fokus på olje- og gassindustrien og energisektoren.",
+        "Argon Solutions holder til i Stavanger, Norge, Norges energihovedstad. Vi tar oppdrag i hele Norge med fokus på olje- og gassindustrien og energisektoren.",
     },
   ],
 };

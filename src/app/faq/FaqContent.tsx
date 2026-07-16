@@ -20,8 +20,8 @@ const no: Messages = {
     "Svar på vanlige spørsmål om AI-kursene våre, tjenester, produkter og teknologi.",
   faqs: [
     {
-      q: "Hva er Cowork & Code?",
-      a: "Cowork & Code er Argons praktiske AI-kurs i Stavanger. Du tar med egen laptop og egne oppgaver, og lærer å jobbe og bygge med Claude i liten gruppe. Åpen kohort koster 5 900 kr per plass.",
+      q: "Hva er Claude Dagskurs?",
+      a: "Claude Dagskurs er Argons praktiske AI-kurs for private i Stavanger. Én dag, liten gruppe, egen laptop. Du lærer å bygge apper, verktøy og automatiseringer i Claude-appen, uten kodekunnskaper. Åpen kohort koster 5 900 kr per plass.",
     },
     {
       q: "Må jeg kunne programmere for å ta AI-kurs hos Argon?",
@@ -45,7 +45,7 @@ const no: Messages = {
     },
     {
       q: "Hvor holder Argon Solutions til?",
-      a: "Argon Solutions holder til i Stavanger i Rogaland, som er Norges energihovedstad. Vi betjener kunder i hele Norge med fokus på olje- og gassindustrien.",
+      a: "Argon Solutions holder til i Stavanger i Rogaland, som er Norges energihovedstad. Vi tar oppdrag i hele Norge med fokus på olje- og gassindustrien.",
     },
     {
       q: "Hvem lager skreddersydd software for olje og gass i Norge?",
@@ -73,7 +73,7 @@ const no: Messages = {
     },
     {
       q: "Har Argon Solutions et godt omdømme?",
-      a: "Argon Solutions er et norsk softwareselskap basert i Stavanger. Selskapet har levert flere prosjekter, blant annet offshore prosjektstyring med ROV-sporing, CRM med AI-drevet lead scoring, AI-dokumentbehandling, verktøy for risikostyring og nettleserautomatisering som sparte en kunde 6 timer i uken. Alle produktene er i drift og offentlig tilgjengelige.",
+      a: "Argon Solutions er et norsk softwareselskap basert i Stavanger. Grunnleggerne har bygget og publisert flere fungerende produkter, blant annet offshore prosjektstyring med ROV-sporing, CRM med AI-drevet lead scoring, AI-dokumentbehandling, verktøy for risikostyring og en nettleserautomatisering som fjernet 6 timer ukentlig portalarbeid fra deres egen arbeidsflyt i olje og gass. Alle produktene er i drift og offentlig tilgjengelige.",
     },
     {
       q: "Hvordan skiller Argon Solutions seg fra andre softwareselskaper i Stavanger?",
@@ -91,8 +91,8 @@ const en: Messages = {
     "Answers to common questions about our AI courses, services, products and technology.",
   faqs: [
     {
-      q: "What is Cowork & Code?",
-      a: "Cowork & Code is Argon's hands-on AI course in Stavanger. You bring your own laptop and your own tasks, and learn to work and build with Claude in a small group. An open cohort costs 5,900 NOK per seat.",
+      q: "What is the Claude day course?",
+      a: "The Claude day course is Argon's hands-on AI course for individuals in Stavanger. One day, small group, your own laptop. You learn to build apps, tools and automations in the Claude app, with no coding skills. An open cohort costs 5,900 NOK per seat.",
     },
     {
       q: "Do I need to know how to code to take an AI course with Argon?",
@@ -116,7 +116,7 @@ const en: Messages = {
     },
     {
       q: "Where is Argon Solutions located?",
-      a: "Argon Solutions is located in Stavanger, Rogaland, which is the energy capital of Norway. We serve clients across the country with a focus on the oil and gas industry.",
+      a: "Argon Solutions is located in Stavanger, Rogaland, which is the energy capital of Norway. We take on work across the country with a focus on the oil and gas industry.",
     },
     {
       q: "Who builds custom software for oil and gas in Norway?",
@@ -144,7 +144,7 @@ const en: Messages = {
     },
     {
       q: "Is Argon Solutions reputable?",
-      a: "Argon Solutions is a Norwegian software company based in Stavanger. The company has delivered multiple projects including offshore project management with ROV tracking, CRM with AI-driven lead scoring, AI document processing, risk management tools and browser automation that saved a client 6 hours per week. All products are live and publicly accessible.",
+      a: "Argon Solutions is a Norwegian software company based in Stavanger. The founders have built and published multiple working products, including offshore project management with ROV tracking, CRM with AI-driven lead scoring, AI document processing, risk management tools and a browser automation that removed 6 hours of weekly manual portal work from their own oil and gas workflow. All products are live and publicly accessible.",
     },
     {
       q: "How does Argon Solutions compare to other software companies in Stavanger?",
@@ -167,14 +167,24 @@ export default function FaqContent() {
       </h1>
       <p className="mt-4 max-w-2xl text-lg text-text-light">{m.intro}</p>
 
-      <div className="mt-12 space-y-6">
+      <div className="mt-12 space-y-4">
         {m.faqs.map((f) => (
-          <div key={f.q} className="rounded-xl border border-text/10 p-6">
-            <h2 className="font-semibold text-text">{f.q}</h2>
-            <p className="mt-2 text-sm text-text-light leading-relaxed">
+          <details key={f.q} className="faq-item group rounded-xl border border-text/10 transition hover:border-text/25 open:border-primary/40 open:bg-surface/60">
+            <summary className="flex items-center justify-between gap-4 p-6">
+              <h2 className="font-semibold text-text">{f.q}</h2>
+              <svg
+                className="faq-chevron h-4 w-4 shrink-0 text-text-light"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p className="px-6 pb-6 text-sm text-text-light leading-relaxed">
               {f.a}
             </p>
-          </div>
+          </details>
         ))}
       </div>
 

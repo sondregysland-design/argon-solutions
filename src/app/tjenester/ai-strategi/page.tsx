@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AIStrategiContent from "./Content";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Argon Solutions tilbyr AI-strategi og rådgivning for energisektoren. AI readiness-vurdering, automatiseringskartlegging, ROI-modellering og implementeringsveikart for beslutningstakere.";
@@ -30,12 +31,21 @@ const serviceJsonLd = {
   description,
 };
 
+const jsonLd = [
+  serviceJsonLd,
+  breadcrumbJsonLd([
+    { name: "Hjem", url: SITE_URL },
+    { name: "Tjenester", url: `${SITE_URL}/tjenester` },
+    { name: "AI-strategi", url: `${SITE_URL}/tjenester/ai-strategi` },
+  ]),
+];
+
 export default function AIStrategiPage() {
   return (
     <div className="py-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <AIStrategiContent />
     </div>

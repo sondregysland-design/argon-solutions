@@ -12,9 +12,29 @@ export const metadata: Metadata = {
   openGraph: { title, description, url: "/en/ai-agency-stavanger", locale: "en_US" },
 };
 
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://argonsolutions.no/en/ai-agency-stavanger",
+  name: title,
+  description,
+  inLanguage: "en",
+  isPartOf: { "@id": "https://argonsolutions.no/#website" },
+  about: { "@id": "https://argonsolutions.no/#organization" },
+  mainEntity: {
+    "@type": "Service",
+    name: "AI agency services in Stavanger, Norway",
+    description,
+    serviceType: "AI consulting, Claude Code setup, custom software, AI agents",
+    provider: { "@type": "Organization", "@id": "https://argonsolutions.no/#organization", name: "Argon Solutions" },
+    areaServed: { "@type": "Country", name: "Norway" },
+  },
+};
+
 export default function AIAgencyPage() {
   return (
     <div className="py-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
       <div className="mx-auto max-w-4xl px-6">
         <p className="text-sm text-text-light">
           <Link href="/" className="hover:text-primary">Norsk</Link>{" / "}<span className="text-text">English</span>
@@ -37,7 +57,7 @@ export default function AIAgencyPage() {
               { title: "AI Agents", desc: "Autonomous agents that handle browser automation, data collection, and repetitive processes." },
               { title: "System Integration", desc: "Connect your existing systems with custom APIs, automated data flows, and AI-powered reporting." },
             ].map((s) => (
-              <div key={s.title} className="rounded-xl border border-text/10 p-6">
+              <div key={s.title} className="rounded-2xl bg-surface p-6">
                 <h3 className="font-semibold text-text">{s.title}</h3>
                 <p className="mt-2 text-sm text-text-light">{s.desc}</p>
               </div>
@@ -45,11 +65,11 @@ export default function AIAgencyPage() {
           </div>
         </section>
 
-        <section className="mt-16 rounded-xl bg-surface p-8 md:p-12">
+        <section className="mt-16 rounded-3xl bg-surface p-8 md:p-12">
           <h2 className="text-2xl font-display font-medium text-text">Why Argon Solutions?</h2>
           <ul className="mt-6 space-y-3 text-text-light">
             {[
-              "Founded by engineers with 10+ years of hands-on experience in oil & gas operations",
+              "Founded by engineers with fifteen years of hands-on experience in oil & gas operations",
               "We build working AI systems, not PowerPoint presentations",
               "First month free. Try before you commit",
             ].map((item) => (
@@ -63,10 +83,10 @@ export default function AIAgencyPage() {
           </ul>
         </section>
 
-        <section className="mt-16 rounded-2xl bg-primary/5 p-8 text-center md:p-12">
+        <section className="mt-16 rounded-3xl bg-primary/5 p-8 text-center md:p-12">
           <h2 className="text-2xl font-display font-medium text-text">Ready to get started?</h2>
           <p className="mt-3 text-text-light">Book a free 30-minute consultation to discuss how AI can transform your operations.</p>
-          <Link href="/kontakt" className="mt-6 inline-block rounded-xl bg-primary px-8 py-3 text-sm font-semibold text-white shadow-[0_0_0_1px_var(--color-primary)] transition hover:bg-primary-dark">
+          <Link href="/kontakt" className="mt-6 inline-block rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-ink/85">
             Get in touch
           </Link>
         </section>

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Figtree, IBM_Plex_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import "./globals.css";
 
-const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo" });
+const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree" });
 const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-plex" });
 
 const siteUrl = "https://argonsolutions.no";
@@ -61,7 +61,7 @@ export default function RootLayout({
     "@type": ["Organization", "LocalBusiness"],
     "@id": `${siteUrl}/#organization`,
     name: siteName,
-    legalName: "Argon Solutions",
+    legalName: "Argon Solutions AS",
     url: siteUrl,
     logo: `${siteUrl}/favicon.svg`,
     image: `${siteUrl}/og-image.png`,
@@ -146,6 +146,7 @@ export default function RootLayout({
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
     name: siteName,
     url: siteUrl,
     description: siteDescription,
@@ -164,7 +165,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(allJsonLd) }}
         />
       </head>
-      <body className={`${archivo.className} ${archivo.variable} ${plexMono.variable} bg-paper text-text antialiased`}>
+      <body className={`${figtree.className} ${figtree.variable} ${plexMono.variable} bg-paper text-text antialiased`}>
         <LanguageProvider>
           <Navbar />
           <main>{children}</main>

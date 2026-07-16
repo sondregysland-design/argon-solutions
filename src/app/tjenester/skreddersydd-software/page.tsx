@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SkreddersyddSoftwareContent from "./Content";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Argon Solutions utvikler skreddersydde webapplikasjoner og dashboards for energisektoren. Mobilvenlige løsninger, sanntids datavisualisering og offline-støtte for feltarbeid.";
@@ -61,13 +62,19 @@ const faqJsonLd = {
   ],
 };
 
+const breadcrumbLd = breadcrumbJsonLd([
+  { name: "Hjem", url: SITE_URL },
+  { name: "Tjenester", url: `${SITE_URL}/tjenester` },
+  { name: "Skreddersydd software", url: `${SITE_URL}/tjenester/skreddersydd-software` },
+]);
+
 export default function SkreddersyddSoftwarePage() {
   return (
     <div className="py-20">
       {/* Safe: both objects are static server-side constants, not user input */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceJsonLd, faqJsonLd]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceJsonLd, faqJsonLd, breadcrumbLd]) }}
       />
       <SkreddersyddSoftwareContent />
     </div>

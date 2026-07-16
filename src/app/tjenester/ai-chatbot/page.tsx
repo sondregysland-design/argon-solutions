@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AIChatbotContent from "./Content";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Argon Solutions bygger skreddersydde AI-chatbots for norske bedrifter. Koblet mot kunnskapsbase, CRM og fagsystemer. Svarer kunder 24/7 på norsk og engelsk. Drevet av Claude AI.";
@@ -60,7 +61,14 @@ const serviceJsonLd = {
 
 export default function AIChatbotPage() {
   // Safe: serviceJsonLd is a static server-side object defined above, no user input — same pattern as /tjenester/claude-code in this codebase
-  const serviceJsonLdString = JSON.stringify(serviceJsonLd);
+  const serviceJsonLdString = JSON.stringify([
+    serviceJsonLd,
+    breadcrumbJsonLd([
+      { name: "Hjem", url: SITE_URL },
+      { name: "Tjenester", url: `${SITE_URL}/tjenester` },
+      { name: "AI-chatbot", url: `${SITE_URL}/tjenester/ai-chatbot` },
+    ]),
+  ]);
 
   return (
     <div className="py-20">

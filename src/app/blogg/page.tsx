@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const title = "Blogg | Argon Solutions";
 const description =
@@ -49,7 +50,13 @@ export default function BlogPage() {
     },
   };
 
-  const blogScript = JSON.stringify(blogListJsonLd);
+  const blogScript = JSON.stringify([
+    blogListJsonLd,
+    breadcrumbJsonLd([
+      { name: "Hjem", url: SITE_URL },
+      { name: "Blogg", url: `${SITE_URL}/blogg` },
+    ]),
+  ]);
 
   return (
     <section className="mx-auto max-w-4xl px-6 py-20">

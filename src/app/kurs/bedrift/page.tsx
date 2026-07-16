@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BedriftContent from "./Content";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Argon Industri leverer in-house AI-opplæring for selskaper i olje og gass. Fra ledelsesworkshop til champions-dag, med datasikkerhet først. Fra 40 000 kr per kursdag.";
@@ -33,10 +34,19 @@ const serviceJsonLd = {
   ],
 };
 
+const jsonLd = [
+  serviceJsonLd,
+  breadcrumbJsonLd([
+    { name: "Hjem", url: SITE_URL },
+    { name: "Kurs", url: `${SITE_URL}/kurs` },
+    { name: "AI-kurs for bedrift", url: `${SITE_URL}/kurs/bedrift` },
+  ]),
+];
+
 export default function BedriftPage() {
   return (
     <div className="pb-20">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BedriftContent />
     </div>
   );

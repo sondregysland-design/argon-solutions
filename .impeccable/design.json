@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-07T09:30:00+02:00",
+  "title": "Design System: Argon Solutions",
+  "extensions": {
+    "colorMeta": {
+      "rust": {
+        "role": "primary",
+        "displayName": "Rust",
+        "canonical": "#B4400C",
+        "tonalRamp": ["#3a1504", "#5f2307", "#8A300A", "#B4400C", "#d05a24", "#e07d4e", "#edaa87", "#f8d9c6"]
+      },
+      "staalblaa": {
+        "role": "secondary",
+        "displayName": "Stålblå",
+        "canonical": "#124559",
+        "tonalRamp": ["#06181f", "#0c2e3c", "#124559", "#1e5c75", "#3E7A8E", "#6699a9", "#98bcc7", "#cfe1e7"]
+      },
+      "blekk": {
+        "role": "neutral",
+        "displayName": "Blekk",
+        "canonical": "#121317",
+        "tonalRamp": ["#121317", "#26272c", "#3b3c42", "#525359", "#6b6c72", "#8f9095", "#b8b9bd", "#e2e2e4"]
+      },
+      "grafitt": {
+        "role": "neutral",
+        "displayName": "Grafitt",
+        "canonical": "#45474D",
+        "tonalRamp": ["#1b1c1f", "#2f3034", "#45474D", "#5c5e64", "#75777d", "#94969b", "#b9babe", "#e0e0e2"]
+      },
+      "hviskegraa": {
+        "role": "neutral",
+        "displayName": "Hviskegrå",
+        "canonical": "#F4F6FA",
+        "tonalRamp": ["#43474f", "#5c6169", "#7b8088", "#9aa0a8", "#bcc1c9", "#d9dde3", "#e9ecf1", "#F4F6FA"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero-overskrifter; andre linje kan settes i rust." },
+      "headline": { "displayName": "Headline", "purpose": "Seksjonsoverskrifter." },
+      "body": { "displayName": "Body", "purpose": "Brødtekst i grafitt, maks 65 til 75 tegn linje." },
+      "label": { "displayName": "Label", "purpose": "Navigasjon, knapper, skjemaetiketter." },
+      "mono": { "displayName": "Mono", "purpose": "Kun teknisk detalj og skjerm-mockups (IBM Plex Mono)." }
+    },
+    "shadows": [
+      { "name": "floating-menu", "value": "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)", "purpose": "Kun dropdowns og elementer som svever over innhold." }
+    ],
+    "motion": [
+      { "name": "hero-rise", "value": "0.7s cubic-bezier(0.22, 1, 0.36, 1) both", "purpose": "Hero-entrance, staggeret 0 / 0.12s / 0.24s. Reduced motion: none." },
+      { "name": "monitor-lerp", "value": "lerp 0.14 per frame i requestAnimationFrame", "purpose": "Claude-monitorens pekerfølging og parallakse." },
+      { "name": "state-transition", "value": "transition-colors, standard Tailwind easing", "purpose": "Hover/fokus på lenker og knapper." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Blekk-pill for alle primærhandlinger (Se kurs, Kontakt, send skjema).",
+      "html": "<button class=\"ds-btn-primary\">Se kurs</button>",
+      "css": ".ds-btn-primary { background: #121317; color: #FFFFFF; padding: 14px 28px; font-family: Figtree, ui-sans-serif, sans-serif; font-size: 0.875rem; font-weight: 600; border: none; border-radius: 9999px; cursor: pointer; transition: background-color 0.15s ease-out; } .ds-btn-primary:hover { background: rgba(18,19,23,0.85); } .ds-btn-primary:focus-visible { outline: 2px solid #B4400C; outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.5; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Hviskegrå pill for sekundærhandlinger ved siden av en primærknapp.",
+      "html": "<button class=\"ds-btn-secondary\">For bedrift</button>",
+      "css": ".ds-btn-secondary { background: #F4F6FA; color: #121317; padding: 14px 28px; font-family: Figtree, ui-sans-serif, sans-serif; font-size: 0.875rem; font-weight: 600; border: none; border-radius: 9999px; cursor: pointer; transition: background-color 0.15s ease-out; } .ds-btn-secondary:hover { background: rgba(18,19,23,0.1); } .ds-btn-secondary:focus-visible { outline: 2px solid #B4400C; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Skjemafelt med rust-fokusring; brukes i kontakt- og bookingskjema.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Navnet ditt\" />",
+      "css": ".ds-input { display: block; width: 100%; background: #FFFFFF; color: #121317; border: 1px solid rgba(18,19,23,0.15); border-radius: 8px; padding: 12px 16px; font-family: Figtree, ui-sans-serif, sans-serif; font-size: 0.875rem; transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out; } .ds-input::placeholder { color: #45474D; } .ds-input:focus { border-color: #B4400C; box-shadow: 0 0 0 1px #B4400C; outline: none; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "label",
+      "description": "Topnav-lenke: grafitt i hvile, rust ved hover og aktiv rute.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link\" href=\"#\">Hjem</a><a class=\"ds-nav-link ds-nav-link-active\" href=\"#\">Kurs</a><a class=\"ds-nav-link\" href=\"#\">Om oss</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 32px; align-items: center; } .ds-nav-link { color: #45474D; font-family: Figtree, ui-sans-serif, sans-serif; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color 0.15s ease-out; } .ds-nav-link:hover { color: #B4400C; } .ds-nav-link-active { color: #B4400C; }"
+    },
+    {
+      "name": "Surface Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Hviskegrått kort uten skygge; nummerert sirkel + tittel + brødtekst.",
+      "html": "<div class=\"ds-card\"><span class=\"ds-card-num\">1</span><h3 class=\"ds-card-title\">Claude i praksis</h3><p class=\"ds-card-body\">Lær arbeidsflyten fra ekte prosjekter, ikke slides.</p></div>",
+      "css": ".ds-card { background: #F4F6FA; border-radius: 16px; padding: 28px; font-family: Figtree, ui-sans-serif, sans-serif; max-width: 280px; } .ds-card-num { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 9999px; background: #FFFFFF; color: #121317; font-size: 0.875rem; font-weight: 600; } .ds-card-title { margin: 16px 0 0; color: #121317; font-size: 1rem; font-weight: 600; } .ds-card-body { margin: 8px 0 0; color: #45474D; font-size: 0.875rem; line-height: 1.625; }"
+    },
+    {
+      "name": "Dark CTA Panel",
+      "kind": "custom",
+      "refersTo": "panel-dark",
+      "description": "Blekk-panel med hvit tekst og hvit pill; sidens avsluttende CTA.",
+      "html": "<div class=\"ds-panel\"><h2 class=\"ds-panel-title\">Klar til å komme i gang?</h2><button class=\"ds-panel-btn\">Book kurs</button></div>",
+      "css": ".ds-panel { background: #121317; border-radius: 24px; padding: 48px; text-align: center; font-family: Figtree, ui-sans-serif, sans-serif; } .ds-panel-title { color: #FFFFFF; font-size: 1.875rem; font-weight: 500; letter-spacing: -0.025em; margin: 0 0 24px; } .ds-panel-btn { background: #FFFFFF; color: #121317; padding: 14px 28px; font-size: 0.875rem; font-weight: 600; border: none; border-radius: 9999px; cursor: pointer; transition: opacity 0.15s ease-out; } .ds-panel-btn:hover { opacity: 0.85; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Rust og stål i dagslys",
+    "overview": "Et lyst, ryddig verksted der materialene selv er paletten: rust-oransje og stålblå mot hvitt papir og blekk. Siden skal føles som den er laget av en som bygger ting: rolige flater, solide pill-knapper, rause seksjonsavstander og én varm aksent som aldri maser. Interaktive egenbygde elementer er systemets utstillingsvindu; de beviser kompetansen i stedet for å beskrive den.",
+    "keyCharacteristics": [
+      "Lys flate (hvit + hviskegrå), blekk-mørke handlingsflater",
+      "Én varm signaturaksent (rust) med faste, få jobber",
+      "Pill-formede knapper, mykt avrundede kort (16px) og paneler (24px)",
+      "Flat i hvile; skygge kun på elementer som svever",
+      "Rolig entrance-koreografi i heroen, ellers tilstandsbasert bevegelse"
+    ],
+    "rules": [
+      { "name": "Rust-regelen", "body": "Rust-oransje har tre faste jobber (garanti/anbefaling, aktiv nav, grunder-seksjonen) og får aldri nye per side.", "section": "colors" },
+      { "name": "Lånte farger-regelen", "body": "Claude/Anthropic-paletten er kun tillatt inne i skjerm-mockups som siterer Claude-produktet. Den lekker aldri ut i sidens egne flater.", "section": "colors" },
+      { "name": "Én familie-regelen", "body": "Figtree bærer alt brukersynlig. IBM Plex Mono er forbeholdt teknisk detalj; mono som teknisk kostyme i overskrifter er forbudt.", "section": "typography" },
+      { "name": "Flat-til-det-flyter-regelen", "body": "Flater i ro har aldri skygge. Skygge og blur er reservert for elementer som svever over andre.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do bruk blekk-pills for alle primærhandlinger; hvit tekst, 9999px radius.",
+      "Do del opp siden med hviskegrå bånd og 96px seksjonsavstand i stedet for streker og skygger.",
+      "Do send all brukersynlig tekst gjennom t()-nøkler på sider med LanguageProvider.",
+      "Do gi all bevegelse et prefers-reduced-motion-alternativ med statisk fallback.",
+      "Do hold rust-aksenten under 10 prosent av enhver skjerm."
+    ],
+    "donts": [
+      "Don't bruk gradient-tekst, glassmorphism, lilla/blå AI-slop, hero-metrics eller identiske kortgrid.",
+      "Don't skriv tankestreker som bindeledd, kolon i setninger eller rule-of-three-oppramsing i copy.",
+      "Don't bruk stock-fotos eller konsulent-fraser; demoer omtales som egenbygde demoer.",
+      "Don't skriv Argon Solutions AS eller oppgi grunnleggingsår.",
+      "Don't la Claude-paletten lekke ut av skjerm-mockups.",
+      "Don't legg skygge på flater i ro eller farget border-left som aksent-stripe.",
+      "Don't introduser nye fonter eller nye farger per side; paletten og Figtree er låst."
+    ]
+  }
+}

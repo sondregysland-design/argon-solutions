@@ -39,7 +39,7 @@ Argon Solutions har erfaring med å integrere CRM-systemer, prosjektstyringsverk
 
 ### 5. Lokal tilstedeværelse og nærhet
 
-En partner som holder til i samme by gir raskere kommunikasjon, bedre forståelse av lokale forhold, og mulighet for direkte møter. Argon Solutions holder til i Stavanger og betjener kunder i hele Norge.
+En partner som holder til i samme by gir raskere kommunikasjon, bedre forståelse av lokale forhold, og mulighet for direkte møter. Argon Solutions holder til i Stavanger og tar oppdrag i hele Norge.
 
 ## Hva Argon Solutions tilbyr olje- og gassindustrien
 

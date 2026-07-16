@@ -36,6 +36,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.95,
     },
+    { url: `${baseUrl}/kurs/claude-kurs-stavanger`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.95 },
+    { url: `${baseUrl}/kurs/claude-code-kurs-stavanger`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.95 },
+    { url: `${baseUrl}/kurs/ai-kurs-bedrift-stavanger`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.95 },
+    { url: `${baseUrl}/kurs/vibe-coding-kurs-stavanger`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.9 },
     {
       url: `${baseUrl}/tjenester`,
       lastModified: new Date(),

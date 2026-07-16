@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SystemintegrasjonContent from "./Content";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Argon Solutions kobler sammen eksisterende systemer og bygger skreddersydde API-integrasjoner for energisektoren. Automatisk dataflyt, AI-drevet rapportering og effektive arbeidsflyter.";
@@ -53,13 +54,19 @@ const faqJsonLd = {
   ],
 };
 
+const breadcrumbLd = breadcrumbJsonLd([
+  { name: "Hjem", url: SITE_URL },
+  { name: "Tjenester", url: `${SITE_URL}/tjenester` },
+  { name: "Systemintegrasjon", url: `${SITE_URL}/tjenester/systemintegrasjon` },
+]);
+
 export default function SystemintegrasjonPage() {
   return (
     <div className="py-20">
       {/* Safe: static server-side constants from this file, not user input */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceJsonLd, faqJsonLd]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceJsonLd, faqJsonLd, breadcrumbLd]) }}
       />
       <SystemintegrasjonContent />
     </div>

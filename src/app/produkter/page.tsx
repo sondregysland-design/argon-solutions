@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { products } from "@/lib/products";
 import { ProdukterContent } from "./ProdukterContent";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Argon Solutions sine produkter: prosjektstyring, CRM, dashboard, PDF-ekstraksjon og risikostyring for olje- og gassindustrien. Skreddersydd med AI.";
@@ -47,7 +48,13 @@ const productCatalogJsonLd = {
 };
 
 export default function ProdukterPage() {
-  const catalogScript = JSON.stringify(productCatalogJsonLd);
+  const catalogScript = JSON.stringify([
+    productCatalogJsonLd,
+    breadcrumbJsonLd([
+      { name: "Hjem", url: SITE_URL },
+      { name: "Produkter", url: `${SITE_URL}/produkter` },
+    ]),
+  ]);
 
   return (
     <div className="py-20">

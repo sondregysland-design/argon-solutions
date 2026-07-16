@@ -21,8 +21,8 @@ export function Footer() {
             <h3 className="font-semibold text-text">{t("footer.pages")}</h3>
             <ul className="mt-3 space-y-2 text-sm text-text-light">
               <li><Link href="/" className="hover:text-primary">{t("nav.home")}</Link></li>
-              <li><Link href="/kurs" className="hover:text-primary">{t("nav.kurs")}</Link></li>
-              <li><Link href="/kurs/bedrift" className="hover:text-primary">{t("nav.bedrift")}</Link></li>
+              <li><Link href="/kurs" className="hover:text-primary">{t("sub.kursPrivate")}</Link></li>
+              <li><Link href="/kurs/bedrift" className="hover:text-primary">{t("sub.kursBedrift")}</Link></li>
               <li><Link href="/tjenester" className="hover:text-primary">{t("nav.services")}</Link></li>
               <li><Link href="/produkter" className="hover:text-primary">{t("nav.products")}</Link></li>
               <li><Link href="/om-oss" className="hover:text-primary">{t("nav.about")}</Link></li>
@@ -53,7 +53,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-text/15 pt-6 text-center text-xs text-text-light">
-          &copy; {new Date().getFullYear()} Argon Solutions. {t("footer.rights")}
+          &copy; {new Date().getFullYear()} Argon Solutions AS. {t("footer.rights")}
         </div>
       </div>
     </footer>

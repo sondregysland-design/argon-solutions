@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ClaudeCodeContent from "./Content";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Argon Solutions setter opp Claude Code som et komplett AI-operativsystem for din bedrift. Skreddersydde skills, MCP-servere, hooks og arbeidsflyter. AI-byrå i Stavanger.";
@@ -32,10 +33,19 @@ const serviceJsonLd = {
   ],
 };
 
+const jsonLd = [
+  serviceJsonLd,
+  breadcrumbJsonLd([
+    { name: "Hjem", url: SITE_URL },
+    { name: "Tjenester", url: `${SITE_URL}/tjenester` },
+    { name: "Claude Code-oppsett", url: `${SITE_URL}/tjenester/claude-code` },
+  ]),
+];
+
 export default function ClaudeCodePage() {
   return (
     <div className="py-20">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ClaudeCodeContent />
     </div>
   );

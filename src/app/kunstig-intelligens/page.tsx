@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { KunstigIntelligensContent } from "./KunstigIntelligensContent";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
   "Komplett guide til kunstig intelligens (AI) for norske bedrifter: hva det er, hvordan det brukes i praksis, kostnader, sikkerhet, og hvordan du kommer i gang. Skrevet av Argon Solutions, AI-byrå i Stavanger.";
@@ -109,7 +110,13 @@ const faqJsonLd = {
 export default function KunstigIntelligensPage() {
   // Safe: articleJsonLd and faqJsonLd are static server-side objects defined above, no user input — same pattern as /faq, /tjenester/claude-code and /blogg/[slug] in this codebase
   const articleJsonLdString = JSON.stringify(articleJsonLd);
-  const faqJsonLdString = JSON.stringify(faqJsonLd);
+  const faqJsonLdString = JSON.stringify([
+    faqJsonLd,
+    breadcrumbJsonLd([
+      { name: "Hjem", url: SITE_URL },
+      { name: "Kunstig intelligens", url: `${SITE_URL}/kunstig-intelligens` },
+    ]),
+  ]);
 
   return (
     <div className="py-20">
