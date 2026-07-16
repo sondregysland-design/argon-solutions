@@ -13,7 +13,7 @@ export default function HomeContent() {
     desc: t(`home.learn.i${n}d`),
   }));
 
-  const faqItems = [1, 2, 3, 4, 5, 6, 7, 8].map((n) => ({
+  const faqItems = [1, 4, 5, 8].map((n) => ({
     q: t(`home.faq.q${n}`),
     a: t(`home.faq.a${n}`),
   }));

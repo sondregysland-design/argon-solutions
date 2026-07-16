@@ -10,7 +10,7 @@ const faqJsonLd = {
   "@id": "https://argonsolutions.no/#faq",
   inLanguage: "nb-NO",
   isPartOf: { "@id": "https://argonsolutions.no/#website" },
-  mainEntity: ([1, 2, 3, 4, 5, 6, 7, 8] as const).map((n) => ({
+  mainEntity: ([1, 4, 5, 8] as const).map((n) => ({
     "@type": "Question",
     name: faq[`q${n}`],
     acceptedAnswer: { "@type": "Answer", text: faq[`a${n}`] },
