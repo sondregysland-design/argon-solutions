@@ -6,11 +6,11 @@ const description =
   "Se prosjektene Argon Solutions har bygget for olje- og gassindustrien: offshore prosjektstyring, CRM, AI-dokumentbehandling, risikostyring og mer.";
 
 export const metadata: Metadata = {
-  title: "Referanser og prosjekter | Argon Solutions",
+  title: "Referanser og prosjekter",
   description,
   alternates: { canonical: "/referanser" },
-  openGraph: {
-    title: "Referanser og prosjekter | Argon Solutions",
+  openGraph: { images: ["/og-image.png"],
+    title: "Referanser og prosjekter",
     description,
     url: "/referanser",
   },
@@ -76,7 +76,7 @@ const prosjekter = [
   {
     title: "Nettleserautomatisering for sertifikathåndtering",
     challenge:
-      "Grunnleggerne brukte selv 6 timer per uke på å manuelt logge inn på leverandørportaler, laste ned sertifikater og oppdatere interne systemer i sin egen arbeidshverdag i olje og gass.",
+      "Teamet brukte selv 6 timer per uke på å manuelt logge inn på leverandørportaler, laste ned sertifikater og oppdatere interne systemer i sin egen arbeidshverdag i olje og gass.",
     solution:
       "Argon Solutions utviklet en AI-agent med Playwright som automatisk logger inn på portaler, navigerer til riktig side, laster ned sertifikater og oppdaterer det interne systemet. Agenten kjøres automatisk og varsler ved avvik.",
     tech: ["Playwright", "Node.js", "Claude AI"],
@@ -105,7 +105,7 @@ const caseStudyJsonLd = {
       description: p.challenge + " " + p.solution,
       creator: {
         "@type": "Organization",
-        "@id": "https://argonsolutions.no/#organization",
+        "@id": "https://www.argonsolutions.no/#organization",
         name: "Argon Solutions",
       },
     },
@@ -123,7 +123,7 @@ export default function ReferanserPage() {
   ]);
 
   return (
-    <div className="py-20">
+    <div className="py-12 sm:py-20">
       <script
         type="application/ld+json"
         // Safe: caseStudyJsonLd is server-side static data, not user-supplied

@@ -28,14 +28,14 @@ export type GeoCourseData = {
 
 export function GeoCoursePage({ data }: { data: GeoCourseData }) {
   return (
-    <div className="py-20">
+    <div className="py-12 sm:py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-2 text-sm font-medium text-text-light">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" aria-hidden />
             {data.eyebrow}
           </p>
-          <h1 className="mt-4 font-display text-5xl font-medium tracking-tight text-text sm:text-6xl">{data.h1}</h1>
+          <h1 className="mt-4 font-display text-4xl font-medium tracking-tight text-text sm:text-6xl">{data.h1}</h1>
           <div className="mt-6 space-y-4 text-lg text-text-light">
             {data.intro.map((p) => (
               <p key={p.slice(0, 40)}>{p}</p>
@@ -57,48 +57,61 @@ export function GeoCoursePage({ data }: { data: GeoCourseData }) {
           </div>
         </div>
 
-        {data.sections.map((s) => (
-          <section key={s.heading} className="mt-20">
-            <h2 className="font-display text-3xl font-medium tracking-tight text-text">{s.heading}</h2>
-            {s.paragraphs && (
-              <div className="mt-6 max-w-3xl space-y-4 leading-relaxed text-text-light">
-                {s.paragraphs.map((p) => (
-                  <p key={p.slice(0, 40)}>{p}</p>
-                ))}
-              </div>
-            )}
-            {s.bullets && (
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {s.bullets.map((b) => (
-                  <div key={b.title} className="card-lift h-full rounded-2xl bg-surface p-7">
-                    <h3 className="font-semibold text-text">{b.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-text-light">{b.desc}</p>
+        {/* Innholdsseksjoner kollapset: alt ligger i DOM for søk og agenter, skjermen holdes rolig. */}
+        <div className="mt-16 max-w-3xl">
+          {data.sections.map((s) => (
+            <details key={s.heading} className="group border-t border-text/15">
+              <summary className="flex cursor-pointer list-none items-center justify-between py-5 font-semibold text-text [&::-webkit-details-marker]:hidden">
+                <h2 className="text-base font-semibold tracking-normal">{s.heading}</h2>
+                <span aria-hidden className="text-text-light transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div className="pb-8">
+                {s.paragraphs && (
+                  <div className="space-y-4 leading-relaxed text-text-light">
+                    {s.paragraphs.map((p) => (
+                      <p key={p.slice(0, 40)}>{p}</p>
+                    ))}
                   </div>
-                ))}
+                )}
+                {s.bullets && (
+                  <div className="space-y-5">
+                    {s.bullets.map((b) => (
+                      <div key={b.title}>
+                        <h3 className="font-semibold text-text">{b.title}</h3>
+                        <p className="mt-1 text-sm leading-relaxed text-text-light">{b.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
-          </section>
-        ))}
+            </details>
+          ))}
+        </div>
 
         <section className="mt-20">
           <div className="rounded-3xl bg-surface p-8 md:p-10">
             <h2 className="font-display text-3xl font-medium tracking-tight text-text">Pris</h2>
-            <p className="mt-6 font-display text-5xl font-medium tracking-tight text-text">{data.price.value}</p>
+            <p className="mt-6 font-display text-4xl sm:text-5xl font-medium tracking-tight text-text">{data.price.value}</p>
             <p className="mt-1 text-sm text-text-light">{data.price.unit}</p>
             <p className="mt-6 max-w-2xl text-sm leading-relaxed text-text-light">{data.price.note}</p>
           </div>
         </section>
 
-        <section className="mt-20">
-          <h2 className="font-display text-3xl font-medium tracking-tight text-text">{data.faqHeading}</h2>
-          <div className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
-            {data.faqs.map((f) => (
-              <div key={f.q} className="border-t border-text/15 pt-5">
-                <h3 className="font-semibold text-text">{f.q}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-text-light">{f.a}</p>
-              </div>
-            ))}
-          </div>
+        <section className="mt-16 max-w-3xl">
+          <details className="group border-t border-text/15">
+            <summary className="flex cursor-pointer list-none items-center justify-between py-5 font-semibold text-text [&::-webkit-details-marker]:hidden">
+              <h2 className="text-base font-semibold tracking-normal">{data.faqHeading}</h2>
+              <span aria-hidden className="text-text-light transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div className="space-y-6 pb-8">
+              {data.faqs.map((f) => (
+                <div key={f.q}>
+                  <h3 className="font-semibold text-text">{f.q}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-text-light">{f.a}</p>
+                </div>
+              ))}
+            </div>
+          </details>
         </section>
 
         <section className="mt-20">
@@ -108,7 +121,7 @@ export function GeoCoursePage({ data }: { data: GeoCourseData }) {
               <Link
                 key={l.href}
                 href={l.href}
-                className="rounded-full bg-surface px-5 py-2.5 text-sm font-semibold text-text transition hover:bg-text/10"
+                className="tap-target rounded-full bg-surface px-5 py-2.5 text-sm font-semibold text-text transition hover:bg-text/10"
               >
                 {l.label}
               </Link>
@@ -120,7 +133,7 @@ export function GeoCoursePage({ data }: { data: GeoCourseData }) {
           <div className="rounded-3xl bg-ink px-6 py-16 text-center">
             <h2 className="font-display text-3xl font-medium tracking-tight text-white">Klar til å komme i gang?</h2>
             <p className="mx-auto mt-4 max-w-xl text-white/70">
-              Meld deg på en åpen kursdag, eller be om tilbud på opplæring for teamet ditt. Vi svarer vanligvis innen 24 timer.
+              Be om tilbud på opplæring for teamet deres, så finner vi en dato som passer. Vi svarer vanligvis innen 24 timer.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link

@@ -3,6 +3,7 @@ title: "Slik kommer du i gang med Claude (norsk guide)"
 description: "Norsk guide til Claude AI. Hva Claude er, hvordan du oppretter konto, hva som er gratis og hva som koster, og hvordan du får AI-en til å gjøre ekte arbeid fra første dag."
 keywords: ["Claude", "Claude AI", "kom i gang med Claude", "Claude norsk", "Claude guide", "Anthropic", "AI-kurs Stavanger"]
 date: 2026-07-08
+updated: 2026-09-13
 faq:
   - q: "Er Claude gratis?"
     a: "Ja, Claude har en gratisversjon på claude.ai som holder til å komme i gang. Gratisversjonen har begrenset antall meldinger per dag. Betalt abonnement (Pro) gir langt høyere kvote, tilgang til de kraftigste modellene og funksjoner som prosjekter og filbygging."
@@ -46,7 +47,7 @@ Et godt første eksperiment er å ta et dokument du faktisk skulle lest denne uk
 
 ## Steg 4. Fra svar til arbeid
 
-Når du er trygg på samtalene, kan Claude begynne å lage ting. I claude.ai kan du be Claude bygge små verktøy og apper direkte i samtalen. En kalkulator for ditt bruksområde, en sjekkliste-generator, en enkel oversikt. Du beskriver, Claude bygger, og du ber om justeringer til det stemmer. Denne arbeidsmåten kalles ofte [vibe coding](/kurs/vibe-coding-kurs-stavanger), og den krever ingen kodekunnskaper.
+Når du er trygg på samtalene, kan Claude begynne å lage ting. I claude.ai kan du be Claude bygge små verktøy og apper direkte i samtalen. En kalkulator for ditt bruksområde, en sjekkliste-generator, en enkel oversikt. Du beskriver, Claude bygger, og du ber om justeringer til det stemmer. Denne arbeidsmåten kalles ofte vibe coding, og den krever ingen kodekunnskaper.
 
 For utviklere finnes [Claude Code](/kurs/claude-code-kurs-stavanger), et verktøy som jobber direkte i kodebasen og løser hele oppgaver selvstendig. Det er et eget univers, og for de fleste er claude.ai riktig sted å starte.
 
@@ -62,22 +63,9 @@ For utviklere finnes [Claude Code](/kurs/claude-code-kurs-stavanger), et verktø
 
 ## Vil du lære det på en dag i stedet?
 
-Alt i denne guiden kan du lære deg selv over noen uker med prøving og feiling. Vil du heller komprimere det til én dag med en trener ved siden av deg, holder vi [Claude-kurs i Stavanger](/kurs/claude-kurs-stavanger). Du tar med egen laptop og egne oppgaver, og går hjem med verktøy og oppsett som virker. For team og bedrifter finnes [eget bedriftskurs](/kurs/ai-kurs-bedrift-stavanger) der vi kommer til dere.
+Alt i denne guiden kan du lære deg selv over noen uker med prøving og feiling. Vil teamet ditt heller komprimere det til én dag med en trener ved siden av seg, holder vi [Claude-kurs hos bedrifter](/kurs). Dere tar med egne laptoper og egne oppgaver, og går hjem med verktøy og oppsett som virker. Opplegget for hele kontoret ligger på [AI-kurs for bedrift](/kurs/ai-kurs-bedrift-stavanger).
 
-## Ofte stilte spørsmål
+## Les mer
 
-### Er Claude gratis?
-
-Ja, Claude har en gratisversjon på claude.ai som holder til å komme i gang. Gratisversjonen har begrenset antall meldinger per dag. Betalt abonnement (Pro) gir langt høyere kvote, tilgang til de kraftigste modellene og funksjoner som prosjekter og filbygging.
-
-### Fungerer Claude på norsk?
-
-Ja. Claude skriver og forstår norsk godt, både bokmål og nynorsk. Du kan gi instruksjoner på norsk, lime inn norske dokumenter og få svar på norsk. Kvaliteten på norsk tekst er høy nok til e-post, rapporter og annet arbeid.
-
-### Hva er forskjellen på Claude og ChatGPT?
-
-Begge er AI-assistenter. Claude lages av Anthropic og er spesielt sterk på lange dokumenter, presis tekst og selvstendig arbeid med verktøy som Claude Code. ChatGPT lages av OpenAI. For de fleste arbeidsoppgaver er arbeidsmåten viktigere enn valget av verktøy. Les mer i vår sammenligning av [Claude og ChatGPT for norske bedrifter](/blogg/claude-vs-chatgpt-norske-bedrifter).
-
-### Er det trygt å lime inn jobbdokumenter i Claude?
-
-Det kommer an på dokumentet og bedriftens regler. Anthropic bruker ikke innhold fra betalte bedriftskontoer til å trene modeller, men du bør aldri lime inn sensitiv eller konfidensiell informasjon uten at bedriften har satt kjøreregler for AI-bruk. Sjekk med arbeidsgiver først.
+- [Claude vs ChatGPT for norske bedrifter](/blogg/claude-vs-chatgpt-norske-bedrifter)
+- [Hva er Claude AI? Komplett norsk guide](/blogg/hva-er-claude-ai-norsk-guide)

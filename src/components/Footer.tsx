@@ -19,41 +19,48 @@ export function Footer() {
           </div>
           <div>
             <h3 className="font-semibold text-text">{t("footer.pages")}</h3>
-            <ul className="mt-3 space-y-2 text-sm text-text-light">
-              <li><Link href="/" className="hover:text-primary">{t("nav.home")}</Link></li>
-              <li><Link href="/kurs" className="hover:text-primary">{t("sub.kursPrivate")}</Link></li>
-              <li><Link href="/kurs/bedrift" className="hover:text-primary">{t("sub.kursBedrift")}</Link></li>
-              <li><Link href="/tjenester" className="hover:text-primary">{t("nav.services")}</Link></li>
-              <li><Link href="/produkter" className="hover:text-primary">{t("nav.products")}</Link></li>
-              <li><Link href="/om-oss" className="hover:text-primary">{t("nav.about")}</Link></li>
-              <li><Link href="/faq" className="hover:text-primary">{t("footer.faq")}</Link></li>
-              <li><Link href="/kontakt" className="hover:text-primary">{t("nav.contact")}</Link></li>
+            <ul className="mt-1 text-sm text-text-light">
+              <li><Link href="/" className="tap-target block py-1.5 hover:text-primary">{t("nav.home")}</Link></li>
+              <li><Link href="/kurs" className="tap-target block py-1.5 hover:text-primary">{t("sub.kursBedrift")}</Link></li>
+              <li><Link href="/tjenester" className="tap-target block py-1.5 hover:text-primary">{t("nav.services")}</Link></li>
+              <li><Link href="/produkter" className="tap-target block py-1.5 hover:text-primary">{t("nav.products")}</Link></li>
+              <li><Link href="/kunstig-intelligens" className="tap-target block py-1.5 hover:text-primary">{t("nav.whatIsAi")}</Link></li>
+              <li><Link href="/referanser" className="tap-target block py-1.5 hover:text-primary">{t("footer.referanser")}</Link></li>
+              <li><Link href="/blogg" className="tap-target block py-1.5 hover:text-primary">{t("nav.blog")}</Link></li>
+              <li><Link href="/om-oss" className="tap-target block py-1.5 hover:text-primary">{t("nav.about")}</Link></li>
+              <li><Link href="/faq" className="tap-target block py-1.5 hover:text-primary">{t("footer.faq")}</Link></li>
+              <li><Link href="/kontakt" className="tap-target block py-1.5 hover:text-primary">{t("nav.contact")}</Link></li>
+              <li><Link href="/en/ai-agency-stavanger" className="tap-target block py-1.5 hover:text-primary" hrefLang="en">In English</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-text">{t("footer.contact")}</h3>
-            <ul className="mt-3 space-y-2 text-sm text-text-light">
+            <ul className="mt-1 text-sm text-text-light">
               <li>
-                <a href="mailto:post@argonsolutions.no" className="hover:text-primary transition-colors">
+                <a href="mailto:post@argonsolutions.no" className="tap-target block py-1.5 hover:text-primary transition-colors">
                   post@argonsolutions.no
                 </a>
               </li>
               <li>
-                <a href="tel:+4745209979" className="hover:text-primary transition-colors">
+                <a href="tel:+4745209979" className="tap-target block py-1.5 hover:text-primary transition-colors">
                   +47 452 09 979
                 </a>
               </li>
-              <li>{t("footer.location")}</li>
+              <li className="py-1.5">{t("footer.location")}</li>
+              <li className="py-1.5">{t("footer.orgnr")} 938 033 072</li>
             </ul>
             <div className="mt-4">
-              <a href="https://www.linkedin.com/company/argonsolutions/" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-primary transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/argonsolutions/" target="_blank" rel="noopener noreferrer" className="tap-target-inline inline-flex h-11 w-11 items-center justify-center -ml-3 text-text-light hover:text-primary transition-colors" aria-label="LinkedIn">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </a>
             </div>
           </div>
         </div>
         <div className="mt-8 border-t border-text/15 pt-6 text-center text-xs text-text-light">
-          &copy; {new Date().getFullYear()} Argon Solutions AS. {t("footer.rights")}
+          &copy; {new Date().getFullYear()} Argon Solutions AS. {t("footer.rights")}{" "}
+          <Link href="/personvern" className="hover:text-primary underline-offset-2 hover:underline">
+            {t("footer.privacy")}
+          </Link>
         </div>
       </div>
     </footer>

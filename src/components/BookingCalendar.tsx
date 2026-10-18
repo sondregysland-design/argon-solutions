@@ -65,7 +65,7 @@ export function BookingCalendar({
       <div className="flex items-center justify-between mb-4">
         <button
           onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
-          className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-text-light hover:text-text"
+          className="flex h-11 w-11 items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-text-light hover:text-text"
           aria-label={m.prevMonth}
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -77,7 +77,7 @@ export function BookingCalendar({
         </h3>
         <button
           onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
-          className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-text-light hover:text-text"
+          className="flex h-11 w-11 items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-text-light hover:text-text"
           aria-label={m.nextMonth}
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -94,7 +94,7 @@ export function BookingCalendar({
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-1">
+      <div className="grid grid-cols-7 gap-0.5 sm:gap-1">
         {days.map((day) => {
           const dateStr = format(day, "yyyy-MM-dd");
           const isCurrentMonth = isSameMonth(day, currentMonth);
@@ -108,7 +108,7 @@ export function BookingCalendar({
               disabled={isDisabled || !hasSlots}
               onClick={() => onSelectDate(dateStr)}
               className={`
-                relative aspect-square flex items-center justify-center rounded-lg text-sm transition-all duration-150
+                relative aspect-square min-h-11 flex items-center justify-center rounded-lg text-sm transition-all duration-150
                 ${!isCurrentMonth ? "text-gray-300" : ""}
                 ${isDisabled && isCurrentMonth ? "text-gray-300 cursor-not-allowed" : ""}
                 ${!isDisabled && hasSlots && !isSelected ? "text-text hover:bg-primary-light/10 hover:text-primary cursor-pointer" : ""}

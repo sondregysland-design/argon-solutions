@@ -3,6 +3,16 @@ title: "AI-strategi for 2026: Slik bygger du et veikart bedriften følger"
 description: "Praktisk guide til AI-strategi for norske bedrifter. Hvordan identifisere muligheter, prioritere prosjekter og bygge et realistisk veikart for AI-implementering."
 keywords: ["AI-strategi", "AI strategi bedrift", "AI veikart", "AI implementering", "AI rådgivning"]
 date: 2026-04-22
+updated: 2026-09-13
+faq:
+  - q: "Hvorfor feiler de fleste AI-strategier?"
+    a: "Fordi de starter i teknologien i stedet for i problemet. En strategi som lister opp AI-muligheter uten å koble dem til konkrete smertepunkter gir prosjekter ingen eier bryr seg om, og de stopper opp så snart pilotfasen er over."
+  - q: "Hvordan lager man en AI-strategi som faktisk blir gjennomført?"
+    a: "Kartlegg smertepunkter først, vurder AI-egnethet for hvert av dem, prioriter i en enkel 2x2-matrise etter verdi og kompleksitet, bygg ett første prosjekt riktig, og mål resultatet før dere utvider."
+  - q: "Hvilke AI-prosjekter gir raskest avkastning?"
+    a: "Oppgaver som er repetitive, tekstbaserte og har tydelige regler gir raskest gevinst. Dokumenthåndtering, rapportgenerering og dataflyt mellom systemer er typiske eksempler, fordi tidsbruken er lett å måle før og etter."
+  - q: "Hvor lang tidshorisont bør en AI-strategi ha?"
+    a: "Planlegg i kvartaler, ikke i år. Modellene og verktøyene endrer seg raskere enn en treårsplan tåler. Sett retningen for året, men la de konkrete prosjektene revideres hvert kvartal."
 ---
 
 Mange norske bedrifter har hatt "AI-strategi" på agendaen i to år uten å komme videre enn pilotprosjekter og interne diskusjoner. Problemet er sjelden mangel på vilje. Det er mangel på en praktisk metode for å gå fra ide til implementering. Denne guiden gir deg en konkret tilnærming.

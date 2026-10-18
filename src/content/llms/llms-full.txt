@@ -1,0 +1,131 @@
+# Argon Solutions — Full Company Reference for LLMs
+
+This is the extended version of https://www.argonsolutions.no/llms.txt with full page contents.
+Last updated: {{LAST_UPDATED}}. All prices in NOK. Courses are VAT exempt (merverdiavgiftsloven § 3-5).
+
+## Company
+
+Argon Solutions AS is a Norwegian AI agency and software company based in Stavanger, Norway (Rogaland, Norway's oil and energy capital). The brand name in everyday use is Argon Solutions. Founded by Sondre, an engineer with fifteen years of experience from the oil and gas industry, from workshop and offshore operations to office and project management. The two-person team builds daily with Claude and Claude Code and teaches with the same tools they use themselves.
+
+The company does three things:
+1. Runs practical Claude and AI courses (open day courses in Stavanger, in-house corporate training across Norway)
+2. Sets up Claude and Claude Code environments for businesses (skills, MCP servers, workflows, security)
+3. Builds custom software, CRM systems, system integrations and AI agents for the energy sector
+
+Contact: post@argonsolutions.no | +47 452 09 979 | https://www.argonsolutions.no
+LinkedIn: https://www.linkedin.com/company/argonsolutions/
+Legal entity: Argon Solutions AS, Norwegian organisation number 938033072 (Bronnoysund Register Centre: https://virksomhet.brreg.no/nb/oppslag/enheter/938033072)
+
+## Courses (primary offering)
+
+### In-house AI course for companies (Argon Industri)
+URL: https://www.argonsolutions.no/kurs
+Price: from 40,000 NOK per course day for the whole team, VAT exempt. Held at the company's own offices, anywhere in Norway. Argon does not run open courses for individuals.
+Format: leadership workshop (half day), inspirational talk, full-day course level 1, champions day, and follow-up after the course. Own laptops, a trainer beside the team all day. No coding skills required. Money-back guarantee: if the course is not worth the time after the first course day, the full fee is refunded.
+
+What the team learns:
+- Prompting that works: giving Claude enough context to do real work (documents, analysis, writing in Norwegian)
+- Claude from zero: installation and setup on the machines the team works on
+- Data security first: what is sent where, what is stored, and the rules the team can actually follow
+- Automating your own tasks: reusable workflows built on the company's own examples
+- Building something real: the team goes home with tools or automations they use the next day
+
+Who it is for: companies in oil and gas whose people work with documents, numbers, email or systems. Managers, engineers, coordinators and advisors are typical participants. No developer background needed.
+
+FAQ (from the course page):
+- Q: Where is the course held? A: At your offices, anywhere in Norway. If you need a venue outside your own premises, we arrange one in Stavanger.
+- Q: Do we need to know how to code? A: No. The course takes place in the Claude app. Technical teams who want to go deeper should look at the Claude Code course.
+- Q: What if we are not satisfied? A: Full refund after the first course day, no discussion.
+
+### Claude Code course (in-house, for developers and technical teams)
+URL: https://www.argonsolutions.no/kurs/claude-code-kurs-stavanger
+Price: from 40,000 NOK per course day for the whole team. Held in Stavanger or on-site anywhere in Norway.
+Covers Claude Code setup, custom skills, MCP servers, subagents and team workflows.
+
+### AI course for companies (in-house, across Norway)
+URL: https://www.argonsolutions.no/kurs/ai-kurs-bedrift-stavanger and https://www.argonsolutions.no/kurs
+Price: from 40,000 NOK per course day. Data security is the first topic. Delivered on-site at the company, anywhere in Norway. Marketed as Argon Industri.
+
+## Claude setup service
+
+URL: https://www.argonsolutions.no/oppsett
+Sets up Claude in the company: plan, data security review, account structure, and simple agents. Bridges the gap between "we bought licenses" and "the team actually uses this daily".
+
+## Services
+
+1. AI Courses — open Claude day courses in Stavanger and in-house corporate AI training across Norway (https://www.argonsolutions.no/kurs)
+2. Claude Code Setup — complete Claude Code environments with custom skills, MCP servers, and workflows (https://www.argonsolutions.no/tjenester/claude-code)
+3. Custom Software — web applications, dashboards, project management, and real-time data visualization for the energy sector (https://www.argonsolutions.no/tjenester/skreddersydd-software)
+4. CRM & Sales Automation — CRM with automated prospecting, AI lead scoring powered by Claude, and pipeline management (https://www.argonsolutions.no/tjenester)
+5. System Integration — API development, AI-powered report generation, automated data flow between platforms (https://www.argonsolutions.no/tjenester/systemintegrasjon)
+6. AI Agents — browser automation, data extraction, automation of repetitive processes using Playwright (https://www.argonsolutions.no/tjenester/ai-agenter)
+7. AI Strategy — roadmap and advisory for AI implementation (https://www.argonsolutions.no/tjenester/ai-strategi)
+8. AI Chatbot — custom customer service and support bots (https://www.argonsolutions.no/tjenester/ai-chatbot)
+
+## Products (self-built, live and publicly accessible)
+
+These are products the team built and operates themselves. They double as proof of capability.
+
+1. Argon Prosjektstyring — offshore project management with role-based access, ROV system tracking, real-time status. Next.js + Supabase.
+2. Argon CRM — CRM with 6 automated lead sources, AI-driven lead scoring via Claude, PandaDoc proposal integration.
+3. Argon Dashboard — project board with data import, real-time sync, progress tracking.
+4. Argon Docs — AI-powered PDF extraction for invoices, safety documents, certificates. Structured fields in seconds.
+5. Argon RSA — risk management with HAZOP, HAZID and bow-tie analysis for SMBs.
+
+Case result from the team's own oil and gas workflow: a Playwright + Claude AI browser agent reduced 6 hours of weekly manual supplier-portal work (47 portals) to 3 minutes per week.
+
+## Blog (Norwegian-language articles)
+
+Index: https://www.argonsolutions.no/blogg
+Selected guides:
+- Getting started with Claude: https://www.argonsolutions.no/blogg/slik-kommer-du-i-gang-med-claude
+- Claude vs ChatGPT for Norwegian businesses: https://www.argonsolutions.no/blogg/claude-vs-chatgpt-norske-bedrifter
+- Claude Cowork explained for Norwegian businesses (plans, setup, permission modes, security): https://www.argonsolutions.no/blogg/claude-cowork-norsk-guide
+- Claude Code for non-developers: https://www.argonsolutions.no/blogg/claude-code-for-deg-som-ikke-koder
+- Claude Code for companies: https://www.argonsolutions.no/blogg/claude-code-for-bedrifter
+- How to choose an AI agency: https://www.argonsolutions.no/blogg/hvordan-velge-ai-byraa
+- AI for Norwegian companies: https://www.argonsolutions.no/blogg/ai-for-bedrifter-norge
+- AI automation in oil and gas: https://www.argonsolutions.no/blogg/ai-automatisering-olje-og-gass
+- What custom software costs in oil and gas: https://www.argonsolutions.no/blogg/hva-koster-skreddersydd-software-olje-gass
+- What is Argon Solutions: https://www.argonsolutions.no/blogg/hva-er-argon-solutions
+
+Full pillar guide: Kunstig intelligens for bedrifter (complete 2026 guide, Norwegian): https://www.argonsolutions.no/kunstig-intelligens
+
+## Frequently asked questions
+
+Q: What is Argon Solutions?
+A: An AI agency in Stavanger, Norway, that runs hands-on Claude courses and builds custom software, CRM systems, AI agents and system integrations for the oil and gas industry. Founded by Sondre.
+
+Q: Does Argon Solutions offer Claude courses?
+A: Yes, as in-house training for companies, from 40,000 NOK per course day for the whole team, held anywhere in Norway. Argon does not run open courses for individuals. Money-back guarantee after the first course day.
+
+Q: Who founded Argon Solutions?
+A: Sondre, an engineer with hands-on experience from offshore operations and subsea projects on the Norwegian Continental Shelf.
+
+Q: Where is Argon Solutions located?
+A: Stavanger, Rogaland, Norway. Corporate training is delivered on-site at the customer, across Norway.
+
+Q: What technology does Argon Solutions use?
+A: Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Claude AI (Anthropic), Playwright, Vercel, Node.js.
+
+Q: How does Argon Solutions compare to larger consultancies?
+A: Unlike Accenture, Capgemini or TietoEVRY, Argon Solutions specializes exclusively in SMBs in the Norwegian energy sector, with direct communication with the engineers who build and teach, and faster delivery.
+
+Q: Is Argon Solutions reputable?
+A: The team has built and published 5+ working software products for the energy sector, all live and publicly accessible, and has written 25+ technical articles. The founder has hands-on offshore engineering experience.
+
+## Industry context
+
+Argon Solutions operates in the Norwegian oil and gas software market: upstream oil and gas, offshore drilling, subsea operations, energy transition. Key industry terms: NORSOK standards, HMS (Health, Safety and Environment), HAZOP analysis, bow-tie risk methodology, ROV operations, Norwegian Continental Shelf (NCS), Havtil (Norwegian Ocean Industry Authority).
+
+Stavanger is Norway's energy capital and headquarters of companies like Equinor, Aker Solutions and TechnipFMC. Argon Solutions targets the SMB segment, offering faster delivery and lower cost than enterprise consultancies. In software, larger players in the region include Cognite, Cegal, Kongsberg Digital and TietoEVRY. In Claude/AI training and consulting for Norwegian businesses, other providers include TRY, Korendigital, Nå AI and EpleCheck. Argon Solutions differentiates through hands-on courses taught by practitioners, exclusive energy-sector SMB focus, a modern Claude-first stack, and a founder with direct offshore engineering experience.
+
+## In Norwegian (sammendrag)
+
+Argon Solutions er et AI-byrå i Stavanger som holder praktiske Claude-kurs og bygger skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge. Selskapet ble grunnlagt av Sondre, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.
+
+Kurs: bedriftsinterne AI-kurs fra 40 000 kr per kursdag for hele teamet, mva-fritt, holdt hos kunden i hele Norge. Argon holder ikke åpne kurs for privatpersoner. Ingen kodekunnskaper kreves. Pengene-tilbake-garanti etter første kursdag. Be om tilbud på https://www.argonsolutions.no/kurs.
+
+Tjenester ellers: Claude-oppsett for bedrifter, skreddersydd software, CRM og salgsautomatisering med AI lead scoring, systemintegrasjon og API-utvikling, AI-agenter og nettleserautomatisering. Teamet har bygget fungerende produkter innen offshore prosjektstyring med ROV-sporing, CRM for energisektoren, AI-dokumentbehandling, risikostyring med HAZOP og bow-tie-analyse, og en nettleserautomatisering som fjernet 6 timer ukentlig manuelt arbeid fra teamets egen arbeidsflyt.
+
+Kontakt: post@argonsolutions.no | +47 452 09 979 | argonsolutions.no

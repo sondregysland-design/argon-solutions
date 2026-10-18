@@ -68,6 +68,20 @@ const no: Strings = {
         "Intelligente agenter som automatiserer nettleseroppgaver, datainnhenting og repetitive prosesser. Spar timer hver dag på manuelt arbeid.",
     },
     {
+      href: "/tjenester/ai-automatisering",
+      title: "AI-automatisering",
+      badge: null,
+      description:
+        "Vi automatiserer arbeidsflytene som spiser mest tid, fra rapportering og dokumenthåndtering til dataflyt mellom fagsystemer.",
+    },
+    {
+      href: "/tjenester/ai-chatbot",
+      title: "AI-chatbot",
+      badge: null,
+      description:
+        "Skreddersydd chatbot for kundeservice og intern support, bygget på deres egne dokumenter og med kontroll på hvor dataene havner.",
+    },
+    {
       href: "/tjenester/ai-strategi",
       title: "AI-strategi og rådgivning",
       badge: null,
@@ -149,6 +163,20 @@ const en: Strings = {
         "Intelligent agents that automate browser tasks, data collection and repetitive processes. Save hours every day on manual work.",
     },
     {
+      href: "/tjenester/ai-automatisering",
+      title: "AI automation",
+      badge: null,
+      description:
+        "We automate the workflows that eat the most time, from reporting and document handling to data flow between line-of-business systems.",
+    },
+    {
+      href: "/tjenester/ai-chatbot",
+      title: "AI chatbot",
+      badge: null,
+      description:
+        "A tailored chatbot for customer service and internal support, built on your own documents and with control over where the data ends up.",
+    },
+    {
       href: "/tjenester/ai-strategi",
       title: "AI strategy and advisory",
       badge: null,
@@ -175,7 +203,7 @@ const en: Strings = {
     {
       question: "What is Argon Solutions?",
       answer:
-        "Argon Solutions is a Norwegian technology company based in Stavanger, founded by engineers with experience from the oil and gas industry. We build custom software, CRM and sales automation, system integrations and AI agents for small and medium-sized companies in the energy sector.",
+        "Argon Solutions is a Norwegian technology company based in Stavanger, founded by an engineer with experience from the oil and gas industry. We build custom software, CRM and sales automation, system integrations and AI agents for small and medium-sized companies in the energy sector.",
     },
     {
       question: "Which services does Argon Solutions offer?",
@@ -241,7 +269,7 @@ export function TjenesterContent() {
                 {s.step}
               </div>
               <h3 className="mt-3 text-sm font-semibold text-text">{s.title}</h3>
-              <p className="mt-1 text-xs text-text-light">{s.desc}</p>
+              <p className="mt-1 text-[13px] leading-relaxed sm:text-xs text-text-light">{s.desc}</p>
             </div>
           ))}
         </div>

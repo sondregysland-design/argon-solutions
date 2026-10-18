@@ -1,39 +1,74 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SetHtmlLang } from "@/components/SetHtmlLang";
 
-const title = "AI Agency in Stavanger, Norway | Argon Solutions";
+const title = "AI Agency in Stavanger, Norway";
 const description = "Argon Solutions is an AI agency in Stavanger, Norway. We deliver AI services, Claude Code setup, custom software and AI agents for the energy sector.";
 
 export const metadata: Metadata = {
   title,
   description,
   keywords: ["AI agency", "AI agency Norway", "AI agency Stavanger", "AI consulting Norway", "Claude Code"],
-  alternates: { canonical: "/en/ai-agency-stavanger" },
-  openGraph: { title, description, url: "/en/ai-agency-stavanger", locale: "en_US" },
+  alternates: {
+    canonical: "/en/ai-agency-stavanger",
+    languages: {
+      "nb-NO": "/",
+      en: "/en/ai-agency-stavanger",
+      "x-default": "/",
+    },
+  },
+  openGraph: { images: ["/og-image.png"], title, description, url: "/en/ai-agency-stavanger", locale: "en_US" },
 };
 
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://argonsolutions.no/en/ai-agency-stavanger",
+  "@id": "https://www.argonsolutions.no/en/ai-agency-stavanger",
   name: title,
   description,
   inLanguage: "en",
-  isPartOf: { "@id": "https://argonsolutions.no/#website" },
-  about: { "@id": "https://argonsolutions.no/#organization" },
+  isPartOf: { "@id": "https://www.argonsolutions.no/#website" },
+  about: { "@id": "https://www.argonsolutions.no/#organization" },
   mainEntity: {
     "@type": "Service",
     name: "AI agency services in Stavanger, Norway",
     description,
     serviceType: "AI consulting, Claude Code setup, custom software, AI agents",
-    provider: { "@type": "Organization", "@id": "https://argonsolutions.no/#organization", name: "Argon Solutions" },
+    provider: { "@type": "Organization", "@id": "https://www.argonsolutions.no/#organization", name: "Argon Solutions" },
     areaServed: { "@type": "Country", name: "Norway" },
   },
 };
 
+const enProseSections = [
+  {
+    heading: "Why an agency in Stavanger",
+    paragraphs: [
+      "Stavanger is Norway's oil and energy capital, and that shapes what we build. The workflows that cost our clients the most time are document handling, certificate tracking, supplier portals and reporting to operators. None of that is generic office work, and off-the-shelf tools rarely fit it without someone bending their process to match the software.",
+      "We come out of that industry rather than into it. The founder is an engineer with experience from offshore operations and subsea projects on the Norwegian continental shelf, which means the first conversation is about your process and not about our technology stack.",
+    ],
+  },
+  {
+    heading: "What we actually do",
+    paragraphs: [
+      "Three things, in roughly this order of demand. We run hands-on AI courses, both open one-day courses in Stavanger and in-house training at your offices anywhere in Norway. We set up Claude and Claude Code for companies, with the skills, hooks and integrations that match how your team already works. And we build custom software, system integrations and AI agents for the energy sector.",
+      "Everything we have built is live and publicly accessible. When you evaluate any supplier, including us, ask to see a system running rather than a presentation.",
+    ],
+  },
+  {
+    heading: "How we price",
+    paragraphs: [
+      "In-house course days start at 40,000 NOK for the whole team, exempt from VAT. Software is a monthly subscription that covers hosting, maintenance and support, starting at 3,000 NOK per month for a single AI agent and 15,000 NOK per month for full custom development. There is no setup fee and the first month is free.",
+      "If we think your problem does not need custom software, we will say so in the first conversation. That is cheaper for both of us than a project that should not be built.",
+    ],
+  },
+];
+
 export default function AIAgencyPage() {
   return (
-    <div className="py-20">
+    // lang på wrapperen gjør språket riktig allerede i server-HTML-en.
+    // SetHtmlLang retter <html lang> etterpå for skjermlesere som ser på roten.
+    <div className="py-12 sm:py-20" lang="en">
+      <SetHtmlLang lang="en" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
       <div className="mx-auto max-w-4xl px-6">
         <p className="text-sm text-text-light">
@@ -69,7 +104,7 @@ export default function AIAgencyPage() {
           <h2 className="text-2xl font-display font-medium text-text">Why Argon Solutions?</h2>
           <ul className="mt-6 space-y-3 text-text-light">
             {[
-              "Founded by engineers with fifteen years of hands-on experience in oil & gas operations",
+              "Founded by an engineer with fifteen years of hands-on experience in oil & gas operations",
               "We build working AI systems, not PowerPoint presentations",
               "First month free. Try before you commit",
             ].map((item) => (
@@ -90,6 +125,27 @@ export default function AIAgencyPage() {
             Get in touch
           </Link>
         </section>
+      </div>
+      <div className="mx-auto max-w-3xl px-6 mt-16 space-y-12">
+        {enProseSections.map((sec) => (
+          <section key={sec.heading}>
+            <h2 className="font-display text-2xl font-medium tracking-tight text-text">
+              {sec.heading}
+            </h2>
+            {sec.paragraphs.map((para) => (
+              <p key={para.slice(0, 40)} className="mt-4 leading-relaxed text-text-light">
+                {para}
+              </p>
+            ))}
+          </section>
+        ))}
+        <p className="mt-10 text-text-light">
+            Looking for developer training specifically? See our{" "}
+            <Link href="/en/claude-code-course" className="text-primary hover:underline">
+              Claude Code course in Norway
+            </Link>
+            .
+          </p>
       </div>
     </div>
   );

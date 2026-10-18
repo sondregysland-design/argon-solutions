@@ -1,19 +1,25 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-
-const EMAIL_RE = /^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]+$/;
-
-function esc(s: unknown): string {
-  return String(s)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
+import { pushLead } from "@/lib/crm";
+import { EMAIL_RE, esc, isBot, tooLong } from "@/lib/form-guard";
 
 export async function POST(request: Request) {
-  const { name, email, message } = await request.json();
+  let body: Record<string, unknown>;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Ugyldig forespørsel." }, { status: 400 });
+  }
+
+  // Bots får et vanlig suksess-svar, men ingen e-post sendes
+  if (isBot(body)) {
+    return NextResponse.json({ success: true });
+  }
+
+  const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
+  const name = str(body.name);
+  const email = str(body.email);
+  const message = str(body.message);
 
   if (!name || !email || !message) {
     return NextResponse.json(
@@ -22,23 +28,30 @@ export async function POST(request: Request) {
     );
   }
 
-  if (typeof email !== "string" || !EMAIL_RE.test(email)) {
+  if (!EMAIL_RE.test(email)) {
     return NextResponse.json(
       { error: "Ugyldig e-postadresse." },
       { status: 400 }
     );
   }
 
+  if (tooLong({ name, email, message })) {
+    return NextResponse.json(
+      { error: "Meldingen er for lang." },
+      { status: 400 }
+    );
+  }
+
   const resend = new Resend(process.env.RESEND_API_KEY);
   const emailFrom =
-    process.env.EMAIL_FROM || "Argon Solutions <noreply@argonsolutions.no>";
+    process.env.EMAIL_FROM || "Argon Solutions <post@argonsolutions.no>";
 
   try {
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: emailFrom,
       to: "post@argonsolutions.no",
       replyTo: email,
-      subject: `Ny henvendelse fra ${String(name).slice(0, 100)}`,
+      subject: `Ny henvendelse fra ${name.slice(0, 100)}`,
       html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background-color: #1E40AF; padding: 24px; text-align: center;">
@@ -62,27 +75,17 @@ export async function POST(request: Request) {
         </div>
       </div>`,
     });
-
-    // Push to CRM (fire-and-forget, don't block the form response)
-    const crmUrl = process.env.ARGON_CRM_BASE_URL;
-    if (crmUrl) {
-      fetch(`${crmUrl}/api/leads/ingest`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          source: "contact-form",
-          message,
-        }),
-      }).catch((err) => console.error("CRM ingestion failed:", err));
-    }
-
-    return NextResponse.json({ success: true });
-  } catch {
+    // Resend kaster ikke ved API-feil, den returnerer { error }
+    if (error) throw new Error(error.message);
+  } catch (err) {
+    console.error("Kontaktskjema: e-post feilet:", err);
     return NextResponse.json(
       { error: "Kunne ikke sende melding. Prøv igjen senere." },
       { status: 500 }
     );
   }
+
+  pushLead({ name, email, message, source: "contact-form" });
+
+  return NextResponse.json({ success: true });
 }

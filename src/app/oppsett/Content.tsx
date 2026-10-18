@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "@/components/Reveal";
@@ -16,12 +15,11 @@ const no = {
   breadcrumbCurrent: "Oppsett",
   h1: "Sett opp Claude i bedriften",
   intro:
-    "Kurs gir folkene ferdighetene. Vi setter også opp selve verktøyet, trygt og ryddig, med enkle agenter laget for oppgavene dere gjør hver dag. Da kan teamet ta Claude i bruk fra dag én, ikke om et halvt år.",
+    "Vi setter også opp selve Claude hvis bedriften trenger hjelp med det. Da kan teamet ta Claude i bruk fra dag én, ikke om et halvt år.",
   ctaTop: "Book en gratis prat",
   stepsTitle: "Slik setter vi opp Claude",
   stepsIntro:
-    "Et fast opplegg i fem steg. Vi tar ansvaret for det tekniske, dere beholder kontrollen på data og retning. Klikk deg gjennom stegene.",
-  stepsNext: "Neste steg",
+    "Et fast opplegg i fire steg. Vi tar ansvaret for det tekniske, dere beholder kontrollen på data og retning.",
   steps: [
     {
       n: "01",
@@ -30,21 +28,16 @@ const no = {
     },
     {
       n: "02",
-      title: "Data og sikkerhet",
-      body: "Vi går gjennom hva som deles med modellen og hva som holdes utenfor. På bedriftsplanene brukes ikke innholdet deres til trening. Trenger dere strengere styring, setter vi opp Enterprise med kontroll på datalagring, pålogging (SSO og SCIM) og revisjonslogg, dokumentert for GDPR.",
+      title: "Kurs for ansatte",
+      body: "Vi lærer opp teamet i å bruke Claude på ekte oppgaver fra deres egen arbeidshverdag. Tre opplegg, 2 timer, 1 dag eller 2 dager, holdt hos dere. Folk går fra kurset med noe de kan bruke dagen etter.",
     },
     {
       n: "03",
-      title: "Koblet til systemene deres",
-      body: "Claude kobles mot verktøyene dere allerede bruker via MCP, den åpne standarden for integrasjoner. Ferdige koblinger til vanlige systemer, og skreddersydde der dere trenger det, så agentene henter og oppdaterer ekte data i stedet for å gjette.",
-    },
-    {
-      n: "04",
       title: "Enkle agenter for å komme i gang",
       body: "Vi bygger noen få skreddersydde agenter for oppgavene teamet gjør ofte. Små, konkrete og lette å bruke, så folk ser verdien med én gang og tør å ta dem i bruk.",
     },
     {
-      n: "05",
+      n: "04",
       title: "Utrulling og styring",
       body: "Enkle kjøreregler for hvordan Claude brukes internt, opplæring av teamet, og oppfølging etterpå. Bruken blir trygg, forutsigbar og lett å utvide.",
     },
@@ -107,7 +100,7 @@ const no = {
   deeperIntro: "Oppsettet henger sammen med resten av det vi tilbyr.",
   deeperLinks: [
     { label: "Claude Code som AI-operativsystem", href: "/tjenester/claude-code" },
-    { label: "In-house kurs for teamet", href: "/kurs/bedrift" },
+    { label: "In-house kurs for teamet", href: "/kurs" },
     { label: "AI-agenter bygget for dere", href: "/tjenester/ai-agenter" },
   ],
   ctaTitle: "Klar for å komme i gang med Claude?",
@@ -120,12 +113,11 @@ const en: typeof no = {
   breadcrumbCurrent: "Setup",
   h1: "Set up Claude in your business",
   intro:
-    "Courses give your people the skills. We also set up the tool itself, safely and cleanly, with simple agents built for the tasks you do every day. That way the team can start using Claude on day one, not six months from now.",
+    "We also set up Claude itself if your business needs help with that. That way the team can start using Claude on day one, not six months from now.",
   ctaTop: "Book a free chat",
   stepsTitle: "How we set up Claude",
   stepsIntro:
-    "A fixed five-step approach. We take responsibility for the technical side, you keep control of your data and direction. Click through the steps.",
-  stepsNext: "Next step",
+    "A fixed four-step approach. We take responsibility for the technical side, you keep control of your data and direction.",
   steps: [
     {
       n: "01",
@@ -134,21 +126,16 @@ const en: typeof no = {
     },
     {
       n: "02",
-      title: "Data and security",
-      body: "We go through what is shared with the model and what stays out. On the business plans your content is not used for training. If you need stricter control, we set up Enterprise with control over data retention, sign-in (SSO and SCIM) and audit logs, documented for GDPR.",
+      title: "Training for staff",
+      body: "We train the team to use Claude on real tasks from their own workday. Three formats, 2 hours, 1 day or 2 days, run at your offices. People leave with something they can use the next day.",
     },
     {
       n: "03",
-      title: "Connected to your systems",
-      body: "Claude connects to the tools you already use via MCP, the open standard for integrations. Prebuilt connectors for common systems, and custom ones where you need them, so agents read and update real data instead of guessing.",
-    },
-    {
-      n: "04",
       title: "Simple agents to get started",
       body: "We build a handful of tailored agents for the tasks your team does often. Small, concrete and easy to use, so people see the value right away and actually adopt them.",
     },
     {
-      n: "05",
+      n: "04",
       title: "Rollout and governance",
       body: "Simple ground rules for how Claude is used internally, training for the team, and follow-up afterwards. Usage stays safe, predictable and easy to expand.",
     },
@@ -211,7 +198,7 @@ const en: typeof no = {
   deeperIntro: "The setup connects to the rest of what we offer.",
   deeperLinks: [
     { label: "Claude Code as an AI operating system", href: "/tjenester/claude-code" },
-    { label: "In-house course for the team", href: "/kurs/bedrift" },
+    { label: "In-house course for the team", href: "/kurs" },
     { label: "AI agents built for you", href: "/tjenester/ai-agenter" },
   ],
   ctaTitle: "Ready to get started with Claude?",
@@ -222,12 +209,11 @@ const en: typeof no = {
 export default function OppsettContent() {
   const { locale } = useLanguage();
   const m = locale === "en" ? en : no;
-  const [activeStep, setActiveStep] = useState(0);
 
   return (
     <div className="mx-auto max-w-6xl px-6">
       <nav className="mb-8 flex items-center gap-2 text-sm text-text-light">
-        <Link href="/" className="hover:text-text transition-colors">{m.breadcrumbHome}</Link>
+        <Link href="/" className="tap-target-inline hover:text-text transition-colors">{m.breadcrumbHome}</Link>
         <span>/</span>
         <span className="text-text">{m.breadcrumbCurrent}</span>
       </nav>
@@ -236,7 +222,7 @@ export default function OppsettContent() {
       <p className="mt-4 max-w-2xl text-lg text-text-light">{m.intro}</p>
       <Link
         href="/kontakt"
-        className="mt-8 inline-flex rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/90"
+        className="mt-8 inline-flex rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-ink/85"
       >
         {m.ctaTop}
       </Link>
@@ -245,46 +231,14 @@ export default function OppsettContent() {
       <div className="mt-20">
         <h2 className="text-2xl font-display font-medium text-text">{m.stepsTitle}</h2>
         <p className="mt-4 max-w-2xl text-text-light">{m.stepsIntro}</p>
-        <div className="mt-8">
-          <div className="flex flex-wrap gap-2">
-            {m.steps.map((step, i) => (
-              <button
-                key={step.n}
-                type="button"
-                onClick={() => setActiveStep(i)}
-                aria-pressed={i === activeStep}
-                className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition ${
-                  i === activeStep
-                    ? "bg-ink text-white"
-                    : "bg-surface text-text-light hover:bg-text/10 hover:text-text"
-                }`}
-              >
-                <span className="font-mono text-xs">{step.n}</span>
-                <span className="hidden sm:inline">{step.title}</span>
-              </button>
-            ))}
-          </div>
-          {m.steps.map((step, i) => (
-            <div
-              key={step.n}
-              className={
-                i === activeStep
-                  ? "step-panel mt-6 rounded-2xl border border-text/10 p-8 md:p-10"
-                  : "hidden"
-              }
-            >
-              <span className="font-mono text-sm text-primary">{step.n} / 05</span>
-              <h3 className="mt-2 text-xl font-semibold text-text">{step.title}</h3>
-              <p className="mt-3 max-w-2xl leading-relaxed text-text-light">{step.body}</p>
-              {i < m.steps.length - 1 && (
-                <button
-                  type="button"
-                  onClick={() => setActiveStep(i + 1)}
-                  className="mt-6 text-sm font-semibold text-primary hover:underline"
-                >
-                  {m.stepsNext} &rarr;
-                </button>
-              )}
+        <div className="mt-10 space-y-10">
+          {m.steps.map((step) => (
+            <div key={step.n} className="flex gap-5 sm:gap-8">
+              <span className="shrink-0 pt-1 font-mono text-sm text-primary">{step.n}</span>
+              <div>
+                <h3 className="text-xl font-semibold text-text">{step.title}</h3>
+                <p className="mt-2 max-w-2xl leading-relaxed text-text-light">{step.body}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -341,7 +295,7 @@ export default function OppsettContent() {
             <Link
               key={l.href}
               href={l.href}
-              className="rounded-full border border-text/15 px-4 py-2 text-sm text-text-light transition-colors hover:border-primary hover:text-primary"
+              className="tap-target rounded-full border border-text/15 px-4 py-2 text-sm text-text-light transition-colors hover:border-primary hover:text-primary"
             >
               {l.label}
             </Link>
@@ -351,12 +305,12 @@ export default function OppsettContent() {
 
       {/* CTA */}
       <Reveal className="mt-20">
-      <div className="rounded-xl bg-primary p-10 text-center md:p-14">
+      <div className="rounded-3xl bg-ink p-10 text-center md:p-14">
         <h2 className="text-2xl font-display font-medium text-white">{m.ctaTitle}</h2>
-        <p className="mx-auto mt-3 max-w-xl text-white/90">{m.ctaText}</p>
+        <p className="mx-auto mt-3 max-w-xl text-white/75">{m.ctaText}</p>
         <Link
           href="/kontakt"
-          className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-white/90"
+          className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-white/90"
         >
           {m.ctaButton}
         </Link>

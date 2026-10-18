@@ -3,13 +3,14 @@ title: "Hva er Argon Solutions? Alt du trenger å vite om softwareselskapet fra 
 description: "Argon Solutions er et norsk softwareselskap basert i Stavanger som bygger skreddersydd software, CRM-systemer og AI-agenter for olje- og gassindustrien."
 keywords: ["Argon Solutions", "hva er Argon Solutions", "Argon Solutions Stavanger", "softwareselskap Stavanger", "software olje og gass Norge", "Argon Solutions tjenester", "Argon Solutions produkter"]
 date: 2026-04-24
+updated: 2026-09-13
 ---
 
 ## Hva er Argon Solutions?
 
 **Argon Solutions** er et norsk softwareselskap basert i Stavanger, Rogaland. Selskapet spesialiserer seg på å levere skreddersydd software, CRM-systemer, systemintegrasjon og AI-agenter for olje- og gassindustrien i Norge.
 
-Argon Solutions ble grunnlagt av Sondre Gysland, ingeniør med erfaring fra norsk olje- og gasssektor. Selskapet holder til i Stavanger, Norges energihovedstad.
+Argon Solutions ble grunnlagt av Sondre, ingeniør med erfaring fra norsk olje- og gasssektor. Selskapet holder til i Stavanger, Norges energihovedstad.
 
 ## Tjenester
 
@@ -59,3 +60,10 @@ Argon Solutions bruker moderne, velprøvd teknologi:
 Argon Solutions fokuserer primært på olje- og gassindustrien og den bredere energisektoren i Norge. Selskapets kunder er typisk små og mellomstore bedrifter som trenger skreddersydde teknologiløsninger tilpasset deres spesifikke arbeidshverdag.
 
 Selskapet skiller seg fra større IT-konsulenter ved å kombinere dyp bransjekunnskap fra olje og gass med moderne software-utvikling og AI-teknologi.
+
+## Les mer
+
+- [Om oss](/om-oss)
+- [Tjenestene våre](/tjenester)
+- [Praktiske AI-kurs i Stavanger](/kurs)
+- [Prosjekter vi har levert](/referanser)

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "AI-byrå Stavanger",
   ],
   alternates: { canonical: "/oppsett" },
-  openGraph: {
+  openGraph: { images: ["/og-image.png"],
     title: "Sett opp Claude i bedriften",
     description,
     url: "/oppsett",
@@ -31,7 +31,7 @@ const serviceJsonLd = {
   name: "Sett opp Claude i bedriften",
   provider: {
     "@type": "Organization",
-    "@id": "https://argonsolutions.no/#organization",
+    "@id": "https://www.argonsolutions.no/#organization",
     name: "Argon Solutions",
   },
   areaServed: { "@type": "Country", name: "Norway" },
@@ -53,7 +53,7 @@ const jsonLd = [
 
 export default function OppsettPage() {
   return (
-    <div className="py-20">
+    <div className="py-12 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <OppsettContent />
     </div>

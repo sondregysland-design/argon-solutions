@@ -4,14 +4,21 @@ import { SITE_URL, ORG_REF, faqPageJsonLd, breadcrumbJsonLd, stavangerPlace } fr
 
 const pageUrl = `${SITE_URL}/kurs/claude-code-kurs-stavanger`;
 const description =
-  "Claude Code-kurs i Stavanger for utviklere og tekniske team. Bedriftsintern opplæring i Claude Code, agenter, skills og automatisering, holdt av folk som bruker verktøyet daglig på egne prosjekter. Fra 40 000 kr per kursdag.";
+  "Bedriftsinternt Claude Code-kurs i Stavanger for utviklere og team. Agenter, skills og automatisering fra folk som bruker det daglig. Fra 40 000 kr per dag.";
 
 export const metadata: Metadata = {
   title: "Claude Code-kurs i Stavanger, opplæring for utviklere og team",
   description,
   keywords: ["Claude Code kurs", "Claude Code kurs Stavanger", "Claude Code opplæring", "AI-verktøy for utviklere", "agentisk koding kurs"],
-  alternates: { canonical: "/kurs/claude-code-kurs-stavanger" },
-  openGraph: {
+  alternates: {
+    canonical: "/kurs/claude-code-kurs-stavanger",
+    languages: {
+      "nb-NO": "/kurs/claude-code-kurs-stavanger",
+      en: "/en/claude-code-course",
+      "x-default": "/kurs/claude-code-kurs-stavanger",
+    },
+  },
+  openGraph: { images: ["/og-image.png"],
     title: "Claude Code-kurs i Stavanger, opplæring for utviklere og team",
     description,
     url: "/kurs/claude-code-kurs-stavanger",
@@ -80,13 +87,12 @@ const data: GeoCourseData = {
   ],
   ctaHref: "/kontakt",
   ctaLabel: "Be om tilbud",
-  secondaryHref: "/kurs/bedrift",
-  secondaryLabel: "Se bedriftsopplegget",
+  secondaryHref: "/kurs",
+  secondaryLabel: "Se kursopplegget",
   relatedHeading: "Relaterte kurs og guider",
   related: [
-    { href: "/kurs/bedrift", label: "Kurs for bedrifter (Argon Industri)" },
+    { href: "/kurs", label: "AI-kurs for bedrift (Argon Industri)" },
     { href: "/kurs/ai-kurs-bedrift-stavanger", label: "AI-kurs for bedrift i Stavanger" },
-    { href: "/kurs/claude-kurs-stavanger", label: "Claude-kurs i Stavanger (åpent dagskurs)" },
     { href: "/tjenester/claude-code", label: "Claude Code-oppsett som tjeneste" },
     { href: "/blogg/claude-code-for-deg-som-ikke-koder", label: "Guide: Claude Code for deg som ikke koder" },
   ],

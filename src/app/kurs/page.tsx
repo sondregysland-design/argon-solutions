@@ -1,62 +1,42 @@
 import type { Metadata } from "next";
 import KursContent from "./Content";
-import { COHORTS } from "@/lib/cohorts";
 import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
-  "Claude Dagskurs er et praktisk AI-kurs for private i Stavanger. Én dag, liten gruppe, egen laptop. Lær å bygge apper, verktøy og automatiseringer i Claude-appen, uten kodekunnskaper. 5 900 kr per plass.";
+  "Argon Industri leverer in-house AI-opplæring for selskaper i olje og gass. Fra ledelsesworkshop til champions-dag, med datasikkerhet først. Fra 40 000 kr per kursdag.";
 
 export const metadata: Metadata = {
-  title: "Claude Dagskurs, praktisk AI-kurs for private i Stavanger",
+  title: "In-house AI-kurs for olje og gass",
   description,
-  keywords: ["AI-kurs Stavanger", "Claude kurs", "Claude Dagskurs", "AI-opplæring", "AI-kurs for private", "Argon Kurs"],
+  keywords: ["AI-kurs bedrift", "in-house AI-opplæring", "AI olje og gass", "Claude kurs bedrift", "Argon Industri"],
   alternates: { canonical: "/kurs" },
-  openGraph: {
-    title: "Claude Dagskurs, praktisk AI-kurs for private i Stavanger",
+  openGraph: { images: ["/og-image.png"],
+    title: "In-house AI-kurs for olje og gass",
     description,
     url: "/kurs",
   },
 };
 
-const courseJsonLd = {
+const serviceJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Course",
-  "@id": "https://argonsolutions.no/kurs#course",
-  name: "Claude Dagskurs",
+  "@type": "Service",
+  serviceType: "In-house AI training",
+  "@id": `${SITE_URL}/kurs#service`,
+  name: "Argon Industri",
+  provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Argon Solutions" },
+  areaServed: { "@type": "Country", name: "Norway" },
   description,
-  url: "https://argonsolutions.no/kurs",
-  inLanguage: "nb-NO",
-  provider: { "@type": "Organization", "@id": "https://argonsolutions.no/#organization", name: "Argon Solutions" },
-  offers: {
-    "@type": "Offer",
-    price: "5900",
-    priceCurrency: "NOK",
-    availability: "https://schema.org/InStock",
-    url: "https://argonsolutions.no/kurs#pamelding",
-    category: "Åpen kohort, per plass",
-  },
-  hasCourseInstance: COHORTS.map((c) => ({
-    "@type": "CourseInstance",
-    courseMode: "Onsite",
-    courseWorkload: "P1D",
-    startDate: c.id,
-    endDate: c.id,
-    location: {
-      "@type": "Place",
-      name: "Stavanger",
-      address: { "@type": "PostalAddress", addressLocality: "Stavanger", addressRegion: "Rogaland", addressCountry: "NO" },
-    },
-  })),
-  audience: { "@type": "Audience", audienceType: "Privatpersoner og enkeltdeltakere uten utviklerbakgrunn" },
-  teaches: [
-    "Prompting og kontekst i Claude",
-    "Bygge verktøy og automatiseringer i Claude-appen",
-    "Automatisere egne arbeidsoppgaver med AI",
+  offers: [
+    { "@type": "Offer", name: "Ledelsesworkshop", description: "Halvdags workshop for ledergruppen." },
+    { "@type": "Offer", name: "Inspirasjonsforedrag", description: "Foredrag for hele organisasjonen." },
+    { "@type": "Offer", name: "Heldagskurs nivå 1", description: "Praktisk heldagskurs for ansatte." },
+    { "@type": "Offer", name: "Champions-dag", description: "Dypere opplæring for interne ressurspersoner." },
+    { "@type": "Offer", name: "Oppfølging", description: "Oppfølgingsbesøk etter kursløpet." },
   ],
 };
 
 const jsonLd = [
-  courseJsonLd,
+  serviceJsonLd,
   breadcrumbJsonLd([
     { name: "Hjem", url: SITE_URL },
     { name: "Kurs", url: `${SITE_URL}/kurs` },
@@ -65,7 +45,7 @@ const jsonLd = [
 
 export default function KursPage() {
   return (
-    <div className="py-20">
+    <div className="pb-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <KursContent />
     </div>

@@ -3,7 +3,7 @@ import { KunstigIntelligensContent } from "./KunstigIntelligensContent";
 import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
-  "Komplett guide til kunstig intelligens (AI) for norske bedrifter: hva det er, hvordan det brukes i praksis, kostnader, sikkerhet, og hvordan du kommer i gang. Skrevet av Argon Solutions, AI-byrå i Stavanger.";
+  "Guide til kunstig intelligens for norske bedrifter. Hva AI er, hvordan det brukes i praksis, hva det koster, sikkerhet og hvordan dere kommer i gang.";
 
 export const metadata: Metadata = {
   title: "Kunstig intelligens for bedrifter: Komplett guide for 2026",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "agentic AI",
   ],
   alternates: { canonical: "/kunstig-intelligens" },
-  openGraph: {
+  openGraph: { images: ["/og-image.png"],
     title: "Kunstig intelligens for bedrifter: Komplett guide for 2026",
     description,
     url: "/kunstig-intelligens",
@@ -40,17 +40,17 @@ const articleJsonLd = {
   },
   publisher: {
     "@type": "Organization",
-    "@id": "https://argonsolutions.no/#organization",
+    "@id": "https://www.argonsolutions.no/#organization",
     name: "Argon Solutions",
-    url: "https://argonsolutions.no",
+    url: "https://www.argonsolutions.no",
     logo: {
       "@type": "ImageObject",
-      url: "https://argonsolutions.no/favicon.svg",
+      url: "https://www.argonsolutions.no/favicon.svg",
     },
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://argonsolutions.no/kunstig-intelligens",
+    "@id": "https://www.argonsolutions.no/kunstig-intelligens",
   },
   about: [
     { "@type": "Thing", name: "Kunstig intelligens" },
@@ -119,7 +119,7 @@ export default function KunstigIntelligensPage() {
   ]);
 
   return (
-    <div className="py-20">
+    <div className="py-12 sm:py-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: articleJsonLdString }}

@@ -10,6 +10,7 @@ const copy = {
     heading: "Skreddersydde AI- og softwareløsninger fra Argon Solutions",
     intro:
       "Våre AI-drevne produkter for energisektoren, bygget med Claude Code og moderne AI-tjenester for å automatisere hverdagen. Vi skreddersyr verktøyet dere trenger, dere prøver det gratis den første måneden uten forpliktelse.",
+    productsHeading: "Produkter",
     automationHeading: "Automatisering",
     automationIntro:
       "Spar tid med ferdige automatiseringsløsninger bygget for olje og gass-næringen. Våre automatiseringer håndterer repetitive oppgaver slik at teamet ditt kan fokusere på det som gir verdi.",
@@ -18,6 +19,7 @@ const copy = {
     heading: "Tailored AI and software solutions from Argon Solutions",
     intro:
       "Our AI-powered products for the energy sector, built with Claude Code and modern AI services to automate everyday work. We tailor the tool you need, and you try it free for the first month with no commitment.",
+    productsHeading: "Products",
     automationHeading: "Automation",
     automationIntro:
       "Save time with ready-made automation solutions built for the oil and gas industry. Our automations handle repetitive tasks so your team can focus on what creates value.",
@@ -32,6 +34,8 @@ export function ProdukterContent() {
     <div className="mx-auto max-w-6xl px-6">
       <h1 className="text-4xl font-bold text-text">{t.heading}</h1>
       <p className="mt-4 max-w-2xl text-lg text-text-light">{t.intro}</p>
+
+      <h2 className="mt-16 text-3xl font-bold text-text">{t.productsHeading}</h2>
 
       <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {products.map((product) => (

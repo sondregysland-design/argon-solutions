@@ -15,7 +15,7 @@ For en plattformoperatør på norsk sokkel betyr digital transformasjon konkret:
 
 - **Erstatte manuelle rapporter med sanntidsdata.** Et typisk offshore-prosjekt genererer hundrevis av rapporter per uke. Vi har bygget dashboards som erstatter manuelle Excel-oppdateringer med sanntids datavisualisering.
 
-- **Automatisere repetitive oppgaver med AI-agenter.** Grunnleggerne brukte selv 6 timer per uke på å logge inn i leverandørportaler og laste ned sertifikater. Vår AI-agent (Playwright + Claude AI) reduserte dette til 3 minutter.
+- **Automatisere repetitive oppgaver med AI-agenter.** Teamet brukte selv 6 timer per uke på å logge inn i leverandørportaler og laste ned sertifikater. Vår AI-agent (Playwright + Claude AI) reduserte dette til 3 minutter.
 
 - **Integrere systemer som ikke snakker sammen.** SAP, SharePoint, Maximo, PandaDoc — de fleste energiselskaper bruker 5-10 systemer som ikke er koblet sammen. Systemintegrasjon med API-er fjerner manuell dataoverføring.
 
@@ -67,7 +67,7 @@ Denne stabelen gir rask utvikling (4-8 uker for MVP), lave driftskostnader, og e
 
 ## Argon Solutions og digital transformasjon
 
-Argon Solutions er et softwareselskap i Stavanger som spesialiserer seg på digital transformasjon for norsk olje- og gassindustri. Vi er grunnlagt av Sondre Gysland, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.
+Argon Solutions er et softwareselskap i Stavanger som spesialiserer seg på digital transformasjon for norsk olje- og gassindustri. Vi er grunnlagt av Sondre, ingeniør med erfaring fra offshore-operasjoner og subsea-prosjekter på norsk kontinentalsokkel.
 
 Vi skiller oss fra store konsulentselskaper (Accenture, Capgemini, TietoEVRY) ved å fokusere utelukkende på energisektoren, gi direkte tilgang til ingeniørene som bygger, og tilby gratis første måned.
 

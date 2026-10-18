@@ -93,6 +93,35 @@ h1, h2, h3, h4 {
   border-color: #e2e8f0;
   margin: 2em 0;
 }
+/* Kodeblokker er bredere enn skjermen på mobil. Uten dette arver <pre>
+   white-space: pre uten noe sted å gjøre av seg, og hele dokumentet
+   scroller sidelengs i stedet for bare blokken. */
+.prose pre {
+  overflow-x: auto;
+  max-width: 100%;
+  background: var(--color-surface);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.25em;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  -webkit-overflow-scrolling: touch;
+}
+/* Lange tokens i løpende tekst (stier, kommandoer) skal brytes, ikke
+   dytte kolonnen ut. Gjelder ikke kode inne i <pre>, som scroller. */
+.prose :not(pre) > code {
+  overflow-wrap: anywhere;
+  background: var(--color-surface);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.9em;
+}
+.prose table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
 
 /* Monitor (ClaudeMonitor.tsx): snur seg mot pekeren */
 .crt-scene {
@@ -177,6 +206,15 @@ h1, h2, h3, h4 {
   opacity: 1;
   transform: none;
 }
+/* Uten JavaScript får ingen elementer is-visible, og innholdet ville
+   stått på opacity: 0 for alltid. */
+@media (scripting: none) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 /* Kort-hover */
 .card-lift {
@@ -233,4 +271,54 @@ h1, h2, h3, h4 {
   .step-panel {
     animation: none;
   }
+}
+
+/* ---------------------------------------------------------------
+   Mobil
+   --------------------------------------------------------------- */
+
+/* Ankerlenker (f.eks. /kurs#pamelding) havner ellers bak den sticky
+   navbaren. Navbaren er ca. 64px høy, 6rem gir litt luft over. */
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* Sikkerhetsnett mot vannrett scroll. clip, ikke hidden: hidden på et
+   forfedreelement gjør at position: sticky på navbaren slutter å virke. */
+html,
+body {
+  overflow-x: clip;
+}
+
+@media (max-width: 640px) {
+  /* iOS Safari zoomer inn når et felt med mindre enn 16px får fokus, og
+     zoomer ikke ut igjen. Alle skjemafelt får derfor 16px på mobil. */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /* Minste anbefalte trykkflate. Gjelder lenker og knapper som står
+     for seg selv, ikke tekstlenker inne i løpende tekst. */
+  .tap-target {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Samme høyde, men uten å bli fullbreddes. display: flex over gjør at
+     et trykk på tom plass til høyre for lenketeksten navigerer. */
+  .tap-target-inline {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Gråboksen som blinker ved trykk ser ut som en feil på Android. */
+a,
+button,
+summary {
+  -webkit-tap-highlight-color: transparent;
 }

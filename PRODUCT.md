@@ -6,11 +6,11 @@ brand
 
 ## Users
 
-Beslutningstakere i norske olje- og gassbedrifter (SMB) i Stavanger-regionen: daglige ledere, operasjonsledere og ingeniører som vurderer AI-verktøy, Claude-oppsett eller kurs for teamet sitt. Sekundært: enkeltdeltakere som vurderer "Argon Kurs / Cowork & Code" (5 900 kr). De leser på jobb, ofte mobil, kommer via LinkedIn eller søk, og har lav toleranse for buzzord. De bestemmer seg raskt: virker dette konkret og troverdig, eller er det enda et AI-byrå?
+Beslutningstakere i norske olje- og gassbedrifter (SMB) i Stavanger-regionen: daglige ledere, operasjonsledere og ingeniører som vurderer AI-verktøy, Claude-oppsett eller kurs for teamet sitt. De leser på jobb, ofte mobil, kommer via LinkedIn eller søk, og har lav toleranse for buzzord. De bestemmer seg raskt: virker dette konkret og troverdig, eller er det enda et AI-byrå?
 
 ## Product Purpose
 
-Offentlig nettside for Argon Solutions (enkeltpersonforetak, aldri "AS"). Forsiden leder med praktiske AI-kurs; sekundært selges Claude-oppsett for bedrifter og skreddersydd software for energisektoren. Suksess = kurspåmeldinger, bedriftshenvendelser og kontaktskjema-innsendinger. Sterk SEO/GEO-satsing (JSON-LD, norsk copy, egen engelsk landingsside for "AI agency Stavanger").
+Offentlig nettside for Argon Solutions AS (juridisk navn, se under). Forsiden leder med bedriftsinterne AI-kurs (fra 40 000 kr per kursdag, ingen åpne kurs for privatpersoner siden 2026-09-18); sekundært selges Claude-oppsett for bedrifter og skreddersydd software for energisektoren. Suksess = tilbudsforespørsler, bookede møter og kontaktskjema-innsendinger. Sterk SEO/GEO-satsing (JSON-LD, norsk copy, egen engelsk landingsside for "AI agency Stavanger").
 
 ## Brand Personality
 
@@ -22,7 +22,7 @@ Industriell, praktisk, jordnær. Grunnlagt på offshore-/subsea-erfaring; leder 
 - AI-skrivetegn i copy: tankestreker som bindeledd, kolon i setninger, "rule of three"-oppramsing.
 - Konsulent-corporate: stock-fotos, tomme fraser, "vi hjelper deg å realisere potensialet".
 - Aldri oppgi grunnleggingsår (2024) eller antyde eksisterende kunder; demoer omtales som egenbygde demoer.
-- Aldri "Argon Solutions AS".
+- "Argon Solutions AS" (juridisk navn per juli 2026) brukes kun i juridiske felt: footer-copyright, JSON-LD legalName, llms-fakta, faktura/kontrakt. I løpende copy skrives bare "Argon Solutions".
 
 ## Design Principles
 

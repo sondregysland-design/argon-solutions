@@ -2,263 +2,266 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/i18n/LanguageProvider";
-import { KursSignup, COHORTS } from "@/components/KursSignup";
 import { Reveal } from "@/components/Reveal";
 
-const CheckIcon = () => (
-  <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+const ShieldIcon = () => (
+  <svg className="mt-0.5 h-4 w-4 shrink-0 text-steel" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
   </svg>
 );
 
 const no = {
-  eyebrow: "Argon Kurs / Claude Dagskurs for private / Stavanger",
-  h1: "Bygg noe ekte med Claude på én dag",
+  eyebrow: "Argon Industri / In-house for olje og gass",
+  h1: "AI-opplæring der dere jobber",
   intro:
-    "Lær å bygge apper, verktøy og automatiseringer med AI, rett fra Claude-appen, uten kodekunnskaper. Et praktisk dagskurs for privatpersoner i liten gruppe. Du tar med egen laptop og egne oppgaver, og sitter med verktøyet hele tiden.",
-  heroNote: "Kan du skrive en tydelig e-post, kan du lære dette. Ingen utviklerbakgrunn nødvendig.",
-  heroGaranti: "Fornøyd etter første kursdag, eller pengene tilbake.",
-  ctaPrimary: "Meld deg på",
-  ctaSecondary: "For bedrifter",
-  cardTitle: "Claude Dagskurs",
-  cardDesc: "Du går hjem med noe som virker. Et verktøy eller en automatisering du bruker dagen etter.",
-  cardTime: "09:00 til 16:00",
-  cardPlace: "Stavanger",
-  cardGroup: "Liten gruppe",
-  cardPrice: "5 900 kr",
-  cardPerSeat: "per plass",
-  cardMore: "Vis mer",
-  learnTitle: "Hva du lærer",
-  learnItems: [
+    "Vi kommer til dere og bruker deres hverdag som pensum. Kurset er skreddersydd etter bedriftens ønske, om det er grunnkunnskaper eller hjelp til å sette opp enkle agenter slik at bedriften kan dyppe tåen i AI-verdenen.",
+  ctaPrimary: "Be om tilbud",
+  ctaSecondary: "Be om møte",
+  securityTitle: "Trygg bruk av AI i drift",
+  securityBody:
+    "Det første spørsmålet i bransjen er alltid det samme. Hva skjer med dataene våre? Derfor starter vi der. Kurset viser hvordan dere kan jobbe med Claude uten å eksponere driftskritisk eller proprietær informasjon.",
+  securityPoints: [
+    "Gjennomgang av hva som sendes hvor, og hva som lagres",
+    "Innstillinger og avtaler som må på plass før teamet slippes løs",
+    "Retningslinjer folk faktisk kan følge i arbeidshverdagen",
+    "Øvelser med ufarlige data, aldri produksjonsdata",
+  ],
+  ladderTitle: "Slik ser kursdagene ut",
+  ladderIntro:
+    "Innholdet slik vi holder det i dag. Dagskurset dekker dag én, intensivkurset går videre til dag to. Introkurset er en kortere gjennomgang av de første punktene.",
+  ladder: [
     {
-      title: "Jobbe med Claude i hverdagen",
-      desc: "Prompting som faktisk virker, dokumenter, analyse og skriving. Du lærer å gi AI-en nok kontekst til å gjøre ekte arbeid.",
+      day: "Dag 1",
+      name: "Tre måter å bruke Claude",
+      desc: "Chat for raske spørsmål, Cowork som jobber i filene deres, og Code som bygger og automatiserer. Dere lærer når dere skal bruke hva.",
     },
     {
-      title: "Claude-appen fra null",
-      desc: "Installasjon og oppsett på egen maskin. Du lager dokumenter, analyser og små verktøy direkte i appen, uten å skrive kode.",
+      day: "Dag 1",
+      name: "Cowork i praksis",
+      desc: "Prosjekter som holder på konteksten på tvers av filer, skills som gjenbrukbare maler, og CLAUDE.md som fast instruks. Faste oppgaver kan kjøre på timeplan.",
     },
     {
-      title: "Automatisere egne oppgaver",
-      desc: "Faste arbeidsflyter og gjenbrukbare oppsett som tar de repetitive delene av jobben din. Bygget på dine egne eksempler.",
+      day: "Dag 1",
+      name: "Code og automatisering",
+      desc: "Code-fanen for skripting og automatisering, rutiner som kjører gjentakende arbeidsflyter i skyen, og taleinput i stedet for tastatur.",
     },
     {
-      title: "Bygge noe ekte",
-      desc: "Du går hjem med noe som virker. Et verktøy, en automasjon eller et oppsett du bruker dagen etter.",
+      day: "Dag 1",
+      name: "Konseptene som avgjør resultatet",
+      desc: "Prompting med nok kontekst og tydelige suksesskriterier, styring av informasjonsflyt, prosjektminne i CLAUDE.md og MEMORY.md, og hvordan kontekstvinduet faktisk fungerer.",
+    },
+    {
+      day: "Dag 1",
+      name: "Bygg deres egne skills",
+      desc: "Beskriv oppgaven med vanlige ord, kjør den én gang, finpuss resultatet og lagre den som en skill resten av teamet kan bruke igjen.",
+    },
+    {
+      day: "Dag 2",
+      name: "Koblinger til systemene deres",
+      desc: "MCP er den åpne standarden for integrasjoner. Vi kobler Claude mot verktøyene dere allerede bruker, både gjennom grensesnittet og fra kommandolinjen.",
+    },
+    {
+      day: "Dag 2",
+      name: "Fra idé til ferdig løsning",
+      desc: "En fast arbeidsflyt i tre faser. Idémyldringen blir en spesifikasjon, spesifikasjonen blir en plan, og planen bygges ut oppgave for oppgave med tester underveis.",
+    },
+    {
+      day: "Dag 2",
+      name: "Database uten dramatikk",
+      desc: "Driftet database i skyen, med tilgangsstyring på radnivå, innlogging og sanntidsoppdateringer. Nok til at agentene kan lagre og hente ekte data.",
+    },
+    {
+      day: "Dag 2",
+      name: "Avanserte grep",
+      desc: "Subagenter som tar hver sin oppgave, hooks som utløses av hendelser, agentteam som jobber parallelt, nettleserautomatisering og Python i skyen.",
+    },
+    {
+      day: "Dag 2",
+      name: "Sikkerhet og versjonskontroll",
+      desc: "Hemmeligheter i miljøvariabler, GitHub som angrefunksjon, sikkerhetsgjennomgang av egen kode, og fem nivåer av tilgangsstyring fra spør alltid til full automatikk.",
     },
   ],
-  splitTitle: "Privat eller bedrift?",
-  splitBody:
-    "Dette er det åpne dagskurset for privatpersoner og enkeltdeltakere. Det varer én dag, du bruker Claude-appen og trenger ingen utviklerbakgrunn. Skal dere kurse et helt team, holder vi bedriftsinterne kurs der Claude Code og automatisering står på planen.",
-  splitCta: "Se kurs for bedrifter",
-  agendaTitle: "Slik ser dagskurset ut",
-  agendaIntro:
-    "Konkret plan for en typisk kursdag, så du vet hva du melder deg på. Tidene er veiledende, innholdet tilpasses gruppa og oppgavene dere tar med.",
-  agendaItems: [
+  proofTitle: "Bygget for bransjen",
+  proofBody:
+    "Kursholderen kjenner hverdagen kurset skal fungere i, fra verksted og offshore-operasjoner til kontor og prosjektstyring.",
+  priceTitle: "Tre opplegg å velge mellom",
+  priceIntro:
+    "Samme kursholder og samme praktiske form, tre nivåer av dybde. Alle tre holdes hos dere, med deres egne oppgaver som pensum.",
+  packages: [
     {
-      time: "09:00",
-      title: "Oppsett og intro",
-      desc: "Alle får Claude-appen på plass på egen maskin. Kort om hva verktøyet faktisk er.",
+      name: "Introkurs",
+      duration: "2 timer",
+      price: "15 000 kr",
+      desc: "Felles oppstart for hele avdelingen. Hva verktøyet er, hva det ikke er, og hvor det treffer arbeidsdagen deres.",
+      points: [
+        "Datasikkerhet og hva som aldri skal legges inn",
+        "Live gjennomgang av tre oppgaver fra deres hverdag",
+        "Anbefalt neste steg, tilpasset teamet",
+      ],
+      badge: "Kom i gang",
+      highlight: false,
     },
     {
-      time: "09:30",
-      title: "Prompting og kontekst",
-      desc: "Hvordan gi Claude nok kontekst til å gjøre ekte arbeid, ikke bare svare pent.",
+      name: "Dagskurs",
+      duration: "1 dag",
+      price: "40 000 kr",
+      desc: "Praktisk heldag der alle sitter med verktøyet og løser egne arbeidsoppgaver. Egen laptop, egne filer.",
+      points: [
+        "Alt fra introkurset, med tid til å øve",
+        "Hver deltaker bygger noe de bruker etterpå",
+        "Retningslinjer teamet kan følge fra dagen etter",
+      ],
+      badge: "Mest valgt",
+      highlight: true,
     },
     {
-      time: "10:30",
-      title: "Claude-appen i praksis",
-      desc: "Dokumenter, filer og ditt første verktøy. Du bygger, ikke ser på.",
-    },
-    {
-      time: "12:00",
-      title: "Pause",
-      desc: "Lunsj og luft.",
-    },
-    {
-      time: "12:45",
-      title: "Dine egne oppgaver",
-      desc: "Vi tar utgangspunkt i det du faktisk gjør på jobb og bygger derfra.",
-    },
-    {
-      time: "14:30",
-      title: "Verktøy og automatisering",
-      desc: "Sett automatiseringen i system så den fortsetter å virke etter kurset.",
-    },
-    {
-      time: "15:30",
-      title: "Oppsummering og veien videre",
-      desc: "Du går hjem med noe som virker, og en plan for hva du bygger neste uke.",
+      name: "Intensivkurs",
+      duration: "2 dager",
+      price: "70 000 kr",
+      desc: "To sammenhengende dager for team som skal jobbe systematisk, ikke bare prøve. Dag to går i dybden.",
+      points: [
+        "Alt fra dagskurset, med automatisering på dag to",
+        "Claude Code og faste arbeidsflyter som blir stående",
+        "Interne ressurspersoner som kan lære opp resten",
+      ],
+      badge: "Størst utbytte",
+      highlight: false,
     },
   ],
-  priceTitle: "Pris",
-  priceValue: "5 900 kr",
-  priceUnit: "per plass, åpen kohort i Stavanger",
   priceNote:
-    "Kurs er unntatt merverdiavgift etter merverdiavgiftsloven § 3-5. Prisen er det du betaler, uten mva-påslag.",
-  priceCorporate: "Skal dere kurse et helt team? Se in-house opplæring under Argon Industri.",
-  priceCorporateLink: "Argon Industri",
-  garantiLabel: "Fornøyd, eller pengene tilbake",
-  garantiBody:
-    "Er ikke kurset verdt tiden din etter første dag, sier du ifra og får hele kursavgiften tilbake. Ingen diskusjon.",
-  datesTitle: "Neste kohorter",
-  datesBody:
-    "To åpne kohorter i Stavanger i høst. Lokale annonseres på e-post før kursstart. Meld deg på, så holder vi av plassen din.",
-  cohortMeta: "Stavanger, 09:00 til 16:00",
-  freeTitle: "Bør du heller ta gratiskurset til Anthropic?",
-  freeIntro:
-    "Anthropic har et gratis introkurs på engelsk, rundt tre timer med video og quiz. Ta det gjerne, det er fin forberedelse. Dette kurset er for deg som vil forbi videostadiet.",
-  freeItems: [
-    {
-      title: "Live hjelp når noe feiler",
-      desc: "I et selvstudium er en feilmelding et stoppunkt. Her sitter det en trener ved siden av deg til det virker.",
-    },
-    {
-      title: "Dine oppgaver, ikke demoer",
-      desc: "Videokursene bruker generiske eksempler. Du jobber med dine egne filer og din egen arbeidshverdag.",
-    },
-    {
-      title: "Norsk, og for alle",
-      desc: "Anthropic-kurset går på engelsk og forutsetter erfaring med terminal og Git. Her trenger du ingen utviklerbakgrunn.",
-    },
-    {
-      title: "Noen å spørre etterpå",
-      desc: "Interaktiv+ inkluderer oppfølging etter kurset. Et videokurs svarer ikke på e-post.",
-    },
-  ],
-  founderTitle: "Hvem holder kurset",
-  founderP1:
-    "Sondre Gysland har femten år bak seg fra olje og gass, fra verksted og offshore-operasjoner til kontor og prosjektstyring. Han bygger daglig med Claude og Claude Code, og underviser med de samme verktøyene han bruker selv.",
-  founderP2:
-    "Argon er selskapet bak kursene. Vi bygger også software og AI-agenter for olje og gass, så opplæringen kommer fra folk som bruker verktøyene på ekte prosjekter.",
-  bookTitle: "Meld deg på",
-  bookIntro:
-    "Velg dato og fyll inn skjemaet, så holder vi av plassen din og sender bekreftelse på e-post. Usikker på om kurset passer? Skriv det i kommentarfeltet, så tar vi en prat først.",
+    "Prisene gjelder samlet for gruppen, ikke per deltaker. Kurs er unntatt merverdiavgift etter merverdiavgiftsloven § 3-5. Reise utenfor Rogaland kommer i tillegg. Oppfølging etter kurset avtales separat.",
+  packageCta: "Be om tilbud",
+  ctaTitle: "Fortell oss hvor dere står",
+  ctaBody:
+    "Send noen linjer om teamet og hva dere vil oppnå, så kommer vi tilbake med et konkret forslag og pris.",
+  ctaButton: "Be om tilbud",
 };
 
 const en: typeof no = {
-  eyebrow: "Argon Kurs / Claude day course for individuals / Stavanger",
-  h1: "Build something real with Claude in one day",
+  eyebrow: "Argon Industri / In-house for oil and gas",
+  h1: "AI training where you work",
   intro:
-    "Learn to build apps, tools and automations with AI, straight from the Claude app, with no coding skills. A hands-on one-day course for individuals in a small group. You bring your own laptop and your own tasks, and sit with the tool the whole time.",
-  heroNote: "If you can write a clear email, you can learn this. No developer background required.",
-  heroGaranti: "Happy after the first course day, or your money back.",
-  ctaPrimary: "Sign up",
-  ctaSecondary: "For businesses",
-  cardTitle: "Claude day course",
-  cardDesc: "You go home with something that works. A tool or an automation you use the next day.",
-  cardTime: "09:00 to 16:00",
-  cardPlace: "Stavanger",
-  cardGroup: "Small group",
-  cardPrice: "5,900 NOK",
-  cardPerSeat: "per seat",
-  cardMore: "Show more",
-  learnTitle: "What you learn",
-  learnItems: [
+    "We come to you and use your everyday work as the curriculum. The course is tailored to what your business wants, whether that is the basics or help setting up simple agents so you can dip a toe into AI.",
+  ctaPrimary: "Request a quote",
+  ctaSecondary: "Book a meeting",
+  securityTitle: "Safe use of AI in operations",
+  securityBody:
+    "The first question in this industry is always the same. What happens to our data? So that is where we start. The course shows how you can work with Claude without exposing operation-critical or proprietary information.",
+  securityPoints: [
+    "A walkthrough of what is sent where, and what is stored",
+    "Settings and agreements that must be in place before the team is let loose",
+    "Guidelines people can actually follow in their working day",
+    "Exercises with harmless data, never production data",
+  ],
+  ladderTitle: "What the course days look like",
+  ladderIntro:
+    "The content as we run it today. The day course covers day one, the intensive course continues into day two. The intro course is a shorter walkthrough of the first topics.",
+  ladder: [
     {
-      title: "Working with Claude every day",
-      desc: "Prompting that actually works, documents, analysis and writing. You learn to give the AI enough context to do real work.",
+      day: "Day 1",
+      name: "Three ways to use Claude",
+      desc: "Chat for quick questions, Cowork that works inside your files, and Code that builds and automates. You learn when to reach for which.",
     },
     {
-      title: "The Claude app from zero",
-      desc: "Installation and setup on your own machine. You create documents, analyses and small tools directly in the app, without writing code.",
+      day: "Day 1",
+      name: "Cowork in practice",
+      desc: "Projects that hold context across files, skills as reusable templates, and CLAUDE.md as standing instructions. Recurring tasks can run on a schedule.",
     },
     {
-      title: "Automating your own tasks",
-      desc: "Fixed workflows and reusable setups that take over the repetitive parts of your job. Built on your own examples.",
+      day: "Day 1",
+      name: "Code and automation",
+      desc: "The Code tab for scripting and automation, routines that run recurring workflows in the cloud, and voice input instead of the keyboard.",
     },
     {
-      title: "Building something real",
-      desc: "You go home with something that works. A tool, an automation or a setup you use the next day.",
+      day: "Day 1",
+      name: "The concepts that decide the result",
+      desc: "Prompting with enough context and clear success criteria, controlling the flow of information, project memory in CLAUDE.md and MEMORY.md, and how the context window actually works.",
+    },
+    {
+      day: "Day 1",
+      name: "Build your own skills",
+      desc: "Describe the task in plain words, run it once, refine the output and save it as a skill the rest of the team can reuse.",
+    },
+    {
+      day: "Day 2",
+      name: "Connections to your systems",
+      desc: "MCP is the open standard for integrations. We connect Claude to the tools you already use, both through the interface and from the command line.",
+    },
+    {
+      day: "Day 2",
+      name: "From idea to finished solution",
+      desc: "A fixed workflow in three phases. Brainstorming becomes a spec, the spec becomes a plan, and the plan is built out task by task with tests along the way.",
+    },
+    {
+      day: "Day 2",
+      name: "Databases without drama",
+      desc: "A managed database in the cloud, with row-level access control, sign-in and real-time updates. Enough for agents to store and fetch real data.",
+    },
+    {
+      day: "Day 2",
+      name: "Advanced moves",
+      desc: "Subagents that each take a task, hooks triggered by events, agent teams working in parallel, browser automation and Python in the cloud.",
+    },
+    {
+      day: "Day 2",
+      name: "Security and version control",
+      desc: "Secrets in environment variables, GitHub as an undo button, security review of your own code, and five levels of permission from ask every time to full automation.",
     },
   ],
-  splitTitle: "Individual or business?",
-  splitBody:
-    "This is the open one-day course for individuals. It lasts one day, you use the Claude app and need no developer background. Training a whole team? We run in-house courses where Claude Code and automation are on the agenda.",
-  splitCta: "See courses for businesses",
-  agendaTitle: "What the one-day course looks like",
-  agendaIntro:
-    "A concrete plan for a typical course day, so you know what you are signing up for. Times are indicative, the content adapts to the group and the tasks you bring.",
-  agendaItems: [
+  proofTitle: "Built for the industry",
+  proofBody:
+    "The instructor knows the workday the course has to function in, from the workshop and offshore operations to the office and project management.",
+  priceTitle: "Three formats to choose from",
+  priceIntro:
+    "The same instructor and the same hands-on format, at three levels of depth. All three run at your place, with your own tasks as the material.",
+  packages: [
     {
-      time: "09:00",
-      title: "Setup and intro",
-      desc: "Everyone gets the Claude app set up on their own machine. A short look at what the tool actually is.",
+      name: "Intro course",
+      duration: "2 hours",
+      price: "15,000 NOK",
+      desc: "A shared start for the whole department. What the tool is, what it is not, and where it meets your workday.",
+      points: [
+        "Data security and what must never be entered",
+        "A live walkthrough of three tasks from your own week",
+        "A recommended next step, matched to the team",
+      ],
+      badge: "Get started",
+      highlight: false,
     },
     {
-      time: "09:30",
-      title: "Prompting and context",
-      desc: "How to give Claude enough context to do real work, not just answer politely.",
+      name: "Day course",
+      duration: "1 day",
+      price: "40,000 NOK",
+      desc: "A hands-on full day where everyone sits with the tool and solves their own work tasks. Own laptop, own files.",
+      points: [
+        "Everything from the intro course, with time to practise",
+        "Every participant builds something they use afterwards",
+        "Guidelines the team can follow from the next day",
+      ],
+      badge: "Most chosen",
+      highlight: true,
     },
     {
-      time: "10:30",
-      title: "The Claude app in practice",
-      desc: "Documents, files and your first tool. You build, you do not watch.",
-    },
-    {
-      time: "12:00",
-      title: "Break",
-      desc: "Lunch and fresh air.",
-    },
-    {
-      time: "12:45",
-      title: "Your own tasks",
-      desc: "We start from what you actually do at work and build from there.",
-    },
-    {
-      time: "14:30",
-      title: "Tools and automation",
-      desc: "Put the automation into a system so it keeps working after the course.",
-    },
-    {
-      time: "15:30",
-      title: "Wrap-up and next steps",
-      desc: "You go home with something that works, and a plan for what to build next week.",
+      name: "Intensive course",
+      duration: "2 days",
+      price: "70,000 NOK",
+      desc: "Two consecutive days for teams that will work systematically, not just try it out. Day two goes deep.",
+      points: [
+        "Everything from the day course, with automation on day two",
+        "Claude Code and repeatable workflows that stay in place",
+        "Internal champions who can train the rest",
+      ],
+      badge: "Most value",
+      highlight: false,
     },
   ],
-  priceTitle: "Price",
-  priceValue: "5,900 NOK",
-  priceUnit: "per seat, open cohort in Stavanger",
   priceNote:
-    "Courses are exempt from VAT under section 3-5 of the Norwegian VAT Act. The price is what you pay, with no VAT added.",
-  priceCorporate: "Training a whole team? See in-house training under Argon Industri.",
-  priceCorporateLink: "Argon Industri",
-  garantiLabel: "Happy, or your money back",
-  garantiBody:
-    "If the course is not worth your time after the first day, just say so and you get the full fee back. No questions asked.",
-  datesTitle: "Upcoming cohorts",
-  datesBody:
-    "Two open cohorts in Stavanger this autumn. The venue is announced by email before the course starts. Sign up and we will reserve your seat.",
-  cohortMeta: "Stavanger, 09:00 to 16:00",
-  freeTitle: "Should you just take Anthropic's free course instead?",
-  freeIntro:
-    "Anthropic offers a free intro course in English, around three hours of video and quizzes. Go ahead and take it, it is good preparation. This course is for when you want to get past the video stage.",
-  freeItems: [
-    {
-      title: "Live help when something breaks",
-      desc: "In self-study, an error message is a dead end. Here a trainer sits next to you until it works.",
-    },
-    {
-      title: "Your tasks, not demos",
-      desc: "The video courses use generic examples. You work on your own files and your own workday.",
-    },
-    {
-      title: "Norwegian, and for everyone",
-      desc: "The Anthropic course is in English and assumes terminal and Git experience. Here you need no developer background.",
-    },
-    {
-      title: "Someone to ask afterwards",
-      desc: "Interactive+ includes follow-up after the course. A video course does not answer email.",
-    },
-  ],
-  founderTitle: "Who teaches the course",
-  founderP1:
-    "Sondre Gysland has fifteen years behind him in oil and gas, from the workshop and offshore operations to the office and project management. He builds with Claude and Claude Code every day, and teaches with the same tools he uses himself.",
-  founderP2:
-    "Argon is the company behind the courses. We also build software and AI agents for oil and gas, so the training comes from people who use the tools on real projects.",
-  bookTitle: "Sign up",
-  bookIntro:
-    "Choose a date and fill in the form, and we will reserve your seat and send a confirmation by email. Unsure whether the course is right for you? Mention it in the comment field and we will have a chat first.",
+    "Prices are for the group as a whole, not per participant. Courses are exempt from VAT under section 3-5 of the Norwegian VAT Act. Travel outside Rogaland is added. Follow-up after the course is agreed separately.",
+  packageCta: "Request a quote",
+  ctaTitle: "Tell us where you stand",
+  ctaBody:
+    "Send a few lines about the team and what you want to achieve, and we will come back with a concrete proposal and price.",
+  ctaButton: "Request a quote",
 };
 
 export default function KursContent() {
@@ -266,220 +269,173 @@ export default function KursContent() {
   const m = locale === "en" ? en : no;
 
   return (
-    <div className="mx-auto max-w-6xl px-6">
-      {/* Header */}
-      <div className="max-w-3xl">
-        <p className="inline-flex items-center gap-2 text-sm font-medium text-text-light">
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" aria-hidden />
-          {m.eyebrow}
-        </p>
-        <h1 className="mt-4 font-display text-5xl font-medium tracking-tight text-text sm:text-6xl">{m.h1}</h1>
-        <p className="mt-6 text-lg text-text-light">{m.intro}</p>
-        <p className="mt-4 text-text-light">{m.heroNote}</p>
-        <div className="mt-10 space-y-4">
-          {COHORTS.map((c, i) => (
-            <Reveal key={c.id} delay={i * 90}>
-              <div className="card-lift flex overflow-hidden rounded-2xl bg-white ring-1 ring-text/10">
-                <div
-                  className="relative hidden w-40 shrink-0 flex-col items-center justify-center bg-ink sm:flex"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(120% 90% at 20% 15%, rgba(217,119,87,0.4), transparent 60%), radial-gradient(100% 80% at 85% 90%, rgba(96,125,139,0.35), transparent 55%)",
-                  }}
-                >
-                  <span className="absolute left-3 top-3 flex h-12 w-12 flex-col items-center justify-center rounded-lg bg-white text-ink shadow">
-                    <span className="text-base font-bold leading-none">{c.day}</span>
-                    <span className="mt-0.5 text-[10px] font-semibold leading-none">{c.monthNo}</span>
-                  </span>
-                  <span className="px-4 text-center font-display text-lg font-medium leading-tight text-white">
-                    Claude
-                    <br />
-                    Dagskurs
-                  </span>
-                </div>
-                <div className="flex-1 p-5 sm:p-6">
-                  <div className="flex flex-wrap items-start justify-between gap-3">
-                    <h3 className="text-lg font-semibold text-text">{m.cardTitle}</h3>
-                    <div className="text-right">
-                      <p className="text-lg font-bold leading-none text-text">{m.cardPrice}</p>
-                      <p className="mt-1 text-xs text-text-light">{m.cardPerSeat}</p>
-                    </div>
-                  </div>
-                  <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-text-light">
-                    <span>{locale === "en" ? c.labelEn : c.labelNo}</span>
-                    <span>{m.cardTime}</span>
-                    <span>{m.cardPlace}</span>
-                    <span>{m.cardGroup}</span>
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-text-light">{m.cardDesc}</p>
-                  <div className="mt-4 flex flex-wrap items-center gap-5">
-                    <a
-                      href="#pamelding"
-                      className="rounded-full bg-ink px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-ink/85"
-                    >
-                      {m.ctaPrimary}
-                    </a>
-                    <a href="#agenda" className="text-sm font-semibold text-primary hover:underline">
-                      {m.cardMore} &rarr;
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
-          <Link
-            href="/kurs/bedrift"
-            className="rounded-full bg-surface px-6 py-3 text-sm font-semibold text-text transition hover:bg-text/10"
-          >
-            {m.ctaSecondary}
-          </Link>
-          <p className="flex items-center gap-2 text-sm font-medium text-primary">
-            <CheckIcon />
-            {m.heroGaranti}
+    <div>
+      {/* Header band, petrol */}
+      <div className="bg-ink">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="inline-flex items-center gap-2 text-sm font-medium text-white/60">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary-light" aria-hidden />
+            {m.eyebrow}
           </p>
-        </div>
-      </div>
-
-      {/* Hva du lærer */}
-      <div className="mt-24">
-        <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.learnTitle}</h2>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
-          {m.learnItems.map((item, i) => (
-            <Reveal key={item.title} delay={(i % 2) * 90}>
-              <div className="card-lift h-full rounded-2xl bg-surface p-8">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm font-semibold text-text">{i + 1}</span>
-                <h3 className="mt-4 text-lg font-semibold text-text">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-text-light">{item.desc}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-
-      {/* Privat eller bedrift */}
-      <Reveal className="mt-24">
-        <div className="flex flex-wrap items-center justify-between gap-6 rounded-3xl bg-surface p-8 md:p-10">
-          <div className="max-w-2xl">
-            <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.splitTitle}</h2>
-            <p className="mt-3 text-sm leading-relaxed text-text-light">{m.splitBody}</p>
+          <h1 className="mt-4 max-w-3xl font-display text-4xl font-medium tracking-tight text-white sm:text-6xl">
+            {m.h1}
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-white/75">{m.intro}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/kontakt"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:bg-white/90"
+            >
+              {m.ctaPrimary}
+            </Link>
+            <Link
+              href="/kontakt#book"
+              className="rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+            >
+              {m.ctaSecondary}
+            </Link>
           </div>
-          <Link
-            href="/kurs/bedrift"
-            className="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-ink/85"
-          >
-            {m.splitCta}
-          </Link>
         </div>
-      </Reveal>
-
-      {/* Agenda / slik ser dagskurset ut */}
-      <div id="agenda" className="mt-24 scroll-mt-24">
-        <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.agendaTitle}</h2>
-        <p className="mt-4 max-w-2xl text-text-light">{m.agendaIntro}</p>
-        <ol className="mt-10 space-y-0">
-          {m.agendaItems.map((item, i) => (
-            <li key={item.time} className="flex gap-6">
-              <div className="flex flex-col items-center">
-                <span className="flex h-8 w-16 shrink-0 items-center justify-center rounded-full bg-surface text-xs font-semibold text-text">
-                  {item.time}
-                </span>
-                {i < m.agendaItems.length - 1 && <span className="w-px flex-1 bg-text/10" aria-hidden />}
-              </div>
-              <div className="pb-8">
-                <h3 className="font-semibold text-text">{item.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-text-light">{item.desc}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
       </div>
 
-      {/* Pris + datoer */}
-      <div className="mt-24">
-        <div className="grid gap-4 md:grid-cols-2">
-          <div className="rounded-3xl bg-surface p-8 md:p-10">
-            <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.priceTitle}</h2>
-            <p className="mt-6 font-display text-5xl font-medium tracking-tight text-text">{m.priceValue}</p>
-            <p className="mt-1 text-sm text-text-light">{m.priceUnit}</p>
-            <p className="mt-6 text-sm leading-relaxed text-text-light">{m.priceNote}</p>
-            <p className="mt-4 text-sm text-text-light">
-              {m.priceCorporate.split(m.priceCorporateLink)[0]}
-              <Link href="/kurs/bedrift" className="font-medium text-steel underline underline-offset-2 hover:text-steel-light">
-                {m.priceCorporateLink}
-              </Link>
-              {m.priceCorporate.split(m.priceCorporateLink)[1]}
-            </p>
-          </div>
-          <div className="rounded-3xl bg-surface p-8 md:p-10">
-            <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.datesTitle}</h2>
-            <p className="mt-4 text-sm leading-relaxed text-text-light">{m.datesBody}</p>
-            <div className="mt-6 space-y-3">
-              {COHORTS.map((c) => (
-                <a
-                  key={c.id}
-                  href="#pamelding"
-                  className="card-lift flex items-center gap-4 rounded-xl bg-white p-4 transition hover:ring-1 hover:ring-primary"
-                >
-                  <span className="flex h-12 w-12 shrink-0 flex-col items-center justify-center rounded-lg bg-ink text-white">
-                    <span className="text-base font-bold leading-none">{c.day}</span>
-                    <span className="mt-0.5 text-[10px] font-semibold leading-none">{c.monthNo}</span>
-                  </span>
-                  <span className="flex-1">
-                    <span className="block text-sm font-semibold text-text">
-                      {locale === "en" ? c.labelEn : c.labelNo}
-                    </span>
-                    <span className="block text-xs text-text-light">{m.cohortMeta}</span>
-                  </span>
-                  <span className="text-sm font-semibold text-primary">{m.ctaPrimary}</span>
-                </a>
-              ))}
+      <div className="mx-auto max-w-6xl px-6">
+        {/* Datasikkerhet */}
+        <div className="mt-20">
+          <div className="grid gap-10 md:grid-cols-2">
+            <div>
+              <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.securityTitle}</h2>
+              <p className="mt-4 leading-relaxed text-text-light">{m.securityBody}</p>
             </div>
+            <ul className="space-y-4 rounded-2xl bg-surface p-8">
+              {m.securityPoints.map((p) => (
+                <li key={p} className="flex items-start gap-3 text-sm text-text">
+                  <ShieldIcon />
+                  {p}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-        <div className="mt-4 flex items-start gap-3 rounded-2xl bg-primary/5 p-6">
-          <CheckIcon />
-          <div>
-            <p className="text-sm font-semibold text-primary">{m.garantiLabel}</p>
-            <p className="mt-1.5 text-sm leading-relaxed text-text-light">{m.garantiBody}</p>
+
+        {/* Ladder */}
+        <div className="mt-24">
+          <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.ladderTitle}</h2>
+          <p className="mt-4 max-w-2xl text-text-light">{m.ladderIntro}</p>
+          <ol className="mt-10">
+            {m.ladder.map((step, i) => (
+              <li key={step.name} className="relative flex gap-6 pb-10 last:pb-0">
+                {i < m.ladder.length - 1 && (
+                  <span className="absolute top-10 left-[19px] h-full w-px bg-steel/25" aria-hidden />
+                )}
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-steel/30 bg-white font-mono text-sm font-semibold text-steel">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                {/* Dag-etiketten står bare på det første punktet i hver dag, så
+                    de to dagene leses som blokker uten å bryte den loddrette linja. */}
+                <Reveal className="pt-1.5" delay={i * 60}>
+                  {step.day !== m.ladder[i - 1]?.day && (
+                    <p className="mb-1.5 text-sm font-semibold text-primary">{step.day}</p>
+                  )}
+                  <h3 className="text-lg font-semibold text-text">{step.name}</h3>
+                  <p className="mt-1 max-w-xl text-sm leading-relaxed text-text-light">{step.desc}</p>
+                </Reveal>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {/* Tre pakker */}
+        <div id="opplegg" className="mt-24 scroll-mt-24">
+          <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.priceTitle}</h2>
+          <p className="mt-4 max-w-2xl text-text-light">{m.priceIntro}</p>
+          <div className="mt-10 grid items-stretch gap-4 lg:grid-cols-3">
+            {m.packages.map((pkg, i) => (
+              <Reveal key={pkg.name} delay={i * 90}>
+                <div
+                  className={`card-lift flex h-full flex-col rounded-3xl p-8 ${
+                    pkg.highlight ? "bg-ink text-white ring-2 ring-primary" : "bg-surface"
+                  }`}
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <span
+                      className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                        pkg.highlight ? "bg-primary text-white" : "bg-white text-primary"
+                      }`}
+                    >
+                      {pkg.badge}
+                    </span>
+                    <span className={`text-sm font-medium ${pkg.highlight ? "text-white/70" : "text-text-light"}`}>
+                      {pkg.duration}
+                    </span>
+                  </div>
+                  <h3
+                    className={`mt-5 font-display text-2xl font-medium tracking-tight ${
+                      pkg.highlight ? "text-white" : "text-text"
+                    }`}
+                  >
+                    {pkg.name}
+                  </h3>
+                  <p
+                    className={`mt-3 font-display text-4xl font-medium tracking-tight ${
+                      pkg.highlight ? "text-white" : "text-text"
+                    }`}
+                  >
+                    {pkg.price}
+                  </p>
+                  <p className={`mt-4 text-sm leading-relaxed ${pkg.highlight ? "text-white/75" : "text-text-light"}`}>
+                    {pkg.desc}
+                  </p>
+                  <ul className="mt-6 flex-1 space-y-3">
+                    {pkg.points.map((point) => (
+                      <li
+                        key={point}
+                        className={`flex items-start gap-2.5 text-sm ${
+                          pkg.highlight ? "text-white/85" : "text-text-light"
+                        }`}
+                      >
+                        <span
+                          className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${
+                            pkg.highlight ? "bg-primary-light" : "bg-primary"
+                          }`}
+                          aria-hidden
+                        />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/kontakt"
+                    className={`mt-8 inline-block self-start rounded-full px-6 py-3 text-sm font-semibold transition ${
+                      pkg.highlight
+                        ? "bg-white text-ink hover:bg-white/90"
+                        : "bg-ink text-white hover:bg-ink/85"
+                    }`}
+                  >
+                    {m.packageCta}
+                  </Link>
+                </div>
+              </Reveal>
+            ))}
           </div>
+          <p className="mt-6 max-w-3xl text-sm leading-relaxed text-text-light">{m.priceNote}</p>
         </div>
-      </div>
 
-      {/* Gratiskurs-sammenligning */}
-      <div className="mt-24">
-        <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.freeTitle}</h2>
-        <p className="mt-4 max-w-2xl text-text-light">{m.freeIntro}</p>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
-          {m.freeItems.map((item, i) => (
-            <Reveal key={item.title} delay={(i % 2) * 90}>
-              <div className="card-lift h-full rounded-2xl bg-surface p-8">
-                <h3 className="text-lg font-semibold text-text">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-text-light">{item.desc}</p>
-              </div>
-            </Reveal>
-          ))}
+        {/* Bevis */}
+        <div className="mt-16 rounded-3xl bg-surface p-8 md:p-10">
+          <h2 className="font-display text-2xl font-medium tracking-tight text-text">{m.proofTitle}</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-text-light">{m.proofBody}</p>
         </div>
-      </div>
 
-      {/* Hvem holder kurset */}
-      <div className="mt-24">
-        <div className="grid gap-10 rounded-3xl bg-primary/5 p-8 md:grid-cols-[1fr_2fr] md:p-12">
-          <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.founderTitle}</h2>
-          <div className="space-y-4 leading-relaxed text-text-light">
-            <p>{m.founderP1}</p>
-            <p>{m.founderP2}</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Påmelding / booking */}
-      <div id="pamelding" className="mt-24 scroll-mt-24">
-        <h2 className="font-display text-3xl font-medium tracking-tight text-text">{m.bookTitle}</h2>
-        <p className="mt-4 max-w-2xl text-text-light">{m.bookIntro}</p>
-        <div className="mt-8 rounded-3xl bg-surface p-6 md:p-10">
-          <KursSignup />
+        {/* CTA */}
+        <div className="mt-24 rounded-3xl bg-ink p-10 text-center md:p-14">
+          <h2 className="font-display text-3xl font-medium tracking-tight text-white">{m.ctaTitle}</h2>
+          <p className="mx-auto mt-4 max-w-xl text-white/70">{m.ctaBody}</p>
+          <Link
+            href="/kontakt"
+            className="mt-8 inline-block rounded-full bg-white px-8 py-3 text-sm font-semibold text-ink transition hover:bg-white/90"
+          >
+            {m.ctaButton}
+          </Link>
         </div>
       </div>
     </div>

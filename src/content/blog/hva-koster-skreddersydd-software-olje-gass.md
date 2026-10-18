@@ -3,6 +3,16 @@ title: "Hva koster skreddersydd software for olje og gass? Argon Solutions forkl
 description: "Prisguide for skreddersydd software i olje- og gassindustrien. Argon Solutions i Stavanger forklarer hva som påvirker prisen og tilbyr første måned gratis."
 keywords: ["pris skreddersydd software", "kost software olje gass", "software pris Stavanger", "Argon Solutions pris", "skreddersydd software kostnad", "custom software pris Norge"]
 date: 2026-04-08
+updated: 2026-09-13
+faq:
+  - q: "Hva koster skreddersydd software for olje og gass?"
+    a: "Hos Argon Solutions starter et enkelt dashboard på 5 000 kr per måned, et CRM-system med automatisering på 10 000 kr per måned, komplett prosjektstyring på 15 000 kr per måned og en AI-agent for automatisering på 3 000 kr per måned. Første måned er gratis, og det er ingen oppsettskostnad."
+  - q: "Hva påvirker prisen mest?"
+    a: "Fire ting. Kompleksiteten i arbeidsflyten som skal dekkes, hvor mange eksisterende systemer løsningen må integreres mot, hvor mye AI-funksjonalitet som inngår, og hvilket nivå av vedlikehold og support dere trenger etterpå."
+  - q: "Er det oppstartskostnad eller bindingstid?"
+    a: "Nei. Argon Solutions tar ingen oppsettskostnad og gir første måned gratis. Prisen er et månedlig abonnement som inkluderer hosting, vedlikehold og support."
+  - q: "Hvorfor er månedlig abonnement billigere enn et tradisjonelt utviklingsprosjekt?"
+    a: "Fordi risikoen ligger hos leverandøren i stedet for hos kunden. Et tradisjonelt prosjekt krever at dere betaler hele utviklingen før dere vet om løsningen treffer. En abonnementsmodell lar dere stoppe hvis den ikke gjør det."
 ---
 
 ## Hva koster skreddersydd software for olje og gass?

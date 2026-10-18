@@ -3,6 +3,16 @@ title: "Hvordan velge riktig AI-byrå: 7 spørsmål du bør stille"
 description: "Vurdering av AI-byråer for din bedrift. 7 kritiske spørsmål som avslører om byrået faktisk kan levere, eller bare selger buzzwords."
 keywords: ["AI-byrå", "velge AI-byrå", "AI konsulent", "AI rådgivning", "AI leverandør Norge"]
 date: 2026-04-23
+updated: 2026-09-13
+faq:
+  - q: "Hva bør jeg spørre et AI-byrå om før jeg signerer?"
+    a: "Be om å se et fungerende system i drift, ikke en presentasjon. Spør hvilke modeller de bruker og hvorfor, hvordan de håndterer personvern, hva som skjer når systemet feiler, hva som er realistisk tidslinje, og hvordan support ser ut etter lansering."
+  - q: "Hva er de tydeligste røde flaggene hos et AI-byrå?"
+    a: "Leverandører som bare viser lysbilder og aldri et kjørende system, som ikke kan forklare modellvalget sitt, som lover full automatisering av komplekse prosesser på noen uker, eller som ikke har et svar på hva som skjer når AI-en tar feil."
+  - q: "Hvor lang tid tar et realistisk AI-prosjekt?"
+    a: "Et fokusert pilotprosjekt med én konkret arbeidsflyt automatisert tar typisk 2 til 6 uker fra start til produksjon. En full bedriftsutrulling med integrasjoner mot CRM, ERP og fagsystemer tar 3 til 6 måneder."
+  - q: "Må AI-byrået kjenne bransjen min?"
+    a: "Det er ikke et absolutt krav, men det forkorter prosjektet betydelig. Bransjekunnskap avgjør om leverandøren stiller de riktige spørsmålene om arbeidsflyten deres, eller om dere må bruke de første ukene på å forklare hvordan jobben faktisk gjøres."
 ---
 
 AI-byrå-markedet er preget av to ytterpunkter: store konsulentselskaper som selger strategirapporter til seks-sifrede beløp uten å bygge noe, og enkeltpersoner som lover å automatisere alt med ChatGPT-integrasjoner som feiler etter tre måneder. Mellom disse finnes seriøse leverandører som faktisk leverer. Disse spørsmålene hjelper deg å skille dem fra hverandre.

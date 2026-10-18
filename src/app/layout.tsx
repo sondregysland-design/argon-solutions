@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Figtree, IBM_Plex_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "@/components/Navbar";
@@ -9,10 +9,17 @@ import "./globals.css";
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree" });
 const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-plex" });
 
-const siteUrl = "https://argonsolutions.no";
+const siteUrl = "https://www.argonsolutions.no";
 const siteName = "Argon Solutions";
 const siteDescription =
   "Argon Solutions er et AI-byrå i Stavanger. Vi setter opp Claude for bedrifter, bygger AI-agenter og skreddersydd software, og holder praktiske AI-kurs for team i olje og gass.";
+
+// Rustfargen fra --color-primary. Fargelegger adresselinjen på mobil.
+// viewportFit: "cover" gjør env(safe-area-inset-*) tilgjengelig.
+export const viewport: Viewport = {
+  themeColor: "#B4400C",
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +29,14 @@ export const metadata: Metadata = {
   description: siteDescription,
   icons: { icon: "/favicon.svg" },
   metadataBase: new URL(siteUrl),
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    languages: {
+      "nb-NO": "/",
+      en: "/en/ai-agency-stavanger",
+      "x-default": "/",
+    },
+  },
   openGraph: {
     type: "website",
     locale: "nb_NO",
@@ -41,8 +55,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Argon Solutions | AI-byrå og kurs i Stavanger",
-    description: siteDescription,
     images: ["/og-image.png"],
   },
   robots: {
@@ -65,7 +77,7 @@ export default function RootLayout({
     url: siteUrl,
     logo: `${siteUrl}/favicon.svg`,
     image: `${siteUrl}/og-image.png`,
-    alternateName: ["Argon Kurs", "Argon Industri", "Argon Kurs Stavanger"],
+    alternateName: ["Argon Industri", "Argon Kurs", "Argon Kurs Stavanger"],
     description: siteDescription,
     foundingLocation: {
       "@type": "Place",
@@ -94,12 +106,14 @@ export default function RootLayout({
       },
     ],
     numberOfEmployees: { "@type": "QuantitativeValue", value: 2 },
+    // Ingen streetAddress eller postalCode her før vi har en ekte
+    // besøksadresse. "Stavanger" som gate og "4000" som postnummer var
+    // plassholdere, og falsk adressedata diskvalifiserer oss fra
+    // Google Business Profile-match i stedet for å hjelpe.
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Stavanger",
       addressLocality: "Stavanger",
       addressRegion: "Rogaland",
-      postalCode: "4000",
       addressCountry: "NO",
     },
     geo: {
@@ -114,8 +128,20 @@ export default function RootLayout({
       contactType: "customer service",
       availableLanguage: ["Norwegian", "English"],
     },
+    // Organisasjonsnummeret er det som knytter nettstedet til den juridiske
+    // enheten i Brreg. Uten det hviler entitetsoppslaget for navnet
+    // "Argon Solutions" på en enkelt LinkedIn-URL.
+    identifier: {
+      "@type": "PropertyValue",
+      propertyID: "Organisasjonsnummer",
+      value: "938033072",
+    },
+    taxID: "938033072",
+    vatID: "NO938033072MVA",
     sameAs: [
       "https://www.linkedin.com/company/argonsolutions/",
+      "https://virksomhet.brreg.no/nb/oppslag/enheter/938033072",
+      "https://www.proff.no/selskap/argon-solutions-as/stavanger/-/938033072",
     ],
     knowsAbout: [
       "Skreddersydd software for olje og gass",
@@ -157,7 +183,7 @@ export default function RootLayout({
   const allJsonLd = [jsonLd, websiteJsonLd];
 
   return (
-    <html lang="no">
+    <html lang="nb">
       <head>
         <script
           type="application/ld+json"

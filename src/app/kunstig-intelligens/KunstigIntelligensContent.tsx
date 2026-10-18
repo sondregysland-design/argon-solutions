@@ -70,7 +70,7 @@ const no: Messages = {
   h1: "Kunstig intelligens for bedrifter: Komplett guide for 2026",
   intro:
     "Kunstig intelligens (AI) er ikke lenger en fremtidsteknologi. Det er allerede inne i CRM-en, e-postklienten og dokumentbehandlingen til tusenvis av norske bedrifter, som regel uten at noen har tatt en bevisst beslutning om det. Denne guiden forklarer hva AI faktisk er, hvordan norske bedrifter bruker det i praksis, og hvordan du kommer i gang uten å brenne penger på pilot-prosjekter som aldri går i produksjon.",
-  byline: "Skrevet av Sondre Gysland, grunder Argon Solutions",
+  byline: "Skrevet av Sondre, grunder Argon Solutions",
   updated: "Oppdatert 8. mai 2026",
   readingTime: "~12 min lesing",
 
@@ -96,7 +96,7 @@ const no: Messages = {
     {
       title: "AI-agenter for repetitive oppgaver",
       description:
-        "Autonome AI-agenter som leser e-post, oppdaterer systemer, håndterer dokumenter og sender varsler. Grunnleggerne sparte selv 6 timer per uke ved å automatisere sertifikathåndtering for 47 leverandører, ned til 3 minutter i uken.",
+        "Autonome AI-agenter som leser e-post, oppdaterer systemer, håndterer dokumenter og sender varsler. Teamet sparte selv 6 timer per uke ved å automatisere sertifikathåndtering for 47 leverandører, ned til 3 minutter i uken.",
       href: "/tjenester/ai-agenter",
     },
     {
@@ -330,7 +330,7 @@ const en: Messages = {
   h1: "Artificial intelligence for businesses: A complete guide for 2026",
   intro:
     "Artificial intelligence (AI) is no longer a future technology. It is already inside the CRM, the email client and the document handling of thousands of Norwegian businesses, usually without anyone having made a deliberate decision about it. This guide explains what AI actually is, how Norwegian businesses use it in practice, and how you get started without burning money on pilot projects that never reach production.",
-  byline: "Written by Sondre Gysland, founder of Argon Solutions",
+  byline: "Written by Sondre, founder of Argon Solutions",
   updated: "Updated 8 May 2026",
   readingTime: "~12 min read",
 
@@ -356,7 +356,7 @@ const en: Messages = {
     {
       title: "AI agents for repetitive tasks",
       description:
-        "Autonomous AI agents that read email, update systems, handle documents and send alerts. The founders themselves saved 6 hours per week by automating certificate handling for 47 suppliers, down to 3 minutes a week.",
+        "Autonomous AI agents that read email, update systems, handle documents and send alerts. The team saved 6 hours per week by automating certificate handling for 47 suppliers, down to 3 minutes a week.",
       href: "/tjenester/ai-agenter",
     },
     {

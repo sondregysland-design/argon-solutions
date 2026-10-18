@@ -85,7 +85,7 @@ export function OmOssContent() {
           {partners.map((p) => (
             <div key={p.name} className="rounded-lg bg-surface p-4">
               <h3 className="text-sm font-semibold text-text">{p.name}</h3>
-              <p className="mt-1 text-xs text-text-light">{p.desc}</p>
+              <p className="mt-1 text-[13px] leading-relaxed sm:text-xs text-text-light">{p.desc}</p>
             </div>
           ))}
         </div>

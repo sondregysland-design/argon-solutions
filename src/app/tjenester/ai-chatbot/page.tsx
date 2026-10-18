@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { RelatedServices } from "@/components/RelatedServices";
 import AIChatbotContent from "./Content";
 import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     "AI-byrå Stavanger",
   ],
   alternates: { canonical: "/tjenester/ai-chatbot" },
-  openGraph: {
+  openGraph: { images: ["/og-image.png"],
     title: "AI-chatbot for bedrifter: Skreddersydd kundeservice og support",
     description,
     url: "/tjenester/ai-chatbot",
@@ -32,7 +33,7 @@ const serviceJsonLd = {
   name: "AI-chatbot for bedrifter",
   provider: {
     "@type": "Organization",
-    "@id": "https://argonsolutions.no/#organization",
+    "@id": "https://www.argonsolutions.no/#organization",
     name: "Argon Solutions",
   },
   areaServed: { "@type": "Country", name: "Norway" },
@@ -71,12 +72,13 @@ export default function AIChatbotPage() {
   ]);
 
   return (
-    <div className="py-20">
+    <div className="py-12 sm:py-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serviceJsonLdString }}
       />
       <AIChatbotContent />
+      <RelatedServices current="/tjenester/ai-chatbot" />
     </div>
   );
 }

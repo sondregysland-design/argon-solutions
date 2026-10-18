@@ -192,7 +192,7 @@ Egenbygd SVG-illustrasjon i heroen: moderne skjerm i champagne-aluminium som vis
 - **Don't** bruk gradient-tekst, glassmorphism, lilla/blå AI-slop, hero-metrics eller identiske kortgrid (PRODUCT.md: anti-referanser).
 - **Don't** skriv tankestreker som bindeledd, kolon i setninger eller "rule of three"-oppramsing i copy.
 - **Don't** bruk stock-fotos eller konsulent-fraser; demoer omtales som egenbygde demoer.
-- **Don't** skriv "Argon Solutions AS" eller oppgi grunnleggingsår.
+- **Don't** oppgi grunnleggingsår. "Argon Solutions AS" (juridisk navn per juli 2026) hører kun hjemme i juridiske felt (footer, legalName, faktura); i løpende copy skrives bare "Argon Solutions".
 - **Don't** la Claude-paletten lekke ut av skjerm-mockups (Lånte farger-regelen).
 - **Don't** legg skygge på flater i ro eller farget border-left som aksent-stripe.
 - **Don't** introduser nye fonter eller nye farger per side; paletten og Figtree er låst.

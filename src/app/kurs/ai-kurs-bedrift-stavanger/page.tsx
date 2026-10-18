@@ -4,14 +4,14 @@ import { SITE_URL, ORG_REF, faqPageJsonLd, breadcrumbJsonLd, stavangerPlace } fr
 
 const pageUrl = `${SITE_URL}/kurs/ai-kurs-bedrift-stavanger`;
 const description =
-  "AI-kurs for bedrifter i Stavanger og resten av Norge. Bedriftsintern opplæring i Claude og AI-verktøy, bygget rundt deres egne arbeidsflyter, med datasikkerhet som første tema. Fra 40 000 kr per kursdag for hele teamet.";
+  "AI-kurs for bedrifter i Stavanger og hele Norge. Claude-opplæring bygget rundt deres egne arbeidsflyter, med datasikkerhet først. Fra 40 000 kr per kursdag.";
 
 export const metadata: Metadata = {
   title: "AI-kurs for bedrift i Stavanger, opplæring hos dere",
   description,
   keywords: ["AI-kurs bedrift", "AI-kurs bedrift Stavanger", "AI-opplæring bedrift", "bedriftsinternt AI-kurs", "Claude kurs bedrift"],
   alternates: { canonical: "/kurs/ai-kurs-bedrift-stavanger" },
-  openGraph: {
+  openGraph: { images: ["/og-image.png"],
     title: "AI-kurs for bedrift i Stavanger, opplæring hos dere",
     description,
     url: "/kurs/ai-kurs-bedrift-stavanger",
@@ -45,7 +45,7 @@ const data: GeoCourseData = {
     {
       heading: "Hvorfor Argon",
       paragraphs: [
-        "Kursene holdes av folk som bruker verktøyene daglig. Grunnleggerne kommer selv fra olje og gass, fra verksted og offshore-operasjoner til kontor og prosjektstyring, og bygger til daglig software, AI-agenter og automatiseringer med de samme verktøyene det undervises i. Opplæringen er måten vi selv jobber på, ikke en innleid læreplan.",
+        "Kursene holdes av folk som bruker verktøyene daglig. Teamet kommer selv fra olje og gass, fra verksted og offshore-operasjoner til kontor og prosjektstyring, og bygger til daglig software, AI-agenter og automatiseringer med de samme verktøyene det undervises i. Opplæringen er måten vi selv jobber på, ikke en innleid læreplan.",
         "Vi er et lite selskap fra Stavanger. Dere snakker direkte med de som holder kurset, før, under og etter. Ingen mellomledd og ingen support-kø.",
       ],
     },
@@ -84,13 +84,12 @@ const data: GeoCourseData = {
   ],
   ctaHref: "/kontakt",
   ctaLabel: "Be om tilbud",
-  secondaryHref: "/kurs/bedrift",
-  secondaryLabel: "Se bedriftsopplegget",
+  secondaryHref: "/kurs",
+  secondaryLabel: "Se kursopplegget",
   relatedHeading: "Relaterte kurs og guider",
   related: [
-    { href: "/kurs/bedrift", label: "Kurs for bedrifter (Argon Industri)" },
+    { href: "/kurs", label: "AI-kurs for bedrift (Argon Industri)" },
     { href: "/kurs/claude-code-kurs-stavanger", label: "Claude Code-kurs for utviklerteam" },
-    { href: "/kurs/claude-kurs-stavanger", label: "Claude-kurs i Stavanger (åpent dagskurs)" },
     { href: "/blogg/claude-vs-chatgpt-norske-bedrifter", label: "Claude vs ChatGPT for norske bedrifter" },
     { href: "/blogg/slik-kommer-du-i-gang-med-claude", label: "Guide: Slik kommer du i gang med Claude" },
   ],

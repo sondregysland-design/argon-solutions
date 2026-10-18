@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPost, getAllSlugs, getAllPosts, type BlogPostMeta } from "@/lib/blog";
+import { getPost, getAllSlugs, getAllPosts, formatDateNo, type BlogPostMeta } from "@/lib/blog";
 import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 interface Props {
@@ -63,32 +63,32 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated,
     author: [
       {
         "@type": "Person",
-        "@id": "https://argonsolutions.no/#founder",
+        "@id": "https://www.argonsolutions.no/#founder",
         name: "Sondre Gysland",
         jobTitle: "Grunder, Argon Solutions",
         url: "https://www.linkedin.com/company/argonsolutions/",
       },
       {
         "@type": "Organization",
-        "@id": "https://argonsolutions.no/#organization",
+        "@id": "https://www.argonsolutions.no/#organization",
         name: "Argon Solutions",
-        url: "https://argonsolutions.no",
+        url: "https://www.argonsolutions.no",
       },
     ],
     publisher: {
       "@type": "Organization",
-      "@id": "https://argonsolutions.no/#organization",
+      "@id": "https://www.argonsolutions.no/#organization",
       name: "Argon Solutions",
-      url: "https://argonsolutions.no",
-      logo: { "@type": "ImageObject", url: "https://argonsolutions.no/favicon.svg" },
+      url: "https://www.argonsolutions.no",
+      logo: { "@type": "ImageObject", url: "https://www.argonsolutions.no/favicon.svg" },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://argonsolutions.no/blogg/${slug}`,
+      "@id": `https://www.argonsolutions.no/blogg/${slug}`,
     },
     keywords: post.keywords.join(", "),
   };
@@ -100,7 +100,7 @@ export default async function BlogPostPage({ params }: Props) {
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          "@id": `https://argonsolutions.no/blogg/${slug}#faq`,
+          "@id": `https://www.argonsolutions.no/blogg/${slug}#faq`,
           inLanguage: "nb-NO",
           mainEntity: post.faq.map((f) => ({
             "@type": "Question",
@@ -119,7 +119,7 @@ export default async function BlogPostPage({ params }: Props) {
     : [jsonLd, breadcrumbLd];
 
   return (
-    <article className="mx-auto max-w-3xl px-6 py-20">
+    <article className="mx-auto max-w-3xl px-6 py-12 sm:py-20">
       <script
         type="application/ld+json"
         // Safe: jsonLd is built from our own markdown frontmatter, not user input
@@ -127,13 +127,13 @@ export default async function BlogPostPage({ params }: Props) {
       />
       <Link
         href="/blogg"
-        className="text-sm text-text-light hover:text-primary transition-colors"
+        className="tap-target-inline text-sm text-text-light hover:text-primary transition-colors"
       >
         &larr; Tilbake til blogg
       </Link>
 
       <header className="mt-6">
-        <time className="text-sm text-text-light">{post.date}</time>
+        <time dateTime={post.date} className="text-sm text-text-light">{formatDateNo(post.date)}</time>
         <h1 className="mt-2 text-4xl font-bold tracking-tight text-text">
           {post.title}
         </h1>
@@ -143,7 +143,7 @@ export default async function BlogPostPage({ params }: Props) {
             SG
           </div>
           <div>
-            <p className="text-sm font-medium text-text">Sondre Gysland</p>
+            <p className="text-sm font-medium text-text">Sondre</p>
             <p className="text-xs text-text-light">
               Grunder, Argon Solutions ·{" "}
               <a
@@ -164,6 +164,22 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 
+      {post.faq.length > 0 && (
+        <section className="mt-16 border-t border-text/10 pt-10">
+          <h2 className="text-2xl font-display font-medium text-text">
+            Ofte stilte spørsmål
+          </h2>
+          <dl className="mt-6 space-y-6">
+            {post.faq.map((f) => (
+              <div key={f.q}>
+                <dt className="font-semibold text-text">{f.q}</dt>
+                <dd className="mt-2 leading-relaxed text-text-light">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
+
       {relatedPosts.length > 0 && (
         <aside className="mt-16 border-t border-text/10 pt-10">
           <h2 className="text-2xl font-display font-medium text-text">
@@ -176,7 +192,7 @@ export default async function BlogPostPage({ params }: Props) {
                 href={`/blogg/${rp.slug}`}
                 className="group block rounded-xl border border-text/10 p-5 transition-colors hover:border-primary/30 hover:bg-surface"
               >
-                <time className="text-xs text-text-light">{rp.date}</time>
+                <time dateTime={rp.date} className="text-xs text-text-light">{formatDateNo(rp.date)}</time>
                 <h3 className="mt-2 text-base font-semibold text-text group-hover:text-primary transition-colors">
                   {rp.title}
                 </h3>

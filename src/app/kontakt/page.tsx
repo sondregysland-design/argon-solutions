@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Kontakt Argon Solutions: Software for olje og gass i Stavanger",
   description,
   alternates: { canonical: "/kontakt" },
-  openGraph: {
+  openGraph: { images: ["/og-image.png"],
     title: "Kontakt Argon Solutions: Software for olje og gass i Stavanger",
     description,
     url: "/kontakt",
@@ -20,12 +20,12 @@ const contactJsonLd = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   name: "Kontakt Argon Solutions",
-  url: "https://argonsolutions.no/kontakt",
+  url: "https://www.argonsolutions.no/kontakt",
   description:
     "Kontakt Argon Solutions i Stavanger for skreddersydd software, CRM-systemer og AI-løsninger for olje og gass.",
   mainEntity: {
     "@type": "Organization",
-    "@id": "https://argonsolutions.no/#organization",
+    "@id": "https://www.argonsolutions.no/#organization",
     name: "Argon Solutions",
     contactPoint: {
       "@type": "ContactPoint",
@@ -49,7 +49,7 @@ export default function KontaktPage() {
   ]);
 
   return (
-    <div className="py-20">
+    <div className="py-12 sm:py-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript }}

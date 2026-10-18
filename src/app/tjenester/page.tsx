@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description,
   keywords: ["AI-tjenester", "AI tjenester Norge", "software energisektoren", "AI-byrå Stavanger"],
   alternates: { canonical: "/tjenester" },
-  openGraph: {
+  openGraph: { images: ["/og-image.png"],
     title: "AI-tjenester og software for energisektoren",
     description,
     url: "/tjenester",
@@ -99,7 +99,7 @@ const serviceJsonLd = {
   serviceType: "AI Services and Custom Software Development",
   provider: {
     "@type": "Organization",
-    "@id": "https://argonsolutions.no/#organization",
+    "@id": "https://www.argonsolutions.no/#organization",
     name: "Argon Solutions",
   },
   areaServed: { "@type": "Country", name: "Norway" },
@@ -170,7 +170,7 @@ const allTjenesterJsonLd = [
 
 export default function TjenesterPage() {
   return (
-    <div className="py-20">
+    <div className="py-12 sm:py-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(allTjenesterJsonLd) }}

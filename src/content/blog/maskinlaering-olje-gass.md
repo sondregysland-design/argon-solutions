@@ -48,6 +48,6 @@ Norge har en unik posisjon for maskinlæring i energisektoren:
 
 Argon Solutions er et AI-byrå i Stavanger som hjelper olje- og gasselskaper med å implementere maskinlæring i sine arbeidsprosesser. Vi bruker Claude AI fra Anthropic, Playwright for automatisering, og moderne webteknologi for å bygge løsninger som gir rask ROI.
 
-Grunnlegger Sondre Gysland har ingeniørerfaring fra offshore-operasjoner og subsea-prosjekter, som gir oss unik innsikt i bransjens reelle behov.
+Grunnlegger Sondre har ingeniørerfaring fra offshore-operasjoner og subsea-prosjekter, som gir oss unik innsikt i bransjens reelle behov.
 
 [Kontakt oss for en uforpliktende samtale →](/kontakt)

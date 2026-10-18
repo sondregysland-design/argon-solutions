@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { format, addMonths, addDays, parseISO } from "date-fns";
 import { nb, enUS } from "date-fns/locale";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { track } from "@vercel/analytics";
 import { BookingCalendar } from "./BookingCalendar";
 
 export function BookingSection() {
@@ -12,7 +13,6 @@ export function BookingSection() {
   const m =
     locale === "en"
       ? {
-          loadError: "Could not load available times",
           genericError: "Something went wrong",
           retryError: "Something went wrong. Please try again.",
           successTitle: "Booking confirmed",
@@ -34,9 +34,13 @@ export function BookingSection() {
           submitting: "Booking...",
           footer:
             "Times are updated continuously. Bookings must be made at least 2 days in advance.",
+          unavailableTitle: "The calendar is temporarily unavailable",
+          unavailableBody:
+            "Send us a short message instead, and we will suggest a time that suits you.",
+          unavailableForm: "Write to us",
+          unavailableRetry: "Try again",
         }
       : {
-          loadError: "Kunne ikke laste tilgjengelige tider",
           genericError: "Noe gikk galt",
           retryError: "Noe gikk galt. Vennligst prøv igjen.",
           successTitle: "Booking bekreftet!",
@@ -58,6 +62,11 @@ export function BookingSection() {
           submitting: "Booker...",
           footer:
             "Tidene oppdateres fortløpende. Booking må gjøres minst 2 dager i forveien.",
+          unavailableTitle: "Kalenderen er midlertidig utilgjengelig",
+          unavailableBody:
+            "Send oss en kort melding i stedet, så foreslår vi et tidspunkt som passer deg.",
+          unavailableForm: "Skriv til oss",
+          unavailableRetry: "Prøv igjen",
         };
 
   const [availability, setAvailability] = useState<Record<string, string[]>>({});
@@ -66,31 +75,34 @@ export function BookingSection() {
   const [loading, setLoading] = useState(false);
   const [fetchingSlots, setFetchingSlots] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [loadFailed, setLoadFailed] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [topic, setTopic] = useState("");
+  const [website, setWebsite] = useState(""); // honeypot
 
   const fetchAvailability = useCallback(async () => {
     setFetchingSlots(true);
+    setLoadFailed(false);
     try {
       const from = format(addDays(new Date(), 2), "yyyy-MM-dd");
       const to = format(addMonths(new Date(), 2), "yyyy-MM-dd");
       const res = await fetch(`/api/availability?from=${from}&to=${to}`);
       if (!res.ok) {
-        setError(m.loadError);
+        setLoadFailed(true);
         return;
       }
       const data = await res.json();
       if (data.dates) setAvailability(data.dates);
     } catch {
-      setError(m.loadError);
+      setLoadFailed(true);
     } finally {
       setFetchingSlots(false);
     }
-  }, [m.loadError]);
+  }, []);
 
   useEffect(() => {
     fetchAvailability();
@@ -107,7 +119,7 @@ export function BookingSection() {
       const res = await fetch("/api/book", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ date: selectedDate, time: selectedTime, name, email, company, topic }),
+        body: JSON.stringify({ date: selectedDate, time: selectedTime, name, email, company, topic, website }),
       });
       const result = await res.json();
       if (!res.ok) {
@@ -115,6 +127,7 @@ export function BookingSection() {
         return;
       }
       setSuccess(true);
+      track("booking_confirmed");
     } catch {
       setError(m.retryError);
     } finally {
@@ -141,10 +154,41 @@ export function BookingSection() {
         </p>
         <button
           onClick={() => { setSuccess(false); setSelectedDate(null); setSelectedTime(null); setName(""); setEmail(""); setCompany(""); setTopic(""); fetchAvailability(); }}
-          className="mt-4 text-sm text-primary hover:underline"
+          className="tap-target-inline mt-4 px-2 text-sm text-primary hover:underline"
         >
           {m.bookAnother}
         </button>
+      </div>
+    );
+  }
+
+  // Når kalender-API-et feiler (f.eks. utløpt Google-token) skal besøkende
+  // ikke stå fast: send dem til kontaktskjemaet på samme side.
+  if (loadFailed) {
+    return (
+      <div className="rounded-xl border border-text/10 bg-white p-8 text-center">
+        <h3 className="text-lg font-semibold text-text">{m.unavailableTitle}</h3>
+        <p className="mt-2 text-sm text-text-light">{m.unavailableBody}</p>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="#melding"
+            className="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-ink/85"
+          >
+            {m.unavailableForm}
+          </a>
+          <a
+            href="mailto:post@argonsolutions.no"
+            className="tap-target-inline px-2 text-sm text-primary hover:underline"
+          >
+            post@argonsolutions.no
+          </a>
+          <button
+            onClick={() => fetchAvailability()}
+            className="tap-target-inline px-2 text-sm text-text-light hover:underline"
+          >
+            {m.unavailableRetry}
+          </button>
+        </div>
       </div>
     );
   }
@@ -213,17 +257,21 @@ export function BookingSection() {
 
           {selectedTime && (
             <form onSubmit={handleSubmit} className="space-y-4">
+              <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+                <label htmlFor="book-website">Website</label>
+                <input id="book-website" type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
+              </div>
               <div>
                 <label htmlFor="book-name" className="block text-sm font-medium text-text">{m.nameLabel}</label>
-                <input id="book-name" type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder={m.namePlaceholder} className={inputClass} />
+                <input id="book-name" type="text" autoComplete="name" required value={name} onChange={(e) => setName(e.target.value)} placeholder={m.namePlaceholder} className={inputClass} />
               </div>
               <div>
                 <label htmlFor="book-email" className="block text-sm font-medium text-text">{m.emailLabel}</label>
-                <input id="book-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder={m.emailPlaceholder} className={inputClass} />
+                <input id="book-email" type="email" autoComplete="email" inputMode="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder={m.emailPlaceholder} className={inputClass} />
               </div>
               <div>
                 <label htmlFor="book-company" className="block text-sm font-medium text-text">{m.companyLabel}</label>
-                <input id="book-company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder={m.companyPlaceholder} className={inputClass} />
+                <input id="book-company" type="text" autoComplete="organization" value={company} onChange={(e) => setCompany(e.target.value)} placeholder={m.companyPlaceholder} className={inputClass} />
               </div>
               <div>
                 <label htmlFor="book-topic" className="block text-sm font-medium text-text">{m.topicLabel}</label>
@@ -250,7 +298,7 @@ export function BookingSection() {
         </div>
       </div>
 
-      <p className="text-xs text-gray-400 mt-6">
+      <p className="mt-6 text-[13px] leading-relaxed sm:text-xs text-gray-400">
         {m.footer}
       </p>
     </div>

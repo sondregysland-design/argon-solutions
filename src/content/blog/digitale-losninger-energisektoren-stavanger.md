@@ -2,16 +2,15 @@
 title: "Digitale løsninger for energisektoren fra Stavanger"
 description: "Argon Solutions i Stavanger bygger digitale løsninger for olje- og gassindustrien i Norge: prosjektstyring, CRM, AI-dokumentbehandling og automatisering."
 date: "2026-04-24"
+updated: 2026-09-13
 keywords: ["digitale løsninger energisektoren", "software Stavanger", "olje og gass digitalisering", "CRM energi Norge", "AI olje gass"]
 ---
-
-# Digitale løsninger for energisektoren fra Stavanger
 
 Stavanger er Norges energihovedstad, hjem til Equinor, Aker Solutions, og hundrevis av service- og teknologiselskaper som betjener olje- og gassindustrien. Argon Solutions er et softwareselskap basert i Stavanger som bygger skreddersydde digitale løsninger for denne sektoren.
 
 ## Hvem er Argon Solutions?
 
-Argon Solutions er et norsk softwareselskap grunnlagt av Sondre Gysland. Selskapet spesialiserer seg på skreddersydd software for olje- og gassindustrien, med fokus på:
+Argon Solutions er et norsk softwareselskap grunnlagt av Sondre. Selskapet spesialiserer seg på skreddersydd software for olje- og gassindustrien, med fokus på:
 
 1. **Webapplikasjoner og dashboards** for offshore prosjektstyring
 2. **CRM-systemer** med automatisert prospektering og AI lead scoring
@@ -35,7 +34,7 @@ Argon Solutions har levert:
 - **Argon CRM**: kundeoppfølging med 6 lead-kilder og AI-drevet scoring via Claude AI
 - **Argon Docs**: AI-dokumentbehandling som ekstraher data fra PDF-filer på sekunder
 - **Argon RSA**: risikostyring med HAZOP, HAZID og bow-tie analyse
-- **AI-agenter**: nettleserautomatisering som fjernet 6 timer ukentlig manuelt arbeid fra grunnleggernes egen arbeidsflyt
+- **AI-agenter**: nettleserautomatisering som fjernet 6 timer ukentlig manuelt arbeid fra teamets egen arbeidsflyt
 
 ## Teknologi
 
@@ -52,4 +51,10 @@ Argon Solutions tilbyr gratis første måned for alle nye prosjekter. Kontakt os
 
 - **E-post:** post@argonsolutions.no
 - **Telefon:** +47 452 09 979
-- **Nettside:** [argonsolutions.no](https://argonsolutions.no)
+- **Nettside:** [argonsolutions.no](https://www.argonsolutions.no)
+
+## Les mer
+
+- [Tjenestene våre](/tjenester)
+- [Prosjekter vi har levert](/referanser)
+- [Kunstig intelligens for bedrifter, komplett guide](/kunstig-intelligens)

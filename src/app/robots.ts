@@ -23,7 +23,31 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "GoogleOther",
         allow: "/",
       },
+      {
+        userAgent: "Google-Extended",
+        allow: "/",
+      },
+      {
+        userAgent: "Claude-Web",
+        allow: "/",
+      },
+      {
+        userAgent: "anthropic-ai",
+        allow: "/",
+      },
+      {
+        userAgent: "CCBot",
+        allow: "/",
+      },
+      {
+        userAgent: "meta-externalagent",
+        allow: "/",
+      },
+      {
+        userAgent: "OAI-SearchBot",
+        allow: "/",
+      },
     ],
-    sitemap: "https://argonsolutions.no/sitemap.xml",
+    sitemap: "https://www.argonsolutions.no/sitemap.xml",
   };
 }

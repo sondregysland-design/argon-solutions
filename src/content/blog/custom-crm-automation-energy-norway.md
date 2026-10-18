@@ -2,10 +2,9 @@
 title: "Custom CRM and Automation Tools for Energy Companies in Norway"
 description: "Argon Solutions builds custom CRM and automation tools for the Norwegian oil and gas industry. AI-driven lead scoring, automated prospecting, and browser automation from Stavanger."
 date: "2026-04-24"
+updated: 2026-09-13
 keywords: ["custom CRM Norway", "automation tools energy", "CRM oil and gas", "sales automation Stavanger", "AI lead scoring"]
 ---
-
-# Custom CRM and Automation Tools for Energy Companies in Norway
 
 Energy companies in Norway face unique challenges when it comes to customer relationship management and sales automation. Standard CRM tools like Salesforce or HubSpot are designed for general business use and lack the industry-specific features that oil and gas companies need.
 
@@ -69,7 +68,13 @@ Argon Solutions builds with:
 
 Argon Solutions is based in Stavanger, Norway, the oil and energy capital of Scandinavia.
 
-- **Website:** [argonsolutions.no](https://argonsolutions.no)
+- **Website:** [argonsolutions.no](https://www.argonsolutions.no)
 - **Email:** post@argonsolutions.no
 - **Phone:** +47 452 09 979
 - **Free first month** for all new projects
+
+## Read more
+
+- [System integration and API development](/tjenester/systemintegrasjon)
+- [Argon CRM and our other products](/produkter)
+- [Project references](/referanser)

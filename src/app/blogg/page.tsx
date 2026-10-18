@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPosts, formatDateNo } from "@/lib/blog";
 import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
-const title = "Blogg | Argon Solutions";
+const title = "Blogg: AI, Claude og digitalisering i praksis";
 const description =
   "Artikler om AI-automatisering, digitalisering og systemintegrasjon i norsk olje og gass. Innsikt og ekspertise fra Argon Solutions i Stavanger.";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/blogg" },
-  openGraph: {
+  openGraph: { images: ["/og-image.png"],
     title,
     description,
     url: "/blogg",
@@ -33,10 +33,10 @@ export default function BlogPage() {
     name: "Argon Solutions Blogg",
     description:
       "Artikler om AI-automatisering, digitalisering og systemintegrasjon i norsk olje og gass fra Argon Solutions i Stavanger.",
-    url: "https://argonsolutions.no/blogg",
+    url: "https://www.argonsolutions.no/blogg",
     publisher: {
       "@type": "Organization",
-      "@id": "https://argonsolutions.no/#organization",
+      "@id": "https://www.argonsolutions.no/#organization",
       name: "Argon Solutions",
     },
     mainEntity: {
@@ -44,7 +44,7 @@ export default function BlogPage() {
       itemListElement: posts.map((post, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        url: `https://argonsolutions.no/blogg/${post.slug}`,
+        url: `https://www.argonsolutions.no/blogg/${post.slug}`,
         name: post.title,
       })),
     },
@@ -59,9 +59,9 @@ export default function BlogPage() {
   ]);
 
   return (
-    <section className="mx-auto max-w-4xl px-6 py-20">
+    <section className="mx-auto max-w-4xl px-6 py-12 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: blogScript }} />
-      <h1 className="text-4xl font-bold tracking-tight text-text">Blogg | Argon Solutions</h1>
+      <h1 className="text-4xl font-bold tracking-tight text-text">Blogg</h1>
       <p className="mt-4 text-lg text-text-light">
         Innsikt om teknologi, automatisering og digitalisering i
         energisektoren fra Argon Solutions i Stavanger.
@@ -69,12 +69,7 @@ export default function BlogPage() {
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
         {posts.map((post) => {
-          const d = new Date(post.date);
-          const formatted = d.toLocaleDateString("nb-NO", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          });
+          const formatted = formatDateNo(post.date);
 
           return (
             <article
@@ -82,7 +77,7 @@ export default function BlogPage() {
               className="group flex flex-col rounded-2xl border border-text/10 bg-white p-6 transition-shadow hover:shadow-md"
             >
               <Link href={`/blogg/${post.slug}`} className="flex flex-col flex-1">
-                <time className="text-xs font-medium uppercase tracking-wider text-text-light">
+                <time dateTime={post.date} className="text-xs font-medium uppercase tracking-wider text-text-light">
                   {formatted}
                 </time>
                 <h2 className="mt-2 text-lg font-semibold text-text group-hover:text-primary transition-colors leading-snug">

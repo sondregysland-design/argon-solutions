@@ -3,6 +3,7 @@ title: "Claude Code for deg som ikke koder"
 description: "Claude Code er ikke bare for utviklere. Norsk guide til hva Claude Code er, hva ikke-utviklere faktisk kan bruke det til, og hvordan du kommer i gang uten teknisk bakgrunn."
 keywords: ["Claude Code", "Claude Code norsk", "Claude Code for nybegynnere", "AI-automatisering", "vibe coding", "Claude Code kurs"]
 date: 2026-07-08
+updated: 2026-09-13
 faq:
   - q: "Hva er Claude Code?"
     a: "Claude Code er Anthropics agentiske arbeidsverktøy. Det kjører på din egen maskin, kan lese og skrive filer, kjøre programmer og jobbe selvstendig gjennom oppgaver i flere steg. Det ble laget for utviklere, men brukes i økende grad til dokumenthåndtering, dataarbeid og automatisering av kontoroppgaver."
@@ -30,13 +31,13 @@ Orden i filer og mapper. Rydde, døpe om etter fast mønster, sortere etter innh
 
 Gjentakende småoppgaver. Ukesrapporten som alltid settes sammen fra de samme tre kildene. Sjekklisten som fylles ut fra e-postvedlegg. Claude Code kan gjøre oppgaven, og så huske oppskriften til neste gang.
 
-Små verktøy og oversikter. Trenger du en enkel kalkulator, en statusoversikt eller et skjema, beskriver du det og får det bygget. Dette grenser mot [vibe coding](/kurs/vibe-coding-kurs-stavanger), å lage programvare ved å beskrive den.
+Små verktøy og oversikter. Trenger du en enkel kalkulator, en statusoversikt eller et skjema, beskriver du det og får det bygget. Dette grenser mot vibe coding, å lage programvare ved å beskrive den.
 
 ## Det ærlige forbeholdet
 
 Claude Code kjører i terminalen, det svarte tekstvinduet som ser ut som noe fra en hackerfilm. Du trenger ikke kunne kommandoer, men du må tåle synet. Installasjonen tar noen minutter og krever at du følger en oppskrift. Og verktøyet spør om lov før det endrer filer, så du må lese og svare underveis.
 
-Er det for høy terskel, er det ingen skam å bli i Claude-appen. Den dekker mye, og [dagskurset vårt](/kurs/claude-kurs-stavanger) foregår nettopp der. Men klarer du å installere et program og følge en oppskrift, klarer du å komme i gang med Claude Code.
+Er det for høy terskel, er det ingen skam å bli i Claude-appen. Den dekker mye, og [bedriftskurset vårt](/kurs) starter nettopp der. Men klarer du å installere et program og følge en oppskrift, klarer du å komme i gang med Claude Code.
 
 ## Slik kommer du i gang
 
@@ -44,22 +45,9 @@ Start i det små. Installer Claude Code, lag en egen arbeidsmappe med kopier av 
 
 Neste steg er å ta en ekte, repeterende oppgave fra din egen uke og la Claude Code gjøre den sammen med deg. Når den sitter, ber du Claude Code skrive ned oppskriften, så går neste kjøring av seg selv. Det er slik automatiseringene bygges, én oppgave om gangen.
 
-Vil du ha hjelp til å komme dit, underviser vi i akkurat dette. Ikke-utviklere starter best på det [åpne Claude-kurset i Stavanger](/kurs/claude-kurs-stavanger), der vi jobber i Claude-appen og viser veien videre. Tekniske team som vil rett på Claude Code, får eget [Claude Code-kurs](/kurs/claude-code-kurs-stavanger), og bedrifter som vil løfte hele kontoret finner opplegget på [AI-kurs for bedrift](/kurs/ai-kurs-bedrift-stavanger).
+Vil dere ha hjelp til å komme dit, underviser vi i akkurat dette. Ikke-utviklere starter best på [bedriftskurset vårt](/kurs), der vi jobber i Claude-appen og viser veien videre. Tekniske team som vil rett på Claude Code, får eget [Claude Code-kurs](/kurs/claude-code-kurs-stavanger), og bedrifter som vil løfte hele kontoret finner opplegget på [AI-kurs for bedrift](/kurs/ai-kurs-bedrift-stavanger).
 
-## Ofte stilte spørsmål
+## Les mer
 
-### Hva er Claude Code?
-
-Claude Code er Anthropics agentiske arbeidsverktøy. Det kjører på din egen maskin, kan lese og skrive filer, kjøre programmer og jobbe selvstendig gjennom oppgaver i flere steg. Det ble laget for utviklere, men brukes i økende grad til dokumenthåndtering, dataarbeid og automatisering av kontoroppgaver.
-
-### Må jeg kunne programmere for å bruke Claude Code?
-
-Nei, men du må tåle å jobbe i et terminalvindu, altså å skrive kommandoer som tekst i stedet for å klikke på knapper. Selve arbeidet beskriver du på vanlig norsk. Mange ikke-utviklere bruker Claude Code daglig til filer, rapporter og automatiseringer.
-
-### Hva er forskjellen på Claude-appen og Claude Code?
-
-Claude-appen er en samtale i nettleseren eller på mobilen, der du laster opp filer manuelt. Claude Code jobber direkte på maskinen din, i dine egne mapper og filer, og kan gjøre endringer, kjøre verktøy og gjenta oppgaver. Appen er enklest å starte med, Claude Code er kraftigere for gjentakende arbeid. Ny til Claude? Start med guiden [Slik kommer du i gang med Claude](/blogg/slik-kommer-du-i-gang-med-claude).
-
-### Er det trygt å la Claude Code jobbe i filene mine?
-
-Claude Code spør om lov før det endrer filer eller kjører kommandoer, og du styrer hvilke mapper det har tilgang til. Start i en egen arbeidsmappe med kopier av dokumenter til du er trygg på verktøyet, og følg bedriftens kjøreregler for hvilke data som kan brukes med AI-verktøy.
+- [Slik kommer du i gang med Claude](/blogg/slik-kommer-du-i-gang-med-claude)
+- [Hva er Claude AI? Komplett norsk guide](/blogg/hva-er-claude-ai-norsk-guide)

@@ -1,0 +1,183 @@
+{
+  "label": "before-panel",
+  "base": "http://localhost:4311",
+  "results": [
+    {
+      "route": "/",
+      "key": "root",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "innerWidth": 390,
+      "overflow": 0,
+      "widest": null,
+      "smallTapTargets": [],
+      "domNodes": 270,
+      "h1Count": 1,
+      "smallTapCount": 0,
+      "requests": 99,
+      "bytes": 1066760,
+      "bytesJs": 740266,
+      "bytesImg": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Refused to execute script from 'http://localhost:4311/_vercel/insights/script.js' because its MIME type ('text/html') is"
+      ],
+      "menu": {
+        "navHeight": 835,
+        "viewportHeight": 664,
+        "navSharePct": 126,
+        "totalLinks": 24,
+        "linksOutsideViewport": 2,
+        "unreachableLinks": [
+          "Om oss",
+          "Kontakt"
+        ],
+        "scrollablePanel": null,
+        "bodyScrollLocked": true,
+        "expanded": "Tjenester",
+        "unreachableAfterScroll": [
+          "Om oss",
+          "Kontakt"
+        ],
+        "trulyUnreachable": [
+          "Om oss",
+          "Kontakt"
+        ]
+      }
+    },
+    {
+      "route": "/kurs",
+      "key": "kurs",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "innerWidth": 390,
+      "overflow": 0,
+      "widest": null,
+      "smallTapTargets": [
+        {
+          "tag": "a",
+          "w": 90,
+          "h": 17,
+          "text": "Argon Industri",
+          "cls": "font-medium text-steel underline underline-offset-2 hover:te"
+        }
+      ],
+      "domNodes": 399,
+      "h1Count": 1,
+      "smallTapCount": 1,
+      "requests": 59,
+      "bytes": 916272,
+      "bytesJs": 639544,
+      "bytesImg": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Refused to execute script from 'http://localhost:4311/_vercel/insights/script.js' because its MIME type ('text/html') is"
+      ],
+      "menu": null
+    },
+    {
+      "route": "/kurs/bedrift",
+      "key": "kurs-bedrift",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "innerWidth": 390,
+      "overflow": 0,
+      "widest": null,
+      "smallTapTargets": [],
+      "domNodes": 271,
+      "h1Count": 1,
+      "smallTapCount": 0,
+      "requests": 59,
+      "bytes": 907020,
+      "bytesJs": 639544,
+      "bytesImg": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Refused to execute script from 'http://localhost:4311/_vercel/insights/script.js' because its MIME type ('text/html') is"
+      ],
+      "menu": null
+    },
+    {
+      "route": "/kontakt",
+      "key": "kontakt",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "innerWidth": 390,
+      "overflow": 0,
+      "widest": null,
+      "smallTapTargets": [],
+      "domNodes": 254,
+      "h1Count": 1,
+      "smallTapCount": 0,
+      "requests": 60,
+      "bytes": 896500,
+      "bytesJs": 639544,
+      "bytesImg": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Refused to execute script from 'http://localhost:4311/_vercel/insights/script.js' because its MIME type ('text/html') is",
+        "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+      ],
+      "menu": null
+    },
+    {
+      "route": "/blogg/claude-code-oppsett-teams",
+      "key": "blogg-post",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "innerWidth": 390,
+      "overflow": 0,
+      "widest": null,
+      "smallTapTargets": [
+        {
+          "tag": "a",
+          "w": 45,
+          "h": 14,
+          "text": "LinkedIn",
+          "cls": "hover:text-primary transition-colors"
+        },
+        {
+          "tag": "a",
+          "w": 74,
+          "h": 19,
+          "text": "Ta kontakt",
+          "cls": ""
+        }
+      ],
+      "domNodes": 286,
+      "h1Count": 1,
+      "smallTapCount": 2,
+      "requests": 59,
+      "bytes": 921147,
+      "bytesJs": 639544,
+      "bytesImg": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Refused to execute script from 'http://localhost:4311/_vercel/insights/script.js' because its MIME type ('text/html') is"
+      ],
+      "menu": null
+    },
+    {
+      "route": "/tjenester",
+      "key": "tjenester",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "innerWidth": 390,
+      "overflow": 0,
+      "widest": null,
+      "smallTapTargets": [],
+      "domNodes": 223,
+      "h1Count": 1,
+      "smallTapCount": 0,
+      "requests": 74,
+      "bytes": 954319,
+      "bytesJs": 663920,
+      "bytesImg": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Refused to execute script from 'http://localhost:4311/_vercel/insights/script.js' because its MIME type ('text/html') is"
+      ],
+      "menu": null
+    }
+  ]
+}

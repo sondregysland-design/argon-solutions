@@ -64,7 +64,7 @@ export function LanguageSwitcher() {
         onClick={() => setOpen((value) => !value)}
         aria-label="Velg språk"
         aria-expanded={open}
-        className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium text-text-light transition-colors hover:text-primary"
+        className="tap-target-inline flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium text-text-light transition-colors hover:text-primary"
       >
         <span className="inline-block h-5 w-5 overflow-hidden rounded-full ring-1 ring-black/10">
           <current.Flag />
@@ -85,7 +85,7 @@ export function LanguageSwitcher() {
                 setLocale(l.code);
                 setOpen(false);
               }}
-              className={`flex w-full items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
+              className={`tap-target flex w-full items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
                 l.code === locale ? "bg-primary/5 font-semibold text-text" : "text-text-light hover:bg-surface"
               }`}
             >

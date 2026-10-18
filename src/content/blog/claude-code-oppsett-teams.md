@@ -3,6 +3,16 @@ title: "Claude Code oppsett for teams: Komplett guide til CLAUDE.md, hooks og sk
 description: "Teknisk guide til å sette opp Claude Code for hele teamet. Lær å konfigurere CLAUDE.md, bygge skills, sette opp hooks og dele konfigurasjon på tvers av prosjekter."
 keywords: ["Claude Code oppsett", "Claude Code team", "CLAUDE.md", "Claude Code skills", "Claude Code hooks", "Claude Code MCP"]
 date: 2026-04-21
+updated: 2026-09-13
+faq:
+  - q: "Hva er CLAUDE.md?"
+    a: "CLAUDE.md er en fil i prosjektet som beskriver hvordan Claude Code skal jobbe der. Den inneholder kjøreregler, arkitektur, kommandoer og konvensjoner, og leses automatisk ved hver økt, slik at hele teamet får samme oppførsel."
+  - q: "Hvorfor trenger et team delt Claude Code-oppsett?"
+    a: "Uten delt oppsett bygger hver utvikler sine egne vaner, og resultatet varierer fra maskin til maskin. Delte skills, hooks og CLAUDE.md gjør at verktøyet oppfører seg likt for alle, og at kvalitetskontroll kjøres automatisk i stedet for å avhenge av hvem som satt ved tastaturet."
+  - q: "Hva gjør hooks i Claude Code?"
+    a: "Hooks kjører automatisk på bestemte tidspunkt, for eksempel før eller etter at en fil endres. De brukes typisk til å kjøre linting, tester eller formatering, slik at feil fanges før de rekker å bli commitet."
+  - q: "Hvor lang tid tar det å sette opp Claude Code for et team?"
+    a: "Et fungerende grunnoppsett med CLAUDE.md, noen skills og et par hooks tar typisk en dag. Å modne oppsettet med MCP-servere mot egne systemer og skills for teamets faktiske arbeidsflyter tar noen uker med bruk."
 ---
 
 En enkeltperson som installerer Claude Code og bruker det ad hoc, får kanskje 20–30 % produktivitetsforbedring. Et team som setter opp Claude Code riktig, med delt konfigurasjon, skreddersydde skills og automatiske hooks, ser gjerne 50–70 %. Forskjellen er ikke verktøyet, det er konfigurasjonen.

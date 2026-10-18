@@ -3,6 +3,16 @@ title: "Claude Code for bedrifter: Mer enn bare et kodeverktøy"
 description: "Claude Code er Anthropics AI-drevne utviklingsverktøy. Lær hvordan norske bedrifter bruker det som et komplett AI-operativsystem med skreddersydde skills, MCP-servere og automatiserte arbeidsflyter."
 keywords: ["Claude Code", "Claude Code bedrift", "AI-operativsystem", "Claude Code oppsett", "AI-verktøy", "Anthropic Claude", "AI-byrå Stavanger"]
 date: 2026-04-26
+updated: 2026-09-13
+faq:
+  - q: "Hva er Claude Code?"
+    a: "Claude Code er Anthropics verktøy som kjører i terminalen på din egen maskin. Det leser og skriver filer direkte, kjører kommandoer og løser hele oppgaver selvstendig, i stedet for å svare i et chattevindu som du selv må handle på."
+  - q: "Er Claude Code bare for utviklere?"
+    a: "Nei. Utviklere får mest ut av det i kodebaser, men verktøyet er like nyttig for dokumenthåndtering, rapportgenerering og automatisering av repetitive kontoroppgaver. Alt som ligger som filer på en maskin kan Claude Code jobbe med."
+  - q: "Hva er skills og MCP-servere?"
+    a: "Skills er skreddersydde kommandoer som koder inn bedriftens egne arbeidsflyter, slik at de kjøres likt hver gang. MCP-servere gir Claude Code direkte tilgang til systemene dere allerede bruker, for eksempel databaser, e-post eller prosjektverktøy."
+  - q: "Hva koster det å sette opp Claude Code for en bedrift?"
+    a: "Selve verktøyet følger Claude-abonnementet. Kostnaden ligger i oppsett og opplæring. Argon Solutions holder bedriftsinterne Claude Code-kurs fra 40 000 kr per kursdag for hele teamet."
 ---
 
 De fleste hører "Claude Code" og tenker: et kodeverktøy for utviklere. Det er en naturlig slutning. Navnet antyder det. Men bedrifter som bruker Claude Code i produksjon i dag opplever noe annet: et komplett AI-operativsystem som kan automatisere, analysere og levere arbeid på tvers av hele organisasjonen.

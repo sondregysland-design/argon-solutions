@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { useT } from "@/i18n/LanguageProvider";
 
 export function ContactForm() {
@@ -27,6 +28,7 @@ export function ContactForm() {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      website: (form.elements.namedItem("website") as HTMLInputElement).value,
     };
     try {
       const res = await fetch("/api/contact", {
@@ -36,6 +38,7 @@ export function ContactForm() {
       });
       if (!res.ok) throw new Error("Sending feilet");
       setSubmitted(true);
+      track("contact_submitted");
     } catch {
       setError(t("contactForm.error"));
     } finally {
@@ -48,6 +51,11 @@ export function ContactForm() {
       onSubmit={handleSubmit}
       className="space-y-6"
     >
+      {/* Honeypot: skjult for mennesker og skjermlesere, bots fyller det ut */}
+      <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+        <label htmlFor="website">Website</label>
+        <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-text">
           {t("contactForm.name")}
@@ -56,6 +64,7 @@ export function ContactForm() {
           type="text"
           id="name"
           name="name"
+          autoComplete="name"
           required
           className="mt-1 block w-full rounded-lg border border-text/15 px-4 py-3 text-sm placeholder:text-text-light transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           placeholder={t("contactForm.namePh")}
@@ -69,6 +78,8 @@ export function ContactForm() {
           type="email"
           id="email"
           name="email"
+          autoComplete="email"
+          inputMode="email"
           required
           className="mt-1 block w-full rounded-lg border border-text/15 px-4 py-3 text-sm placeholder:text-text-light transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           placeholder={t("contactForm.emailPh")}
@@ -83,6 +94,7 @@ export function ContactForm() {
           name="message"
           rows={5}
           required
+          maxLength={5000}
           className="mt-1 block w-full rounded-lg border border-text/15 px-4 py-3 text-sm placeholder:text-text-light transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           placeholder={t("contactForm.messagePh")}
         />
