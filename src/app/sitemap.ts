@@ -51,7 +51,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/tjenester/ai-strategi`, lastModified: STATIC_LASTMOD, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${baseUrl}/tjenester/ai-automatisering`, lastModified: STATIC_LASTMOD, changeFrequency: "monthly" as const, priority: 0.85 },
     { url: `${baseUrl}/kunstig-intelligens`, lastModified: AUDIT_OCT, changeFrequency: "monthly" as const, priority: 0.95 },
-    { url: `${baseUrl}/en/ai-agency-stavanger`, lastModified: STATIC_LASTMOD, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${baseUrl}/ai-byra-stavanger`, lastModified: new Date("2026-10-19"), changeFrequency: "monthly" as const, priority: 0.9 },
+    { url: `${baseUrl}/tjenester/ai-for-industribedrifter`, lastModified: new Date("2026-10-19"), changeFrequency: "monthly" as const, priority: 0.85 },
+    { url: `${baseUrl}/en/ai-agency-stavanger`, lastModified: new Date("2026-10-19"), changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${baseUrl}/en/claude-code-course`, lastModified: AUDIT_OCT, changeFrequency: "monthly" as const, priority: 0.75 },
     {
       url: `${baseUrl}/produkter`,

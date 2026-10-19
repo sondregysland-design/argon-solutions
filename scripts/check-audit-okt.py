@@ -107,5 +107,25 @@ check("book: ugyldig datoformat gir 400", st == 400, f"{st} {b[:60]}")
 st, b = post("/api/book", {"date": "2026-11-02", "time": "10:00", "name": "<b>" * 60, "email": "a@example.com"})
 check("book: for langt navn gir 400", st == 400, f"{st} {b[:60]}")
 
+# 10. GEO-tiltak 2026-10-19
+html = get("/ai-byra-stavanger")[2].decode()
+check("/ai-byra-stavanger har én H1", len(re.findall(r"<h1[\s>]", html)) == 1)
+check("/ai-byra-stavanger hreflang til EN",
+      re.search(r'<link[^>]+hreflang="en"[^>]+/en/ai-agency-stavanger', html, re.I) is not None)
+check("/ai-byra-stavanger FAQ synlig",
+      "Hvilke AI-byråer finnes i Stavanger?" in re.sub(r"<script.*?</script>", "", html, flags=re.S))
+en = get("/en/ai-agency-stavanger")[2].decode()
+check("EN-side hreflang til /ai-byra-stavanger",
+      re.search(r'<link[^>]+hreflang="nb-NO"[^>]+/ai-byra-stavanger', en, re.I) is not None)
+check("EN-side uten åpne dagskurs", "open one-day" not in en)
+ind = get("/tjenester/ai-for-industribedrifter")[2].decode()
+check("industriside har FAQPage", '"FAQPage"' in ind)
+check("kalkulator på /tjenester/ai-automatisering", "kostnadskalkulator" in get("/tjenester/ai-automatisering")[2].decode())
+sm = get("/sitemap.xml")[2].decode()
+check("nye sider i sitemap", "/ai-byra-stavanger" in sm and "/tjenester/ai-for-industribedrifter" in sm)
+full = get("/llms-full.txt")[2].decode()
+check("llms-full uten åpne dagskurs", "open day course" not in full and "open Claude day" not in full)
+check("footer lenker til /ai-byra-stavanger", 'href="/ai-byra-stavanger"' in get("/")[2].decode())
+
 print(f"\n{'Alt grønt' if fails == 0 else f'{fails} feil'}")
 sys.exit(1 if fails else 0)

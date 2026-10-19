@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { after, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { pushLead } from "@/lib/crm";
 import { EMAIL_RE, esc, isBot, tooLong } from "@/lib/form-guard";
@@ -86,6 +86,30 @@ export async function POST(request: Request) {
   }
 
   pushLead({ name, email, message, source: "contact-form" });
+
+  // Kvittering til innsender. Bevisst uten noe av det brukeren skrev (ikke engang
+  // navnet), så skjemaet ikke kan brukes til å sende vilkårlig innhold fra domenet.
+  after(async () => {
+    const { error: receiptError } = await resend.emails.send({
+      from: emailFrom,
+      to: email,
+      replyTo: "post@argonsolutions.no",
+      subject: "Vi har mottatt meldingen din",
+      text: [
+        "Hei,",
+        "",
+        "Takk for meldingen. Vi har mottatt henvendelsen din og svarer vanligvis innen 24 timer på hverdager.",
+        "Haster det, kan du ringe oss på +47 452 09 979.",
+        "",
+        "Thanks for your message. We usually reply within 24 hours on weekdays.",
+        "",
+        "Vennlig hilsen",
+        "Argon Solutions",
+        "post@argonsolutions.no",
+      ].join("\n"),
+    });
+    if (receiptError) console.error("Kvittering feilet:", receiptError.message);
+  });
 
   return NextResponse.json({ success: true });
 }

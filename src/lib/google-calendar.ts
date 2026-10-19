@@ -46,15 +46,38 @@ function getSlotsForDate(dateStr: string): string[] {
   return pool.slice(0, numSlots).sort();
 }
 
-function getAuth() {
-  return new google.auth.OAuth2(
-    envTrimmed("GOOGLE_CLIENT_ID"),
-    envTrimmed("GOOGLE_CLIENT_SECRET")
-  );
+/**
+ * Service account (GOOGLE_SERVICE_ACCOUNT_JSON, rå JSON eller base64) brukes når
+ * den er satt. Den kan ikke få invalid_grant slik OAuth-refresh-tokenet har fått
+ * gjentatte ganger (juli 2026, og nede fra 27. juli). Kalenderen må deles med
+ * service-kontoens e-post med «Gjør endringer i aktiviteter». Uten variabelen
+ * brukes OAuth som før.
+ */
+function serviceAccount(): { client_email: string; private_key: string } | null {
+  const raw = envTrimmed("GOOGLE_SERVICE_ACCOUNT_JSON");
+  if (!raw) return null;
+  const json = raw.startsWith("{") ? raw : Buffer.from(raw, "base64").toString("utf8");
+  const parsed = JSON.parse(json);
+  if (!parsed.client_email || !parsed.private_key) {
+    throw new Error("GOOGLE_SERVICE_ACCOUNT_JSON mangler client_email eller private_key");
+  }
+  return parsed;
 }
 
 function getCalendar() {
-  const auth = getAuth();
+  const sa = serviceAccount();
+  if (sa) {
+    const auth = new google.auth.JWT({
+      email: sa.client_email,
+      key: sa.private_key,
+      scopes: ["https://www.googleapis.com/auth/calendar"],
+    });
+    return google.calendar({ version: "v3", auth });
+  }
+  const auth = new google.auth.OAuth2(
+    envTrimmed("GOOGLE_CLIENT_ID"),
+    envTrimmed("GOOGLE_CLIENT_SECRET")
+  );
   auth.setCredentials({
     refresh_token: envTrimmed("GOOGLE_REFRESH_TOKEN"),
   });
@@ -160,7 +183,9 @@ export async function createBooking(params: {
         dateTime: end.toISOString(),
         timeZone: TZ,
       },
-      attendees: [{ email }],
+      // En service account uten domain-wide delegation kan ikke invitere gjester.
+      // Gjesten får uansett ICS-invitasjon i bekreftelses-e-posten.
+      ...(serviceAccount() ? {} : { attendees: [{ email }] }),
     },
   });
 

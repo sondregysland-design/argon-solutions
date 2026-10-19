@@ -8,7 +8,7 @@ Last updated: {{LAST_UPDATED}}. All prices in NOK. Courses are VAT exempt (merve
 Argon Solutions AS is a Norwegian AI agency and software company based in Stavanger, Norway (Rogaland, Norway's oil and energy capital). The brand name in everyday use is Argon Solutions. Founded by Sondre, an engineer with fifteen years of experience from the oil and gas industry, from workshop and offshore operations to office and project management. The two-person team builds daily with Claude and Claude Code and teaches with the same tools they use themselves.
 
 The company does three things:
-1. Runs practical Claude and AI courses (open day courses in Stavanger, in-house corporate training across Norway)
+1. Runs practical in-house Claude and AI courses for companies, held at the client's offices across Norway
 2. Sets up Claude and Claude Code environments for businesses (skills, MCP servers, workflows, security)
 3. Builds custom software, CRM systems, system integrations and AI agents for the energy sector
 
@@ -53,13 +53,16 @@ Sets up Claude in the company: plan, data security review, account structure, an
 
 ## Services
 
-1. AI Courses — open Claude day courses in Stavanger and in-house corporate AI training across Norway (https://www.argonsolutions.no/kurs)
+1. AI Courses — in-house corporate Claude and AI training at the client's offices across Norway, no open courses for individuals (https://www.argonsolutions.no/kurs)
 2. Claude Code Setup — complete Claude Code environments with custom skills, MCP servers, and workflows (https://www.argonsolutions.no/tjenester/claude-code)
 3. Custom Software — web applications, dashboards, project management, and real-time data visualization for the energy sector (https://www.argonsolutions.no/tjenester/skreddersydd-software)
 4. CRM & Sales Automation — CRM with automated prospecting, AI lead scoring powered by Claude, and pipeline management (https://www.argonsolutions.no/tjenester)
 5. System Integration — API development, AI-powered report generation, automated data flow between platforms (https://www.argonsolutions.no/tjenester/systemintegrasjon)
 6. AI Agents — browser automation, data extraction, automation of repetitive processes using Playwright (https://www.argonsolutions.no/tjenester/ai-agenter)
 7. AI Strategy — roadmap and advisory for AI implementation (https://www.argonsolutions.no/tjenester/ai-strategi)
+8. AI for industrial SMBs in Rogaland — document and certificate extraction, HSE reporting, project follow-up (https://www.argonsolutions.no/tjenester/ai-for-industribedrifter)
+
+Local page (Norwegian): AI agency in Stavanger, https://www.argonsolutions.no/ai-byra-stavanger
 8. AI Chatbot — custom customer service and support bots (https://www.argonsolutions.no/tjenester/ai-chatbot)
 
 ## Products (self-built, live and publicly accessible)
@@ -81,6 +84,8 @@ Selected guides:
 - Getting started with Claude: https://www.argonsolutions.no/blogg/slik-kommer-du-i-gang-med-claude
 - Claude vs ChatGPT for Norwegian businesses: https://www.argonsolutions.no/blogg/claude-vs-chatgpt-norske-bedrifter
 - Claude Cowork explained for Norwegian businesses (plans, setup, permission modes, security): https://www.argonsolutions.no/blogg/claude-cowork-norsk-guide
+- Claude skills explained in Norwegian (what they are, plans, how to build one, security): https://www.argonsolutions.no/blogg/claude-skills-norsk-guide
+- Claude Pro price and plans in Norway (Free, Pro, Max, Team, Enterprise, usage limits, tax): https://www.argonsolutions.no/blogg/claude-pro-pris-abonnement
 - Claude Code for non-developers: https://www.argonsolutions.no/blogg/claude-code-for-deg-som-ikke-koder
 - Claude Code for companies: https://www.argonsolutions.no/blogg/claude-code-for-bedrifter
 - How to choose an AI agency: https://www.argonsolutions.no/blogg/hvordan-velge-ai-byraa

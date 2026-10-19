@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { LogoFull } from "./Logo";
-import { useT } from "@/i18n/LanguageProvider";
+import { useLanguage, useT } from "@/i18n/LanguageProvider";
 
 export function Footer() {
   const t = useT();
+  const { locale } = useLanguage();
 
   return (
     <footer className="border-t border-text/10 bg-surface">
@@ -25,6 +26,7 @@ export function Footer() {
               <li><Link href="/tjenester" className="tap-target block py-1.5 hover:text-primary">{t("nav.services")}</Link></li>
               <li><Link href="/produkter" className="tap-target block py-1.5 hover:text-primary">{t("nav.products")}</Link></li>
               <li><Link href="/kunstig-intelligens" className="tap-target block py-1.5 hover:text-primary">{t("nav.whatIsAi")}</Link></li>
+              <li><Link href={locale === "en" ? "/en/ai-agency-stavanger" : "/ai-byra-stavanger"} className="tap-target block py-1.5 hover:text-primary">{t("footer.aiByra")}</Link></li>
               <li><Link href="/referanser" className="tap-target block py-1.5 hover:text-primary">{t("footer.referanser")}</Link></li>
               <li><Link href="/blogg" className="tap-target block py-1.5 hover:text-primary">{t("nav.blog")}</Link></li>
               <li><Link href="/om-oss" className="tap-target block py-1.5 hover:text-primary">{t("nav.about")}</Link></li>

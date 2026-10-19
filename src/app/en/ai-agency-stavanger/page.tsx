@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/en/ai-agency-stavanger",
     languages: {
-      "nb-NO": "/",
+      "nb-NO": "/ai-byra-stavanger",
       en: "/en/ai-agency-stavanger",
-      "x-default": "/",
+      "x-default": "/ai-byra-stavanger",
     },
   },
   openGraph: { images: ["/og-image.png"], title, description, url: "/en/ai-agency-stavanger", locale: "en_US" },
@@ -50,7 +50,7 @@ const enProseSections = [
   {
     heading: "What we actually do",
     paragraphs: [
-      "Three things, in roughly this order of demand. We run hands-on AI courses, both open one-day courses in Stavanger and in-house training at your offices anywhere in Norway. We set up Claude and Claude Code for companies, with the skills, hooks and integrations that match how your team already works. And we build custom software, system integrations and AI agents for the energy sector.",
+      "Three things, in roughly this order of demand. We run hands-on in-house AI courses at your offices anywhere in Norway. We set up Claude and Claude Code for companies, with the skills, hooks and integrations that match how your team already works. And we build custom software, system integrations and AI agents for the energy sector.",
       "Everything we have built is live and publicly accessible. When you evaluate any supplier, including us, ask to see a system running rather than a presentation.",
     ],
   },
@@ -72,7 +72,7 @@ export default function AIAgencyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
       <div className="mx-auto max-w-4xl px-6">
         <p className="text-sm text-text-light">
-          <Link href="/" className="hover:text-primary">Norsk</Link>{" / "}<span className="text-text">English</span>
+          <Link href="/ai-byra-stavanger" hrefLang="nb" className="hover:text-primary">Norsk</Link>{" / "}<span className="text-text">English</span>
         </p>
         <h1 className="mt-6 text-4xl font-display font-medium text-text sm:text-5xl">
           AI Agency in Stavanger

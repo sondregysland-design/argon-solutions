@@ -39,6 +39,7 @@ export const no = {
     location: "Stavanger, Rogaland, Norge",
     faq: "FAQ",
     referanser: "Referanser",
+    aiByra: "AI-byrå i Stavanger",
     orgnr: "Org.nr.",
     privacy: "Personvern",
     rights: "Alle rettigheter reservert.",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { RelatedServices } from "@/components/RelatedServices";
 import Link from "next/link";
+import { AutomationCostCalculator } from "@/components/AutomationCostCalculator";
 import { breadcrumbJsonLd, SITE_URL } from "@/lib/schema";
 
 const description =
@@ -163,6 +164,8 @@ export default function AIAutomatiseringPage() {
             </div>
           </details>
         </div>
+
+        <AutomationCostCalculator />
 
         <section className="mt-20">
           <div className="rounded-3xl bg-ink px-6 py-16 text-center">
